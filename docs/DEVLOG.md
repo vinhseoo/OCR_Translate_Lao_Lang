@@ -47,3 +47,15 @@ Mỗi khi bắt đầu hoặc hoàn thành một công việc, thêm một entry
   - Tiếp tục hoàn thiện P0 (chuẩn bị file font Lao và tải `lao.traineddata`), sau đó tiến hành Phase P1 (Spike End-to-End với 20 ảnh mẫu).
 
 ---
+
+### [2026-10-01 11:58] - [Hạ tầng] - Khởi tạo Git & Đẩy Lên GitHub Remote
+- **Mục tiêu:** Khởi tạo Git repository cục bộ và đồng bộ toàn bộ cấu trúc dự án, tài liệu, quy chuẩn và code P0 lên GitHub repo của tác giả.
+- **Thực hiện:**
+  - Cấu hình remote `origin`: `https://github.com/vinhseoo/OCR_Translsate_Lao_Lang.git`.
+  - Thiết lập nhánh mặc định `main`.
+  - Thực hiện commit ban đầu (`feat: initialize Lao OCR & Education translation project`).
+  - Đẩy thành công mã nguồn (`git push -u origin main`).
+- **Kết quả / Quyết định:**
+  - Kho mã nguồn GitHub đã được đồng bộ đầy đủ và sẵn sàng cho việc làm việc nhóm và bảo vệ.
+
+---
