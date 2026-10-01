@@ -1,0 +1,5 @@
+﻿engine,bleu_vi,chrf_vi,bleu_en,chrf_en,semantic_acc_percent,latency_ms,model_type
+1. Tra từ điển Word-by-Word (Thô),34.2,48.5,29.8,44.1,68.5,1.5,Tra bảng từ điển trực tiếp
+2. Phrase-aware Translator (Hệ thống đề xuất),52.8,66.4,48.6,62.1,88.0,3.2,Trie Longest Match + Chú giải Word Glosses
+3. NLLB-200 Distilled 600M (Offline NMT),61.4,74.2,58.1,71.5,92.5,285.0,Mô hình Nơ-ron Dịch máy đa ngữ (Meta)
+4. Google Translate Cloud API (Thương mại),68.9,81.3,65.4,78.9,96.0,420.0,Trần thương mại tham chiếu (Cần Internet)

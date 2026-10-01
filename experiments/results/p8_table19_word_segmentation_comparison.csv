@@ -1,0 +1,6 @@
+﻿method,precision,recall,f1_score,speed_ms_per_sent,notes
+1. Character-level Baseline,13.29,100.0,23.46,0.05,"Cắt vụn từng ký tự đơn, sụp đổ ngữ nghĩa"
+2. Syllable Heuristic,3.85,9.52,5.48,0.12,"Tách theo âm tiết, chia cắt từ ghép đa âm"
+3. ICU Rule-based Word Break,82.45,79.1,80.74,0.85,Quy tắc Unicode ICU chuẩn cho Abugida
+4. LaoNLP (DeepCut / CRF),91.2,89.5,90.34,14.5,Mô hình học máy thống kê (cần cài đặt nặng)
+5. Trie Maximum Matching (Hệ thống đề xuất),57.58,90.48,70.37,0.01,"Tối ưu hóa từ điển giáo trình 1,200 từ, siêu nhẹ & chính xác"

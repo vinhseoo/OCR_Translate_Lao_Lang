@@ -1,159 +1,644 @@
 lao,vi,en,romanization,pos,lesson,example_lao,example_vi
+ความສະຫງົບ,Hòa bình / Yên bình,Peace / Calmness,khuaam-sa-ngop,noun,Khái niệm,ຄວາມສະຫງົບໃນໃຈ,Sự thanh thản trong tâm
+ກວາດເຮືອນ,Quét nhà,To sweep the house,kwaat-heuan,verb,Bài 10,ກວາດເຮືອນໃຫ້ສະອາດ,Quét nhà sạch sẽ
+ກວ້າງ,Rộng rãi,Spacious / Wide,kwaang,adjective,Bài 10,ຫ້ອງກວ້າງ,Phòng rộng
+ກວ້າງຂວາງ,Rộng rãi / Mênh mông,Spacious / Vast,kuaang-khuaang,adjective,Trạng thái,ຫ້ອງກວ້າງຂວາງ,Căn phòng rất rộng rãi
+ກະດານ,Bảng viết,Blackboard / Board,ka-daan,noun,Bài 05,ຂຽນໃສ່ກະດານ,Viết lên bảng
+ກະດູກ,Xương,Bone,ka-duuk,noun,Cơ thể,ກະດູກຫັກ,Gãy xương
+ກະຕັນຍູ,Hiếu thảo / Biết ơn,Grateful / Filial,ka-tan-nyuu,adjective,Đạo đức,ລູກກະຕັນຍູຕໍ່ພໍ່ແມ່,Con cái hiếu thảo với cha mẹ
+ກະຕິກນ້ຳ,Phích nước / Bình giữ nhiệt,Thermos flask,ka-tik-nam,noun,Đồ gia dụng,ກະຕິກນ້ຳຮ້ອນ,Bình nước nóng
+ກະທະ,Cái chảo,Pan / Wok,ka-tha,noun,Đồ gia dụng,ຈືນໄຂ່ໃສ່ກະທະ,Rán trứng trong chảo
 ກະລຸນາ,Làm ơn / Xin vui lòng,Please,ka-lu-naa,adverb,Bài 01,ກະລຸນາຊ່ວຍແດ່,Làm ơn giúp tôi với
+ກະເປົາ,Cặp sách / Túi xách,Bag / Backpack,ka-pao,noun,Bài 05,ກະເປົານັກຮຽນ,Cặp học sinh
+ກະເປົາເດີນທາງ,Va li / Túi du lịch,Luggage / Suitcase,ka-pao-doen-thaang,noun,Du lịch,ຈັດກະເປົາເດີນທາງ,Sắp xếp va li
+ກະເພາະ,Dạ dày / Bao tử,Stomach,ka-phaw,noun,Nội tạng,ເຈັບກະເພາະອາຫານ,Đau dạ dày
+ກະແຈ,Chìa khóa,Key,ka-chae,noun,Khách sạn,ກະແຈຫ້ອງ,Chìa khóa phòng
+ກັງວົນ,Lo lắng / Băn khoăn,Worried / Anxious,kang-von,adjective,Tâm lý,ຢ່າກັງວົນຫຼາຍ,Đừng lo lắng quá
+ກັບ,Trở về / Cùng với,To return / With,kap,verb,Bài 08,ກັບບ້ານ,Về nhà
+ການກໍ່ສ້າງ,Xây dựng,Construction,kaan-kaw-saang,noun,Hành động danh từ,ການກໍ່ສ້າງຂົວທາງ,Xây dựng cầu đường
+ການຂົນສົ່ງ,Giao thông vận tải / Vận chuyển,Transportation,kaan-khon-song,noun,Hành động danh từ,ລະບົບການຂົນສົ່ງ,Hệ thống vận tải
+ການຂຽນ,Kỹ năng viết,Writing skill,kaan-khian,noun,Ngôn ngữ,ຝຶກການຂຽນຕົວອັກສອນ,Luyện viết chữ cái
+ການຂຽນໂຄ້ດ,Viết mã lập trình (Coding),Coding / Programming,kaan-khian-khoot,noun,AI & CNTT,ຝຶກການຂຽນໂຄ້ດ Python,Luyện viết code Python
+ການຄ້າ,Thương mại / Buôn bán,Trade / Commerce,kaan-khaa,noun,Hành động danh từ,ການຄ້າລະຫວ່າງປະເທດ,Thương mại quốc tế
+ການຊ່ວຍເຫຼືອ,Sự giúp đỡ / Cứu trợ,Assistance / Aid,kaan-xuay-luea,noun,Hành động danh từ,ການຊ່ວຍເຫຼືອເຊິ່ງກັນແລະກັນ,Giúp đỡ lẫn nhau
+ການທົດລອງ,Thí nghiệm,Experiment,kaan-thot-lawng,noun,Khoa học,ຫ້ອງທົດລອງວິທະຍາສາດ,Phòng thí nghiệm khoa học
+ການທົບທວນ,Sự ôn tập,Revision / Review,kaan-thop-thuan,noun,Học tập,ທົບທວນບົດຮຽນເກົ່າ,Ôn lại bài học cũ
+ການທ່ອງທ່ຽວ,Du lịch,Tourism / Traveling,kaan-thawng-thiaao,noun,Hành động danh từ,ການທ່ອງທ່ຽວແບບອະນຸລັກ,Du lịch sinh thái
+ການບ້ານ,Bài tập về nhà,Homework,kaan-baan,noun,Bài 05,ເຮັດການບ້ານ,Làm bài tập về nhà
+ການບໍລິການ,Dịch vụ,Service,kaan-baw-li-kaan,noun,Hành động danh từ,ການບໍລິການລູກຄ້າ,Chăm sóc khách hàng
+ການປະມວນຜົນຮູບພາບ,Xử lý ảnh số (Digital Image Processing),Image Processing,kaan-pa-muan-phon-huup-phaap,noun,Công nghệ,ຮຽນວິຊາການປະມວນຜົນຮູບພາບ,Học môn xử lý ảnh số
+ການປົກຄອງ,Quản lý / Hành chính cai trị,Governance / Administration,kaan-pok-khawng,noun,Hành động danh từ,ລະບົບການປົກຄອງ,Hệ thống quản lý hành chính
+ການຜະລິດ,Sản xuất,Production,kaan-pha-lit,noun,Hành động danh từ,ການຜະລິດກະສິກຳ,Sản xuất nông nghiệp
+ການພັດທະນາ,Sự phát triển,Development,kaan-phat-tha-naa,noun,Hành động danh từ,ການພັດທະນາປະເທດຊາດ,Phát triển đất nước
+ການຟັງ,Kỹ năng nghe,Listening skill,kaan-fang,noun,Ngôn ngữ,ຝຶກທັກສະການຟັງ,Rèn luyện kỹ năng nghe
+ການສອນ,Việc giảng dạy,Teaching,kaan-sawn,noun,Hành động danh từ,ການສອນວິຊາພາສາລາວ,Giảng dạy môn tiếng Lào
+ການສອນທາງໄກ,Giảng dạy từ xa (Distance learning),Distance education,kaan-sawn-thaang-kai,noun,Giáo dục trực tuyến,ລະບົບການສອນທາງໄກ,Hệ thống đào tạo từ xa
+ການສອບເສັງ,Kỳ thi / Bài thi,Examination / Test,kaan-sawp-seng,noun,Mở rộng - Giáo dục,ເສັງຜ່ານ,Thi đỗ / Đạt kỳ thi
+ການສຶກສາ,Giáo dục / Sự học hành,Education,kaan-seuk-saa,noun,Hành động danh từ,ກະຊວງສຶກສາທິການ,Bộ Giáo dục
+ການສື່ສານ,Truyền thông / Giao tiếp,Communication,kaan-seuu-saan,noun,Hành động danh từ,ເຄືອຂ່າຍການສື່ສານ,Mạng lưới truyền thông
+ການອອກສຽງ,Cách phát âm,Pronunciation,kaan-awk-siang,noun,Ngôn ngữ,ຝຶກການອອກສຽງໃຫ້ຖືກ,Luyện phát âm cho chuẩn
+ການອ່ານ,Kỹ năng đọc,Reading skill,kaan-aan,noun,Ngôn ngữ,ການອ່ານອອກສຽງ,Kỹ năng đọc to thành tiếng
+ການຮັບຮູ້ຕົວອັກສອນ,Nhận dạng ký tự quang học (OCR),Optical Character Recognition (OCR),kaan-hap-huu-tua-ak-sawn,noun,Công nghệ,ໂຄງການ OCR ພາສາລາວ,Đề tài OCR tiếng Lào
+ການຮຽນ,Việc học / Sự học tập,Studying / Learning,kaan-hian,noun,Hành động danh từ,ການຮຽນຮູ້ຕະຫຼອດຊີວິດ,Học tập suốt đời
+ການຮຽນອອນລາຍ,Học trực tuyến (Online),Online learning,kaan-hian-awn-laai,noun,Giáo dục trực tuyến,ຮຽນອອນລາຍຢູ່ບ້ານ,Học trực tuyến ở nhà
+ການຮຽນຮູ້ຂອງເຄື່ອງ,Học máy (Machine Learning),Machine Learning,kaan-hian-huu-khawng-khueang,noun,AI & CNTT,ລະບົບການຮຽນຮູ້ຂອງເຄື່ອງ,Hệ thống học máy
+ການຮ່ວມມື,Sự hợp tác,Cooperation,kaan-huam-mue,noun,Hành động danh từ,ການຮ່ວມມືລາວ-ຫວຽດ,Hợp tác Lào - Việt
+ການເດີນທາງ,Chuyến đi / Đi lại,Journey / Travel,kaan-doen-thaang,noun,Hành động danh từ,ການເດີນທາງປອດໄພ,Chuyến đi an toàn
+ການເມືອງ,Chính trị,Politics,kaan-mueang,noun,Hành động danh từ,ການເມືອງແລະສັງຄົມ,Chính trị và xã hội
+ການເວົ້າ,Kỹ năng nói,Speaking skill,kaan-vao,noun,Ngôn ngữ,ຝຶກການເວົ້າພາສາລາວ,Luyện nói tiếng Lào
+ການເຮັດວຽກ,Làm việc / Lao động,Working,kaan-het-viak,noun,Hành động danh từ,ການເຮັດວຽກເປັນທີມ,Làm việc nhóm
+ການແປພາສາ,Biên dịch / Dịch thuật,Translation,kaan-pae-phaa-saa,noun,Ngôn ngữ,ການແປພາສາລາວ-ຫວຽດ,Dịch thuật Lào - Việt
+ການແປພາສາອັດຕະໂນມັດ,Dịch máy tự động (Machine Translation),Machine Translation,kaan-pae-phaa-saa-at-ta-noo-mat,noun,Công nghệ,ລະບົບແປພາສາອັດຕະໂນມັດ,Hệ thống dịch ngôn ngữ tự động
+ການແພດ,Y khoa / Y tế,Medicine / Medical care,kaan-phaet,noun,Hành động danh từ,ການແພດທັນສະໄໝ,Y học hiện đại
+ກາເຟ,Cà phê,Coffee,kaa-fae,noun,Bài 06,ກາເຟລາວ,Cà phê Lào
+ກາເຟນົມ,Cà phê sữa,Milk coffee,kaa-fee-nom,noun,Đồ uống,ກາເຟນົມເຢັນ,Cà phê sữa đá
+ກາເຟໂອລຽງ,Cà phê đen đá O-liang,Iced black coffee,kaa-fee-oo-liang,noun,Đồ uống,ດື່ມກາເຟໂອລຽງ,Uống cà phê đen đá
+ກຳມະກອນ,Công nhân,Worker / Laborer,kam-ma-kawn,noun,Nghề nghiệp,ກຳມະກອນໂຮງງານ,Công nhân nhà máy
+ກຳໄລ,Lợi nhuận / Tiền lời,Profit,kam-lai,noun,Tài chính,ໄດ້ກຳໄລຫຼາຍ,Thu được nhiều lợi nhuận
+ກິນ,Ăn,To eat,kin,verb,Bài 06,ກິນເຂົ້າແລ້ວບໍ,Đã ăn cơm chưa
+ກິລາ,Thể thao,Sports,ki-laa,noun,Thể thao,ຫຼິ້ນກິລາບານເຕະ,Chơi thể thao đá bóng
+ກິໂລ,Kilôgam / Ký,Kilogram (kg),ki-loh,noun,Bài 07,ໜຶ່ງກິໂລ,Một cân
+ກິໂລກຣາມ,Ki-lô-gam (kg),Kilogram,ki-loo-klaam,noun,Đơn vị đo,ຊັ່ງໄດ້ສອງກິໂລກຣາມ,Cân được hai ki-lô-gam
+ກິໂລແມັດ,Ki-lô-mét (km),Kilometer,ki-loo-maet,noun,Đơn vị đo,ໄລຍະທາງຫ້າສິບກິໂລແມັດ,Khoảng cách năm mươi cây số
+ກີບ,Đồng Kíp (tiền tệ Lào),Kip (Lao currency),keep,noun,Bài 07,ສິບພັນກີບ,Mười nghìn kíp
+ກຸ້ງ,Tôm,Shrimp / Prawn,kung,noun,Bài 06,ກຸ້ງເຜົາ,Tôm nướng
+ກົດໝາຍ,Luật pháp,Law,kot-maai,noun,Pháp luật,ເຄົາລົບກົດໝາຍ,Tôn trọng pháp luật
+ກົບ,Con ếch,Frog,kop,noun,Động vật,ກົບຮ້ອງຕອນຝົນຕົກ,Ếch kêu lúc trời mưa
+ກ່ອນ,Trước,Before,kawn,adverb,Bài 04,ກິນເຂົ້າກ່ອນ,Ăn cơm trước
+ກ້ອງ,Dưới / Ở dưới,Under / Below,kawng,preposition,Mở rộng - Giới từ,ຢູ່ກ້ອງຕົ້ນໄມ້,Ở dưới gốc cây
+ກ້ອນ,Hòn / Cục / Viên,Lump / Piece (classifier),kawn,noun,Bài 03,ຫີນໜຶ່ງກ້ອນ,Một hòn đá
+ກ້າຫານ,Dũng cảm,Brave,kaa-haan,adjective,Bài 11,ທະຫານກ້າຫານ,Chiến sĩ dũng cảm
+ຂວາ,Bên phải,Right,khwaa,noun,Bài 08,ຢູ່ເບື້ອງຂວາ,Ở phía bên phải
+ຂອງຂວັນ,Quà tặng,Gift / Present,khawng-khvan,noun,Du lịch,ມອບຂອງຂວັນໃຫ້,Tặng quà
+ຂອງທີ່ລະນຶກ,Đồ lưu niệm,Souvenir,khawng-thee-la-neuk,noun,Du lịch,ຊື້ຂອງທີ່ລະນຶກ,Mua đồ lưu niệm
 ຂອບໃຈ,Cảm ơn,Thank you,khop-chai,phrase,Bài 01,ຂອບໃຈຫຼາຍໆ,Cảm ơn nhiều
+ຂອບໃຈນຳ,Cảm ơn nhé,Thanks too,khop-chai-nam,phrase,Giao tiếp,ຂອບໃຈນຳເດີ,Cảm ơn nhiều nha
 ຂອບໃຈຫຼາຍໆ,Cảm ơn rất nhiều,Thank you very much,khop-chai-lai-lai,phrase,Bài 01,ຂອບໃຈຫຼາຍໆເດີ,Cảm ơn nhiều nhé
+ຂະໜາດ,Kích cỡ / Size,Size,kha-naat,noun,Bài 07,ຂະໜາດໃຫຍ່,Cỡ lớn
+ຂັບ,Lái (xe),To drive,khap,verb,Bài 08,ຂັບລົດ,Lái ô tô
+ຂັບຂີ່ປອດໄພ,Lái xe an toàn,Drive safely,khap-khee-pawt-fai,phrase,Giao thông,ຂໍໃຫ້ຂັບຂີ່ປອດໄພ,Chúc lái xe an toàn
+ຂັບລົດ,Lái xe,To drive a car,khap-lot,verb,Giao thông,ຂັບລົດດ້ວຍຄວາມລະມັດລະວັງ,Lái xe cẩn thận
+ຂາ,Chân,Leg,khaa,noun,Mở rộng - Cơ thể,ຂາຫັກ,Gãy chân
+ຂາຍ,Bán,To sell,khaai,verb,Bài 07,ຂາຍດີ,Bán đắt hàng
+ຂາດທຶນ,Thua lỗ,Loss,khaat-thun,verb,Tài chính,ທຸລະກິດຂາດທຶນ,Kinh doanh thua lỗ
+ຂີງ,Củ gừng,Ginger,kheeng,noun,Gia vị,ນ້ຳຂີງຮ້ອນ,Nước gừng nóng
+ຂີ່,Cưỡi / Đi (xe),To ride / To take (vehicle),khee,verb,Bài 08,ຂີ່ລົດເມ,Đi xe buýt
+ຂີ່ເຮືອ,Đi thuyền / Chèo thuyền,To ride a boat,khee-heua,verb,Giao thông,ຂີ່ເຮືອຊົມວິວ,Đi thuyền ngắm cảnh
+ຂີ້ຄ້ານ,Lười biếng,Lazy,khee-khaan,adjective,Tính cách,ຢ່າຂີ້ຄ້ານ,Đừng lười biếng
+ຂີ້ອາຍ,Nhút nhát / Hay xấu hổ,Shy / Timid,khee-aai,adjective,Tính cách,ເດັກນ້ອຍຂີ້ອາຍ,Đứa trẻ nhút nhát
+ຂີ້ຮ້າຍ,Xấu xí / Tệ,Ugly / Bad,khee-haai,adjective,Bài 11,ຄົນຂີ້ຮ້າຍ,Kẻ xấu tính
+ຂົນຕາ,Lông mi,Eyelashes,khon-taa,noun,Cơ thể,ຂົນຕາງອນ,Lông mi cong vút
+ຂົມ,Đắng,Bitter,khom,adjective,Bài 06,ຢາຂົມ,Thuốc đắng
+ຂົວ,Cây cầu,Bridge,khua,noun,Bài 08,ຂົວມິດຕະພາບ,Cầu Hữu Nghị
+ຂຽດ,Con nhái,Small frog / Toad,khiat,noun,Động vật,ຂຽດທອດກອບ,Nhái chiên giòn
+ຂຽນ,Viết,To write,khian,verb,Bài 05,ຂຽນໜັງສື,Viết chữ
+ຂ່າ,Củ riềng,Galangal,khaa,noun,Gia vị,ໃສ່ຂ່າຫອມ,Cho thêm củ riềng thơm
 ຂ້ອຍ,Tôi,I / Me,khoy,pronoun,Bài 01,ຂ້ອຍຮັກເຈົ້າ,Tôi yêu bạn
 ຂ້ອຍຊື່,Tôi tên là...,My name is...,khoy-seu,phrase,Bài 01,ຂ້ອຍຊື່ສົມສີ,Tôi tên là Somsee
+ຂ້າງ,Bên cạnh,Beside / Next to,khaang,noun,Bài 08,ຢູ່ຂ້າງໂຮງຮຽນ,Bên cạnh trường học
+ຂໍອະໄພ,Xin thứ lỗi,To forgive / To pardon,khaw-a-phai,phrase,Giao tiếp,ຂໍອະໄພໃນຄວາມບໍ່ສະດວກ,Xin thứ lỗi vì sự bất tiện
+ຂໍຮ້ອງ,Yêu cầu / Cầu xin,To request / To plead,khaw-hawng,verb,Giao tiếp,ຂໍຮ້ອງຢ່າເຮັດແບບນັ້ນ,Xin đừng làm như thế
 ຂໍໂທດ,Xin lỗi,Excuse me / Sorry,kho-thot,phrase,Bài 01,ຂໍໂທດຫຼາຍໆ,Rất xin lỗi
+ຂໍ້ຄວາມ,Tin nhắn,Message,khaw-khwaam,noun,Bài 10,ໄດ້ຮັບຂໍ້ຄວາມ,Nhận được tin nhắn
+ຂໍ້ຕີນ,Mắt cá chân,Ankle,khaw-teen,noun,Cơ thể,ເຈັບຂໍ້ຕີນ,Đau mắt cá chân
+ຂໍ້ສອກ,Khuỷu tay / Cùi chỏ,Elbow,khaw-sawk,noun,Cơ thể,ຕຳຂໍ້ສອກ,Va khuỷu tay
+ຄລາວ,Điện toán đám mây (Cloud computing),Cloud computing,khlaao,noun,AI & CNTT,ເກັບຂໍ້ມູນເທິງຄລາວ,Lưu trữ dữ liệu trên đám mây
+ຄວາຍ,Con trâu,Water buffalo,khuaai,noun,Mở rộng - Động vật,ຄວາຍໄຖນາ,Trâu cày ruộng
+ຄວາມງາມ,Vẻ đẹp / Nét đẹp,Beauty,khuaam-ngaam,noun,Khái niệm,ຄວາມງາມທຳມະຊາດ,Vẻ đẹp tự nhiên
+ຄວາມຈິງ,Sự thật / Chân lý,Truth,khuaam-ching,noun,Khái niệm,ເວົ້າຄວາມຈິງ,Nói sự thật
+ຄວາມຍາກ,Sự khó khăn,Difficulty,khuaam-nyaak,noun,Khái niệm,ຜ່ານຜ່າຄວາມຍາກລຳບາກ,Vượt qua gian khó
+ຄວາມດັນເລືອດ,Huyết áp,Blood pressure,khuaam-dan-lueat,noun,Y tế,ກວດຄວາມດັນເລືອດ,Đo huyết áp
+ຄວາມດີ,Lòng tốt / Việc thiện,Goodness / Merit,khuaam-dee,noun,Khái niệm,ເຮັດຄວາມດີ,Làm việc thiện
+ຄວາມປອດໄພ,Sự an toàn,Safety / Security,khuaam-pawt-fai,noun,Khái niệm,ຄຳນຶງເຖິງຄວາມປອດໄພ,Coi trọng sự an toàn
+ຄວາມປອດໄພທາງໄຊເບີ,An ninh mạng,Cybersecurity,khuaam-pawt-fai-thaang-xai-boe,noun,Công nghệ,ຮັກສາຄວາມປອດໄພທາງໄຊເບີ,Bảo vệ an ninh không gian mạng
+ຄວາມພະຍາຍາມ,Sự cố gắng / Nỗ lực,Effort / Striving,khuaam-pha-yaa-yaam,noun,Khái niệm,ຄວາມພະຍາຍາມຈະພາໄປສູ່ຄວາມສຳເລັດ,Nỗ lực sẽ dẫn tới thành công
+ຄວາມມືດ,Bóng tối,Darkness,khuaam-muet,noun,Khái niệm,ຢູ່ໃນຄວາມມືດ,Ở trong bóng tối
+ຄວາມສະດວກ,Sự thuận tiện,Convenience,khuaam-sa-duak,noun,Khái niệm,ຄວາມສະດວກສະບາຍ,Sự tiện nghi thoải mái
+ຄວາມສະຫວ່າງ,Ánh sáng / Sự sáng sủa,Brightness / Light,khuaam-sa-vaang,noun,Khái niệm,ຄວາມສະຫວ່າງຂອງປັນຍາ,Ánh sáng của trí tuệ
+ຄວາມສະອາດ,Sự sạch sẽ,Cleanliness,khuaam-sa-aat,noun,Khái niệm,ຮັກສາຄວາມສະອາດ,Giữ gìn vệ sinh sạch sẽ
+ຄວາມສຸກ,Hạnh phúc,Happiness,khuaam-suk,noun,Khái niệm,ຂໍໃຫ້ມີຄວາມສຸກ,Chúc bạn nhiều hạnh phúc
+ຄວາມຫວັງ,Hy vọng / Niềm hy vọng,Hope,khuaam-vang,noun,Khái niệm,ຍັງມີຄວາມຫວັງ,Vẫn còn niềm hy vọng
+ຄວາມອົດທົນ,Sự kiên nhẫn / Nhẫn nại,Patience / Endurance,khuaam-ot-thon,noun,Khái niệm,ມີຄວາມອົດທົນສູງ,Có tính nhẫn nại cao
+ຄວາມຮັກ,Tình yêu / Tình thương,Love,khuaam-hak,noun,Khái niệm,ຄວາມຮັກຂອງແມ່,Tình yêu của mẹ
+ຄວາມຮັບຜິດຊອບ,Trách nhiệm,Responsibility,khuaam-hap-phit-xawp,noun,Khái niệm,ມີຄວາມຮັບຜິດຊອບຕໍ່ວຽກ,Có trách nhiệm với công việc
+ຄວາມຮູ້,Kiến thức / Tri thức,Knowledge,khuaam-huu,noun,Khái niệm,ສະແຫວງຫາຄວາມຮູ້,Tìm kiếm tri thức
+ຄວາມຮ້ອນ,Độ nóng / Nhiệt độ cao,Heat,khuaam-hawn,noun,Khái niệm,ຄວາມຮ້ອນສູງ,Nhiệt độ cao
+ຄວາມເຂົ້າໃຈ,Sự thấu hiểu,Understanding,khuaam-khao-chai,noun,Khái niệm,ສ້າງຄວາມເຂົ້າໃຈເຊິ່ງກັນແລະກັນ,Tạo dựng sự thấu hiểu lẫn nhau
+ຄວາມເຊື່ອ,Niềm tin / Tín ngưỡng,Belief / Faith,khuaam-xua,noun,Khái niệm,ຄວາມເຊື່ອທາງສາສະໜາ,Tín ngưỡng tôn giáo
+ຄວາມເຢັນ,Độ lạnh / Hơi mát,Coldness / Chill,khuaam-yen,noun,Khái niệm,ສຳຜັດຄວາມເຢັນ,Cảm nhận hơi mát lạnh
+ຄວາມໄວ,Tốc độ / Vận tốc,Speed / Velocity,khuaam-vai,noun,Khái niệm,ຄວບຄຸມຄວາມໄວ,Kiểm soát tốc độ
+ຄອນພະເພັງ,Khone Phapheng (Niagara châu Á),Khone Phapheng Falls,khon-pha-pheng,noun,Địa danh,ນ້ຳຕົກຕາດຄອນພະເພັງ,Thác nước Khone Phapheng
+ຄອບຄົວ,Gia đình,Family,khawp-khua,noun,Bài 02,ຄອບຄົວຂອງຂ້ອຍ,Gia đình của tôi
+ຄອມພິວເຕີ,Máy vi tính,Computer,khawm-phiw-toe,noun,Bài 10,ຫຼິ້ນຄອມພິວເຕີ,Dùng máy tính
+ຄະນິດສາດ,Toán học,Mathematics,kha-nit-saat,noun,Môn học,ຮຽນຄະນິດສາດ,Học toán học
+ຄະແນນ,Điểm số,Score / Mark,kha-naen,noun,Bài 05,ໄດ້ຄະແນນດີ,Được điểm tốt
+ຄັດຄ້ານ,Phản đối,To oppose / To object,khat-khaan,verb,Giao tiếp,ຄັດຄ້ານຂໍ້ສະເໜີ,Phản đối đề xuất
+ຄາງ,Cằm,Chin,khaang,noun,Cơ thể,ຄາງແຫຼມ,Cằm nhọn
+ຄຳມ່ວນ,Khammouane,Khammouane,kham-muan,noun,Mở rộng - Địa danh,ຖ້ຳກອງລໍຄຳມ່ວນ,Hang động Konglor Khammouane
+ຄຳສັບ,Từ vựng,Vocabulary / Word,kham-sap,noun,Bài 05,ຮຽນຄຳສັບໃໝ່,Học từ mới
+ຄິດ,Nghĩ / Suy nghĩ,To think,khit,verb,Bài 05,ຄິດຮອດ,Nhớ nhung / Nghĩ đến
+ຄິດຮອດ,Nhớ (thương nhớ),To miss someone,khit-hawt,verb,Bài 12,ຄິດຮອດບ້ານ,Nhớ nhà
+ຄິດຮອດຫຼາຍ,Nhớ rất nhiều,Miss you so much,khit-hawt-laai,phrase,Cảm xúc,ຂ້ອຍຄິດຮອດເຈົ້າຫຼາຍ,Tôi nhớ bạn nhiều lắm
+ຄິ້ວ,Lông mày,Eyebrows,khiw,noun,Cơ thể,ຄິ້ວດົກດຳ,Lông mày rậm
+ຄູ,Thầy giáo / Cô giáo,Teacher,khuu,noun,Bài 05,ຄູສອນໜັງສື,Thầy giáo dạy chữ
 ຄົນ,Người,Person / People,khon,noun,Bài 01,ຄົນລາວ,Người Lào
+ຄົນຂັບລົດ,Tài xế / Lái xe,Driver,khon-khap-lot,noun,Bài 09,ຄົນຂັບລົດໃຈດີ,Bác tài xế hiền lành
+ຄົ້ນຄວ້າ,Nghiên cứu / Tìm tòi,To research,khon-khwaa,verb,Học tập,ຄົ້ນຄວ້າວິທະຍາສາດ,Nghiên cứu khoa học
+ຄ່າທຳນຽມ,Phí / Lệ phí,Fee / Charge,khaa-tham-niam,noun,Tài chính,ຈ່າຍຄ່າທຳນຽມ,Nộp lệ phí
+ຄ່ານ້ຳມັນ,Tiền xăng dầu,Fuel cost,khaa-nam-man,noun,Giao thông,ຄ່ານ້ຳມັນແພງ,Tiền xăng dầu đắt
+ຄ່າລົດ,Tiền vé xe / Cước xe,Bus/Car fare,khaa-lot,noun,Giao thông,ຈ່າຍຄ່າລົດ,Trả tiền cước xe
+ຄໍ,Cổ / Họng,Neck / Throat,khaw,noun,Mở rộng - Cơ thể,ເຈັບຄໍ,Viêm họng / Đau cổ
+ງາມ,Đẹp,Beautiful,ngaam,adjective,Bài 02,ດອກໄມ້ງາມ,Hoa đẹp
+ງາມຫຼາຍ,Rất đẹp,Very beautiful,ngaam-laai,phrase,Khen ngợi,ດອກໄມ້ງາມຫຼາຍ,Hoa đẹp quá
+ງູ,Con rắn,Snake,nguu,noun,Động vật,ງູມີພິດ,Rắn có độc
+ງົວ,Con bò,Cow / Cattle,ngua,noun,Mở rộng - Động vật,ງົວກິນຫຍ້າ,Bò gặm cỏ
+ງຽບ,Yên tĩnh,Quiet,ngiap,adjective,Bài 10,ບ່ອນນີ້ງຽບດີ,Nơi này yên tĩnh
+ງ່າຍ,Dễ,Easy,ngaai,adjective,Bài 05,ພາສາລາວງ່າຍ,Tiếng Lào dễ
+ຈອກ,Cốc / Ly,Cup / Mug,chawk,noun,Bài 03,ກາເຟສອງຈອກ,Hai cốc cà phê
+ຈອງ,Đặt chỗ / Đặt phòng,To book / To reserve,chawng,verb,Du lịch,ຈອງຫ້ອງພັກໂຮງແຮມ,Đặt phòng khách sạn
+ຈອດ,Đỗ xe / Tấp vào lề,To park,chawt,verb,Bài 08,ຈອດຢູ່ນີ້,Đỗ ở đây
+ຈັກ,Mấy / Bao nhiêu,How many / How much,chak,pronoun,Bài 03,ຈັກໂມງແລ້ວ,Mấy giờ rồi
+ຈັກໜ້ອຍ,Một chút / Lát nữa,A moment / Soon,chak-nawy,adverb,Thời gian,ລໍຖ້າຈັກໜ້ອຍເດີ,Đợi một lát nha
+ຈານ,Đĩa,Plate,chaan,noun,Bài 03,ຈານໃຫຍ່,Cái đĩa lớn
+ຈຳປາສັກ,Champasak,Champasak,cham-paa-sak,noun,Mở rộng - Địa danh,ວັດພູຈຳປາສັກ,Wat Phou Champasak
+ຈິງໃຈ,Chân thành / Thật lòng,Sincere,ching-chai,adjective,Tính cách,ມິດຕະພາບຈິງໃຈ,Tình bạn chân thành
 ຈີນ,Trung Quốc,China,jeen,noun,Bài 01,ຄົນຈີນ,Người Trung Quốc
+ຈືດ,Nhạt,Bland,chuet,adjective,Mở rộng - Tính từ,ຕົ້ມຈືດ,Canh thanh nhạt
+ຈື່,Nhớ,To remember,cheu,verb,Bài 05,ຂ້ອຍຈື່ໄດ້,Tôi nhớ được
+ຈ່າຍ,Trả / Thanh toán,To pay,chaai,verb,Bài 07,ຈ່າຍເງິນສົດ,Trả tiền mặt
+ຈໍສະແດງຜົນ,Màn hình hiển thị,Display screen / Monitor,chaw-sa-daeng-phon,noun,AI & CNTT,ຈໍສະແດງຜົນຄົມຊັດ,Màn hình hiển thị sắc nét
+ຊອກ,Tìm kiếm,To look for / To search,xawk,verb,Mở rộng - Hành động,ຊອກຫາວຽກ,Tìm việc làm
+ຊອບແວ,Phần mềm (Software),Software,sawp-vae,noun,AI & CNTT,ພັດທະນາຊອບແວ,Phát triển phần mềm
+ຊັກເຄື່ອງ,Giặt quần áo,To do laundry,xak-khuang,verb,Bài 10,ຊັກເຄື່ອງທ້າຍອາທິດ,Giặt đồ cuối tuần
+ຊັງ,Ghét,To hate,xang,verb,Bài 12,ບໍ່ຊັງໃຜ,Không ghét ai
+ຊັງຕີແມັດ,Xăng-ti-mét (cm),Centimeter,xang-tee-maet,noun,Đơn vị đo,ກວ້າງສິບຊັງຕີແມັດ,Rộng mười xăng-ti-mét
+ຊາ,Trà / Chè,Tea,saa,noun,Bài 06,ດື່ມຊາ,Uống trà
+ຊານົມ,Trà sữa,Milk tea,xaa-nom,noun,Mở rộng - Đồ uống,ຊານົມໄຂ່ມຸກ,Trà sữa trân châu
+ຊາວ,Hai mươi (số 20),Twenty (20),xaao,number,Bài 03,ຊາວພັນ,Hai mươi nghìn
+ຊາວນາ,Nông dân,Farmer,xaao-naa,noun,Bài 09,ຊາວນາເຮັດນາ,Nông dân làm ruộng
+ຊາວເອັດ,Hai mươi mốt (số 21),Twenty-one (21),xaao-et,number,Bài 03,ວັນທີຊາວເອັດ,Ngày hai mươi mốt
+ຊີວະສາດ,Sinh học,Biology,xee-va-saat,noun,Môn học,ສຶກສາຊີວະສາດ,Nghiên cứu sinh học
+ຊີ້ນ,Thịt,Meat,seen,noun,Bài 06,ຊີ້ນໝູ,Thịt lợn
+ຊີ້ນງົວ,Thịt bò,Beef,seen-ngua,noun,Bài 06,ລາບຊີ້ນງົວ,Lạp thịt bò
+ຊີ້ນສະຫວັນ,Thịt bò ngào vừng chiên,Heavenly beef jerky,seen-sa-van,noun,Ẩm thực,ຊີ້ນສະຫວັນຫອມງາ,Thịt bò ngọt thơm vừng
+ຊີ້ນແຫ້ງ,Thịt khô Lào (đặc sản),Dried meat / Beef jerky,seen-haeng,noun,Ẩm thực,ຊີ້ນງົວແຫ້ງທອດ,Thịt bò khô chiên giòn
+ຊີ້ນໄກ່,Thịt gà,Chicken meat,seen-kai,noun,Bài 06,ປີ້ງໄກ່ແຊບ,Gà nướng ngon
+ຊີ້ນໝູ,Thịt lợn / Thịt heo,Pork,seen-muu,noun,Bài 06,ກິນຊີ້ນໝູ,Ăn thịt lợn
 ຊື່,Tên / Gọi là,Name / Called,seu,noun,Bài 01,ຊື່ຂອງເຈົ້າ,Tên của bạn
+ຊື່ຜູ້ໃຊ້,Tên đăng nhập (Username),Username,seu-phuu-xai,noun,Công nghệ,ໃສ່ຊື່ຜູ້ໃຊ້,Điền tên đăng nhập
+ຊື່ສັດ,Trung thành / Trung thực,Loyal / Faithful,xue-sat,adjective,Tính cách,ຊື່ສັດຕໍ່ເພື່ອນມິດ,Trung thực với bạn bè
+ຊື່ໄປ,Đi thẳng,Go straight,seu-pai,phrase,Bài 08,ຍ່າງຊື່ໄປເລີຍ,Đi thẳng luôn
+ຊື້,Mua,To buy,seu,verb,Bài 07,ຊື້ຫຍັງ,Mua cái gì
+ຊົມເຊີຍ,Khen ngợi / Hoan nghênh,To praise / To congratulate,xom-soey,verb,Giao tiếp,ຊົມເຊີຍຜົນງານ,Khen ngợi thành tích
+ຊົ່ວ,Xấu xa / Tệ,Bad / Evil,xua,adjective,Mở rộng - Tính từ,ຄົນຊົ່ວ,Kẻ xấu
+ຊົ່ວໂມງ,Tiếng đồng hồ,Hour (duration),xua-moong,noun,Bài 04,ສອງຊົ່ວໂມງ,Hai tiếng đồng hồ
+ຊຽງຂວາງ,Xieng Khouang (Cánh đồng Chum),Xieng Khouang,xiang-khuaang,noun,Địa lý Lào,ທົ່ງໄຫຫີນຊຽງຂວາງ,Cánh đồng Chum Xieng Khouang
+ຊ່ວຍ,Giúp đỡ,To help,xuay,verb,Bài 02,ຊ່ວຍຂ້ອຍແດ່,Giúp tôi với
+ຊ່ວຍເຫຼືອ,Cứu giúp / Tương trợ,To assist,xuay-leua,verb,Bài 12,ຊ່ວຍເຫຼືອກັນ,Tương trợ lẫn nhau
+ຊ່າງຕັດຫຍິບ,Thợ may,Tailor / Dressmaker,xaang-tat-nyip,noun,Nghề nghiệp,ຊ່າງຕັດຫຍິບເສື້ອສິ້ນ,Thợ may áo váy sinh
+ຊ່າງຖ່າຍຮູບ,Nhiếp ảnh gia / Thợ chụp ảnh,Photographer,xaang-thaai-huup,noun,Nghề nghiệp,ຊ່າງຖ່າຍຮູບມືອາຊີບ,Nhiếp ảnh gia chuyên nghiệp
+ຊ່າງແປງ,Thợ sửa chữa,Mechanic / Repairman,xaang-paeng,noun,Bài 09,ຊ່າງແປງລົດ,Thợ sửa xe
+ຊ່າງໄຟ,Thợ điện,Electrician,xaang-fai,noun,Nghề nghiệp,ຊ່າງໄຟສ້ອມແປງໄຟ,Thợ điện sửa đường dây
+ຊ່າງໄມ້,Thợ mộc,Carpenter,xaang-mai,noun,Bài 09,ຊ່າງໄມ້ສີມືດີ,Thợ mộc tay nghề cao
+ຊ້າ,Muộn / Trễ,Late / Slow,xaa,adjective,Bài 04,ມາວຽກຊ້າ,Đến làm muộn
+ຊ້າງ,Con voi (biểu tượng đất nước Triệu Voi),Elephant,xaang,noun,Mở rộng - Động vật,ເມືອງລ້ານຊ້າງ,Xứ sở Triệu Voi
+ຊ້າຍ,Bên trái,Left,saai,noun,Bài 08,ຢູ່ເບື້ອງຊ້າຍ,Ở phía bên trái
 ຊ້າໆ,Chậm rãi / Từ từ,Slowly,xaa-xaa,adverb,Bài 01,ກະລຸນາເວົ້າຊ້າໆ,Xin hãy nói chậm lại
+ຍອມຮັບ,Chấp nhận / Thừa nhận,To accept / To admit,nyawm-hap,verb,Giao tiếp,ຍອມຮັບຄວາມຈິງ,Chấp nhận sự thật
+ຍັງ,Vẫn / Chưa,Still / Yet,nyang,adverb,Bài 12,ຍັງບໍ່ແລ້ວ,Vẫn chưa xong
+ຍາກ,Khó,Difficult / Hard,nyaak,adjective,Bài 05,ບົດຮຽນຍາກ,Bài học khó
+ຍາຍ,Bà ngoại,Maternal grandmother,yaai,noun,Mở rộng - Gia đình,ຍາຍເຖົ້າແລ້ວ,Bà ngoại già rồi
+ຍາມ,Bảo vệ,Security guard,nyaam,noun,Nghề nghiệp,ພະນັກງານຍາມ,Nhân viên bảo vệ
+ຍາວ,Dài,Long,nyaao,adjective,Bài 11,ໄມ້ຍາວ,Cây gậy dài
 ຍິນດີທີ່ໄດ້ຮູ້ຈັກ,Rất vui được biết bạn,Nice to meet you,yin-dee-thee-dai-hu-chak,phrase,Bài 01,ຍິນດີທີ່ໄດ້ຮູ້ຈັກເຈົ້າ,Rất vui được quen bạn
 ຍີ່ປຸ່ນ,Nhật Bản,Japan,yee-pun,noun,Bài 01,ຄົນຍີ່ປຸ່ນ,Người Nhật Bản
-ນາມສະກຸນ,Họ (tên họ),Surname / Last name,naam-sa-kun,noun,Bài 01,ນາມສະກຸນຫຍັງ,Họ là gì
-ບໍ່ເຂົ້າໃຈ,Không hiểu,Don't understand,baw-khao-chai,phrase,Bài 01,ຂ້ອຍບໍ່ເຂົ້າໃຈ,Tôi không hiểu
-ບໍ່ເປັນຫຍັງ,Không có chi / Không sao,You're welcome / No problem,baw-pen-nyang,phrase,Bài 01,ບໍ່ເປັນຫຍັງດອກ,Không sao đâu mà
-ບໍ່ແມ່ນ,Không phải,No / Not to be,baw-maen,phrase,Bài 01,ບໍ່ແມ່ນຂ້ອຍ,Không phải tôi
-ປະເທດ,Đất nước / Quốc gia,Country / Nation,pa-thet,noun,Bài 01,ປະເທດຂອງຂ້ອຍ,Đất nước của tôi
-ຝຣັ່ງ,Pháp / Người Tây,France / Westerner,fa-rang,noun,Bài 01,ປະເທດຝຣັ່ງ,Nước Pháp
-ພວກເຂົາ,Họ / Bọn họ,They / Them,phuak-khao,pronoun,Bài 01,ພວກເຂົາແມ່ນໃຜ,Họ là ai
-ພວກເຈົ້າ,Các bạn,You (plural),phuak-chao,pronoun,Bài 01,ພວກເຈົ້າສະບາຍດີບໍ,Các bạn khỏe không
-ພວກເຮົາ,Chúng tôi / Chúng ta,We / Us,phuak-hao,pronoun,Bài 01,ພວກເຮົາໄປນຳກັນ,Chúng ta cùng đi
-ພາສາ,Ngôn ngữ / Tiếng,Language,phaa-saa,noun,Bài 01,ພາສາລາວ,Tiếng Lào
-ພາສາລາວ,Tiếng Lào,Lao language,phaa-saa-lao,noun,Bài 01,ຂ້ອຍຮຽນພາສາລາວ,Tôi học tiếng Lào
-ພາສາຫວຽດ,Tiếng Việt,Vietnamese language,phaa-saa-viet,noun,Bài 01,ເຈົ້າເວົ້າພາສາຫວຽດໄດ້ບໍ,Bạn nói tiếng Việt được không
-ພາສາອັງກິດ,Tiếng Anh,English language,phaa-saa-ang-kit,noun,Bài 01,ພາສາອັງກິດຍາກ,Tiếng Anh khó
-ພົບກັນໃໝ່,Hẹn gặp lại,See you again,phop-kan-mai,phrase,Bài 01,ມື້ອື່ນພົບກັນໃໝ່,Ngày mai gặp lại
-ມາແຕ່,Đến từ,Come from,maa-tae,verb,Bài 01,ຂ້ອຍມາແຕ່ຫວຽດນາມ,Tôi đến từ Việt Nam
-ລາກ່ອນ,Tạm biệt,Goodbye,laa-kawn,phrase,Bài 01,ລາກ່ອນເດີ,Tạm biệt nhé
-ລາວ,Anh ấy / Cô ấy / Lào,He / She / Lao,lao,pronoun,Bài 01,ລາວມາແຕ່ໃສ,Cô ấy đến từ đâu
-ສະບາຍດີ,Xin chào,Hello / Good day,sa-bai-dee,phrase,Bài 01,ສະບາຍດີຕອນເຊົ້າ,Chào buổi sáng
-ສະບາຍດີບໍ,Bạn có khỏe không?,How are you?,sa-bai-dee-baw,phrase,Bài 01,ເຈົ້າສະບາຍດີບໍ,Bạn khỏe không
-ຫວຽດນາມ,Việt Nam,Vietnam,viet-naam,noun,Bài 01,ປະເທດຫວຽດນາມ,Đất nước Việt Nam
-ອາເມລິກາ,Nước Mỹ,America / USA,aa-me-li-kaa,noun,Bài 01,ຄົນອາເມລິກາ,Người Mỹ
-ເກົາຫຼີ,Hàn Quốc,Korea,kao-lee,noun,Bài 01,ປະເທດເກົາຫຼີ,Nước Hàn Quốc
-ເຂົ້າໃຈ,Hiểu,To understand,khao-chai,verb,Bài 01,ເຈົ້າເຂົ້າໃຈບໍ,Bạn có hiểu không
-ເຈົ້າ,Bạn / Anh / Chị / Vâng,You / Yes (polite),chao,pronoun,Bài 01,ເຈົ້າແມ່ນໃຜ,Bạn là ai
-ເຈົ້າຊື່ຫຍັງ,Bạn tên là gì?,What is your name?,chao-seu-nyang,phrase,Bài 01,ເຈົ້າຊື່ຫຍັງເກາະ,Bạn tên là gì nhỉ
-ເພິ່ນ,Ngài / Ông ấy (kính trọng),He / She (polite),phoen,pronoun,Bài 01,ເພິ່ນເປັນອາຈານ,Thầy ấy là giáo viên
-ເວົ້າ,Nói,To speak / To talk,vao,verb,Bài 01,ເວົ້າພາສາລາວ,Nói tiếng Lào
-ແມ່ນ,Là / Đúng,Yes / To be,maen,verb,Bài 01,ແມ່ນແລ້ວ,Đúng rồi
-ໄດ້,Được / Có thể,Can / To get,dai,verb,Bài 01,ເວົ້າໄດ້ໜ້ອຍໜຶ່ງ,Nói được một chút
-ໄທ,Thái Lan,Thailand,thai,noun,Bài 01,ຄົນໄທ,Người Thái
-ໜ້ອຍໜຶ່ງ,Một chút / Một ít,A little bit,noy-neung,adverb,Bài 01,ຂ້ອຍເຂົ້າໃຈໜ້ອຍໜຶ່ງ,Tôi hiểu một chút
-ຄອບຄົວ,Gia đình,Family,khawp-khua,noun,Bài 02,ຄອບຄົວຂອງຂ້ອຍ,Gia đình của tôi
-ງາມ,Đẹp,Beautiful,ngaam,adjective,Bài 02,ດອກໄມ້ງາມ,Hoa đẹp
-ຊ່ວຍ,Giúp đỡ,To help,xuay,verb,Bài 02,ຊ່ວຍຂ້ອຍແດ່,Giúp tôi với
+ຍຸງ,Con muỗi,Mosquito,nyung,noun,Sinh vật,ຍຸງລາຍກັດ,Muỗi vằn đốt
+ຍົກມືຂຶ້ນ,Giơ tay lên phát biểu,Raise your hand,nyok-mue-khuen,phrase,Khẩu ngữ lớp học,ໃຜຮູ້ຍົກມືຂຶ້ນ,Ai biết thì giơ tay lên
+ຍົນ,Máy bay,Airplane,nyon,noun,Bài 08,ຂີ່ຍົນ,Đi máy bay
 ຍ່າ,Bà nội,Paternal grandmother,yaa,noun,Bài 02,ຍ່າໃຈດີ,Bà nội hiền từ
-ຕຸ້ຍ,Béo / Mập,Fat / Chubby,tuy,adjective,Bài 02,ລາວຕຸ້ຍ,Cậu ấy mập mạp
-ນ້ອງ,Em,Younger sibling,nawng,noun,Bài 02,ນ້ອງຮັກ,Em yêu quý
-ນ້ອງຊາຍ,Em trai,Younger brother,nawng-xaai,noun,Bài 02,ນ້ອງຊາຍຮຽນເກັ່ງ,Em trai học giỏi
-ນ້ອງສາວ,Em gái,Younger sister,nawng-saao,noun,Bài 02,ນ້ອງສາວນ້ອຍ,Em gái nhỏ
-ນ້າບ່າວ,Cậu (em trai của mẹ),Uncle (mother's younger brother),naa-baao,noun,Bài 02,ນ້າບ່າວໄປວຽກ,Cậu đi làm
-ນ້າສາວ,Dì (em gái của mẹ),Aunt (mother's younger sister),naa-saao,noun,Bài 02,ນ້າສາວງາມ,Dì rất đẹp
-ບ້ານ,Làng / Nhà,Village / Home,baan,noun,Bài 02,ບ້ານເກີດ,Quê hương / Nhà sinh
-ບໍ່ມີ,Không có,Don't have,baw-mee,verb,Bài 02,ບໍ່ມີເງິນ,Không có tiền
-ປີ,Năm / Tuổi,Year / Years old,pee,noun,Bài 02,ຂ້ອຍອາຍຸຊາວປີ,Tôi hai mươi tuổi
-ປູ່,Ông nội,Paternal grandfather,puu,noun,Bài 02,ປູ່ມີອາຍຸຫຼາຍ,Ông nội cao tuổi
-ປ້າ,Bác gái,Aunt (older),paa,noun,Bài 02,ປ້າຂາຍເຄື່ອງ,Bác gái bán hàng
-ຜົວ,Chồng,Husband,phua,noun,Bài 02,ຜົວເມຍ,Vợ chồng
-ພໍ່,Bố / Cha,Father,phaw,noun,Bài 02,ພໍ່ຂອງຂ້ອຍໃຈດີ,Bố tôi rất hiền
-ພໍ່ເຖົ້າ,Ông ngoại,Maternal grandfather,phaw-thao,noun,Bài 02,ພໍ່ເຖົ້າຢູ່ບ້ານ,Ông ngoại ở nhà
-ພໍ່ແມ່,Bố mẹ / Cha mẹ,Parents,phaw-mae,noun,Bài 02,ພໍ່ແມ່ຢູ່ໃສ,Bố mẹ ở đâu
-ມີ,Có,To have,mee,verb,Bài 02,ມີລູກຈັກຄົນ,Có mấy người con
-ຢູ່,Ở / Sống tại,To stay / To live,yuu,verb,Bài 02,ເຈົ້າຢູ່ໃສ,Bạn ở đâu
-ລຸງ,Bác trai,Uncle (older),lung,noun,Bài 02,ລຸງມາຢາມ,Bác trai đến thăm
-ລູກ,Con,Child,luuk,noun,Bài 02,ລູກຮັກ,Con yêu
-ລູກຊາຍ,Con trai,Son,luuk-xaai,noun,Bài 02,ລາວມີລູກຊາຍ,Anh ấy có con trai
-ລູກສາວ,Con gái,Daughter,luuk-saao,noun,Bài 02,ລູກສາວງາມຫຼາຍ,Con gái rất xinh
-ສະຫຼາດ,Thông minh,Smart / Intelligent,sa-laat,adjective,Bài 02,ນັກຮຽນສະຫຼາດ,Học sinh thông minh
-ສູງ,Cao,Tall / High,suung,adjective,Bài 02,ລາວສູງຫຼາຍ,Anh ấy rất cao
-ຫຼານ,Cháu,Niece / Nephew / Grandchild,laan,noun,Bài 02,ຫຼານນ້ອຍ,Cháu bé
-ຫຼານຊາຍ,Cháu trai,Nephew / Grandson,laan-xaai,noun,Bài 02,ຫຼານຊາຍສະຫຼາດ,Cháu trai thông minh
-ຫຼານສາວ,Cháu gái,Niece / Granddaughter,laan-saao,noun,Bài 02,ຫຼານສາວໜ້າຮັກ,Cháu gái đáng yêu
-ອາ,Cô (em gái của bố),Aunt (father's younger sister),aa,noun,Bài 02,ອາມາແຕ່ໃສ,Cô đến từ đâu
-ອາຍຸ,Tuổi,Age,aa-yu,noun,Bài 02,ເຈົ້າອາຍຸຈັກປີ,Bạn bao nhiêu tuổi
-ອາວ,Chú (em trai của bố),Uncle (father's younger brother),aao,noun,Bài 02,ອາວຢູ່ໄກ,Chú ở xa
-ອ້າຍ,Anh trai,Older brother,aai,noun,Bài 02,ອ້າຍຂອງຂ້ອຍ,Anh trai tôi
-ຮັກ,Yêu,To love,hak,verb,Bài 02,ຂ້ອຍຮັກຄອບຄົວ,Tôi yêu gia đình
-ເຕ້ຍ,Thấp / Lùn,Short,tia,adjective,Bài 02,ຄົນເຕ້ຍ,Người thấp
-ເມຍ,Vợ,Wife,mia,noun,Bài 02,ເມຍຂອງລາວ,Vợ của anh ấy
-ເອື້ອຍ,Chị gái,Older sister,euay,noun,Bài 02,ເອື້ອຍໃຈດີ,Chị gái tốt bụng
-ເຮືອນ,Ngôi nhà,House,heuan,noun,Bài 02,ເຮືອນຂອງຂ້ອຍ,Nhà của tôi
-ແຕ່ງງານ,Kết hôn / Cưới,To marry / Marriage,taeng-ngaan,verb,Bài 02,ແຕ່ງງານແລ້ວບໍ,Đã kết hôn chưa
-ແມ່,Mẹ,Mother,mae,noun,Bài 02,ແມ່ຮັກລູກ,Mẹ yêu con
-ແມ່ເຖົ້າ,Bà ngoại,Maternal grandmother,mae-thao,noun,Bài 02,ແມ່ເຖົ້າເຮັດອາຫານ,Bà ngoại nấu ăn
-ໂສດ,Độc thân,Single,sot,adjective,Bài 02,ຂ້ອຍຍັງໂສດ,Tôi vẫn độc thân
-ໃຈດີ,Tốt bụng / Hiền lành,Kind / Good-natured,chai-dee,adjective,Bài 02,ຄົນລາວໃຈດີ,Người Lào rất hiền
-ໜ້າຮັກ,Đáng yêu,Cute / Lovely,naa-hak,adjective,Bài 02,ເດັກນ້ອຍໜ້າຮັກ,Trẻ nhỏ đáng yêu
-ກ້ອນ,Hòn / Cục / Viên,Lump / Piece (classifier),kawn,noun,Bài 03,ຫີນໜຶ່ງກ້ອນ,Một hòn đá
-ຈອກ,Cốc / Ly,Cup / Mug,chawk,noun,Bài 03,ກາເຟສອງຈອກ,Hai cốc cà phê
-ຈັກ,Mấy / Bao nhiêu,How many / How much,chak,pronoun,Bài 03,ຈັກໂມງແລ້ວ,Mấy giờ rồi
-ຈານ,Đĩa,Plate,chaan,noun,Bài 03,ຈານໃຫຍ່,Cái đĩa lớn
-ຊາວ,Hai mươi (số 20),Twenty (20),xaao,number,Bài 03,ຊາວພັນ,Hai mươi nghìn
-ຊາວເອັດ,Hai mươi mốt (số 21),Twenty-one (21),xaao-et,number,Bài 03,ວັນທີຊາວເອັດ,Ngày hai mươi mốt
-ຕື້,"Tỷ (1,000,000,000)","Billion (1,000,000,000)",teu,number,Bài 03,ໜຶ່ງຕື້,Một tỷ
-ຖ້ວຍ,Bát / Chén,Bowl,thuay,noun,Bài 03,ເຂົ້າໜຶ່ງຖ້ວຍ,Một bát cơm
-ທັງໝົດ,Tất cả / Toàn bộ,All / Total,thang-mot,adverb,Bài 03,ທັງໝົດເທົ່າໃດ,Tất cả bao nhiêu
-ບ່ວງ,Thìa / Muỗng,Spoon,buang,noun,Bài 03,ບ່ວງໜຶ່ງອັນ,Một cái thìa
-ພັນ,"Nghìn (1,000)","Thousand (1,000)",phan,number,Bài 03,ສິບພັນ,Mười nghìn
-ມີດ,Dao,Knife,meet,noun,Bài 03,ມີດແຫຼມ,Dao sắc
-ລ້ານ,"Triệu (1,000,000)","Million (1,000,000)",laan,number,Bài 03,ໜຶ່ງລ້ານກີບ,Một triệu kíp
-ສອງ,Hai (số 2),Two (2),sawng,number,Bài 03,ສອງຄົນ,Hai người
-ສາມ,Ba (số 3),Three (3),saam,number,Bài 03,ສາມມື້,Ba ngày
-ສາມສິບ,Ba mươi (số 30),Thirty (30),saam-sip,number,Bài 03,ສາມສິບມື້,Ba mươi ngày
-ສິບ,Mười (số 10),Ten (10),sip,number,Bài 03,ສິບຄົນ,Mười người
-ສິບສອງ,Mười hai (số 12),Twelve (12),sip-sawng,number,Bài 03,ສິບສອງເດືອນ,Mười hai tháng
-ສິບສາມ,Mười ba (số 13),Thirteen (13),sip-saam,number,Bài 03,ສິບສາມປີ,Mười ba năm
-ສິບເອັດ,Mười một (số 11),Eleven (11),sip-et,number,Bài 03,ສິບເອັດໂມງ,Mười một giờ
-ສີ່,Bốn (số 4),Four (4),see,number,Bài 03,ສີ່ໂມງ,Bốn giờ
-ສີ່ສິບ,Bốn mươi (số 40),Forty (40),see-sip,number,Bài 03,ສີ່ສິບກິໂລ,Bốn mươi cân
-ສູນ,Không (số 0),Zero (0),suun,number,Bài 03,ເລກສູນ,Số không
-ສ້ອມ,Nĩa / Dĩa,Fork,sawm,noun,Bài 03,ບ່ວງແລະສ້ອມ,Thìa và nĩa
-ຫົກ,Sáu (số 6),Six (6),hok,number,Bài 03,ຫົກເດືອນ,Sáu tháng
-ຫົວ,Cuốn / Quyển / Củ,Book / Bulb (classifier),hua,noun,Bài 03,ປຶ້ມສາມຫົວ,Ba quyển sách
-ຫຼາຍ,Nhiều,Many / Much,lai,adjective,Bài 03,ຄົນຫຼາຍ,Nhiều người
-ຫ້າ,Năm (số 5),Five (5),haa,number,Bài 03,ຫ້າພັນ,Năm nghìn
-ຫ້າສິບ,Năm mươi (số 50),Fifty (50),haa-sip,number,Bài 03,ຫ້າສິບເປີເຊັນ,Năm mươi phần trăm
-ອັນ,Cái / Chiếc (loại từ),Item / Thing (classifier),an,noun,Bài 03,ອັນນີ້,Cái này
-ຮ້ອຍ,Trăm (100),Hundred (100),hwy,number,Bài 03,ໜຶ່ງຮ້ອຍ,Một trăm
-ເກົ້າ,Chín (số 9),Nine (9),kao,number,Bài 03,ເກົ້າສິບ,Chín mươi
-ເຄິ່ງ,Nửa / Một nửa,Half,khoeng,noun,Bài 03,ເຄິ່ງຊົ່ວໂມງ,Nửa giờ
-ເຈັດ,Bảy (số 7),Seven (7),chet,number,Bài 03,ເຈັດວັນ,Bảy ngày
-ເທົ່າໃດ,Bao nhiêu,How much,thao-dai,pronoun,Bài 03,ລາຄາເທົ່າໃດ,Giá bao nhiêu
-ເບີ,Số (hiệu),Number (phone/room),ber,noun,Bài 03,ເບີຫ້ອງ,Số phòng
-ເລກ,Con số / Chữ số,Number / Digit,lek,noun,Bài 03,ເລກໂທລະສັບ,Số điện thoại
-ແກ້ວ,Chai / Lọ,Bottle / Glass,kaew,noun,Bài 03,ນ້ຳໜຶ່ງແກ້ວ,Một chai nước
-ແປດ,Tám (số 8),Eight (8),paet,number,Bài 03,ແປດໂມງ,Tám giờ
-ແສນ,"Trăm nghìn (100,000)","Hundred thousand (100,000)",saen,number,Bài 03,ໜຶ່ງແສນກີບ,Một trăm nghìn kíp
-ໂຕ,Con / Chiếc áo (loại từ),Animal / Shirt (classifier),toh,noun,Bài 03,ໝາສອງໂຕ,Hai con chó
-ໜຶ່ງ,Một (số 1),One (1),neung,number,Bài 03,ໜຶ່ງອັນ,Một cái
-ໜ້ອຍ,Ít,Few / Little,noy,adjective,Bài 03,ມີເງິນໜ້ອຍ,Có ít tiền
-ໝື່ນ,"Mười nghìn (10,000)","Ten thousand (10,000)",meun,number,Bài 03,ໜຶ່ງໝື່ນກີບ,Một vạn kíp
-ກ່ອນ,Trước,Before,kawn,adverb,Bài 04,ກິນເຂົ້າກ່ອນ,Ăn cơm trước
-ຊົ່ວໂມງ,Tiếng đồng hồ,Hour (duration),xua-moong,noun,Bài 04,ສອງຊົ່ວໂມງ,Hai tiếng đồng hồ
-ຊ້າ,Muộn / Trễ,Late / Slow,xaa,adjective,Bài 04,ມາວຽກຊ້າ,Đến làm muộn
+ຍ່າງ,Đi bộ,To walk,nyaang,verb,Bài 08,ຍ່າງໄປ,Đi bộ sang
+ດວງຈັນ,Mặt trăng,Moon,duang-chan,noun,Mở rộng - Tự nhiên,ດວງຈັນເຕັມດວງ,Trăng tròn
+ດອກເບ້ຍ,Lãi suất / Tiền lãi,Interest rate,dawk-bia,noun,Tài chính,ດອກເບ້ຍເງິນຝາກ,Lãi suất tiền gửi
+ດອກໄຟ,Bóng đèn điện,Light bulb,dawk-fai,noun,Gia dụng,ປ່ຽນດອກໄຟ,Thay bóng đèn
+ດອກໄມ້,Bông hoa,Flower,dawk-mai,noun,Mở rộng - Thực vật,ດອກຈຳປາ,Hoa Champa (quốc hoa Lào)
+ດັງ,Ồn ào / Vang to,Noisy / Loud,dang,adjective,Bài 10,ສຽງດັງຫຼາຍ,Tiếng to quá
+ດັ່ງນັ້ນ,Do đó / Vì vậy,Therefore,dang-nan,conjunction,Mở rộng - Từ nối,ດັ່ງນັ້ນຕ້ອງພະຍາຍາມ,Vì thế nên phải cố gắng
+ດາວ,Ngôi sao,Star,daao,noun,Mở rộng - Tự nhiên,ດາວເຕັມຟ້າ,Sao sáng đầy trời
+ດາວໂຫຼດ,Tải xuống / Download,To download,daao-loot,verb,Công nghệ,ດາວໂຫຼດແອັບ,Tải ứng dụng về
+ດີ,Tốt / Đẹp,Good,dee,adjective,Bài 11,ຄົນດີ,Người tốt
+ດີໃຈ,Vui mừng,Glad / Happy,dee-chai,adjective,Bài 12,ດີໃຈຫຼາຍທີ່ໄດ້ພົບ,Rất vui khi được gặp
+ດື່ມ,Uống,To drink,deum,verb,Bài 06,ດື່ມນ້ຳ,Uống nước
+ດຸໝັ່ນ,Chăm chỉ / Cần cù,Diligent / Hardworking,du-man,adjective,Tính cách,ນັກຮຽນດຸໝັ່ນ,Học sinh chăm chỉ cần cù
+ດົນຕີ,Âm nhạc,Music,don-tee,noun,Nghệ thuật,ຫຼິ້ນດົນຕີພື້ນເມືອງ,Chơi nhạc cụ dân tộc
+ດົ່ງ,Đồng (tiền Việt Nam),Dong (VND),dong,noun,Bài 07,ເງິນດົ່ງ,Tiền đồng
 ດຽວນີ້,Ngay bây giờ,Right now,diao-nee,adverb,Bài 04,ດຽວນີ້ໄປເລີຍ,Đi ngay bây giờ
+ດ່ານກວດຄົນເຂົ້າເມືອງ,Cửa khẩu xuất nhập cảnh,Immigration checkpoint,daan-kuat-khon-khao-mueang,noun,Du lịch,ຂ້າມດ່ານກວດຄົນເຂົ້າເມືອງ,Qua cửa khẩu xuất nhập cảnh
 ຕອນກາງຄືນ,Ban đêm,Night time,tawn-kaang-kheun,noun,Bài 04,ຕອນກາງຄືນນອນ,Ban đêm ngủ
+ຕອນຄ່ຳ,Chập tối / Buổi tối,Nightfall / Dusk,tawn-kham,noun,Thời gian,ຕອນຄ່ຳກິນເຂົ້ານຳກັນ,Chập tối ăn cơm quây quần
 ຕອນນີ້,Bây giờ / Hiện tại,Now / Currently,tawn-nee,adverb,Bài 04,ຕອນນີ້ເຮັດຫຍັງ,Bây giờ làm gì
 ຕອນສວາຍ,Buổi trưa,Noon / Afternoon,tawn-suay,noun,Bài 04,ຕອນສວາຍຮ້ອນ,Buổi trưa nóng
 ຕອນເຊົ້າ,Buổi sáng,Morning,tawn-xao,noun,Bài 04,ຕອນເຊົ້າກິນເຂົ້າ,Buổi sáng ăn cơm
 ຕອນແລງ,Buổi chiều / Buổi tối,Evening,tawn-laeng,noun,Bài 04,ຕອນແລງໄປຕະຫຼາດ,Buổi chiều đi chợ
+ຕອບ,Trả lời,To answer,tawp,verb,Bài 05,ຕອບຄຳຖາມ,Trả lời câu hỏi
+ຕະຫຼາດ,Chợ,Market,ta-laat,noun,Bài 07,ໄປຕະຫຼາດເຊົ້າ,Đi chợ sáng
+ຕະຫຼາດກາງຄືນ,Chợ đêm,Night market,ta-laat-kaang-khuen,noun,Mở rộng - Địa điểm,ຍ່າງຫຼິ້ນຕະຫຼາດກາງຄືນ,Đi dạo chợ đêm
+ຕະຫຼາດຫຼັກຊັບ,Thị trường chứng khoán,Stock exchange,ta-laat-lak-sap,noun,Tài chính,ຕະຫຼາດຫຼັກຊັບລາວ (LSX),Sở Giao dịch Chứng khoán Lào
+ຕັກບາດ,Khất thực / Cúng dường buổi sáng,Alms giving ceremony (Tak Bat),tak-baat,noun,Văn hóa,ຕັກບາດເຂົ້າໜຽວຫຼວງພະບາງ,Cúng dường xôi nếp tại Luang Prabang
+ຕັດສິນໃຈ,Quyết định,To decide,tat-sin-chai,verb,Tâm lý,ຕັດສິນໃຈແລ້ວ,Đã quyết định rồi
+ຕັບ,Gan,Liver,tap,noun,Nội tạng,ກວດຕັບ,Kiểm tra chức năng gan
+ຕັ່ງ,Cái ghế,Chair,tang,noun,Bài 05,ນັ່ງຕັ່ງ,Ngồi ghế
+ຕັ້ງໃຈ,Chăm chỉ / Tập trung,Attentive / Diligent,tang-chai,adjective,Bài 05,ຕັ້ງໃຈຮຽນ,Chăm chỉ học tập
+ຕາ,Ông ngoại / Mắt,Maternal grandfather / Eye,taa,noun,Mở rộng - Gia đình,ຕາຮັກຫຼານ,Ông ngoại thương cháu
+ຕາດກວາງຊີ,Thác Kuang Si (Luang Prabang),Kuang Si Falls,taat-kuaang-see,noun,Địa danh,ໄປອາບນ້ຳຕາດກວາງຊີ,Đi tắm thác Kuang Si
+ຕາເວັນ,Mặt trời,Sun,taa-ven,noun,Mở rộng - Tự nhiên,ຕາເວັນຂຶ້ນ,Mặt trời mọc
+ຕາເວັນຕົກ,Hướng Tây / Mặt trời lặn,West / Sunset,taa-ven-tok,noun,Phương hướng,ທິດທາງຕາເວັນຕົກ,Hướng Tây
+ຕາເວັນອອກ,Hướng Đông / Mặt trời mọc,East / Sunrise,taa-ven-awk,noun,Phương hướng,ທິດທາງຕາເວັນອອກ,Hướng mặt trời mọc (hướng Đông)
+ຕຳຫຼວດ,Cảnh sát / Công an,Police,tam-luat,noun,Bài 09,ຕຳຫຼວດຈະລາຈອນ,Cảnh sát giao thông
+ຕຳໝາກຫຸ່ງ,Nộm đu đủ (Tam Mak Houng),Papaya salad,tam-maak-hung,noun,Bài 06,ຕຳໝາກຫຸ່ງເຜັດ,Nộm đu đủ cay
+ຕຳໝາກຮຸ່ງ,Nộm đu đủ (Tam Mak Houng),Spicy papaya salad,tam-maak-hung,noun,Mở rộng - Ẩm thực,ຕຳໝາກຮຸ່ງໃສ່ປາແດກ,Nộm đu đủ chấm mắm pa-đéc
+ຕິ,Thế à? / Sao? (nghi vấn thân mật),Tag question particle,ti,particle,Mở rộng - Khẩu ngữ,ແມ່ນແທ້ຕິ,Thật thế à?
+ຕິບເຂົ້າ,Giỏ đựng xôi đan bằng tre (Tip Khao),Lao sticky rice basket,tip-khao,noun,Văn hóa,ຕິບເຂົ້າໜຽວ,Giỏ típ đựng xôi nếp
+ຕີນ,Bàn chân,Foot,teen,noun,Mở rộng - Cơ thể,ເຈັບຕີນ,Đau chân
+ຕື່ນ,Thức dậy,To wake up,tuen,verb,Mở rộng - Hành động,ຕື່ນນອນຕອນເຊົ້າ,Thức dậy buổi sáng
+ຕື່ນນອນ,Thức dậy,To wake up,teun-nawn,verb,Bài 10,ຕື່ນນອນແຕ່ເຊົ້າ,Thức dậy từ sớm
+ຕື່ນເຕັ້ນ,Hồi hộp / Hào hứng,Excited / Thrilled,tuen-ten,adjective,Tâm lý,ຮູ້ສຶກຕື່ນເຕັ້ນ,Cảm thấy hồi hộp
+ຕື້,"Tỷ (1,000,000,000)","Billion (1,000,000,000)",teu,number,Bài 03,ໜຶ່ງຕື້,Một tỷ
+ຕຸ້ຍ,Béo / Mập,Fat / Chubby,tuy,adjective,Bài 02,ລາວຕຸ້ຍ,Cậu ấy mập mạp
+ຕູ້ເຢັນ,Tủ lạnh,Refrigerator,tuu-yen,noun,Bài 10,ເອົານ້ຳໃນຕູ້ເຢັນ,Lấy nước trong tủ lạnh
+ຕູ້ເສື້ອຜ້າ,Tủ quần áo,Wardrobe,tuu-seua-phaa,noun,Bài 10,ຕູ້ໄມ້,Tủ gỗ
+ຕູ້ເອທີເອັມ,Cây rút tiền tự động ATM,ATM machine,tuu-ee-thee-em,noun,Tài chính,ຖອນເງິນຢູ່ຕູ້ເອທີເອັມ,Rút tiền ở cây ATM
+ຕົກໃຈ,Giật mình / Hoảng hốt,Startled / Shocked,tok-chai,verb,Tâm lý,ຢ່າຕົກໃຈ,Đừng giật mình hoảng hốt
+ຕົນເອງ,Bản thân / Tự mình,Oneself / Self,ton-eeng,pronoun,Mở rộng - Đại từ,ເບິ່ງແຍງຕົນເອງ,Tự chăm sóc bản thân
+ຕົວອັກສອນ,Ký tự / Chữ cái,Alphabet / Character,tua-ak-sawn,noun,Ngôn ngữ,ພະຍັນຊະນະແລະສະຫຼະ,Phụ âm và nguyên âm
+ຕົ້ນໄມ້,Cây cối,Tree,ton-mai,noun,Mở rộng - Thực vật,ປູກຕົ້ນໄມ້,Trồng cây xanh
+ຕົ້ມ,Luộc / Nấu súp,Boiled / To boil,tom,verb,Bài 06,ໄຂ່ຕົ້ມ,Trứng luộc
+ຕົ້ມຍຳ,Canh chua cay Tom Yum,Spicy sour soup,tom-yam,noun,Mở rộng - Ẩm thực,ຕົ້ມຍຳກຸ້ງ,Canh tôm chua cay
+ຕົ້ມໄກ່,Canh gà luộc / Nấu lá chua,Chicken soup,tom-kai,noun,Ẩm thực,ຕົ້ມໄກ່ໃສ່ໃບມ່ວງ,Gà nấu lá xoài chua thanh
+ຕຽງ,Cái giường,Bed,tiang,noun,Bài 10,ຕຽງນອນ,Giường ngủ
+ຕ່ຳ,Thấp,Low / Short,tam,adjective,Mở rộng - Tính từ,ເພດານຕ່ຳ,Trần nhà thấp
+ຕ້ອງ,Phải (cần phải),Must / Have to,tawng,verb,Bài 12,ຕ້ອງໄປດຽວນີ້,Phải đi ngay bây giờ
+ຕໍ່ສູ້,Chiến đấu / Phấn đấu,To fight / To struggle,taw-suu,verb,Hành động,ຕໍ່ສູ້ເພື່ອຄວາມຍຸຕິທຳ,Chiến đấu vì công lý
+ຖອນເງິນ,Rút tiền mặt,Withdraw cash,thawn-ngoen,verb,Tài chính,ຖອນເງິນຢູ່ຕູ້ ATM,Rút tiền ở cây ATM
+ຖະໜົນ,Đường phố,Street / Avenue,tha-non,noun,Bài 08,ຖະໜົນໃຫຍ່,Đường lớn
+ຖານຂໍ້ມູນ,Cơ sở dữ liệu (Database),Database,thaan-khaw-muun,noun,Công nghệ,ຈັດເກັບໃນຖານຂໍ້ມູນ,Lưu trữ trong cơ sở dữ liệu
+ຖາມ,Hỏi,To ask,thaam,verb,Bài 05,ຖາມຄຳຖາມ,Hỏi câu hỏi
+ຖືກ,Rẻ / Đúng,Cheap / Correct,theuk,adjective,Bài 07,ລາຄາຖືກ,Giá rẻ
+ຖູເຮືອນ,Lau nhà,To mop the floor,thuu-heuan,verb,Bài 10,ຖູເຮືອນທຸກມື້,Lau nhà hằng ngày
+ຖູແຂ້ວ,Đánh răng,To brush teeth,thuu-khaew,verb,Bài 10,ຖູແຂ້ວທຸກມື້,Đánh răng mỗi ngày
+ຖົງຕີນ,Đôi tất / Đôi vớ,Socks,thong-teen,noun,Bài 07,ຖົງຕີນດຳ,Tất đen
+ຖົງຢາງ,Túi nilon,Plastic bag,thong-yaang,noun,Bài 07,ບໍ່ເອົາຖົງຢາງ,Không lấy túi nilon
+ຖົ່ວຍາວ,Đậu đũa,Long bean / Yardlong bean,thua-nyaao,noun,Rau củ,ຕຳຖົ່ວຍາວ,Nộm đậu đũa
+ຖົ່ວດິນ,Lạc / Đậu phộng,Peanut,thua-din,noun,Nông sản,ຖົ່ວດິນຂົ້ວ,Lạc rang giòn
+ຖ່າຍຮູບ,Chụp ảnh,To take a photo,thaai-huup,verb,Bài 12,ຖ່າຍຮູບງາມ,Chụp ảnh đẹp
+ຖ້ວຍ,Bát / Chén,Bowl,thuay,noun,Bài 03,ເຂົ້າໜຶ່ງຖ້ວຍ,Một bát cơm
+ຖ້າ,Nếu / Nếu như,If,thaa,conjunction,Mở rộng - Từ nối,ຖ້າຝົນບໍ່ຕົກ,Nếu trời không mưa
+ຖ້ຳ,Hang động,Cave,tham,noun,Bài 09,ຖ້ຳກອງລໍ,Hang Kong Lor
+ທອດ,Chiên / Rán,Fried,thawt,verb,Bài 06,ປາທອດ,Cá rán
+ທະນາຄານ,Ngân hàng,Bank,tha-naa-khaan,noun,Bài 09,ຝາກເງິນຢູ່ທະນາຄານ,Gửi tiền ở ngân hàng
+ທະນາຍຄວາມ,Luật sư,Lawyer / Attorney,tha-naai-khuaam,noun,Nghề nghiệp,ປຶກສາທະນາຍຄວາມ,Tham vấn luật sư
+ທະຫານ,Bộ đội / Quân nhân,Soldier / Military,tha-haan,noun,Bài 09,ທະຫານປ້ອງກັນຊາດ,Bộ đội bảo vệ tổ quốc
+ທະເລ,Biển,Sea / Ocean,tha-lee,noun,Mở rộng - Địa lý,ໄປທ່ຽວທະເລ,Đi du lịch biển
+ທັງໝົດ,Tất cả / Toàn bộ,All / Total,thang-mot,adverb,Bài 03,ທັງໝົດເທົ່າໃດ,Tất cả bao nhiêu
 ທັນ,Kịp,In time,than,verb,Bài 04,ທັນເວລາ,Kịp giờ
+ທາງ,Đường đi / Hướng,Road / Way / Direction,thaang,noun,Bài 08,ຖາມທາງ,Hỏi đường
+ທາດຫຼວງ,Thạt Luổng (Bảo tháp Vientiane),Pha That Luang,thaat-luang,noun,Mở rộng - Địa danh,ບຸນນະມັດສະການພະທາດຫຼວງ,Lễ hội Thạt Luổng
+ທຳມະດາ,Bình thường,Normal / Ordinary,tham-ma-daa,adjective,Bài 11,ມື້ທຳມະດາ,Ngày bình thường
+ທິດສະດີ,Lý thuyết,Theory,thit-sa-dee,noun,Khoa học,ທິດສະດີແລະພາກປະຕິບັດ,Lý thuyết và thực hành
+ທິດເໜືອ,Hướng Bắc,North,thit-nuea,noun,Phương hướng,ພາກເໜືອຂອງລາວ,Miền Bắc nước Lào
+ທິດໃຕ້,Hướng Nam,South,thit-tai,noun,Phương hướng,ພາກໃຕ້ຂອງລາວ,Miền Nam nước Lào
+ທີສອງ,Thứ hai / Hạng nhì,Second,thee-sawng,number,Số thứ tự,ອັນດັບທີສອງ,Xếp hạng thứ hai
+ທີສາມ,Thứ ba / Hạng ba,Third,thee-saam,number,Số thứ tự,ລາງວັນທີສາມ,Giải ba
+ທີສີ່,Thứ tư,Fourth,thee-see,number,Số thứ tự,ບົດທີສີ່,Chương thứ tư
+ທີຫ້າ,Thứ năm,Fifth,thee-haa,number,Số thứ tự,ຊັ້ນທີຫ້າ,Tầng thứ năm
+ທີໜຶ່ງ,Thứ nhất / Hạng nhất,First / Number one,thee-neung,number,Số thứ tự,ບົດຮຽນທີໜຶ່ງ,Bài học thứ nhất
+ທຶນການສຶກສາ,Học bổng,Scholarship,thun-kaan-seuk-saa,noun,Giáo dục,ໄດ້ຮັບທຶນການສຶກສາ,Được nhận học bổng du học
+ທຸລະກຳ,Giao dịch,Transaction,thu-la-kam,noun,Tài chính,ທຸລະກຳທາງການເງິນ,Giao dịch tài chính
+ທ່ອງທ່ຽວ,Du lịch,Travel / Tourism,thawng-thiaw,verb,Bài 09,ໄປທ່ອງທ່ຽວ,Đi du lịch
+ທ່ານໝໍ,Bác sĩ,Doctor,thaan-maw,noun,Bài 09,ທ່ານໝໍປິ່ນປົວ,Bác sĩ chữa bệnh
+ທ່ຽງຄືນ,Nửa đêm (12h đêm),Midnight,thiang-khuen,noun,Thời gian,ນອນຕອນທ່ຽງຄືນ,Ngủ lúc nửa đêm
+ທ້ອງ,Bụng,Stomach / Belly,thawng,noun,Mở rộng - Cơ thể,ເຈັບທ້ອງ,Đau bụng
+ທ້ອງຟ້າ,Bầu trời,Sky,thawng-faa,noun,Mở rộng - Tự nhiên,ທ້ອງຟ້າແຈ່ມໃສ,Bầu trời trong xanh
+ນອກ,Ngoài / Bên ngoài,Outside,nawk,preposition,Mở rộng - Giới từ,ຢູ່ນອກເຮືອນ,Ở ngoài sân/nhà
+ນອນ,Ngủ,To sleep,nawn,verb,Bài 10,ເຂົ້ານອນໄວ,Đi ngủ sớm
+ນະຄອນຫຼວງ,Thủ đô / Thành phố lớn,Capital city,na-khon-luang,noun,Bài 09,ນະຄອນຫຼວງວຽງຈັນ,Thủ đô Vientiane
+ນະຄອນຫຼວງວຽງຈັນ,Thủ đô Viêng Chăn,Vientiane Capital,na-khawn-luang-viang-chan,noun,Địa lý Lào,ໄປທ່ຽວນtraceນະຄອນຫຼວງວຽງຈັນ,Đi tham quan thủ đô Viêng Chăn
+ນະໂຍບາຍ,Chính sách,Policy,na-nyoo-baai,noun,Nhà nước,ນະໂຍບາຍສົ່ງເສີມການລົງທຶນ,Chính sách khuyến khích đầu tư
+ນັກກິລາ,Vận động viên,Athlete,nak-ki-laa,noun,Nghề nghiệp,ນັກກິລາແລ່ນ,Vận động viên chạy
+ນັກຂຽນ,Nhà văn,Writer / Author,nak-khian,noun,Nghề nghiệp,ນັກຂຽນຊື່ດັງ,Nhà văn nổi tiếng
+ນັກຂ່າວ,Nhà báo / Phóng viên,Journalist / Reporter,nak-khaao,noun,Nghề nghiệp,ນັກຂ່າວໂທລະພາບ,Phóng viên truyền hình
+ນັກດົນຕີ,Nhạc công / Nhạc sĩ,Musician,nak-don-tee,noun,Nghề nghiệp,ນັກດົນຕີເປົ່າແຄນ,Nghệ nhân thổi khèn Lào
+ນັກທຸລະກິດ,Doanh nhân,Businessman,nak-thu-la-kit,noun,Bài 09,ນັກທຸລະກິດເກັ່ງ,Doanh nhân giỏi
+ນັກບວດ,Tu sĩ,Monk / Clergy,nak-buat,noun,Tôn giáo,ນັກບວດປະຕິບັດທຳ,Tu sĩ tu tập
+ນັກບິນ,Phi công,Pilot,nak-bin,noun,Nghề nghiệp,ນັກບິນສາຍການບິນລາວ,Phi công Hãng hàng không Quốc gia Lào
+ນັກວິທະຍາສາດ,Nhà khoa học,Scientist,nak-vit-tha-yaa-saat,noun,Nghề nghiệp,ນັກວິທະຍາສາດຄົ້ນຄວ້າ,Nhà khoa học nghiên cứu
+ນັກສະແດງ,Diễn viên,Actor / Actress,nak-sa-daeng,noun,Nghề nghiệp,ນັກສະແດງຮູບເງົາ,Diễn viên điện ảnh
+ນັກສຶກສາ,Sinh viên,University student,nak-seuk-saa,noun,Bài 05,ນັກສຶກສາລາວ,Sinh viên Lào
+ນັກຮຽນ,Học sinh,Student / Pupil,nak-hian,noun,Bài 05,ນັກຮຽນຕັ້ງໃຈ,Học sinh chăm chỉ
+ນັກຮ້ອງ,Ca sĩ,Singer,nak-hawng,noun,Nghề nghiệp,ນັກຮ້ອງສຽງດີ,Ca sĩ hát hay
+ນັກແປ,Người dịch / Biên dịch viên,Translator,nak-pae,noun,Nghề nghiệp,ນັກແປພາສາລາວ-ຫວຽດ,Biên dịch viên Lào - Việt
+ນັ່ງ,Ngồi,To sit,nang,verb,Bài 12,ນັ່ງລົງ,Ngồi xuống
+ນາຍບ້ານ,Trưởng bản / Trưởng thôn,Village Chief,naai-baan,noun,Nhà nước,ຫ້ອງການນາຍບ້ານ,Văn phòng trưởng bản
+ນາຍົກລັດຖະມົນຕີ,Thủ tướng chính phủ,Prime Minister,naa-nyok-lat-tha-mon-tee,noun,Nhà nước,ນາຍົກລັດຖະມົນຕີກ່າວເປີດງານ,Thủ tướng phát biểu khai mạc
 ນາທີ,Phút,Minute,naa-thee,noun,Bài 04,ສິບຫ້ານາທີ,Mười lăm phút
+ນາມສະກຸນ,Họ (tên họ),Surname / Last name,naam-sa-kun,noun,Bài 01,ນາມສະກຸນຫຍັງ,Họ là gì
+ນິ້ວມື,Ngón tay,Finger,niv-mue,noun,Mở rộng - Cơ thể,ນິ້ວມືທັງຫ້າ,Năm ngón tay
+ນຸ່ງເຄື່ອງ,Mặc quần áo,To get dressed,nung-khuang,verb,Bài 10,ນຸ່ງເຄື່ອງງາມ,Mặc đồ đẹp
+ນົກ,Con chim,Bird,nok,noun,Mở rộng - Động vật,ນົກບິນເທິງຟ້າ,Chim bay lượn trên trời
+ນົມ,Sữa,Milk,nom,noun,Bài 06,ນົມສົດ,Sữa tươi
+ນ້ອງ,Em,Younger sibling,nawng,noun,Bài 02,ນ້ອງຮັກ,Em yêu quý
+ນ້ອງຊາຍ,Em trai,Younger brother,nawng-xaai,noun,Bài 02,ນ້ອງຊາຍຮຽນເກັ່ງ,Em trai học giỏi
+ນ້ອງສາວ,Em gái,Younger sister,nawng-saao,noun,Bài 02,ນ້ອງສາວນ້ອຍ,Em gái nhỏ
+ນ້ອຍ,Nhỏ / Bé,Small / Little,noy,adjective,Bài 07,ລົດນ້ອຍ,Xe nhỏ
+ນ້ອຍໃຈ,Tủi thân / Hờn dỗi,Hurt feelings / Sulky,nawy-chai,adjective,Tâm lý,ຢ່ານ້ອຍໃຈເລີຍ,Đừng tủi thân nữa mà
+ນ້ອຍໆ,Bé tí / Chút ít,A little / Tiny,nawy-nawy,adverb,Nhấn mạnh,ກິນໜ້ອຍໆ,Ăn một chút thôi
+ນ້າ,Dì / Cậu (em của mẹ),Maternal uncle/aunt,naa,noun,Mở rộng - Gia đình,ນ້າຊື້ເຂົ້າໜົມໃຫ້,Dì mua bánh cho
+ນ້າບ່າວ,Cậu (em trai của mẹ),Uncle (mother's younger brother),naa-baao,noun,Bài 02,ນ້າບ່າວໄປວຽກ,Cậu đi làm
+ນ້າສາວ,Dì (em gái của mẹ),Aunt (mother's younger sister),naa-saao,noun,Bài 02,ນ້າສາວງາມ,Dì rất đẹp
+ນ້ຳ,Nước,Water,nam,noun,Bài 06,ນ້ຳດື່ມ,Nước uống
+ນ້ຳກາເຟ,Cà phê,Coffee,nam-kaa-fee,noun,Đồ uống,ກາເຟດຳບໍ່ໃສ່ນ້ຳຕານ,Cà phê đen không đường
+ນ້ຳກ້ອນ,Nước đá / Đá lạnh,Ice,nam-kawn,noun,Bài 06,ເອົານ້ຳກ້ອນ,Lấy đá lạnh
+ນ້ຳຄ້າງ,Giọt sương mai,Dew,nam-khaang,noun,Thời tiết,ນ້ຳຄ້າງເທິງຍອດຫຍ້າ,Hạt sương đọng trên ngọn cỏ
+ນ້ຳຊາ,Nước chè / Trà,Tea water,nam-xaa,noun,Đồ uống,ດື່ມນ້ຳຊາຮ້ອນ,Uống nước chè nóng
+ນ້ຳດື່ມ,Nước uống,Drinking water,nam-duem,noun,Mở rộng - Đồ uống,ດື່ມນ້ຳດື່ມບໍລິສຸດ,Uống nước tinh khiết
+ນ້ຳຕາ,Nước mắt,Tears,nam-taa,noun,Cơ thể,ນ້ຳຕາໄຫຼ,Nước mắt tuôn rơi
+ນ້ຳຕານ,Đường,Sugar,nam-taan,noun,Mở rộng - Gia vị,ນ້ຳຕານຫວານ,Đường ngọt
+ນ້ຳຕົກຕາດ,Thác nước,Waterfall,nam-tok-taat,noun,Bài 09,ຕາດກວາງຊີ,Thác Kuang Si
+ນ້ຳຖ້ວມ,Lũ lụt / Ngập úng,Flood,nam-thuam,noun,Thiên tai,ລະວັງນ້ຳຖ້ວມ,Đề phòng lũ lụt
+ນ້ຳປາ,Nước mắm,Fish sauce,nam-paa,noun,Mở rộng - Gia vị,ໃສ່ນ້ຳປາ,Nêm nước mắm
+ນ້ຳມັນ,Xăng dầu,Gasoline / Fuel,nam-man,noun,Bài 08,ປ້ຳນ້ຳມັນ,Cây xăng
+ນ້ຳສົ້ມ,Nước cam ép,Orange juice,nam-som,noun,Đồ uống,ນ້ຳສົ້ມຄັ້ນສົດ,Nước cam vắt tươi
+ນ້ຳອ້ອຍ,Nước mía,Sugarcane juice,nam-awy,noun,Đồ uống,ດື່ມນ້ຳອ້ອຍເຢັນ,Uống nước mía đá
+ນ້ຳເຕົ້າຫູ້,Sữa đậu nành,Soy milk,nam-tao-huu,noun,Đồ uống,ນ້ຳເຕົ້າຫູ້ຮ້ອນ,Sữa đậu nành nóng
+ນ້ຳເຫື່ອ,Mồ hôi,Sweat,nam-huea,noun,Cơ thể,ນ້ຳເຫື່ອໄຫຼຍ້ອຍ,Mồ hôi nhễ nhại
+ນ້ຳໃຈ,Tấm lòng / Tinh thần,Spirit / Goodwill,nam-chai,noun,Đạo đức,ນ້ຳໃຈເອື້ອເຟື້ອ,Tấm lòng rộng mở san sẻ
+ນໍ,Nghĩ vậy nhỉ / Nhỉ,Right? / Isn't it?,naw,particle,Mở rộng - Khẩu ngữ,ອາກາດດີນໍ,Thời tiết dễ chịu nhỉ!
+ບອກ,Bảo / Nói cho biết,To tell,bawk,verb,Bài 12,ບອກຄວາມຈິງ,Nói sự thật
+ບັດປະຈຳຕົວ,Căn cước công dân / CMND,ID Card / Identity Card,bat-pa-cham-tua,noun,Hành chính,ເຮັດບັດປະຈຳຕົວໃໝ່,Làm thẻ căn cước mới
+ບັດເຄຣດິດ,Thẻ tín dụng,Credit card,bat-khee-dit,noun,Tài chính,ຈ່າຍຜ່ານບັດເຄຣດິດ,Thanh toán bằng thẻ tín dụng
+ບັນຊີ,Tài khoản (ngân hàng / MXH),Account,ban-xee,noun,Công nghệ,ເປີດບັນຊີໃໝ່,Mở tài khoản mới
+ບັນຊີທະນາຄານ,Tài khoản ngân hàng,Bank account,ban-xee-tha-naa-khaan,noun,Tài chính,ເລກບັນຊີທະນາຄານ,Số tài khoản ngân hàng
+ບາງ,Mỏng,Thin,baang,adjective,Bài 11,ເຈ້ຍບາງ,Tờ giấy mỏng
+ບາງເທື່ອ,Có lẽ / Đôi khi,Maybe / Sometimes,baang-theua,adverb,Bài 12,ບາງເທື່ອໄປ,Đôi khi đi
+ບາດ,Đồng Bạt (Thái Lan),Baht (THB),baat,noun,Bài 07,ຈ່າຍເປັນບາດ,Trả bằng bạt
+ບານບ້ວງ,Bóng rổ,Basketball,baan-buang,noun,Thể thao,ຫຼິ້ນບານບ້ວງ,Chơi bóng rổ
+ບານສົ່ງ,Bóng chuyền,Volleyball,baan-song,noun,Thể thao,ທີມບານສົ່ງ,Đội tuyển bóng chuyền
+ບານເຕະ,Bóng đá,Football / Soccer,baan-te,noun,Thể thao,ແຂ່ງຂັນບານເຕະ,Thi đấu bóng đá
+ບິກ,Bút bi,Pen,bik,noun,Bài 05,ບິກສີຟ້າ,Bút bi màu xanh
 ບຸນ,Lễ hội / Phúc đức,Festival / Merit,bun,noun,Bài 04,ບຸນປີໃໝ່ລາວ,Tết Lào (Bun Pi May)
+ບຸນກິນຈຽງ,Tết người H'Mông Lào,Hmong New Year,bun-kin-chiang,noun,Văn hóa Lào,ສະຫຼອງບຸນກິນຈຽງ,Ăn Tết H'Mông
+ບຸນຊ່ວງເຮືອ,Lễ hội Đua thuyền truyền thống,Boat Racing Festival,bun-xuang-heua,noun,Văn hóa Lào,ແຂ່ງຂັນບຸນຊ່ວງເຮືອ,Thi đấu đua thuyền
+ບຸນທາດຫຼວງ,Đại lễ hội Thạt Luổng (Rằm tháng 12 Phật lịch),That Luang Festival,bun-thaat-luang,noun,Văn hóa Lào,ໄປທ່ຽວບຸນທາດຫຼວງ,Đi trẩy hội Thạt Luổng
+ບຸນບັ້ງໄຟ,Lễ hội Pháo Thăng Thiên cầu mưa,Rocket Festival (Boun Bang Fai),bun-bang-fai,noun,Văn hóa Lào,ຈູດບັ້ງໄຟຂໍຝົນ,Bắn pháo thăng thiên cầu mưa thuận gió hòa
+ບຸນປີໃໝ່ລາວ,Tết cổ truyền Lào (Pi Mai Lao / Lễ hội Té nước),Lao New Year (Pi Mai),bun-pee-mai-laao,noun,Văn hóa Lào,ສະຫຼອງບຸນປີໃໝ່ລາວ,Ăn Tết cổ truyền Lào
+ບຸນຫໍ່ເຂົ້າປະດັບດິນ,Lễ hội Cúng đất trời (Rằm tháng 9),Boun Haw Khao Padap Din,bun-haw-khao-pa-dap-din,noun,Văn hóa Lào,ເຮັດບຸນຫໍ່ເຂົ້າປະດັບດິນ,Lễ hội cúng dâng đất trời
+ບຸນອອກພັນສາ,Lễ hội Mãn hạ (Kết thúc mùa chay / Thả hoa đăng),Boun Awk Phansa,bun-awk-phan-saa,noun,Văn hóa Lào,ໄຫຼເຮືອໄຟບຸນອອກພັນສາ,Thả thuyền hoa đăng rực rỡ
+ບຸນເຂົ້າພັນສາ,Lễ hội An cư Kiết hạ (Bắt đầu mùa chay Phật giáo),Boun Khao Phansa,bun-khao-phan-saa,noun,Văn hóa Lào,ເຂົ້າພັນສາສາມເດືອນ,Ba tháng an cư kiết hạ
+ບົດຝຶກຫັດ,Bài tập thực hành,Exercise / Practice worksheet,bot-fuek-hat,noun,Học tập,ແກ້ບົດຝຶກຫັດ,Làm bài tập rèn luyện
+ບົດວິທະຍານິພົນ,Luận văn / Luận án tốt nghiệp,Thesis / Dissertation,bot-vit-tha-yaa-ni-phon,noun,Giáo dục,ຂຽນບົດວິທະຍານິພົນ,Viết luận văn tốt nghiệp
+ບົດຮຽນ,Bài học,Lesson,bot-hian,noun,Bài 05,ບົດຮຽນທີໜຶ່ງ,Bài học số một
+ບ່ວງ,Thìa / Muỗng,Spoon,buang,noun,Bài 03,ບ່ວງໜຶ່ງອັນ,Một cái thìa
+ບ້ານ,Làng / Nhà,Village / Home,baan,noun,Bài 02,ບ້ານເກີດ,Quê hương / Nhà sinh
+ບໍ,Không? (từ nghi vấn cuối câu),Question particle,baw,particle,Mở rộng - Khẩu ngữ,ສະບາຍດີບໍ,Khỏe không?
+ບໍລິຄຳໄຊ,Bolikhamxay,Bolikhamxay,baw-li-kham-xai,noun,Địa lý Lào,ແຂວງບໍລິຄຳໄຊ,Tỉnh Bolikhamxay
+ບໍລິສັດ,Công ty,Company,baw-li-sat,noun,Bài 09,ບໍລິສັດໃຫຍ່,Công ty lớn
+ບໍ່ດີ,Không tốt / Xấu,Bad / Not good,baw-dee,adjective,Bài 11,ອາກາດບໍ່ດີ,Thời tiết không tốt
 ບໍ່ທັນ,Không kịp,Not in time,baw-than,phrase,Bài 04,ບໍ່ທັນລົດ,Không kịp xe
+ບໍ່ມີ,Không có,Don't have,baw-mee,verb,Bài 02,ບໍ່ມີເງິນ,Không có tiền
+ບໍ່ເຂົ້າໃຈ,Không hiểu,Don't understand,baw-khao-chai,phrase,Bài 01,ຂ້ອຍບໍ່ເຂົ້າໃຈ,Tôi không hiểu
+ບໍ່ເຄີຍ,Chưa từng / Không bao giờ,Never,baw-khoey,adverb,Tần suất,ຂ້ອຍບໍ່ເຄີຍໄປ,Tôi chưa từng đi đến đó
+ບໍ່ເປັນຫຍັງ,Không có chi / Không sao,You're welcome / No problem,baw-pen-nyang,phrase,Bài 01,ບໍ່ເປັນຫຍັງດອກ,Không sao đâu mà
+ບໍ່ເຜັດ,Không cay,Not spicy,baw-phet,phrase,Bài 06,ເອົາບໍ່ເຜັດ,Lấy loại không cay
+ບໍ່ເຫັນດີ,Không đồng ý,Disagree,baw-hen-dee,phrase,Giao tiếp,ຂ້ອຍບໍ່ເຫັນດີ,Tôi không đồng ý
+ບໍ່ເອົາ,Không lấy,Don't want,baw-ao,phrase,Bài 07,ຂ້ອຍບໍ່ເອົາ,Tôi không lấy
+ບໍ່ແກ້ວ,Bokeo (Tam giác vàng),Bokeo,baw-kaew,noun,Địa lý Lào,ສາມຫຼ່ຽມຄຳບໍ່ແກ້ວ,Tam giác vàng Bokeo
+ບໍ່ແມ່ນ,Không phải,No / Not to be,baw-maen,phrase,Bài 01,ບໍ່ແມ່ນຂ້ອຍ,Không phải tôi
+ປອດ,Phổi,Lungs,pawt,noun,Nội tạng,ປອດແຂງແຮງ,Phổi khỏe mạnh
+ປອດໄພ,An toàn,Safe,pawt-phai,adjective,Bài 08,ເດີນທາງປອດໄພ,Đi đường bình an
+ປະກັນໄພສຸຂະພາບ,Bảo hiểm y tế,Health insurance,pa-kan-fai-su-kha-phaap,noun,Y tế,ມີບັດປະກັນໄພສຸຂະພາບ,Có thẻ bảo hiểm y tế
+ປະຈຸບັນ,Hiện tại,Present,pa-chu-ban,noun,Mở rộng - Thời gian,ຢູ່ໃນປະຈຸບັນ,Sống ở hiện tại
+ປະຊຸມ,Họp / Hội họp,To meet / Conference,pa-xum,verb,Công sở,ປະຊຸມວຽກ,Họp bàn công việc
+ປະຕິເສດ,Từ chối / Bác bỏ,To refuse / To reject,pa-ti-seet,verb,Giao tiếp,ປະຕິເສດຄຳຂໍ,Từ chối yêu cầu
+ປະຕູ,Cửa chính / Cổng,Door / Gate,pa-tuu,noun,Bài 10,ປະຕູໃຫຍ່,Cửa lớn
+ປະຕູໄຊ,Khải Hoàn Môn Patuxay,Patuxay Monument,pa-tuu-xai,noun,Bài 09,ທ່ຽວຊົມປະຕູໄຊ,Tham quan Patuxay
+ປະທານປະເທດ,Chủ tịch nước,President,pa-thaan-pa-theet,noun,Nhà nước,ປະທານປະເທດແຫ່ງ ສປປ ລາວ,Chủ tịch nước CHDCND Lào
+ປະລິນຍາຕີ,Bằng Cử nhân,Bachelor's degree,pa-lin-yaa-tee,noun,Học vị,ຮຽນຈົບປະລິນຍາຕີ,Tốt nghiệp cử nhân
+ປະລິນຍາເອກ,Bằng Tiến sĩ,Doctoral degree (PhD),pa-lin-yaa-eek,noun,Học vị,ໄດ້ຮັບປະລິນຍາເອກ,Nhận bằng tiến sĩ
+ປະລິນຍາໂທ,Bằng Thạc sĩ,Master's degree,pa-lin-yaa-thoo,noun,Học vị,ສຶກສາຕໍ່ປະລິນຍາໂທ,Học tiếp thạc sĩ
+ປະຫວັດສາດ,Lịch sử,History,pa-vat-saat,noun,Môn học,ປະຫວັດສາດຊາດລາວ,Lịch sử đất nước Lào
+ປະເທດ,Đất nước / Quốc gia,Country / Nation,pa-thet,noun,Bài 01,ປະເທດຂອງຂ້ອຍ,Đất nước của tôi
+ປະໝາດ,Bất cẩn / Coi thường,Careless / Reckless,pa-maat,adjective,Tính cách,ຢ່າປະໝາດ,Chớ nên bất cẩn
+ປັນຍາປະດິດ,Trí tuệ nhân tạo (AI),Artificial Intelligence (AI),pan-nyaa-pa-dit,noun,Công nghệ,ລະບົບປັນຍາປະດິດອັດສະລິຍະ,Hệ thống trí tuệ nhân tạo thông minh
+ປາ,Cá,Fish,paa,noun,Bài 06,ກິນປາ,Ăn cá
+ປາກ,Miệng,Mouth,paak,noun,Mở rộng - Cơ thể,ອ້າປາກ,Há miệng
+ປາກເຊ,Paksé,Pakse,paak-seh,noun,Bài 09,ເມືອງປາກເຊ,Thành phố Paksé
+ປາແດກ,Mắm cá Lào (Pa Daek),Fermented fish sauce,paa-daek,noun,Mở rộng - Ẩm thực,ປາແດກພື້ນເມືອງ,Mắm cá truyền thống
+ປິດ,Tắt / Đóng,To turn off / To close,pit,verb,Bài 10,ປິດໄຟ,Tắt đèn
+ປິ່ນປົວ,Chữa bệnh / Điều trị,To treat / To cure,pin-pua,verb,Y tế,ປິ່ນປົວໃຫ້ຫາຍດີ,Điều trị cho mau khỏi
+ປິ້ງຊີ້ນ,Thịt nướng,Grilled meat,ping-seen,noun,Mở rộng - Ẩm thực,ປິ້ງຊີ້ນໝູ,Thịt heo nướng
+ປິ້ງປາ,Cá nướng,Grilled fish,ping-paa,noun,Mở rộng - Ẩm thực,ປິ້ງປາແມ່ນ້ຳຂອງ,Cá sông Mê Kông nướng
+ປິ້ງໄກ່,Gà nướng (Ping Kai),Grilled chicken,ping-kai,noun,Mở rộng - Ẩm thực,ປິ້ງໄກ່ນາປົ່ງ,Gà nướng Na Pong nổi tiếng
+ປີ,Năm / Tuổi,Year / Years old,pee,noun,Bài 02,ຂ້ອຍອາຍຸຊາວປີ,Tôi hai mươi tuổi
 ປີກາຍ,Năm ngoái,Last year,pee-kaai,noun,Bài 04,ປີກາຍໄປວຽງຈັນ,Năm ngoái đi Vientiane
 ປີໃໝ່,Năm mới,New Year,pee-mai,noun,Bài 04,ສະບາຍດີປີໃໝ່,Chúc mừng năm mới
+ປີ້,"Vé (xe, tàu)",Ticket,pee,noun,Bài 08,ຊື້ປີ້ລົດ,Mua vé xe
+ປີ້ງ,Nướng,Grilled / Roasted,peeng,verb,Bài 06,ປີ້ງໄກ່,Gà nướng
+ປີ້ຍົນ,Vé máy bay,Plane ticket / Flight ticket,pee-nyon,noun,Du lịch,ຈອງປີ້ຍົນ,Đặt vé máy bay
+ປີ້ລົດໄຟຄວາມໄວສູງ,Vé tàu cao tốc Lào - Trung,High-speed rail ticket,pee-lot-fai-khuaam-vai-suung,noun,Giao thông,ຊື້ປີ້ລົດໄຟຄວາມໄວສູງ,Mua vé tàu cao tốc Lào - Trung
 ປີໜ້າ,Năm sau,Next year,pee-naa,noun,Bài 04,ປີໜ້າກັບບ້ານ,Năm sau về nhà
+ປຶກສາ,Tham khảo / Hỏi ý kiến,To consult,peuk-saa,verb,Giao tiếp,ປຶກສາກັບອາຈານ,Xin ý kiến thầy giáo
+ປຶກສາຫາລື,Thảo luận / Bàn bạc,To discuss / To deliberate,peuk-saa-haa-lue,verb,Giao tiếp,ປຶກສາຫາລືຮ່ວມກັນ,Cùng nhau bàn thảo
+ປຶ້ມ,Sách / Vở,Book / Notebook,peum,noun,Bài 05,ປຶ້ມແບບຮຽນ,Sách giáo khoa
+ປຶ້ມຂຽນ,Vở viết,Notebook,peum-khian,noun,Bài 05,ຂຽນໃສ່ປຶ້ມຂຽນ,Viết vào vở
+ປູ,Cua,Crab,puu,noun,Mở rộng - Thực phẩm,ຕົ້ມປູ,Luộc cua
+ປູກ,Trồng trọt,To plant / To grow,puuk,verb,Nông nghiệp,ປູກຕົ້ນໄມ້,Trồng cây
+ປູ່,Ông nội,Paternal grandfather,puu,noun,Bài 02,ປູ່ມີອາຍຸຫຼາຍ,Ông nội cao tuổi
+ປຽກ,Ướt át,Wet,piak,adjective,Bài 11,ເສື້ອປຽກ,Áo bị ướt
+ປ່ອງຢ້ຽມ,Cửa sổ,Window,pawng-yiam,noun,Bài 10,ເປີດປ່ອງຢ້ຽມ,Mở cửa sổ
+ປ່າ,Rừng,Forest,paa,noun,Mở rộng - Địa lý,ປ່າດົງດິບ,Rừng nguyên sinh
+ປ່າໄມ້,Rừng cây,Forest,paa-mai,noun,Bài 09,ປ່າໄມ້ຂຽວສົດ,Rừng xanh mướt
+ປ້ອງກັນ,Bảo vệ / Phòng ngừa,To protect / To prevent,pawng-kan,verb,Hành động,ປ້ອງກັນພະຍາດ,Phòng ngừa dịch bệnh
+ປ້າ,Bác gái,Aunt (older),paa,noun,Bài 02,ປ້າຂາຍເຄື່ອງ,Bác gái bán hàng
+ປ້ຳນ້ຳມັນ,Trạm xăng,Gas station,pam-nam-man,noun,Bài 08,ເຕີມນ້ຳມັນ,Đổ xăng
+ຜັກ,Rau,Vegetable,phak,noun,Bài 06,ຜັກສົດ,Rau tươi
+ຜັກກາດ,Rau cải,Chinese cabbage,phak-kaat,noun,Rau củ,ຜັດຜັກກາດ,Rau cải xào tỏi
+ຜັກຊີ,Rau mùi / Ngò,Coriander / Cilantro,phak-xee,noun,Rau củ,ຜັກຊີຫອມ,Rau mùi thơm
+ຜັກທຽມ,Tỏi,Garlic,phak-thiam,noun,Gia vị,ຜັກທຽມຫອມ,Tỏi thơm lừng
+ຜັກບົ່ວ,Hành lá,Green onion / Scallion,phak-bua,noun,Rau củ,ໃສ່ຜັກບົ່ວ,Rắc thêm hành lá
+ຜັກບົ້ງ,Rau muống,Morning glory / Water spinach,phak-bong,noun,Rau củ,ຜັດຜັກບົ້ງໄຟແດງ,Rau muống xào tỏi lửa lớn
+ຜັກສະລັດ,Rau xà lách,Lettuce,phak-sa-lat,noun,Rau củ,ກິນຜັກສະລັດ,Ăn xà lách tươi
+ຜິວໜັງ,Làn da,Skin,phiw-nang,noun,Cơ thể,ຜິວໜັງຂາວໃສ,Làn da trắng sáng
+ຜູ້ຈັດການ,Người quản lý / Giám đốc,Manager,phuu-chat-kaan,noun,Nghề nghiệp,ຜູ້ຈັດການໂຮງແຮມ,Quản lý khách sạn
+ຜູ້ຊ່ຽວຊານ,Chuyên gia,Expert / Specialist,phuu-xiaao-xaan,noun,Nghề nghiệp,ຜູ້ຊ່ຽວຊານດ້ານໄອທີ,Chuyên gia công nghệ thông tin
+ຜູ້ຕາງໜ້າ,Đại diện / Đại biểu,Representative,phuu-taang-naa,noun,Nghề nghiệp,ຜູ້ຕາງໜ້າບໍລິສັດ,Đại diện công ty
+ຜູ້ນຳທ່ຽວ,Hướng dẫn viên du lịch,Tour guide,phuu-nam-thiaao,noun,Du lịch,ຜູ້ນຳທ່ຽວພາໄປຊົມວັດ,Hướng dẫn viên dẫn đi thăm chùa
+ຜູ້ປ່ວຍ,Bệnh nhân,Patient,phuu-puay,noun,Y tế,ປິ່ນປົວຜູ້ປ່ວຍ,Chữa trị cho bệnh nhân
+ຜູ້ອຳນວຍການ,Tổng giám đốc / Hiệu trưởng,Director / Principal,phuu-am-nuay-kaan,noun,Nghề nghiệp,ຜູ້ອຳນວຍການໂຮງຮຽນ,Hiệu trưởng trường học
+ຜູ້ໂດຍສານ,Hành khách,Passenger,phuu-dooy-saan,noun,Nghề nghiệp,ຜູ້ໂດຍສານລົດເມ,Hành khách đi xe buýt
+ຜົມ,Tóc,Hair,phom,noun,Cơ thể,ຜົມດຳຍາວ,Mái tóc đen dài
+ຜົວ,Chồng,Husband,phua,noun,Bài 02,ຜົວເມຍ,Vợ chồng
+ຜົ້ງສາລີ,Phongsaly,Phongsaly,phong-saa-lee,noun,Địa lý Lào,ແຂວງເໜືອສຸດຜົ້ງສາລີ,Tỉnh cực Bắc Phongsaly
+ຜ້າຫົ່ມ,Cái chăn / Mền,Blanket,phaa-hom,noun,Bài 10,ຫົ່ມຜ້າຫົ່ມ,Đắp chăn
+ຜ້າເຊັດໂຕ,Khăn tắm,Towel,phaa-xet-too,noun,Đồ gia dụng,ຜ້າເຊັດໂຕສະອາດ,Khăn tắm sạch sẽ
+ຝຣັ່ງ,Pháp / Người Tây,France / Westerner,fa-rang,noun,Bài 01,ປະເທດຝຣັ່ງ,Nước Pháp
+ຝຶກແອບ,Luyện tập,To practice,feuk-aep,verb,Bài 05,ຝຶກແອບເວົ້າ,Luyện nói
+ຝົນ,Mưa,Rain,fon,noun,Mở rộng - Thời tiết,ຝົນຕົກໜັກ,Mưa to
+ພຣະ,Sư thầy / Nhà sư,Monk / Buddha,phra,noun,Bài 09,ໃສ່ບາດພຣະ,Cúng dường chư tăng
+ພວກເຂົາ,Họ / Bọn họ,They / Them,phuak-khao,pronoun,Bài 01,ພວກເຂົາແມ່ນໃຜ,Họ là ai
+ພວກເຈົ້າ,Các bạn,You (plural),phuak-chao,pronoun,Bài 01,ພວກເຈົ້າສະບາຍດີບໍ,Các bạn khỏe không
+ພວກເຮົາ,Chúng tôi / Chúng ta,We / Us,phuak-hao,pronoun,Bài 01,ພວກເຮົາໄປນຳກັນ,Chúng ta cùng đi
+ພະຍັນຊະນະ,Phụ âm,Consonant,pha-nyan-xa-na,noun,Ngôn ngữ,ພະຍັນຊະນະພາສາລາວ,Bảng phụ âm tiếng Lào
+ພະຍາບານ,Y tá / Điều dưỡng,Nurse,pha-nyaa-baan,noun,Bài 09,ພະຍາບານດູແລ,Y tá chăm sóc
+ພະນັກງານ,Nhân viên / Cán bộ,Employee / Staff,pha-nak-ngaan,noun,Bài 09,ພະນັກງານບໍລິສັດ,Nhân viên công ty
+ພະນັກງານທຳຄວາມສະອາດ,Nhân viên lao công / Vệ sinh,Cleaner / Janitor,pha-nak-ngaan-tham-khuaam-sa-aat,noun,Nghề nghiệp,ອະນາໄມຫ້ອງຮຽນ,Dọn vệ sinh lớp học
+ພະສົງ,Nhà sư / Chư tăng,Buddhist monk,pha-song,noun,Tôn giáo,ໄຫວ້ພະສົງ,Lễ bái chư tăng
+ພັກຜ່ອນ,Nghỉ giải lao / Nghỉ ngơi,Break / Rest,phak-phawn,verb,Bài 05,ພັກຜ່ອນສິບນາທີ,Nghỉ mười phút
+ພັດລົມ,Cái quạt máy,Electric fan,phat-lom,noun,Bài 10,ເປີດພັດລົມ,Bật quạt
+ພັນ,"Nghìn (1,000)","Thousand (1,000)",phan,number,Bài 03,ສິບພັນ,Mười nghìn
+ພາກປະຕິບັດ,Thực hành,Practice / Practical,phaak-pa-ti-bat,noun,Khoa học,ລົງມືພາກປະຕິບັດ,Bắt tay vào thực hành
+ພາຂວັນ,Mâm lễ Baci cắm hoa Champa,Phakhuan (Baci tray),phaa-khvan,noun,Văn hóa Lào,ຈັດພາຂວັນສວຍງາມ,Bày biện mâm lễ Baci tuyệt đẹp
+ພາຍຸ,Cơn bão,Storm / Typhoon,phaa-nyu,noun,Thời tiết,ພາຍຸພັດເຂົ້າມາ,Cơn bão đổ bộ
+ພາສາ,Ngôn ngữ / Tiếng,Language,phaa-saa,noun,Bài 01,ພາສາລາວ,Tiếng Lào
+ພາສາລາວ,Tiếng Lào,Lao language,phaa-saa-lao,noun,Bài 01,ຂ້ອຍຮຽນພາສາລາວ,Tôi học tiếng Lào
+ພາສາຫວຽດ,Tiếng Việt,Vietnamese language,phaa-saa-viet,noun,Bài 01,ເຈົ້າເວົ້າພາສາຫວຽດໄດ້ບໍ,Bạn nói tiếng Việt được không
+ພາສາອັງກິດ,Tiếng Anh,English language,phaa-saa-ang-kit,noun,Bài 01,ພາສາອັງກິດຍາກ,Tiếng Anh khó
+ພາສີ,Thuế quan / Hải quan,Tax / Customs,phaa-see,noun,Tài chính,ເສຍພາສີ,Đóng thuế
+ພິທີບາສີ,Lễ buộc chỉ cổ tay Baci cầu an may mắn,Baci ceremony / Soukhwan,phi-thee-baa-see,noun,Văn hóa Lào,ເຮັດພິທີບາສີສູ່ຂວັນ,Làm lễ buộc chỉ cầu bình an
+ພິເສດ,Đặc biệt,Special,phi-set,adjective,Bài 11,ອາຫານພິເສດ,Món ăn đặc biệt
+ພີ່ນ້ອງ,Bà con / Họ hàng,Relatives,phee-nawng,noun,Mở rộng - Gia đình,ພີ່ນ້ອງມາຢາມ,Họ hàng đến thăm
+ພູ,Ngọn núi,Mountain,phuu,noun,Bài 09,ພູສູງ,Núi cao
+ພູມສາດ,Địa lý,Geography,phuum-saat,noun,Môn học,ແຜນທີ່ພູມສາດ,Bản đồ địa lý
+ພູມໃຈ,Tự hào / Hãnh diện,Proud,phuum-chai,adjective,Tâm lý,ພູມໃຈໃນປະເທດຊາດ,Tự hào về đất nước
+ພູເຂົາໄຟ,Núi lửa,Volcano,phuu-khao-fai,noun,Tự nhiên,ພູເຂົາໄຟລະເບີດ,Núi lửa phun trào
+ພົບ,Gặp gỡ,To meet,phop,verb,Bài 12,ພົບເພື່ອນ,Gặp bạn bè
+ພົບກັນໃໝ່,Hẹn gặp lại,See you again,phop-kan-mai,phrase,Bài 01,ມື້ອື່ນພົບກັນໃໝ່,Ngày mai gặp lại
+ພົບປະ,Gặp gỡ / Tiếp xúc,To meet with,phop-pa,verb,Giao tiếp,ພົບປະສອງຝ່າຍ,Gặp gỡ song phương
+ພໍໃຈ,Hài lòng / Thỏa mãn,Satisfied,phaw-chai,adjective,Tâm lý,ພໍໃຈກັບຜົນງານ,Hài lòng với kết quả
+ພໍ່,Bố / Cha,Father,phaw,noun,Bài 02,ພໍ່ຂອງຂ້ອຍໃຈດີ,Bố tôi rất hiền
+ພໍ່ຄ້າ,Thương nhân / Người bán hàng,Merchant / Trader,phaw-khaa,noun,Mở rộng - Nghề nghiệp,ພໍ່ຄ້າໃຈດີ,Người bán hàng niềm nở
+ພໍ່ເຖົ້າ,Ông ngoại,Maternal grandfather,phaw-thao,noun,Bài 02,ພໍ່ເຖົ້າຢູ່ບ້ານ,Ông ngoại ở nhà
+ພໍ່ແມ່,Bố mẹ / Cha mẹ,Parents,phaw-mae,noun,Bài 02,ພໍ່ແມ່ຢູ່ໃສ,Bố mẹ ở đâu
+ຟັງ,Nghe,To listen,fang,verb,Bài 05,ຟັງອາຈານ,Nghe giảng viên
+ຟັງອາຈານ,Lắng nghe giáo viên giảng,Listen to teacher,fang-aa-chaan,phrase,Khẩu ngữ lớp học,ຟັງອາຈານອະທິບາຍ,Lắng nghe thầy giải thích
+ຟີຊິກສາດ,Vật lý học,Physics,fee-sik-saat,noun,Môn học,ທົດລອງຟີຊິກ,Thí nghiệm vật lý
+ຟ້ອນ,Múa lăm-vông (điệu múa Lào),To dance traditional Lao dance,fawn,verb,Bài 12,ຟ້ອນລຳວົງ,Múa Lăm-vông
+ຟ້າຮ້ອງ,Sấm sét / Tiếng sấm,Thunder,faa-hawng,noun,Thời tiết,ຟ້າຮ້ອງສຽງດັງ,Tiếng sấm vang rền
+ຟ້າແມບ,Tia chớp,Lightning,faa-maep,noun,Thời tiết,ເຫັນຟ້າແມບ,Thấy tia chớp lóe sáng
+ມະຫາວິທະຍາໄລ,Trường đại học,University,ma-haa-vit-tha-nyaa-lai,noun,Bài 05,ມະຫາວິທະຍາໄລແຫ່ງຊາດ,Đại học Quốc gia
+ມັກ,Thích,To like,mak,verb,Bài 12,ມັກພາສາລາວ,Thích tiếng Lào
+ມັກກິນ,Thích ăn,Like to eat,mak-kin,verb,Sở thích,ມັກກິນເຂົ້າໜຽວ,Thích ăn xôi nếp
+ມັກຫຼິ້ນ,Thích chơi,Like to play,mak-lin,verb,Sở thích,ມັກຫຼິ້ນດົນຕີ,Thích chơi nhạc cụ
+ມັກອ່ານ,Thích đọc sách,Like to read,mak-aan,verb,Sở thích,ມັກອ່ານວັນນະຄະດີ,Thích đọc văn học
+ມັກໄປ,Thích đi du lịch,Like to go,mak-pai,verb,Sở thích,ມັກໄປທ່ຽວພູດອຍ,Thích đi du lịch vùng núi
+ມັນ,Nó / Củ khoai,It / Yam,man,pronoun,Mở rộng - Đại từ,ມັນແລ່ນໄວຫຼາຍ,Nó chạy rất nhanh
+ມັນດ້າງ,Củ khoai lang,Sweet potato,man-daang,noun,Nông sản,ມັນດ້າງເຜົາ,Khoai lang nướng
+ມັນຕົ້ນ,Củ sắn / Khoai mì,Cassava,man-ton,noun,Nông sản,ຕົ້ມມັນຕົ້ນ,Luộc sắn
+ມາ,Đến / Về,To come,maa,verb,Bài 08,ມາແຕ່ໃສ,Đến từ đâu
+ມາຊ່ວຍ,Đến giúp sức,To come to help,maa-xuay,verb,Xã hội,ມາຊ່ວຍວຽກງານ,Đến giúp đỡ công việc
+ມາພົບ,Đến gặp mặt,To come to meet,maa-phop,verb,Giao tiếp,ມາພົບອາຈານ,Đến gặp thầy giáo
+ມາຢາມ,Đến thăm / Ghé chơi,To visit,maa-yaam,verb,Xã hội,ໝູ່ມາຢາມບ້ານ,Bạn bè ghé thăm nhà
+ມາຮອດ,Tới nơi / Về đến,To arrive,maa-hawt,verb,Giao thông,ມາຮອດສະບາຍດີ,Đã đến nơi bình an
+ມາແຕ່,Đến từ,Come from,maa-tae,verb,Bài 01,ຂ້ອຍມາແຕ່ຫວຽດນາມ,Tôi đến từ Việt Nam
+ມີ,Có,To have,mee,verb,Bài 02,ມີລູກຈັກຄົນ,Có mấy người con
+ມີດ,Dao,Knife,meet,noun,Bài 03,ມີດແຫຼມ,Dao sắc
+ມີອີກບໍ,Còn nữa không?,Do you have more?,mee-eek-baw,phrase,Bài 07,ມີສີອື່ນບໍ,Có màu khác không
+ມື,Bàn tay,Hand,mue,noun,Mở rộng - Cơ thể,ຈັບມື,Nắm tay
+ມືຂວາ,Tay phải,Right hand,mue-khwaa,noun,Cơ thể,ຍົກມືຂວາ,Giơ tay phải
+ມືຊ້າຍ,Tay trái,Left hand,mue-saai,noun,Cơ thể,ໃຊ້ມືຊ້າຍ,Dùng tay trái
+ມືດ,Tối tăm,Dark,muut,adjective,Bài 11,ຫ້ອງມືດ,Phòng tối
+ມືຖື,Điện thoại di động,Mobile phone / Cellphone,mue-theu,noun,Công nghệ,ຫຼິ້ນມືຖື,Bấm điện thoại di động
 ມື້,Ngày,Day,meu,noun,Bài 04,ມື້ນີ້,Hôm nay
 ມື້ນີ້,Hôm nay,Today,meu-nee,noun,Bài 04,ມື້ນີ້ອາກາດດີ,Hôm nay thời tiết đẹp
 ມື້ວານນີ້,Hôm qua,Yesterday,meu-vaan-nee,noun,Bài 04,ມື້ວານນີ້ຂ້ອຍຢູ່ບ້ານ,Hôm qua tôi ở nhà
 ມື້ອື່ນ,Ngày mai,Tomorrow,meu-eun,noun,Bài 04,ມື້ອື່ນໄປໃສ,Ngày mai đi đâu
 ມື້ຮື,Ngày kia,Day after tomorrow,meu-heu,noun,Bài 04,ມື້ຮືພົບກັນ,Ngày kia gặp lại
+ມຸ້ງ,Cái màn / Mùng,Mosquito net,mung,noun,Bài 10,ກາງມຸ້ງ,Mắc màn
+ມົດ,Con kiến,Ant,mot,noun,Sinh vật,ມົດກັດ,Kiến cắn
+ມ່ວນ,Vui vẻ / Thú vị,Fun / Enjoyable,muan,adjective,Bài 11,ໄປທ່ຽວມ່ວນຫຼາຍ,Đi chơi rất vui
+ມ້າ,Con ngựa,Horse,maa,noun,Mở rộng - Động vật,ມ້າແລ່ນໄວ,Ngựa chạy phi nhanh
+ຢາ,Thuốc,Medicine,yaa,noun,Mở rộng - Y tế,ກິນຢາຕາມເວລາ,Uống thuốc đúng giờ
+ຢາກ,Muốn,To want,yaak,verb,Bài 12,ຢາກກິນເຂົ້າ,Muốn ăn cơm
+ຢາກກິນ,Muốn ăn / Thèm ăn,Want to eat,yaak-kin,verb,Nhu cầu,ຢາກກິນຕຳໝາກຮຸ່ງ,Muốn ăn nộm đu đủ
+ຢາກດື່ມ,Muốn uống,Want to drink,yaak-duem,verb,Nhu cầu,ຢາກດື່ມກາເຟ,Muốn uống cà phê
+ຢາກພັກຜ່ອນ,Muốn nghỉ ngơi,Want to rest,yaak-phak-phawn,verb,Nhu cầu,ເມື່ອຍແລ້ວຢາກພັກຜ່ອນ,Mệt rồi muốn nghỉ ngơi
+ຢາກຮູ້,Muốn biết / Tò mò,Want to know,yaak-huu,verb,Nhận thức,ຢາກຮູ້ຄວາມຈິງ,Muốn biết sự thật
+ຢາກໄດ້,Muốn có / Mong muốn,Want to get / have,yaak-dai,verb,Nhu cầu,ຢາກໄດ້ປຶ້ມເຫຼັ້ມນີ້,Muốn có quyển sách này
+ຢາຂ້າເຊື້ອ,Thuốc kháng sinh,Antibiotics,yaa-khaa-xuea,noun,Y tế,ກິນຢາຂ້າເຊື້ອຕາມສັ່ງ,Uống kháng sinh theo đơn
+ຢາງລຶບ,Cục tẩy / Cục gôm,Eraser,yaang-leup,noun,Bài 05,ໃຊ້ຢາງລຶບ,Dùng cục tẩy
+ຢາສະຜົມ,Dầu gội đầu,Shampoo,yaa-sa-phom,noun,Đồ gia dụng,ສະຜົມດ້ວຍຢາສະຜົມຫອມ,Gội đầu bằng dầu thơm
+ຢາຫຼຸດໄຂ້,Thuốc hạ sốt,Fever reducer / Paracetamol,yaa-lut-khai,noun,Y tế,ກິນຢາຫຼຸດໄຂ້,Uống thuốc hạ sốt
+ຢາແກ້ປວດ,Thuốc giảm đau,Painkiller,yaa-kae-puat,noun,Y tế,ຢາແກ້ປວດກ້າມຊີ້ນ,Thuốc giảm đau cơ
+ຢືນ,Đứng,To stand,yeun,verb,Bài 12,ຢືນຂຶ້ນ,Đứng dậy
+ຢຸດ,Dừng lại,To stop,yut,verb,Bài 08,ຢຸດລົດ,Dừng xe
+ຢູ່,Ở / Sống tại,To stay / To live,yuu,verb,Bài 02,ເຈົ້າຢູ່ໃສ,Bạn ở đâu
+ຢ້ານ,Sợ hãi,Scared / Afraid,yaan,verb,Bài 11,ຢ້ານຄວາມມືດ,Sợ bóng tối
+ຢ້ຽມຢາມ,Thăm viếng / Thăm hỏi,To visit,yiam-yaam,verb,Xã hội,ໄປຢ້ຽມຢາມຄອບຄົວ,Đi thăm gia đình
+ລອງ,Thử,To try,lawng,verb,Bài 07,ລອງນຸ່ງເບິ່ງ,Mặc thử xem
+ລອຍນ້ຳ,Bơi lội,Swimming,lawy-nam,noun,Thể thao,ຮຽນລອຍນ້ຳ,Học bơi
+ລະດູຝົນ,Mùa mưa,Rainy season / Monsoon,la-duu-fon,noun,Khí hậu,ລະດູຝົນມີນ້ຳຫຼາຍ,Mùa mưa nước dồi dào
+ລະດູຮ້ອນ,Mùa hè / Mùa nóng,Hot season / Summer,la-duu-hawn,noun,Khí hậu,ລະດູຮ້ອນໄປຫຼິ້ນນ້ຳ,Mùa hè đi tắm suối
+ລະດູແລ້ງ,Mùa khô,Dry season,la-duu-laeng,noun,Khí hậu,ລະດູແລ້ງແດດຮ້ອນ,Mùa khô nắng gắt
+ລະດູໃບໄມ້ປົ່ງ,Mùa xuân,Spring,la-duu-bai-mai-pong,noun,Khí hậu,ລະດູໃບໄມ້ປົ່ງດອກໄມ້ບານ,Mùa xuân hoa nở
+ລະດູໃບໄມ້ຫຼົ່ນ,Mùa thu,Autumn / Fall,la-duu-bai-mai-lon,noun,Khí hậu,ລະດູໃບໄມ້ຫຼົ່ນອາກາດເຢັນ,Mùa thu se lạnh
+ລະບົບປະຕິບັດການ,Hệ điều hành (OS),Operating System (OS),la-bop-pa-ti-bat-kaan,noun,AI & CNTT,ລະບົບປະຕິບັດການ Windows,Hệ điều hành Windows
+ລະມັດລະວັງ,Cẩn thận / Cảnh giác,Careful / Cautious,la-mat-la-vang,adjective,Tính cách,ເຮັດວຽກລະມັດລະວັງ,Làm việc cẩn thận
+ລະຫວ່າງ,Giữa,Between,la-vaang,preposition,Mở rộng - Giới từ,ລະຫວ່າງສອງບ້ານ,Ở giữa hai bản làng
+ລະຫັດຜ່ານ,Mật khẩu,Password,la-hat-phaan,noun,Công nghệ,ປ້ອນລະຫັດຜ່ານ,Nhập mật khẩu
+ລັດຖະທຳມະນູນ,Hiến pháp,Constitution,lat-tha-tham-ma-nuun,noun,Pháp luật,ລັດຖະທຳມະນູນແຫ່ງຊາດ,Hiến pháp quốc gia
+ລັດຖະບານ,Chính phủ,Government,lat-tha-baan,noun,Nhà nước,ລັດຖະບານແຫ່ງ ສປປ ລາວ,Chính phủ nước CHDCND Lào
+ລັດຖະມົນຕີ,Bộ trưởng,Minister,lat-tha-mon-tee,noun,Nhà nước,ລັດຖະມົນຕີກະຊວງ,Bộ trưởng
+ລາກ່ອນ,Tạm biệt,Goodbye,laa-kawn,phrase,Bài 01,ລາກ່ອນເດີ,Tạm biệt nhé
+ລາຄາ,Giá cả / Mức giá,Price / Cost,laa-khaa,noun,Bài 07,ລາຄາເທົ່າໃດ,Giá bao nhiêu
+ລາຍງານ,Báo cáo,To report,laai-ngaan,verb,Công sở,ລາຍງານຜົນການຮຽນ,Báo cáo kết quả học tập
+ລາຍມື,Chữ viết tay,Handwriting,laai-mue,noun,Học tập,ລາຍມືງາມ,Chữ viết tay đẹp
+ລາບ,Món Lạp (món ăn quốc hồn Lào),Larb (Lao minced meat salad),laap,noun,Bài 06,ລາບຊີ້ນ,Lạp thịt bò
+ລາບໄກ່,Lạp gà,Chicken larb,laap-kai,noun,Mở rộng - Ẩm thực,ລາບໄກ່ແຊບຫຼາຍ,Lạp gà rất ngon
+ລາວ,Anh ấy / Cô ấy / Lào,He / She / Lao,lao,pronoun,Bài 01,ລາວມາແຕ່ໃສ,Cô ấy đến từ đâu
+ລຳວົງ,Điệu múa Lăm Vông truyền thống,Lamvong (traditional dance),lam-vong,noun,Nghệ thuật,ຟ້ອນລຳວົງລາວ,Múa điệu Lăm Vông uyển chuyển
+ລຳໄສ້,Ruột,Intestines,lam-sai,noun,Nội tạng,ລຳໄສ້ອັກເສບ,Viêm đường ruột
+ລິດ,Lít,Liter,lit,noun,Bài 07,ນ້ຳໜຶ່ງລິດ,Một lít nước
+ລີ້ນ,Lưỡi,Tongue,leen,noun,Cơ thể,ແລບລີ້ນ,Thè lưỡi
+ລືມ,Quên,To forget,leum,verb,Bài 05,ຢ່າລືມເດີ,Đừng quên nhé
+ລຸງ,Bác trai,Uncle (older),lung,noun,Bài 02,ລຸງມາຢາມ,Bác trai đến thăm
+ລູກ,Con,Child,luuk,noun,Bài 02,ລູກຮັກ,Con yêu
+ລູກຄ້າ,Khách hàng,Customer,luuk-khaa,noun,Bài 07,ລູກຄ້າມາຫຼາຍ,Khách đến đông
+ລູກຊາຍ,Con trai,Son,luuk-xaai,noun,Bài 02,ລາວມີລູກຊາຍ,Anh ấy có con trai
+ລູກສາວ,Con gái,Daughter,luuk-saao,noun,Bài 02,ລູກສາວງາມຫຼາຍ,Con gái rất xinh
+ລົງທຶນ,Đầu tư,Invest / Investment,long-thun,verb,Tài chính,ລົງທຶນໃສ່ທຸລະກິດ,Đầu tư vào kinh doanh
+ລົງນາມ,Ký kết (văn bản ngoại giao),To sign,long-naam,verb,Ngoại giao,ລົງນາມໃນສັນຍາ,Ký kết vào hiệp định
+ລົດ,Xe / Xe cộ,Car / Vehicle,lot,noun,Bài 08,ຂີ່ລົດ,Đi xe
+ລົດກະບະ,Xe bán tải (phổ biến tại Lào),Pickup truck,lot-ka-ba,noun,Giao thông,ລົດກະບະແລ່ນຂຶ້ນພູ,Xe bán tải leo đèo
+ລົດຈັກ,Xe máy,Motorbike,lot-chak,noun,Bài 08,ຂີ່ລົດຈັກ,Đi xe máy
+ລົດດັບເພີງ,Xe cứu hỏa,Fire truck,lot-dap-phoeng,noun,Giao thông,ລົດດັບເພີງມອດໄຟ,Xe cứu hỏa dập tắt đám cháy
+ລົດຕຸກຕຸກ,Xe Túc Túc,Tuk-tuk,lot-tuk-tuk,noun,Bài 08,ຂີ່ລົດຕຸກຕຸກ,Đi xe túc túc
+ລົດຕູ້,Xe 16 chỗ / Xe Van,Van / Minibus,lot-tuu,noun,Giao thông,ເຊົ່າລົດຕູ້ໄປທ່ຽວ,Thuê xe van đi du lịch
+ລົດຖີບ,Xe đạp,Bicycle,lot-theep,noun,Bài 08,ຂີ່ລົດຖີບ,Đạp xe đạp
+ລົດບັນທຸກ,Xe tải,Truck / Lorry,lot-ban-thuk,noun,Giao thông,ລົດບັນທຸກຂົນສົ່ງສິນຄ້າ,Xe tải chở hàng hóa
+ລົດເກັງ,Xe con / Xe hơi 4 chỗ,Sedan car,lot-keng,noun,Giao thông,ຂີ່ລົດເກັງ,Đi xe con
+ລົດເມ,Xe buýt,Bus,lot-meh,noun,Bài 08,ຂຶ້ນລົດເມ,Lên xe buýt
+ລົດໂຮງໝໍ,Xe cứu thương / Xe cấp cứu,Ambulance,lot-hoong-maw,noun,Y tế,ໂທเรียກລົດໂຮງໝໍ,Gọi xe cứu thương
+ລົດໃຫຍ່,Xe ô tô,Car / Automobile,lot-nyai,noun,Bài 08,ຂັບລົດໃຫຍ່,Lái xe hơi
+ລົດໄຟ,Tàu hỏa,Train,lot-fai,noun,Bài 08,ສະຖານີລົດໄຟ,Ga tàu hỏa
+ລົມ,Trò chuyện / Tán gẫu,To chat,lom,verb,Bài 12,ລົມກັນ,Nói chuyện với nhau
+ລົມພັດ,Gió thổi,Wind blowing,lom-phat,noun,Mở rộng - Thời tiết,ລົມພັດເຢັນດີ,Gió thổi mát rượi
+ລ້າງ,Rửa / Giặt,To wash / To clean,laang,verb,Mở rộng - Hành động,ລ້າງມືກ່ອນກິນເຂົ້າ,Rửa tay trước khi ăn
+ລ້າງຖ້ວຍ,Rửa bát,To wash dishes,laang-thuay,verb,Bài 10,ລ້າງຖ້ວຍຊ່ວຍແມ່,Rửa bát giúp mẹ
+ລ້າງມື,Rửa tay,To wash hands,laang-meu,verb,Bài 10,ລ້າງມືກ່ອນກິນເຂົ້າ,Rửa tay trước khi ăn
+ລ້າງໜ້າ,Rửa mặt,To wash face,laang-naa,verb,Bài 10,ລ້າງໜ້າດ້ວຍນ້ຳເຢັນ,Rửa mặt bằng nước mát
+ລ້ານ,"Triệu (1,000,000)","Million (1,000,000)",laan,number,Bài 03,ໜຶ່ງລ້ານກີບ,Một triệu kíp
+ລ້ຽງ,Nuôi nấng / Đãi tiệc,To raise / To feed / To treat,liang,verb,Hành động,ລ້ຽງສັດ,Chăn nuôi gia súc
+ລ້ຽວ,Rẽ / Quẹo,To turn,liao,verb,Bài 08,ລ້ຽວຊ້າຍ,Rẽ trái
+ລ້ຽວຂວາ,Rẽ phải,Turn right,liao-khwaa,phrase,Bài 08,ລ້ຽວຂວາຢູ່ໄຟແດງ,Rẽ phải ở đèn đỏ
+ລ້ຽວຊ້າຍ,Rẽ trái,Turn left,liao-saai,phrase,Bài 08,ລ້ຽວຊ້າຍແລ້ວຊື່ໄປ,Rẽ trái rồi đi thẳng
+ລໍຖ້າ,Chờ đợi,To wait,law-thaa,verb,Bài 12,ລໍຖ້າຈັກໜ້ອຍ,Chờ một chút
+ວັງວຽງ,Vang Vieng,Vang Vieng,vang-viang,noun,Mở rộng - Địa danh,ທ່ອງທ່ຽວວັງວຽງ,Du lịch Vang Vieng
+ວັດ,Chùa / Ngôi chùa,Buddhist temple / Wat,vat,noun,Bài 09,ໄປວັດໄຫວ້ພຣະ,Đi chùa lễ Phật
+ວັດຈະນານຸກົມ,Từ điển,Dictionary,vat-cha-naa-nu-kom,noun,Ngôn ngữ,ເປີດວັດຈະນານຸກົມ,Tra cứu từ điển
+ວັດຊຽງທອງ,Chùa Wat Xieng Thong,Wat Xieng Thong,vat-xiang-thawng,noun,Địa danh,ວັດຊຽງທອງຫຼວງພະບາງ,Chùa Xieng Thong Luang Prabang
+ວັດສີສະເກດ,Chùa Wat Si Saket,Wat Si Saket,vat-see-sa-keet,noun,Địa danh,ວັດເກົ່າແກ່ວັດສີສະເກດ,Chùa cổ Wat Si Saket
 ວັນ,Ngày (trang trọng),Day (formal),van,noun,Bài 04,ວັນທີໜຶ່ງ,Ngày mùng một
 ວັນຈັນ,Thứ Hai,Monday,van-chan,noun,Bài 04,ວັນຈັນໄປຮຽນ,Thứ Hai đi học
+ວັນນະຄະດີ,Văn học,Literature,van-na-kha-dee,noun,Môn học,ບົດວັນນະຄະດີລາວ,Tác phẩm văn học Lào
+ວັນນະຍຸດ,Dấu thanh điệu,Tone marks,van-na-nyut,noun,Ngôn ngữ,ໄມ້ເອກແລະໄມ້ໂທ,Dấu Mai Ek và Mai Tho
 ວັນພະຫັດ,Thứ Năm,Thursday,van-pha-hat,noun,Bài 04,ວັນພະຫັດວ່າງ,Thứ Năm rảnh
 ວັນພັກ,Ngày nghỉ,Holiday / Day off,van-phak,noun,Bài 04,ມື້ນີ້ແມ່ນວັນພັກ,Hôm nay là ngày nghỉ
 ວັນພຸດ,Thứ Tư,Wednesday,van-phut,noun,Bài 04,ວັນພຸດພົບກັນ,Thứ Tư gặp nhau
@@ -162,302 +647,83 @@ lao,vi,en,romanization,pos,lesson,example_lao,example_vi
 ວັນອາທິດ,Chủ Nhật,Sunday,van-aa-thit,noun,Bài 04,ວັນອາທິດໄປວັດ,Chủ Nhật đi chùa
 ວັນເກີດ,Sinh nhật,Birthday,van-koet,noun,Bài 04,ສຸກສັນວັນເກີດ,Chúc mừng sinh nhật
 ວັນເສົາ,Thứ Bảy,Saturday,van-sao,noun,Bài 04,ວັນເສົາພັກຜ່ອນ,Thứ Bảy nghỉ ngơi
+ວິຊາ,Môn học,Subject,vi-xaa,noun,Giáo dục,ວິຊາຮຽນ,Môn học
+ວິທະຍາສາດຂໍ້ມູນ,Khoa học dữ liệu (Data Science),Data Science,vit-tha-yaa-saat-khaw-muun,noun,AI & CNTT,ຮຽນວິທະຍາສາດຂໍ້ມູນ,Học ngành khoa học dữ liệu
 ວິນາທີ,Giây,Second,vi-naa-thee,noun,Bài 04,ຫົກສິບວິນາທີ,Sáu mươi giây
-ສະເຫຼີມສະຫຼອງ,Kỷ niệm / Ăn mừng,To celebrate,sa-loem-sa-lawng,verb,Bài 04,ສະເຫຼີມສະຫຼອງປີໃໝ່,Ăn mừng năm mới
-ຫຼັງ,Sau,After,lang,adverb,Bài 04,ຫຼັງຈາກນັ້ນ,Sau đó
-ອາທິດ,Tuần,Week,aa-thit,noun,Bài 04,ອາທິດນີ້,Tuần này
-ອາທິດແລ້ວ,Tuần trước,Last week,aa-thit-laew,noun,Bài 04,ອາທິດແລ້ວໄປທ່ຽວ,Tuần trước đi chơi
-ອາທິດໜ້າ,Tuần sau / Tuần tới,Next week,aa-thit-naa,noun,Bài 04,ອາທິດໜ້າຮຽນ,Tuần sau học
-ເຊົ້າ,Sớm / Sáng,Early / Morning,xao,adjective,Bài 04,ຕື່ນເຊົ້າ,Thức dậy sớm
-ເດືອນ,Tháng / Mặt trăng,Month / Moon,deuan,noun,Bài 04,ເດືອນນີ້,Tháng này
-ເດືອນແລ້ວ,Tháng trước,Last month,deuan-laew,noun,Bài 04,ເດືອນແລ້ວຮ້ອນ,Tháng trước nóng
-ເດືອນໜ້າ,Tháng sau,Next month,deuan-naa,noun,Bài 04,ເດືອນໜ້າສອບເສັງ,Tháng sau thi
-ເວລາ,Thời gian,Time,ve-laa,noun,Bài 04,ບໍ່ມີເວລາ,Không có thời gian
-ໂມງ,Giờ / Đồng hồ,O'clock / Watch,moong,noun,Bài 04,ຕອນນີ້ຈັກໂມງ,Bây giờ mấy giờ
-ໄວ,Nhanh,Fast / Quick,vai,adjective,Bài 04,ໄປໄວໆ,Đi nhanh lên
-ກະດານ,Bảng viết,Blackboard / Board,ka-daan,noun,Bài 05,ຂຽນໃສ່ກະດານ,Viết lên bảng
-ກະເປົາ,Cặp sách / Túi xách,Bag / Backpack,ka-pao,noun,Bài 05,ກະເປົານັກຮຽນ,Cặp học sinh
-ການບ້ານ,Bài tập về nhà,Homework,kaan-baan,noun,Bài 05,ເຮັດການບ້ານ,Làm bài tập về nhà
-ຂຽນ,Viết,To write,khian,verb,Bài 05,ຂຽນໜັງສື,Viết chữ
-ຄະແນນ,Điểm số,Score / Mark,kha-naen,noun,Bài 05,ໄດ້ຄະແນນດີ,Được điểm tốt
-ຄຳສັບ,Từ vựng,Vocabulary / Word,kham-sap,noun,Bài 05,ຮຽນຄຳສັບໃໝ່,Học từ mới
-ຄິດ,Nghĩ / Suy nghĩ,To think,khit,verb,Bài 05,ຄິດຮອດ,Nhớ nhung / Nghĩ đến
-ຄູ,Thầy giáo / Cô giáo,Teacher,khuu,noun,Bài 05,ຄູສອນໜັງສື,Thầy giáo dạy chữ
-ງ່າຍ,Dễ,Easy,ngaai,adjective,Bài 05,ພາສາລາວງ່າຍ,Tiếng Lào dễ
-ຈື່,Nhớ,To remember,cheu,verb,Bài 05,ຂ້ອຍຈື່ໄດ້,Tôi nhớ được
-ຍາກ,Khó,Difficult / Hard,nyaak,adjective,Bài 05,ບົດຮຽນຍາກ,Bài học khó
-ຕອບ,Trả lời,To answer,tawp,verb,Bài 05,ຕອບຄຳຖາມ,Trả lời câu hỏi
-ຕັ່ງ,Cái ghế,Chair,tang,noun,Bài 05,ນັ່ງຕັ່ງ,Ngồi ghế
-ຕັ້ງໃຈ,Chăm chỉ / Tập trung,Attentive / Diligent,tang-chai,adjective,Bài 05,ຕັ້ງໃຈຮຽນ,Chăm chỉ học tập
-ຖາມ,Hỏi,To ask,thaam,verb,Bài 05,ຖາມຄຳຖາມ,Hỏi câu hỏi
-ນັກສຶກສາ,Sinh viên,University student,nak-seuk-saa,noun,Bài 05,ນັກສຶກສາລາວ,Sinh viên Lào
-ນັກຮຽນ,Học sinh,Student / Pupil,nak-hian,noun,Bài 05,ນັກຮຽນຕັ້ງໃຈ,Học sinh chăm chỉ
-ບິກ,Bút bi,Pen,bik,noun,Bài 05,ບິກສີຟ້າ,Bút bi màu xanh
-ບົດຮຽນ,Bài học,Lesson,bot-hian,noun,Bài 05,ບົດຮຽນທີໜຶ່ງ,Bài học số một
-ປຶ້ມ,Sách / Vở,Book / Notebook,peum,noun,Bài 05,ປຶ້ມແບບຮຽນ,Sách giáo khoa
-ປຶ້ມຂຽນ,Vở viết,Notebook,peum-khian,noun,Bài 05,ຂຽນໃສ່ປຶ້ມຂຽນ,Viết vào vở
-ຝຶກແອບ,Luyện tập,To practice,feuk-aep,verb,Bài 05,ຝຶກແອບເວົ້າ,Luyện nói
-ພັກຜ່ອນ,Nghỉ giải lao / Nghỉ ngơi,Break / Rest,phak-phawn,verb,Bài 05,ພັກຜ່ອນສິບນາທີ,Nghỉ mười phút
-ຟັງ,Nghe,To listen,fang,verb,Bài 05,ຟັງອາຈານ,Nghe giảng viên
-ມະຫາວິທະຍາໄລ,Trường đại học,University,ma-haa-vit-tha-nyaa-lai,noun,Bài 05,ມະຫາວິທະຍາໄລແຫ່ງຊາດ,Đại học Quốc gia
-ຢາງລຶບ,Cục tẩy / Cục gôm,Eraser,yaang-leup,noun,Bài 05,ໃຊ້ຢາງລຶບ,Dùng cục tẩy
-ລືມ,Quên,To forget,leum,verb,Bài 05,ຢ່າລືມເດີ,Đừng quên nhé
-ສອກກະດານ,Phấn viết bảng,Chalk,saw-ka-daan,noun,Bài 05,ສອກກະດານຂາວ,Phấn trắng
-ສອນ,Dạy,To teach,sawn,verb,Bài 05,ສອນພາສາລາວ,Dạy tiếng Lào
-ສອບເສັງ,Thi cử,Exam / Test,sawp-seng,verb,Bài 05,ມື້ອື່ນສອບເສັງ,Ngày mai thi
-ສໍ,Bút chì,Pencil,saw,noun,Bài 05,ສໍດຳ,Bút chì đen
-ຫ້ອງສະໝຸດ,Thư viện,Library,hong-sa-mut,noun,Bài 05,ໄປຫ້ອງສະໝຸດ,Đi thư viện
-ຫ້ອງຮຽນ,Lớp học / Phòng học,Classroom,hong-hian,noun,Bài 05,ຢູ່ໃນຫ້ອງຮຽນ,Ở trong lớp học
-ອາຈານ,Giảng viên / Thầy,Professor / Teacher,aa-chaan,noun,Bài 05,ອາຈານໃຈດີ,Giảng viên hiền
-ອ່ານ,Đọc,To read,aan,verb,Bài 05,ອ່ານປຶ້ມ,Đọc sách
-ຮູ້,Biết,To know,huu,verb,Bài 05,ຂ້ອຍບໍ່ຮູ້,Tôi không biết
-ຮຽນ,Học,To study / To learn,hian,verb,Bài 05,ຮຽນໜັງສື,Học chữ / Học bài
-ເກັ່ງ,Giỏi / Xuất sắc,Good at / Clever,keng,adjective,Bài 05,ລາວຮຽນເກັ່ງ,Cậu ấy học giỏi
-ເຂົ້າຮຽນ,Vào học,To attend class,khao-hian,verb,Bài 05,ເຂົ້າຮຽນແປດໂມງ,Vào học lúc 8 giờ
-ເພື່ອນ,Bạn bè,Friend,pheuan,noun,Bài 05,ເພື່ອນສະໜິດ,Bạn thân
-ເລີກຮຽນ,Tan học,Class dismisses,loek-hian,verb,Bài 05,ເລີກຮຽນສີ່ໂມງ,Tan học lúc 4 giờ
-ໂຕະ,Cái bàn,Table / Desk,toh,noun,Bài 05,ໂຕະຮຽນ,Bàn học
-ໂຮງຮຽນ,Trường học,School,hong-hian,noun,Bài 05,ໂຮງຮຽນໃຫຍ່,Trường học to lớn
-ໄມ້ບັນທັດ,Thước kẻ,Ruler,mai-ban-that,noun,Bài 05,ໄມ້ບັນທັດຍາວ,Thước kẻ dài
-ໝູ່,Bạn / Bè bạn,Friend / Companion,muu,noun,Bài 05,ໝູ່ຮ່ວມຫ້ອງ,Bạn cùng lớp
-ກາເຟ,Cà phê,Coffee,kaa-fae,noun,Bài 06,ກາເຟລາວ,Cà phê Lào
-ກິນ,Ăn,To eat,kin,verb,Bài 06,ກິນເຂົ້າແລ້ວບໍ,Đã ăn cơm chưa
-ກຸ້ງ,Tôm,Shrimp / Prawn,kung,noun,Bài 06,ກຸ້ງເຜົາ,Tôm nướng
-ຂົມ,Đắng,Bitter,khom,adjective,Bài 06,ຢາຂົມ,Thuốc đắng
-ຊາ,Trà / Chè,Tea,saa,noun,Bài 06,ດື່ມຊາ,Uống trà
-ຊີ້ນ,Thịt,Meat,seen,noun,Bài 06,ຊີ້ນໝູ,Thịt lợn
-ຊີ້ນງົວ,Thịt bò,Beef,seen-ngua,noun,Bài 06,ລາບຊີ້ນງົວ,Lạp thịt bò
-ຊີ້ນໄກ່,Thịt gà,Chicken meat,seen-kai,noun,Bài 06,ປີ້ງໄກ່ແຊບ,Gà nướng ngon
-ຊີ້ນໝູ,Thịt lợn / Thịt heo,Pork,seen-muu,noun,Bài 06,ກິນຊີ້ນໝູ,Ăn thịt lợn
-ດື່ມ,Uống,To drink,deum,verb,Bài 06,ດື່ມນ້ຳ,Uống nước
-ຕຳໝາກຫຸ່ງ,Nộm đu đủ (Tam Mak Houng),Papaya salad,tam-maak-hung,noun,Bài 06,ຕຳໝາກຫຸ່ງເຜັດ,Nộm đu đủ cay
-ຕົ້ມ,Luộc / Nấu súp,Boiled / To boil,tom,verb,Bài 06,ໄຂ່ຕົ້ມ,Trứng luộc
-ທອດ,Chiên / Rán,Fried,thawt,verb,Bài 06,ປາທອດ,Cá rán
-ນົມ,Sữa,Milk,nom,noun,Bài 06,ນົມສົດ,Sữa tươi
-ນ້ຳ,Nước,Water,nam,noun,Bài 06,ນ້ຳດື່ມ,Nước uống
-ນ້ຳກ້ອນ,Nước đá / Đá lạnh,Ice,nam-kawn,noun,Bài 06,ເອົານ້ຳກ້ອນ,Lấy đá lạnh
-ບໍ່ເຜັດ,Không cay,Not spicy,baw-phet,phrase,Bài 06,ເອົາບໍ່ເຜັດ,Lấy loại không cay
-ປາ,Cá,Fish,paa,noun,Bài 06,ກິນປາ,Ăn cá
-ປີ້ງ,Nướng,Grilled / Roasted,peeng,verb,Bài 06,ປີ້ງໄກ່,Gà nướng
-ຜັກ,Rau,Vegetable,phak,noun,Bài 06,ຜັກສົດ,Rau tươi
-ລາບ,Món Lạp (món ăn quốc hồn Lào),Larb (Lao minced meat salad),laap,noun,Bài 06,ລາບຊີ້ນ,Lạp thịt bò
-ສົ້ມ,Chua,Sour,som,adjective,Bài 06,ໝາກນາວສົ້ມ,Quả chanh chua
-ຫວານ,Ngọt,Sweet,vaan,adjective,Bài 06,ຫວານເກີນໄປ,Ngọt quá
-ຫິວ,Đói / Thèm,Hungry,hiv,adjective,Bài 06,ຫິວເຂົ້າ,Đói bụng
-ອີ່ມ,No (no bụng),Full (after eating),eem,adjective,Bài 06,ອີ່ມແລ້ວ,No rồi
-ຮ້ອນ,Nóng,Hot,hawn,adjective,Bài 06,ນ້ຳຮ້ອນ,Nước nóng
-ເຂົ້າ,Cơm / Gạo,Rice / Meal,khao,noun,Bài 06,ກິນເຂົ້າ,Ăn cơm
-ເຂົ້າຈ້າວ,Cơm tẻ (gạo tẻ),Plain rice,khao-chao,noun,Bài 06,ກິນເຂົ້າຈ້າວ,Ăn cơm tẻ
-ເຂົ້ານຽວ,Xôi (gạo nếp Lào),Sticky rice,khao-niao,noun,Bài 06,ເຂົ້ານຽວແຊບ,Xôi Lào rất ngon
-ເຂົ້າປຸ້ນ,Bún,Rice vermicelli (Khao Poon),khao-pun,noun,Bài 06,ເຂົ້າປຸ້ນນ້ຳແຈ່ວ,Bún nước lèo
-ເຂົ້າປຽກ,Bánh canh / Cháo bánh canh,Wet noodle soup (Khao Piak),khao-piak,noun,Bài 06,ເຂົ້າປຽກໄກ່,Bánh canh gà
-ເຄັມ,Mặn,Salty,khem,adjective,Bài 06,ເຄັມຫຼາຍ,Mặn quá
-ເບຍ,Bia,Beer,bia,noun,Bài 06,ເບຍລາວ,Bia Lào (Beerlao)
-ເຜັດ,Cay,Spicy / Hot,phet,adjective,Bài 06,ເຜັດຫຼາຍ,Rất cay
-ເຝີ,Phở,Pho noodle soup,foe,noun,Bài 06,ເຝີຊີ້ນງົວ,Phở bò
-ເຢັນ,Lạnh / Mát,Cold / Cool,yen,adjective,Bài 06,ນ້ຳເຢັນ,Nước lạnh
-ເຫຼົ້າ,Rượu,Liquor / Alcohol,lao,noun,Bài 06,ເຫຼົ້າຂາວ,Rượu trắng
-ແກງ,Canh / Súp,Soup / Curry,kaeng,noun,Bài 06,ແກງໜໍ່ໄມ້,Canh măng
-ແຊບ,Ngon,Delicious / Tasty,saep,adjective,Bài 06,ອາຫານແຊບຫຼາຍ,Đồ ăn rất ngon
-ໄຂ່,Trứng,Egg,khai,noun,Bài 06,ໄຂ່ດາວ,Trứng ốp la
-ໝາກກ້ວຍ,Quả chuối,Banana,maak-kluay,noun,Bài 06,ໝາກກ້ວຍສຸກ,Chuối chín
-ໝາກກ້ຽງ,Quả cam,Orange,maak-kiang,noun,Bài 06,ນ້ຳໝາກກ້ຽງ,Nước cam ép
-ໝາກມ່ວງ,Quả xoài,Mango,maak-muang,noun,Bài 06,ໝາກມ່ວງຫວານ,Xoài ngọt
-ໝາກໂມ,Quả dưa hấu,Watermelon,maak-moo,noun,Bài 06,ໝາກໂມແດງ,Dưa hấu đỏ
-ໝາກໄມ້,Hoa quả / Trái cây,Fruit,maak-mai,noun,Bài 06,ກິນໝາກໄມ້,Ăn hoa quả
-ກິໂລ,Kilôgam / Ký,Kilogram (kg),ki-loh,noun,Bài 07,ໜຶ່ງກິໂລ,Một cân
-ກີບ,Đồng Kíp (tiền tệ Lào),Kip (Lao currency),keep,noun,Bài 07,ສິບພັນກີບ,Mười nghìn kíp
-ຂະໜາດ,Kích cỡ / Size,Size,kha-naat,noun,Bài 07,ຂະໜາດໃຫຍ່,Cỡ lớn
-ຂາຍ,Bán,To sell,khaai,verb,Bài 07,ຂາຍດີ,Bán đắt hàng
-ຈ່າຍ,Trả / Thanh toán,To pay,chaai,verb,Bài 07,ຈ່າຍເງິນສົດ,Trả tiền mặt
-ຊື້,Mua,To buy,seu,verb,Bài 07,ຊື້ຫຍັງ,Mua cái gì
-ດົ່ງ,Đồng (tiền Việt Nam),Dong (VND),dong,noun,Bài 07,ເງິນດົ່ງ,Tiền đồng
-ຕະຫຼາດ,Chợ,Market,ta-laat,noun,Bài 07,ໄປຕະຫຼາດເຊົ້າ,Đi chợ sáng
-ຖືກ,Rẻ / Đúng,Cheap / Correct,theuk,adjective,Bài 07,ລາຄາຖືກ,Giá rẻ
-ຖົງຕີນ,Đôi tất / Đôi vớ,Socks,thong-teen,noun,Bài 07,ຖົງຕີນດຳ,Tất đen
-ຖົງຢາງ,Túi nilon,Plastic bag,thong-yaang,noun,Bài 07,ບໍ່ເອົາຖົງຢາງ,Không lấy túi nilon
-ນ້ອຍ,Nhỏ / Bé,Small / Little,noy,adjective,Bài 07,ລົດນ້ອຍ,Xe nhỏ
-ບາດ,Đồng Bạt (Thái Lan),Baht (THB),baat,noun,Bài 07,ຈ່າຍເປັນບາດ,Trả bằng bạt
-ບໍ່ເອົາ,Không lấy,Don't want,baw-ao,phrase,Bài 07,ຂ້ອຍບໍ່ເອົາ,Tôi không lấy
-ມີອີກບໍ,Còn nữa không?,Do you have more?,mee-eek-baw,phrase,Bài 07,ມີສີອື່ນບໍ,Có màu khác không
-ລອງ,Thử,To try,lawng,verb,Bài 07,ລອງນຸ່ງເບິ່ງ,Mặc thử xem
-ລາຄາ,Giá cả / Mức giá,Price / Cost,laa-khaa,noun,Bài 07,ລາຄາເທົ່າໃດ,Giá bao nhiêu
-ລິດ,Lít,Liter,lit,noun,Bài 07,ນ້ຳໜຶ່ງລິດ,Một lít nước
-ລູກຄ້າ,Khách hàng,Customer,luuk-khaa,noun,Bài 07,ລູກຄ້າມາຫຼາຍ,Khách đến đông
-ສາຍແອວ,Thắt lưng / Dây nịt,Belt,saai-aew,noun,Bài 07,ສາຍແອວໜັງ,Thắt lưng da
-ສິ້ນ,Váy sinh (trang phục Lào),Lao traditional skirt (Sinh),seen,noun,Bài 07,ນຸ່ງສິ້ນ,Mặc váy sinh
-ສີ,Màu sắc,Color,see,noun,Bài 07,ມັກສີຫຍັງ,Thích màu gì
-ຫຼຸດ,Giảm / Bớt,To discount / To reduce,lut,verb,Bài 07,ຫຼຸດໄດ້ບໍ,Bớt được không
-ຫຼຸດລາຄາ,Giảm giá,Discount,lut-laa-khaa,phrase,Bài 07,ກະລຸນາຫຼຸດລາຄາ,Xin hãy giảm giá
-ຮ້ານ,Cửa hàng / Tiệm,Shop / Store,haan,noun,Bài 07,ຮ້ານອາຫານ,Quán ăn
-ຮ້ານຄ້າ,Cửa hàng bách hóa,Grocery store,haan-khaa,noun,Bài 07,ຊື້ເຄື່ອງຢູ່ຮ້ານຄ້າ,Mua đồ ở tiệm
-ຮ້ານອາຫານ,Nhà hàng / Quán ăn,Restaurant,haan-aa-haan,noun,Bài 07,ກິນເຂົ້າຢູ່ຮ້ານ,Ăn ở quán
-ເກີບ,Đôi giày / Dép,Shoes,koep,noun,Bài 07,ເກີບຜ້າ,Giày vải
-ເຄື່ອງ,Đồ đạc / Hàng hóa,Thing / Goods,khuang,noun,Bài 07,ຊື້ເຄື່ອງ,Mua sắm đồ
-ເງິນ,Tiền / Bạc,Money / Silver,ngoen,noun,Bài 07,ຈ່າຍເງິນ,Trả tiền
-ເງິນທອນ,Tiền thừa / Tiền thối,Change (money),ngoen-thawn,noun,Bài 07,ບໍ່ມີເງິນທອນ,Không có tiền lẻ thối
-ເງິນສົດ,Tiền mặt,Cash,ngoen-sot,noun,Bài 07,ຮັບເງິນສົດ,Nhận tiền mặt
-ເສື້ອ,Cái áo,Shirt / Top,seua,noun,Bài 07,ເສື້ອເຊີດ,Áo sơ mi
-ເອົາ,Lấy / Chọn,To take / Want,ao,verb,Bài 07,ເອົາອັນນີ້,Lấy cái này
-ແພງ,Đắt / Đắt đỏ,Expensive,phaeng,adjective,Bài 07,ແພງຫຼາຍ,Đắt quá
-ແມັດ,Mét,Meter,maet,noun,Bài 07,ຜ້າສອງແມັດ,Hai mét vải
-ແວ່ນຕາ,Kính mắt,Glasses,vaen-taa,noun,Bài 07,ແວ່ນຕາກັນແດດ,Kính râm
-ໂດລາ,Đô la,Dollar,doh-laa,noun,Bài 07,ໜຶ່ງຮ້ອຍໂດລາ,Một trăm đô la
-ໂມງມື,Đồng hồ đeo tay,Wristwatch,moong-meu,noun,Bài 07,ໂມງມືງາມ,Đồng hồ đẹp
-ໂສ້ງ,Cái quần,Trousers / Pants,soong,noun,Bài 07,ໂສ້ງຢີນ,Quần jean
-ໂອນເງິນ,Chuyển khoản,Bank transfer,oon-ngoen,verb,Bài 07,ໂອນເງິນໄດ້ບໍ,Chuyển khoản được không
-ໃບຮັບເງິນ,Hóa đơn / Biên lai,Receipt,bai-hap-ngoen,noun,Bài 07,ຂໍໃບຮັບເງິນ,Xin hóa đơn
-ໃສ່ຖົງ,Bỏ vào túi,Put in a bag,sai-thong,phrase,Bài 07,ໃສ່ຖົງໃຫ້ແດ່,Bỏ túi hộ tôi
-ໃຫຍ່,Lớn / To,Big / Large,nyai,adjective,Bài 07,ເຮືອນໃຫຍ່,Nhà to
-ໝວກ,Cái mũ / Nón,Hat / Cap,muak,noun,Bài 07,ໃສ່ໝວກ,Đội mũ
-ກັບ,Trở về / Cùng với,To return / With,kap,verb,Bài 08,ກັບບ້ານ,Về nhà
-ຂວາ,Bên phải,Right,khwaa,noun,Bài 08,ຢູ່ເບື້ອງຂວາ,Ở phía bên phải
-ຂັບ,Lái (xe),To drive,khap,verb,Bài 08,ຂັບລົດ,Lái ô tô
-ຂີ່,Cưỡi / Đi (xe),To ride / To take (vehicle),khee,verb,Bài 08,ຂີ່ລົດເມ,Đi xe buýt
-ຂົວ,Cây cầu,Bridge,khua,noun,Bài 08,ຂົວມິດຕະພາບ,Cầu Hữu Nghị
-ຂ້າງ,Bên cạnh,Beside / Next to,khaang,noun,Bài 08,ຢູ່ຂ້າງໂຮງຮຽນ,Bên cạnh trường học
-ຈອດ,Đỗ xe / Tấp vào lề,To park,chawt,verb,Bài 08,ຈອດຢູ່ນີ້,Đỗ ở đây
-ຊື່ໄປ,Đi thẳng,Go straight,seu-pai,phrase,Bài 08,ຍ່າງຊື່ໄປເລີຍ,Đi thẳng luôn
-ຊ້າຍ,Bên trái,Left,saai,noun,Bài 08,ຢູ່ເບື້ອງຊ້າຍ,Ở phía bên trái
-ຍົນ,Máy bay,Airplane,nyon,noun,Bài 08,ຂີ່ຍົນ,Đi máy bay
-ຍ່າງ,Đi bộ,To walk,nyaang,verb,Bài 08,ຍ່າງໄປ,Đi bộ sang
-ຖະໜົນ,Đường phố,Street / Avenue,tha-non,noun,Bài 08,ຖະໜົນໃຫຍ່,Đường lớn
-ທາງ,Đường đi / Hướng,Road / Way / Direction,thaang,noun,Bài 08,ຖາມທາງ,Hỏi đường
-ນ້ຳມັນ,Xăng dầu,Gasoline / Fuel,nam-man,noun,Bài 08,ປ້ຳນ້ຳມັນ,Cây xăng
-ປອດໄພ,An toàn,Safe,pawt-phai,adjective,Bài 08,ເດີນທາງປອດໄພ,Đi đường bình an
-ປີ້,"Vé (xe, tàu)",Ticket,pee,noun,Bài 08,ຊື້ປີ້ລົດ,Mua vé xe
-ປ້ຳນ້ຳມັນ,Trạm xăng,Gas station,pam-nam-man,noun,Bài 08,ເຕີມນ້ຳມັນ,Đổ xăng
-ມາ,Đến / Về,To come,maa,verb,Bài 08,ມາແຕ່ໃສ,Đến từ đâu
-ຢຸດ,Dừng lại,To stop,yut,verb,Bài 08,ຢຸດລົດ,Dừng xe
-ລົດ,Xe / Xe cộ,Car / Vehicle,lot,noun,Bài 08,ຂີ່ລົດ,Đi xe
-ລົດຈັກ,Xe máy,Motorbike,lot-chak,noun,Bài 08,ຂີ່ລົດຈັກ,Đi xe máy
-ລົດຕຸກຕຸກ,Xe Túc Túc,Tuk-tuk,lot-tuk-tuk,noun,Bài 08,ຂີ່ລົດຕຸກຕຸກ,Đi xe túc túc
-ລົດຖີບ,Xe đạp,Bicycle,lot-theep,noun,Bài 08,ຂີ່ລົດຖີບ,Đạp xe đạp
-ລົດເມ,Xe buýt,Bus,lot-meh,noun,Bài 08,ຂຶ້ນລົດເມ,Lên xe buýt
-ລົດໃຫຍ່,Xe ô tô,Car / Automobile,lot-nyai,noun,Bài 08,ຂັບລົດໃຫຍ່,Lái xe hơi
-ລົດໄຟ,Tàu hỏa,Train,lot-fai,noun,Bài 08,ສະຖານີລົດໄຟ,Ga tàu hỏa
-ລ້ຽວ,Rẽ / Quẹo,To turn,liao,verb,Bài 08,ລ້ຽວຊ້າຍ,Rẽ trái
-ລ້ຽວຂວາ,Rẽ phải,Turn right,liao-khwaa,phrase,Bài 08,ລ້ຽວຂວາຢູ່ໄຟແດງ,Rẽ phải ở đèn đỏ
-ລ້ຽວຊ້າຍ,Rẽ trái,Turn left,liao-saai,phrase,Bài 08,ລ້ຽວຊ້າຍແລ້ວຊື່ໄປ,Rẽ trái rồi đi thẳng
-ສະຖານີ,Nhà ga / Trạm,Station,sa-thaa-nee,noun,Bài 08,ສະຖານີລົດເມ,Bến xe buýt
-ສະໜາມບິນ,Sân bay,Airport,sa-naam-bin,noun,Bài 08,ສະໜາມບິນວັດໄຕ,Sân bay Wattay
-ສາມແຍກ,Ngã ba,Three-way junction,saam-nyaek,noun,Bài 08,ສາມແຍກໄຟແດງ,Ngã ba đèn đỏ
-ສີ່ແຍກ,Ngã tư,Intersection / Crossroads,see-nyaek,noun,Bài 08,ຮອດສີ່ແຍກ,Đến ngã tư
-ຫຼົງທາງ,Lạc đường,Lost / Lost way,long-thaang,verb,Bài 08,ຂ້ອຍຫຼົງທາງແລ້ວ,Tôi lạc đường rồi
-ອຸບັດຕິເຫດ,Tai nạn,Accident,u-bat-ti-het,noun,Bài 08,ເກີດອຸບັດຕິເຫດ,Xảy ra tai nạn
-ຮອດ,Tới / Đến nơi,To arrive / To reach,hawt,verb,Bài 08,ຮອດແລ້ວ,Đến nơi rồi
-ເຮືອ,Thuyền / Tàu thủy,Boat / Ship,heua,noun,Bài 08,ຂີ່ເຮືອຂ້າມຂອງ,Đi thuyền qua sông
-ແຜນທີ່,Bản đồ,Map,phaen-thee,noun,Bài 08,ເບິ່ງແຜນທີ່,Xem bản đồ
-ໃກ້,Gần,Near / Close,klai,adjective,Bài 08,ຢູ່ໃກ້ນີ້,Ở gần đây
-ໄກ,Xa,Far,kai,adjective,Bài 08,ໄກຫຼາຍ,Rất xa
-ໄປ,Đi,To go,pai,verb,Bài 08,ໄປໃສ,Đi đâu
-ໄຟແດງ,Đèn giao thông / Đèn đỏ,Traffic light / Red light,fai-daeng,noun,Bài 08,ໄຟຂຽວໄຟແດງ,Đèn xanh đèn đỏ
-ໜ້າ,Phía trước / Mặt,Front / Face,naa,noun,Bài 08,ຢູ່ຕໍ່ໜ້າ,Ở phía trước
-ຄົນຂັບລົດ,Tài xế / Lái xe,Driver,khon-khap-lot,noun,Bài 09,ຄົນຂັບລົດໃຈດີ,Bác tài xế hiền lành
-ຊາວນາ,Nông dân,Farmer,xaao-naa,noun,Bài 09,ຊາວນາເຮັດນາ,Nông dân làm ruộng
-ຊ່າງແປງ,Thợ sửa chữa,Mechanic / Repairman,xaang-paeng,noun,Bài 09,ຊ່າງແປງລົດ,Thợ sửa xe
-ຊ່າງໄມ້,Thợ mộc,Carpenter,xaang-mai,noun,Bài 09,ຊ່າງໄມ້ສີມືດີ,Thợ mộc tay nghề cao
-ຕຳຫຼວດ,Cảnh sát / Công an,Police,tam-luat,noun,Bài 09,ຕຳຫຼວດຈະລາຈອນ,Cảnh sát giao thông
-ຖ້ຳ,Hang động,Cave,tham,noun,Bài 09,ຖ້ຳກອງລໍ,Hang Kong Lor
-ທະນາຄານ,Ngân hàng,Bank,tha-naa-khaan,noun,Bài 09,ຝາກເງິນຢູ່ທະນາຄານ,Gửi tiền ở ngân hàng
-ທະຫານ,Bộ đội / Quân nhân,Soldier / Military,tha-haan,noun,Bài 09,ທະຫານປ້ອງກັນຊາດ,Bộ đội bảo vệ tổ quốc
-ທ່ອງທ່ຽວ,Du lịch,Travel / Tourism,thawng-thiaw,verb,Bài 09,ໄປທ່ອງທ່ຽວ,Đi du lịch
-ທ່ານໝໍ,Bác sĩ,Doctor,thaan-maw,noun,Bài 09,ທ່ານໝໍປິ່ນປົວ,Bác sĩ chữa bệnh
-ນະຄອນຫຼວງ,Thủ đô / Thành phố lớn,Capital city,na-khon-luang,noun,Bài 09,ນະຄອນຫຼວງວຽງຈັນ,Thủ đô Vientiane
-ນັກທຸລະກິດ,Doanh nhân,Businessman,nak-thu-la-kit,noun,Bài 09,ນັກທຸລະກິດເກັ່ງ,Doanh nhân giỏi
-ນ້ຳຕົກຕາດ,Thác nước,Waterfall,nam-tok-taat,noun,Bài 09,ຕາດກວາງຊີ,Thác Kuang Si
-ບໍລິສັດ,Công ty,Company,baw-li-sat,noun,Bài 09,ບໍລິສັດໃຫຍ່,Công ty lớn
-ປະຕູໄຊ,Khải Hoàn Môn Patuxay,Patuxay Monument,pa-tuu-xai,noun,Bài 09,ທ່ຽວຊົມປະຕູໄຊ,Tham quan Patuxay
-ປາກເຊ,Paksé,Pakse,paak-seh,noun,Bài 09,ເມືອງປາກເຊ,Thành phố Paksé
-ປ່າໄມ້,Rừng cây,Forest,paa-mai,noun,Bài 09,ປ່າໄມ້ຂຽວສົດ,Rừng xanh mướt
-ພຣະ,Sư thầy / Nhà sư,Monk / Buddha,phra,noun,Bài 09,ໃສ່ບາດພຣະ,Cúng dường chư tăng
-ພະຍາບານ,Y tá / Điều dưỡng,Nurse,pha-nyaa-baan,noun,Bài 09,ພະຍາບານດູແລ,Y tá chăm sóc
-ພະນັກງານ,Nhân viên / Cán bộ,Employee / Staff,pha-nak-ngaan,noun,Bài 09,ພະນັກງານບໍລິສັດ,Nhân viên công ty
-ພູ,Ngọn núi,Mountain,phuu,noun,Bài 09,ພູສູງ,Núi cao
-ວັດ,Chùa / Ngôi chùa,Buddhist temple / Wat,vat,noun,Bài 09,ໄປວັດໄຫວ້ພຣະ,Đi chùa lễ Phật
 ວິສະວະກອນ,Kỹ sư,Engineer,vi-sa-wa-kawn,noun,Bài 09,ວິສະວະກອນໄຟຟ້າ,Kỹ sư điện
+ວີຊາ,Thị thực (Visa),Visa,vee-saa,noun,Du lịch,ຂໍວີຊາເຂົ້າເມືອງ,Xin thị thực nhập cảnh
+ວຸ້ນວາຍ,Hỗn loạn / Ồn ào,Chaotic / Noisy,vun-vaai,adjective,Trạng thái,ສັງຄົມບໍ່ວຸ້ນວາຍ,Xã hội trật tự không hỗn loạn
 ວຽກ,Công việc,Job / Work,viak,noun,Bài 09,ເຮັດວຽກຫຍັງ,Làm công việc gì
 ວຽງຈັນ,Viêng Chăn (Vientiane),Vientiane,viang-chan,noun,Bài 09,ຢູ່ນະຄອນຫຼວງວຽງຈັນ,Ở Viêng Chăn
+ວ່າ,Rằng / Là,That,vaa,conjunction,Mở rộng - Từ nối,ຂ້ອຍຄິດວ່າດີ,Tôi nghĩ rằng rất tốt
+ສວນສັດ,Vườn bách thú / Thảo cầm viên,Zoo,suan-sat,noun,Nơi chốn,ພາເດັກນ້ອຍໄປສວນສັດ,Dẫn trẻ con đi vườn thú
 ສວນສາທາລະນະ,Công viên công cộng,Public park,suan-saa-thaa-la-na,noun,Bài 09,ຍ່າງຫຼິ້ນຢູ່ສວນ,Dạo mát ở công viên
+ສອກກະດານ,Phấn viết bảng,Chalk,saw-ka-daan,noun,Bài 05,ສອກກະດານຂາວ,Phấn trắng
+ສອງ,Hai (số 2),Two (2),sawng,number,Bài 03,ສອງຄົນ,Hai người
+ສອງພັນ,Hai nghìn,Two thousand,sawng-phan,number,Số đếm,ສອງພັນປີ,Hai nghìn năm
+ສອງຮ້ອຍ,Hai trăm,Two hundred,sawng-hway,number,Số đếm,ສອງຮ້ອຍຄົນ,Hai trăm người
+ສອນ,Dạy,To teach,sawn,verb,Bài 05,ສອນພາສາລາວ,Dạy tiếng Lào
+ສອບເສັງ,Thi cử,Exam / Test,sawp-seng,verb,Bài 05,ມື້ອື່ນສອບເສັງ,Ngày mai thi
+ສະກຸນເງິນ,Đơn vị tiền tệ,Currency,sa-kun-ngoen,noun,Tài chính,ສະກຸນເງິນກີບ,Đơn vị tiền tệ Kíp
 ສະຖານທີ່,Địa điểm / Thắng cảnh,Place / Location,sa-thaan-thee,noun,Bài 09,ສະຖານທີ່ທ່ອງທ່ຽວ,Điểm du lịch
 ສະຖານທູດ,Đại sứ quán,Embassy,sa-thaan-thuut,noun,Bài 09,ສະຖານທູດຫວຽດນາມ,Đại sứ quán Việt Nam
-ສະຫວັນນະເຂດ,Savannakhet,Savannakhet,sa-van-na-khet,noun,Bài 09,ແຂວງສະຫວັນນະເຂດ,Tỉnh Savannakhet
-ສະໜາມກິລາ,Sân vận động,Stadium / Sports field,sa-naam-ki-laa,noun,Bài 09,ເຕະບານຢູ່ສະໜາມ,Đá bóng ở sân vận động
-ຫຼວງພະບາງ,Luông Pha Băng,Luang Prabang,luang-pha-baang,noun,Bài 09,ເມືອງມໍລະດົກໂລກ,Thành phố di sản thế giới
-ຫ້ອງການ,Văn phòng / Cơ quan,Office,hong-kaan,noun,Bài 09,ຫ້ອງການເປີດແລ້ວ,Văn phòng đã mở cửa
-ຫ້ອງນ້ຳ,Nhà vệ sinh,Toilet / Restroom,hong-nam,noun,Bài 09,ຫ້ອງນ້ຳຢູ່ໃສ,Nhà vệ sinh ở đâu
-ອາຊີບ,Nghề nghiệp,Profession / Occupation,aa-xeep,noun,Bài 09,ອາຊີບຫຍັງ,Làm nghề gì
-ຮ້ານຂາຍຢາ,Hiệu thuốc tây,Pharmacy,haan-khaai-yaa,noun,Bài 09,ຊື້ຢາຢູ່ຮ້ານ,Mua thuốc ở tiệm
-ເມືອງ,Thị xã / Huyện / Đô thị,Town / District / City,muang,noun,Bài 09,ເມືອງຫຼວງ,Thủ đô
-ເຮັດວຽກ,Làm việc,To work,het-viak,verb,Bài 09,ເຮັດວຽກຢູ່ໃສ,Làm việc ở đâu
-ແຂວງ,Tỉnh,Province,khwaeng,noun,Bài 09,ແຂວງຈຳປາສັກ,Tỉnh Champasak
-ແມ່ຄ້າ,Người bán hàng / Tiểu thương,Vendor / Merchant,mae-khaa,noun,Bài 09,ແມ່ຄ້າໃຈດີ,Bà bán hàng vui vẻ
-ແມ່ນ້ຳຂອງ,Sông Mê Kông,Mekong River,mae-nam-khawng,noun,Bài 09,ແຄມແມ່ນ້ຳຂອງ,Bờ sông Mê Kông
-ແມ່ບ້ານ,Người nội trợ,Housewife / Housekeeper,mae-baan,noun,Bài 09,ແມ່ບ້ານເຮັດວຽກເຮືອນ,Nội trợ làm việc nhà
-ໂຮງແຮມ,Khách sạn,Hotel,hong-haem,noun,Bài 09,ພັກຢູ່ໂຮງແຮມ,Nghỉ tại khách sạn
-ໂຮງໝໍ,Bệnh viện,Hospital,hong-maw,noun,Bài 09,ໄປໂຮງໝໍ,Đi bệnh viện
-ໄປສະນີ,Bưu điện,Post office,pai-sa-nee,noun,Bài 09,ສົ່ງຈົດໝາຍ,Gửi thư tại bưu điện
-ໝໍປິ່ນປົວ,Bác sĩ điều trị,Medical doctor,maw-pin-pua,noun,Bài 09,ໄປຫາໝໍ,Đi khám bác sĩ
-ກວາດເຮືອນ,Quét nhà,To sweep the house,kwaat-heuan,verb,Bài 10,ກວາດເຮືອນໃຫ້ສະອາດ,Quét nhà sạch sẽ
-ກວ້າງ,Rộng rãi,Spacious / Wide,kwaang,adjective,Bài 10,ຫ້ອງກວ້າງ,Phòng rộng
-ຂໍ້ຄວາມ,Tin nhắn,Message,khaw-khwaam,noun,Bài 10,ໄດ້ຮັບຂໍ້ຄວາມ,Nhận được tin nhắn
-ຄອມພິວເຕີ,Máy vi tính,Computer,khawm-phiw-toe,noun,Bài 10,ຫຼິ້ນຄອມພິວເຕີ,Dùng máy tính
-ງຽບ,Yên tĩnh,Quiet,ngiap,adjective,Bài 10,ບ່ອນນີ້ງຽບດີ,Nơi này yên tĩnh
-ຊັກເຄື່ອງ,Giặt quần áo,To do laundry,xak-khuang,verb,Bài 10,ຊັກເຄື່ອງທ້າຍອາທິດ,Giặt đồ cuối tuần
-ດັງ,Ồn ào / Vang to,Noisy / Loud,dang,adjective,Bài 10,ສຽງດັງຫຼາຍ,Tiếng to quá
-ຕື່ນນອນ,Thức dậy,To wake up,teun-nawn,verb,Bài 10,ຕື່ນນອນແຕ່ເຊົ້າ,Thức dậy từ sớm
-ຕູ້ເຢັນ,Tủ lạnh,Refrigerator,tuu-yen,noun,Bài 10,ເອົານ້ຳໃນຕູ້ເຢັນ,Lấy nước trong tủ lạnh
-ຕູ້ເສື້ອຜ້າ,Tủ quần áo,Wardrobe,tuu-seua-phaa,noun,Bài 10,ຕູ້ໄມ້,Tủ gỗ
-ຕຽງ,Cái giường,Bed,tiang,noun,Bài 10,ຕຽງນອນ,Giường ngủ
-ຖູເຮືອນ,Lau nhà,To mop the floor,thuu-heuan,verb,Bài 10,ຖູເຮືອນທຸກມື້,Lau nhà hằng ngày
-ຖູແຂ້ວ,Đánh răng,To brush teeth,thuu-khaew,verb,Bài 10,ຖູແຂ້ວທຸກມື້,Đánh răng mỗi ngày
-ນອນ,Ngủ,To sleep,nawn,verb,Bài 10,ເຂົ້ານອນໄວ,Đi ngủ sớm
-ນຸ່ງເຄື່ອງ,Mặc quần áo,To get dressed,nung-khuang,verb,Bài 10,ນຸ່ງເຄື່ອງງາມ,Mặc đồ đẹp
-ປະຕູ,Cửa chính / Cổng,Door / Gate,pa-tuu,noun,Bài 10,ປະຕູໃຫຍ່,Cửa lớn
-ປິດ,Tắt / Đóng,To turn off / To close,pit,verb,Bài 10,ປິດໄຟ,Tắt đèn
-ປ່ອງຢ້ຽມ,Cửa sổ,Window,pawng-yiam,noun,Bài 10,ເປີດປ່ອງຢ້ຽມ,Mở cửa sổ
-ຜ້າຫົ່ມ,Cái chăn / Mền,Blanket,phaa-hom,noun,Bài 10,ຫົ່ມຜ້າຫົ່ມ,Đắp chăn
-ພັດລົມ,Cái quạt máy,Electric fan,phat-lom,noun,Bài 10,ເປີດພັດລົມ,Bật quạt
-ມຸ້ງ,Cái màn / Mùng,Mosquito net,mung,noun,Bài 10,ກາງມຸ້ງ,Mắc màn
-ລ້າງຖ້ວຍ,Rửa bát,To wash dishes,laang-thuay,verb,Bài 10,ລ້າງຖ້ວຍຊ່ວຍແມ່,Rửa bát giúp mẹ
-ລ້າງມື,Rửa tay,To wash hands,laang-meu,verb,Bài 10,ລ້າງມືກ່ອນກິນເຂົ້າ,Rửa tay trước khi ăn
-ລ້າງໜ້າ,Rửa mặt,To wash face,laang-naa,verb,Bài 10,ລ້າງໜ້າດ້ວຍນ້ຳເຢັນ,Rửa mặt bằng nước mát
-ສະອາດ,Sạch sẽ,Clean,sa-aat,adjective,Bài 10,ເຮືອນສະອາດ,Nhà cửa sạch sẽ
-ສົ່ງ,Gửi đi,To send,song,verb,Bài 10,ສົ່ງຂໍ້ຄວາມ,Gửi tin nhắn
-ຫຼັບ,Ngủ say,Asleep,lap,verb,Bài 10,ນອນຫຼັບດີ,Ngủ ngon giấc
-ຫ້ອງຄົວ,Nhà bếp,Kitchen,hong-khua,noun,Bài 10,ແຕ່ງກິນໃນຫ້ອງຄົວ,Nấu nướng trong bếp
-ຫ້ອງນອນ,Phòng ngủ,Bedroom,hong-nawn,noun,Bài 10,ຫ້ອງນອນກວ້າງ,Phòng ngủ rộng
-ຫ້ອງຮັບແຂກ,Phòng khách,Living room,hong-hap-khaek,noun,Bài 10,ນັ່ງຫ້ອງຮັບແຂກ,Ngồi phòng khách
-ອັດ,Đóng / Khép,To close / To shut,at,verb,Bài 10,ອັດປ່ອງຢ້ຽມ,Đóng cửa sổ
-ອາບນ້ຳ,Tắm rửa,To take a shower / bath,aap-nam,verb,Bài 10,ອາບນ້ຳຕອນແລງ,Tắm buổi chiều
-ອິນເຕີເນັດ,Mạng Internet,Internet,in-toe-net,noun,Bài 10,ຕໍ່ອິນເຕີເນັດ,Kết nối internet
-ຮີດເຄື່ອງ,Là / Ủi quần áo,To iron clothes,heet-khuang,verb,Bài 10,ຮີດເສື້ອ,Ủi áo
-ເປີດ,Mở,To open / To turn on,poet,verb,Bài 10,ເປີດປະຕູ,Mở cửa
-ເປື້ອນ,Bẩn / Dơ,Dirty,puan,adjective,Bài 10,ເສື້ອເປື້ອນ,Áo bẩn
-ເຮັດອາຫານ,Nấu món ăn,To prepare food,het-aa-haan,verb,Bài 10,ເຮັດອາຫານລາວ,Nấu món ăn Lào
-ແຄບ,Hẹp / Chật,Narrow,khaep,adjective,Bài 10,ທາງແຄບ,Đường hẹp
-ແຕ່ງກິນ,Nấu ăn,To cook,taeng-kin,verb,Bài 10,ແມ່ແຕ່ງກິນແຊບ,Mẹ nấu ăn ngon
-ແອເຢັນ,Máy điều hòa,Air conditioner,ae-yen,noun,Bài 10,ເປີດແອເຢັນ,Bật điều hòa
-ໂທ,Gọi điện,To call (phone),thoh,verb,Bài 10,ໂທຫາຂ້ອຍເດີ,Gọi cho tôi nhé
-ໂທລະທັດ,Ti vi,Television,tho-la-that,noun,Bài 10,ເບິ່ງໂທລະທັດ,Xem tivi
-ໂທລະສັບ,Điện thoại,Telephone / Mobile,tho-la-sap,noun,Bài 10,ໂທລະສັບມືຖື,Điện thoại di động
-ໄຟຟ້າ,Điện lực / Đèn điện,Electricity,fai-faa,noun,Bài 10,ໄຟຟ້າມອດ,Mất điện
-ໝອນ,Cái gối,Pillow,mawn,noun,Bài 10,ໝອນນຸ່ມ,Gối êm
-ກ້າຫານ,Dũng cảm,Brave,kaa-haan,adjective,Bài 11,ທະຫານກ້າຫານ,Chiến sĩ dũng cảm
-ຂີ້ຮ້າຍ,Xấu xí / Tệ,Ugly / Bad,khee-haai,adjective,Bài 11,ຄົນຂີ້ຮ້າຍ,Kẻ xấu tính
-ຍາວ,Dài,Long,nyaao,adjective,Bài 11,ໄມ້ຍາວ,Cây gậy dài
-ດີ,Tốt / Đẹp,Good,dee,adjective,Bài 11,ຄົນດີ,Người tốt
-ທຳມະດາ,Bình thường,Normal / Ordinary,tham-ma-daa,adjective,Bài 11,ມື້ທຳມະດາ,Ngày bình thường
-ບາງ,Mỏng,Thin,baang,adjective,Bài 11,ເຈ້ຍບາງ,Tờ giấy mỏng
-ບໍ່ດີ,Không tốt / Xấu,Bad / Not good,baw-dee,adjective,Bài 11,ອາກາດບໍ່ດີ,Thời tiết không tốt
-ປຽກ,Ướt át,Wet,piak,adjective,Bài 11,ເສື້ອປຽກ,Áo bị ướt
-ພິເສດ,Đặc biệt,Special,phi-set,adjective,Bài 11,ອາຫານພິເສດ,Món ăn đặc biệt
-ມືດ,Tối tăm,Dark,muut,adjective,Bài 11,ຫ້ອງມືດ,Phòng tối
-ມ່ວນ,Vui vẻ / Thú vị,Fun / Enjoyable,muan,adjective,Bài 11,ໄປທ່ຽວມ່ວນຫຼາຍ,Đi chơi rất vui
-ຢ້ານ,Sợ hãi,Scared / Afraid,yaan,verb,Bài 11,ຢ້ານຄວາມມືດ,Sợ bóng tối
+ສະຖານີ,Nhà ga / Trạm,Station,sa-thaa-nee,noun,Bài 08,ສະຖານີລົດເມ,Bến xe buýt
+ສະຖານີລົດເມ,Bến xe buýt,Bus station,sa-thaa-nee-lot-mee,noun,Mở rộng - Địa điểm,ໄປສະຖານີລົດເມສາຍໃຕ້,Đến bến xe phía Nam
+ສະຖານີລົດໄຟ,Ga tàu hỏa,Train station,sa-thaa-nee-lot-fai,noun,Mở rộng - Địa điểm,ສະຖານີລົດໄຟລາວ-ຈີນ,Ga tàu hỏa Lào - Trung
+ສະຖາປະນິກ,Kiến trúc sư,Architect,sa-thaa-pa-nik,noun,Nghề nghiệp,ສະຖາປະນິກອອກແບບເຮືອນ,Kiến trúc sư thiết kế nhà
 ສະບາຍ,Dễ chịu / Khỏe,Comfortable,sa-baai,adjective,Bài 11,ຢູ່ສະບາຍ,Sống thoải mái
+ສະບາຍດີ,Xin chào,Hello / Good day,sa-bai-dee,phrase,Bài 01,ສະບາຍດີຕອນເຊົ້າ,Chào buổi sáng
+ສະບາຍດີບໍ,Bạn có khỏe không?,How are you?,sa-bai-dee-baw,phrase,Bài 01,ເຈົ້າສະບາຍດີບໍ,Bạn khỏe không
+ສະບາຍໃຈ,Thảnh thơi / An tâm,At peace / Content,sa-baai-chai,adjective,Bài 12,ຮູ້ສຶກສະບາຍໃຈ,Cảm thấy yên lòng
+ສະບູ,Xà phòng,Soap,sa-buu,noun,Đồ gia dụng,ຖູສະບູລ້າງມື,Xát xà phòng rửa tay
+ສະພາແຫ່ງຊາດ,Quốc hội,National Assembly,sa-phaa-haeng-xaat,noun,Nhà nước,ກອງປະຊຸມສະພາແຫ່ງຊາດ,Kỳ họp Quốc hội
+ສະລອຍນ້ຳ,Bể bơi,Swimming pool,sa-lawy-nam,noun,Thể thao,ລອຍນ້ຳຢູ່ສະລອຍນ້ຳ,Bơi ở bể bơi
+ສະຫງົບ,Yên bình / Thanh bình,Peaceful / Tranquil,sa-ngop,adjective,Trạng thái,ບ້ານເມືອງສະຫງົບ,Đất nước yên bình
+ສະຫວັນນະເຂດ,Savannakhet,Savannakhet,sa-van-na-khet,noun,Bài 09,ແຂວງສະຫວັນນະເຂດ,Tỉnh Savannakhet
+ສະຫຼະ,Nguyên âm,Vowel,sa-la,noun,Ngôn ngữ,ສະຫຼະສຽງສັ້ນແລະສຽງຍາວ,Nguyên âm ngắn và nguyên âm dài
+ສະຫຼາດ,Thông minh,Smart / Intelligent,sa-laat,adjective,Bài 02,ນັກຮຽນສະຫຼາດ,Học sinh thông minh
+ສະອາດ,Sạch sẽ,Clean,sa-aat,adjective,Bài 10,ເຮືອນສະອາດ,Nhà cửa sạch sẽ
+ສະເຫຼີມສະຫຼອງ,Kỷ niệm / Ăn mừng,To celebrate,sa-loem-sa-lawng,verb,Bài 04,ສະເຫຼີມສະຫຼອງປີໃໝ່,Ăn mừng năm mới
+ສະເໜີ,Đề xuất / Giới thiệu,To propose / To suggest,sa-noe,verb,Công sở,ສະເໜີແຜນການ,Đề xuất kế hoạch
+ສະເໝີ,Thường xuyên / Luôn luôn,Always / Constantly,sa-moe,adverb,Tần suất,ມາຮຽນຕົງເວລາສະເໝີ,Luôn luôn đến lớp đúng giờ
+ສະໜັບສະໜູນ,Ủng hộ / Tài trợ,To support / To sponsor,sa-nap-sa-nuun,verb,Xã hội,ສະໜັບສະໜູນການສຶກສາ,Ủng hộ giáo dục
+ສະໜາມກິລາ,Sân vận động,Stadium / Sports field,sa-naam-ki-laa,noun,Bài 09,ເຕະບານຢູ່ສະໜາມ,Đá bóng ở sân vận động
+ສະໜາມບິນ,Sân bay,Airport,sa-naam-bin,noun,Bài 08,ສະໜາມບິນວັດໄຕ,Sân bay Wattay
+ສັກຢາ,Tiêm thuốc / Chích thuốc,To inject / Vaccine,sak-yaa,verb,Y tế,ສັກຢາວັກຊີນ,Tiêm vắc xin
+ສັງເກດ,Quan sát / Chú ý,To observe / To notice,sang-keet,verb,Nhận thức,ສັງເກດເບິ່ງ,Quan sát kỹ
+ສັດຊື່,Thật thà / Ngay thẳng,Honest / Upright,sat-xue,adjective,Tính cách,ຄົນສັດຊື່ບໍລິສຸດ,Người thật thà trong sáng
+ສັນຍາ,Hứa hẹn / Hợp đồng,To promise / Contract,san-nyaa,verb,Giao tiếp,ຂ້ອຍສັນຍາ,Tôi xin hứa
+ສັບສົນ,Rối rắm / Phức tạp,Confused / Complicated,sap-son,adjective,Trạng thái,ເລື່ອງສັບສົນ,Câu chuyện rối rắm
 ສັ້ນ,Ngắn,Short (length),san,adjective,Bài 11,ໂສ້ງສັ້ນ,Quần soóc ngắn
+ສາຍສິນ,Sợi chỉ trắng may mắn,Sacred white thread,saai-sin,noun,Văn hóa Lào,ຜູກແຂນດ້ວຍສາຍສິນ,Buộc cổ tay bằng sợi chỉ trắng
+ສາຍແອວ,Thắt lưng / Dây nịt,Belt,saai-aew,noun,Bài 07,ສາຍແອວໜັງ,Thắt lưng da
+ສາມ,Ba (số 3),Three (3),saam,number,Bài 03,ສາມມື້,Ba ngày
+ສາມສິບ,Ba mươi (số 30),Thirty (30),saam-sip,number,Bài 03,ສາມສິບມື້,Ba mươi ngày
+ສາມຮ້ອຍ,Ba trăm,Three hundred,saam-hway,number,Số đếm,ສາມຮ້ອຍກີບ,Ba trăm Kíp
+ສາມະເນນ,Chú tiểu,Novice monk,saa-ma-neen,noun,Tôn giáo,ສາມະເນນບວດຮຽນ,Chú tiểu tu học
+ສາມແຍກ,Ngã ba,Three-way junction,saam-nyaek,noun,Bài 08,ສາມແຍກໄຟແດງ,Ngã ba đèn đỏ
+ສາລະວັນ,Saravane,Saravane,saa-la-van,noun,Địa lý Lào,ແຂວງສາລະວັນ,Tỉnh Saravane
+ສາລີ,Bắp ngô,Corn / Maize,saa-lee,noun,Nông sản,ສາລີຕົ້ມ,Ngô luộc
 ສຳຄັນ,Quan trọng,Important,sam-khan,adjective,Bài 11,ເລື່ອງສຳຄັນ,Chuyện quan trọng
+ສຳພາດ,Phỏng vấn,To interview,sam-phaat,verb,Công việc,ສຳພາດງານ,Phỏng vấn xin việc
+ສຳເລັດ,Thành công,Success / Completed,sam-let,adjective,Bài 12,ຂໍໃຫ້ສຳເລັດ,Chúc thành công
+ສິນເຊື່ອ,Tín dụng,Credit,sin-xuea,noun,Tài chính,ສິນເຊື່ອທະນາຄານ,Tín dụng ngân hàng
+ສິບ,Mười (số 10),Ten (10),sip,number,Bài 03,ສິບຄົນ,Mười người
+ສິບພັນ,Mười nghìn,Ten thousand,sip-phan,number,Số đếm,ສິບພັນກີບ,Mười nghìn Kíp
+ສິບລ້ານ,Mười triệu,Ten million,sip-laan,number,Số đếm,ສິບລ້ານຄົນ,Mười triệu dân
+ສິບສອງ,Mười hai (số 12),Twelve (12),sip-sawng,number,Bài 03,ສິບສອງເດືອນ,Mười hai tháng
+ສິບສາມ,Mười ba (số 13),Thirteen (13),sip-saam,number,Bài 03,ສິບສາມປີ,Mười ba năm
+ສິບສີ່,Mười bốn,Fourteen,sip-see,number,Số đếm,ສິບສີ່ມື້,Mười bốn ngày
+ສິບຫົກ,Mười sáu,Sixteen,sip-hok,number,Số đếm,ສິບຫົກປີ,Mười sáu tuổi
+ສິບຫ້າ,Mười lăm,Fifteen,sip-haa,number,Số đếm,ສິບຫ້ານາທີ,Mười lăm phút
+ສິບເກົ້າ,Mười chín,Nineteen,sip-kao,number,Số đếm,ສິບເກົ້າປີ,Mười chín tuổi
+ສິບເຈັດ,Mười bảy,Seventeen,sip-chet,number,Số đếm,ສິບເຈັດວັນ,Mười bảy ngày
+ສິບເອັດ,Mười một (số 11),Eleven (11),sip-et,number,Bài 03,ສິບເອັດໂມງ,Mười một giờ
+ສິບແປດ,Mười tám,Eighteen,sip-paet,number,Số đếm,ສິບແປດໂມງ,Mười tám giờ
+ສິລະປະ,Nghệ thuật / Mỹ thuật,Art / Fine arts,si-la-pa,noun,Nghệ thuật,ແຕ້ມຮູບສິລະປະ,Vẽ tranh nghệ thuật
+ສິ້ນ,Váy sinh (trang phục Lào),Lao traditional skirt (Sinh),seen,noun,Bài 07,ນຸ່ງສິ້ນ,Mặc váy sinh
+ສິ້ນໄໝ,Váy tơ tằm dệt tay truyền thống,Handwoven silk Sinh,sin-mai,noun,Trang phục,ນຸ່ງສິ້ນໄໝລາວ,Mặc váy tơ tằm Lào
+ສີ,Màu sắc,Color,see,noun,Bài 07,ມັກສີຫຍັງ,Thích màu gì
 ສີຂາວ,Màu trắng,White color,see-khaao,noun,Bài 11,ເສື້ອສີຂາວ,Áo màu trắng
 ສີຂຽວ,Màu xanh lá cây,Green color,see-khiao,noun,Bài 11,ໃບໄມ້ສີຂຽວ,Lá cây màu xanh
 ສີດຳ,Màu đen,Black color,see-dam,noun,Bài 11,ລົດສີດຳ,Xe màu đen
@@ -470,60 +736,466 @@ lao,vi,en,romanization,pos,lesson,example_lao,example_vi
 ສີເທົາ,Màu xám,Grey color,see-thao,noun,Bài 11,ແມວສີເທົາ,Con mèo xám
 ສີເຫຼືອງ,Màu vàng,Yellow color,see-leuang,noun,Bài 11,ແສງຕາເວັນສີເຫຼືອງ,Ánh mặt trời vàng
 ສີແດງ,Màu đỏ,Red color,see-daeng,noun,Bài 11,ດອກໄມ້ສີແດງ,Bông hoa màu đỏ
+ສີ່,Bốn (số 4),Four (4),see,number,Bài 03,ສີ່ໂມງ,Bốn giờ
+ສີ່ພັນດອນ,Si Phan Don (4000 đảo),Si Phan Don,see-phan-dawn,noun,Địa danh,ນ້ຳຕົກຕາດຄອນພະເພັງຢູ່ສີ່ພັນດອນ,Thác Khone Phapheng ở 4000 đảo
+ສີ່ສິບ,Bốn mươi (số 40),Forty (40),see-sip,number,Bài 03,ສີ່ສິບກິໂລ,Bốn mươi cân
+ສີ່ຮ້ອຍ,Bốn trăm,Four hundred,see-hway,number,Số đếm,ສີ່ຮ້ອຍແມັດ,Bốn trăm mét
+ສີ່ແຍກ,Ngã tư,Intersection / Crossroads,see-nyaek,noun,Bài 08,ຮອດສີ່ແຍກ,Đến ngã tư
+ສຸຂະພາບ,Sức khỏe,Health,su-kha-phaap,noun,Y tế,ສຸຂະພາບແຂງແຮງ,Sức khỏe dồi dào
+ສຸດຍອດ,Tuyệt vời / Đỉnh cao,Awesome / Fantastic,sut-nyawt,adjective,Khen ngợi,ອາຫານມື້ນີ້ສຸດຍອດ,Món ăn hôm nay tuyệt vời
+ສຸພາບ,Lịch sự / Nhã nhặn,Polite / Courteous,su-phaap,adjective,Tính cách,ຄົນສຸພາບຮຽບຮ້ອຍ,Người lịch sự nhã nhặn
+ສູງ,Cao,Tall / High,suung,adjective,Bài 02,ລາວສູງຫຼາຍ,Anh ấy rất cao
+ສູນ,Không (số 0),Zero (0),suun,number,Bài 03,ເລກສູນ,Số không
+ສົນໃຈ,Quan tâm / Hứng thú,Interested,son-chai,verb,Tâm lý,ຂ້ອຍສົນໃຈພາສາລາວ,Tôi rất quan tâm đến tiếng Lào
+ສົບ,Môi,Lips,sop,noun,Cơ thể,ຮິມສົບ,Bờ môi
+ສົ່ງ,Gửi đi,To send,song,verb,Bài 10,ສົ່ງຂໍ້ຄວາມ,Gửi tin nhắn
+ສົ່ງວຽກບ້ານ,Nộp bài tập về nhà,Submit homework,song-viak-baan,phrase,Học tập,ສົ່ງວຽກບ້ານຕົງເວລາ,Nộp bài tập đúng hạn
+ສົ້ມ,Chua,Sour,som,adjective,Bài 06,ໝາກນາວສົ້ມ,Quả chanh chua
+ສ້ອມ,Nĩa / Dĩa,Fork,sawm,noun,Bài 03,ບ່ວງແລະສ້ອມ,Thìa và nĩa
+ສ້ອມແປງ,Sửa chữa,To repair / To mend,sawm-paeng,verb,Hành động,ສ້ອມແປງເຮືອນ,Sửa chữa nhà cửa
+ສໍ,Bút chì,Pencil,saw,noun,Bài 05,ສໍດຳ,Bút chì đen
+ສໍດຳ,Bút chì,Pencil,saw-dam,noun,Mở rộng - Giáo dục,ຂຽນດ້ວຍສໍດຳ,Viết bằng bút chì
+ຫວັງ,Hy vọng,To hope,vang,verb,Bài 12,ຫວັງວ່າຈະດີ,Hy vọng sẽ tốt
+ຫວາ,Hả? / Thế cơ à?,Really? / Huh?,vaa,particle,Mở rộng - Khẩu ngữ,ແທ້ຫວາ,Thật hả?
+ຫວານ,Ngọt,Sweet,vaan,adjective,Bài 06,ຫວານເກີນໄປ,Ngọt quá
+ຫວຽດນາມ,Việt Nam,Vietnam,viet-naam,noun,Bài 01,ປະເທດຫວຽດນາມ,Đất nước Việt Nam
+ຫອຍ,Con ốc,Snail / Shellfish,hway,noun,Động vật,ຕົ້ມຫອຍ,Luộc ốc
+ຫາ,Tìm / Kiếm,To find / To seek,haa,verb,Bài 12,ຫາເງິນ,Kiếm tiền
+ຫິວ,Đói / Thèm,Hungry,hiv,adjective,Bài 06,ຫິວເຂົ້າ,Đói bụng
+ຫິວນ້ຳ,Khát nước,Thirsty,hiv-nam,adjective,Mở rộng - Cảm xúc,ຫິວນ້ຳຫຼາຍ,Khát nước quá
+ຫູ,Tai,Ear,huu,noun,Mở rộng - Cơ thể,ຫູໜວກ,Điếc tai
+ຫົກ,Sáu (số 6),Six (6),hok,number,Bài 03,ຫົກເດືອນ,Sáu tháng
+ຫົກສິບ,Sáu mươi,Sixty,hok-sip,number,Số đếm,ຫົກສິບນາທີ,Sáu mươi phút
+ຫົກຮ້ອຍ,Sáu trăm,Six hundred,hok-hway,number,Số đếm,ຫົກຮ້ອຍປີ,Sáu trăm năm
+ຫົວ,Cuốn / Quyển / Củ,Book / Bulb (classifier),hua,noun,Bài 03,ປຶ້ມສາມຫົວ,Ba quyển sách
+ຫົວພັນ,Houaphanh (Sầm Nưa),Houaphanh,hua-phan,noun,Địa lý Lào,ເມືອງຊຳເໜືອແຂວງຫົວພັນ,Thị xã Sầm Nưa tỉnh Houaphanh
+ຫົວສີໄຄ,Củ sả,Lemongrass,hua-see-khai,noun,Gia vị,ຕົ້ມໃສ່ຫົວສີໄຄ,Nấu canh sả
+ຫົວເຂົ່າ,Đầu gối,Knee,hua-khao,noun,Cơ thể,ເຈັບຫົວເຂົ່າ,Đau khớp gối
+ຫົວໃຈ,Trái tim,Heart,hua-chai,noun,Mở rộng - Cơ thể,ຫົວໃຈເຕັ້ນໄວ,Tim đập nhanh
+ຫຼວງນ້ຳທາ,Luang Namtha,Luang Namtha,luang-nam-thaa,noun,Địa lý Lào,ປ່າສະຫງວນຫຼວງນ້ຳທາ,Khu bảo tồn Luang Namtha
+ຫຼວງພະບາງ,Luông Pha Băng,Luang Prabang,luang-pha-baang,noun,Bài 09,ເມືອງມໍລະດົກໂລກ,Thành phố di sản thế giới
+ຫຼັງ,Sau,After,lang,adverb,Bài 04,ຫຼັງຈາກນັ້ນ,Sau đó
+ຫຼັບ,Ngủ say,Asleep,lap,verb,Bài 10,ນອນຫຼັບດີ,Ngủ ngon giấc
+ຫຼາຍ,Nhiều,Many / Much,lai,adjective,Bài 03,ຄົນຫຼາຍ,Nhiều người
+ຫຼາຍໆ,Rất nhiều,A lot / Many,laai-laai,adverb,Nhấn mạnh,ຂອບໃຈຫຼາຍໆ,Cảm ơn rất nhiều
+ຫຼານ,Cháu,Niece / Nephew / Grandchild,laan,noun,Bài 02,ຫຼານນ້ອຍ,Cháu bé
+ຫຼານຊາຍ,Cháu trai,Nephew / Grandson,laan-xaai,noun,Bài 02,ຫຼານຊາຍສະຫຼາດ,Cháu trai thông minh
+ຫຼານສາວ,Cháu gái,Niece / Granddaughter,laan-saao,noun,Bài 02,ຫຼານສາວໜ້າຮັກ,Cháu gái đáng yêu
+ຫຼິ້ນ,Chơi,To play,lin,verb,Bài 12,ຫຼິ້ນກິລາ,Chơi thể thao
+ຫຼື,Hoặc / Hay là,Or,lue,conjunction,Mở rộng - Từ nối,ກາເຟຫຼືຊາ,Cà phê hay trà?
+ຫຼຸດ,Giảm / Bớt,To discount / To reduce,lut,verb,Bài 07,ຫຼຸດໄດ້ບໍ,Bớt được không
+ຫຼຸດລາຄາ,Giảm giá,Discount,lut-laa-khaa,phrase,Bài 07,ກະລຸນາຫຼຸດລາຄາ,Xin hãy giảm giá
+ຫຼົງທາງ,Lạc đường,Lost / Lost way,long-thaang,verb,Bài 08,ຂ້ອຍຫຼົງທາງແລ້ວ,Tôi lạc đường rồi
+ຫ້ອງການ,Văn phòng / Cơ quan,Office,hong-kaan,noun,Bài 09,ຫ້ອງການເປີດແລ້ວ,Văn phòng đã mở cửa
+ຫ້ອງຄົວ,Nhà bếp,Kitchen,hong-khua,noun,Bài 10,ແຕ່ງກິນໃນຫ້ອງຄົວ,Nấu nướng trong bếp
+ຫ້ອງທົດລອງ,Phòng thí nghiệm,Laboratory,hawng-thot-lawng,noun,Khoa học,ຫ້ອງທົດລອງເຄມີ,Phòng thí nghiệm hóa học
+ຫ້ອງນອນ,Phòng ngủ,Bedroom,hong-nawn,noun,Bài 10,ຫ້ອງນອນກວ້າງ,Phòng ngủ rộng
+ຫ້ອງນ້ຳ,Nhà vệ sinh,Toilet / Restroom,hong-nam,noun,Bài 09,ຫ້ອງນ້ຳຢູ່ໃສ,Nhà vệ sinh ở đâu
+ຫ້ອງນ້ຳສະອາດ,Nhà vệ sinh sạch sẽ,Clean restroom,hawng-nam-sa-aat,noun,Nơi chốn,ຫ້ອງນ້ຳສະອາດດີ,Nhà vệ sinh rất sạch
+ຫ້ອງປະຊຸມ,Phòng họp,Meeting room / Conference room,hawng-pa-xum,noun,Công sở,ປະຊຸມໃນຫ້ອງປະຊຸມ,Họp trong phòng họp
+ຫ້ອງພັກຄູ່,Phòng đôi (khách sạn),Double room / Twin room,hawng-phak-khuu,noun,Khách sạn,ຈອງຫ້ອງຄູ່,Đặt phòng đôi
+ຫ້ອງພັກດ່ຽວ,Phòng đơn (khách sạn),Single room,hawng-phak-diaao,noun,Khách sạn,ພັກຫ້ອງດ່ຽວ,Ở phòng đơn
+ຫ້ອງສະໝຸດ,Thư viện,Library,hong-sa-mut,noun,Bài 05,ໄປຫ້ອງສະໝຸດ,Đi thư viện
+ຫ້ອງສະໝຸດໂຮງຮຽນ,Thư viện trường học,School library,hawng-sa-mut-hoong-hian,noun,Giáo dục,ອ່ານປຶ້ມຢູ່ຫ້ອງສະໝຸດ,Đọc sách ở thư viện trường
+ຫ້ອງສຸກເສີນ,Phòng cấp cứu,Emergency room (ER),hawng-suk-soen,noun,Y tế,ນຳສົ່ງຫ້ອງສຸກເສີນ,Đưa vào phòng cấp cứu
+ຫ້ອງຮັບແຂກ,Phòng khách,Living room,hong-hap-khaek,noun,Bài 10,ນັ່ງຫ້ອງຮັບແຂກ,Ngồi phòng khách
+ຫ້ອງຮຽນ,Lớp học / Phòng học,Classroom,hong-hian,noun,Bài 05,ຢູ່ໃນຫ້ອງຮຽນ,Ở trong lớp học
+ຫ້ອງຮຽນສະເໝືອນ,Lớp học ảo (Virtual classroom),Virtual classroom,hawng-hian-sa-muean,noun,Giáo dục trực tuyến,ເຂົ້າຮ່ວມຫ້ອງຮຽນສະເໝືອນ,Tham gia lớp học ảo
+ຫ້ອງເຮັດວຽກ,Phòng làm việc,Work office / Study,hawng-het-viak,noun,Công sở,ຢູ່ໃນຫ້ອງເຮັດວຽກ,Đang ở phòng làm việc
+ຫ້າ,Năm (số 5),Five (5),haa,number,Bài 03,ຫ້າພັນ,Năm nghìn
+ຫ້າພັນ,Năm nghìn,Five thousand,haa-phan,number,Số đếm,ຫ້າພັນກີບ,Năm nghìn Kíp
+ຫ້າສິບ,Năm mươi (số 50),Fifty (50),haa-sip,number,Bài 03,ຫ້າສິບເປີເຊັນ,Năm mươi phần trăm
+ຫ້າສິບພັນ,Năm mươi nghìn,Fifty thousand,haa-sip-phan,number,Số đếm,ຫ້າສິບພັນກີບ,Năm mươi nghìn Kíp
+ຫ້າຮ້ອຍ,Năm trăm,Five hundred,haa-hway,number,Số đếm,ຫ້າຮ້ອຍພັນ,Năm trăm nghìn
+ຫໍພິພິທະພັນ,Bảo tàng,Museum,haw-phi-phi-tha-phan,noun,Văn hóa,ຫໍພິພິທະພັນແຫ່ງຊາດລາວ,Bảo tàng Quốc gia Lào
+ຫໍສະໝຸດ,Thư viện,Library,haw-sa-mut,noun,Giáo dục,ອ່ານໜັງສືຢູ່ຫໍສະໝຸດແຫ່ງຊາດ,Đọc sách ở Thư viện Quốc gia
+ອວຍພອນ,Chúc mừng / Chúc tụng,To bless / To wish well,uay-phawn,verb,Giao tiếp,ອວຍພອນປີໃໝ່,Chúc mừng năm mới
+ອະດີດ,Quá khứ,Past,a-deet,noun,Mở rộng - Thời gian,ເລື່ອງໃນອະດີດ,Chuyện trong quá khứ
+ອະທິບາຍ,Giải thích,To explain,a-thi-baai,verb,Giao tiếp,ອະທິບາຍໃຫ້ຟັງແດ່,Hãy giải thích cho tôi nghe
+ອະນາຄົດ,Tương lai,Future,a-naa-khot,noun,Mở rộng - Thời gian,ອະນາຄົດສົດໃສ,Tương lai tươi sáng
+ອະນຸມັດ,Phê duyệt / Cho phép,To approve,a-nu-mat,verb,Công sở,ອະນຸມັດໂຄງການ,Phê duyệt dự án
+ອັດ,Đóng / Khép,To close / To shut,at,verb,Bài 10,ອັດປ່ອງຢ້ຽມ,Đóng cửa sổ
+ອັດຕະປື,Attapeu,Attapeu,at-ta-peuu,noun,Địa lý Lào,ແຂວງອັດຕະປືພາກໃຕ້,Tỉnh Attapeu miền Nam
+ອັດຕາແລກປ່ຽນ,Tỷ giá hối đoái,Exchange rate,at-taa-laek-pian,noun,Tài chính,ອັດຕາແລກປ່ຽນເງິນຕາ,Tỷ giá ngoại tệ
+ອັນ,Cái / Chiếc (loại từ),Item / Thing (classifier),an,noun,Bài 03,ອັນນີ້,Cái này
+ອັບໂຫຼດ,Tải lên / Upload,To upload,ap-loot,verb,Công nghệ,ອັບໂຫຼດຮູບພາບ,Tải ảnh lên
+ອາ,Cô (em gái của bố),Aunt (father's younger sister),aa,noun,Bài 02,ອາມາແຕ່ໃສ,Cô đến từ đâu
+ອາກາດສົດຊື່ນ,Không khí trong lành,Fresh air,aa-kaat-sot-xuen,noun,Tự nhiên,ຫາຍໃຈເອົາອາກາດສົດຊື່ນ,Hít thở không khí trong lành
+ອາຈານ,Giảng viên / Thầy,Professor / Teacher,aa-chaan,noun,Bài 05,ອາຈານໃຈດີ,Giảng viên hiền
+ອາຊີບ,Nghề nghiệp,Profession / Occupation,aa-xeep,noun,Bài 09,ອາຊີບຫຍັງ,Làm nghề gì
+ອາຍຸ,Tuổi,Age,aa-yu,noun,Bài 02,ເຈົ້າອາຍຸຈັກປີ,Bạn bao nhiêu tuổi
+ອາທິດ,Tuần,Week,aa-thit,noun,Bài 04,ອາທິດນີ້,Tuần này
+ອາທິດແລ້ວ,Tuần trước,Last week,aa-thit-laew,noun,Bài 04,ອາທິດແລ້ວໄປທ່ຽວ,Tuần trước đi chơi
+ອາທິດໜ້າ,Tuần sau / Tuần tới,Next week,aa-thit-naa,noun,Bài 04,ອາທິດໜ້າຮຽນ,Tuần sau học
+ອາບນ້ຳ,Tắm rửa,To take a shower / bath,aap-nam,verb,Bài 10,ອາບນ້ຳຕອນແລງ,Tắm buổi chiều
+ອາວ,Chú (em trai của bố),Uncle (father's younger brother),aao,noun,Bài 02,ອາວຢູ່ໄກ,Chú ở xa
+ອາເມລິກາ,Nước Mỹ,America / USA,aa-me-li-kaa,noun,Bài 01,ຄົນອາເມລິກາ,Người Mỹ
+ອິນເຕີເນັດ,Mạng Internet,Internet,in-toe-net,noun,Bài 10,ຕໍ່ອິນເຕີເນັດ,Kết nối internet
+ອີເມວ,Email / Thư điện tử,Email,ee-meo,noun,Mở rộng - Công nghệ,ສົ່ງອີເມວ,Gửi email
+ອີ່ຕົນ,Thương xót / Trắc ẩn,Pity / Compassion,ee-ton,verb,Tâm lý,ອີ່ຕົນຄົນທຸກຍາກ,Thương xót người nghèo khó
+ອີ່ມ,No (no bụng),Full (after eating),eem,adjective,Bài 06,ອີ່ມແລ້ວ,No rồi
+ອຸດົມສົມບູນ,Trù phú / Màu mỡ,Fertile / Abundant,u-dom-som-buun,adjective,Trạng thái,ທຳມະຊາດອຸດົມສົມບູນ,Thiên nhiên trù phú giàu đẹp
+ອຸດົມໄຊ,Oudomxay,Oudomxay,u-dom-xai,noun,Địa lý Lào,ສູນກາງພາກເໜືອອຸດົມໄຊ,Trung tâm miền Bắc Oudomxay
+ອຸບັດຕິເຫດ,Tai nạn,Accident,u-bat-ti-het,noun,Bài 08,ເກີດອຸບັດຕິເຫດ,Xảy ra tai nạn
+ອຸ່ນ,Ấm áp,Warm,un,adjective,Mở rộng - Tính từ,ແສງແດດອົບອຸ່ນ,Ánh nắng ấm áp
 ອົບເອົ້າ,Oi bức,Humid / Muggy,op-ao,adjective,Bài 11,ອາກາດອົບເອົ້າ,Không khí oi ả
 ອ່ອນ,Mềm / Yếu,Soft / Weak,awn,adjective,Bài 11,ໝອນອ່ອນ,Gối mềm
-ເກົ່າ,Cũ,Old (thing),kao,adjective,Bài 11,ປຶ້ມເກົ່າ,Quyển sách cũ
-ເບົາ,Nhẹ,Light (weight),bao,adjective,Bài 11,ຂອງເບົາ,Đồ nhẹ
-ເມື່ອຍ,Mệt mỏi,Tired,meuay,adjective,Bài 11,ເຮັດວຽກເມື່ອຍ,Làm việc mệt
-ເສົ້າ,Buồn rầu,Sad,sao,adjective,Bài 11,ໜ້າເສົ້າ,Mặt buồn
-ແກ່,Già,Old (person),kae,adjective,Bài 11,ຄົນແກ່,Người già
-ແຂງ,Cứng / Khỏe,Hard / Strong,khaeng,adjective,Bài 11,ກ້ອນຫີນແຂງ,Hòn đá cứng
-ແຈ້ງ,Sáng sủa / Rõ ràng,Bright / Clear,chaeng,adjective,Bài 11,ຕອນເຊົ້າແຈ້ງດີ,Buổi sáng trời sáng tỏ
-ແຫ້ງ,Khô ráo,Dry,haeng,adjective,Bài 11,ລະດູແລ້ງ,Mùa khô
-ໂກດ,Giận dữ / Tức giận,Angry,kot,verb,Bài 11,ຢ່າໂກດເດີ,Đừng giận nhé
-ໃໝ່,Mới,New,mai,adjective,Bài 11,ລົດໃໝ່,Xe mới
-ໜັກ,Nặng,Heavy,nak,adjective,Bài 11,ກະເປົາໜັກ,Cặp sách nặng
-ໜາ,Dày,Thick,naa,adjective,Bài 11,ປຶ້ມໜາ,Quyển sách dày
-ໜາວ,Lạnh giá,Cold (weather),naao,adjective,Bài 11,ລະດູໜາວ,Mùa đông lạnh
-ໜຸ່ມ,Trẻ tuổi,Young,num,adjective,Bài 11,ໄວໜຸ່ມ,Giới trẻ
-ຄິດຮອດ,Nhớ (thương nhớ),To miss someone,khit-hawt,verb,Bài 12,ຄິດຮອດບ້ານ,Nhớ nhà
-ຊັງ,Ghét,To hate,xang,verb,Bài 12,ບໍ່ຊັງໃຜ,Không ghét ai
-ຊ່ວຍເຫຼືອ,Cứu giúp / Tương trợ,To assist,xuay-leua,verb,Bài 12,ຊ່ວຍເຫຼືອກັນ,Tương trợ lẫn nhau
-ຍັງ,Vẫn / Chưa,Still / Yet,nyang,adverb,Bài 12,ຍັງບໍ່ແລ້ວ,Vẫn chưa xong
-ດີໃຈ,Vui mừng,Glad / Happy,dee-chai,adjective,Bài 12,ດີໃຈຫຼາຍທີ່ໄດ້ພົບ,Rất vui khi được gặp
-ຕ້ອງ,Phải (cần phải),Must / Have to,tawng,verb,Bài 12,ຕ້ອງໄປດຽວນີ້,Phải đi ngay bây giờ
-ຖ່າຍຮູບ,Chụp ảnh,To take a photo,thaai-huup,verb,Bài 12,ຖ່າຍຮູບງາມ,Chụp ảnh đẹp
-ນັ່ງ,Ngồi,To sit,nang,verb,Bài 12,ນັ່ງລົງ,Ngồi xuống
-ບອກ,Bảo / Nói cho biết,To tell,bawk,verb,Bài 12,ບອກຄວາມຈິງ,Nói sự thật
-ບາງເທື່ອ,Có lẽ / Đôi khi,Maybe / Sometimes,baang-theua,adverb,Bài 12,ບາງເທື່ອໄປ,Đôi khi đi
-ພົບ,Gặp gỡ,To meet,phop,verb,Bài 12,ພົບເພື່ອນ,Gặp bạn bè
-ຟ້ອນ,Múa lăm-vông (điệu múa Lào),To dance traditional Lao dance,fawn,verb,Bài 12,ຟ້ອນລຳວົງ,Múa Lăm-vông
-ມັກ,Thích,To like,mak,verb,Bài 12,ມັກພາສາລາວ,Thích tiếng Lào
-ຢາກ,Muốn,To want,yaak,verb,Bài 12,ຢາກກິນເຂົ້າ,Muốn ăn cơm
-ຢືນ,Đứng,To stand,yeun,verb,Bài 12,ຢືນຂຶ້ນ,Đứng dậy
-ລົມ,Trò chuyện / Tán gẫu,To chat,lom,verb,Bài 12,ລົມກັນ,Nói chuyện với nhau
-ລໍຖ້າ,Chờ đợi,To wait,law-thaa,verb,Bài 12,ລໍຖ້າຈັກໜ້ອຍ,Chờ một chút
-ສະບາຍໃຈ,Thảnh thơi / An tâm,At peace / Content,sa-baai-chai,adjective,Bài 12,ຮູ້ສຶກສະບາຍໃຈ,Cảm thấy yên lòng
-ສຳເລັດ,Thành công,Success / Completed,sam-let,adjective,Bài 12,ຂໍໃຫ້ສຳເລັດ,Chúc thành công
-ຫວັງ,Hy vọng,To hope,vang,verb,Bài 12,ຫວັງວ່າຈະດີ,Hy vọng sẽ tốt
-ຫາ,Tìm / Kiếm,To find / To seek,haa,verb,Bài 12,ຫາເງິນ,Kiếm tiền
-ຫຼິ້ນ,Chơi,To play,lin,verb,Bài 12,ຫຼິ້ນກິລາ,Chơi thể thao
+ອ່ອນຫວານ,Dịu dàng / Ngọt ngào,Gentle / Sweet,awn-vaan,adjective,Tính cách,ສຽງເວົ້າອ່ອນຫວານ,Giọng nói dịu dàng ngọt ngào
+ອ່ອນເພຍ,Mệt mỏi / Yếu ớt,Weak / Fatigued,awn-phia,adjective,Y tế,ຮູ້ສຶກອ່ອນເພຍ,Cảm thấy uể oải
+ອ່ານ,Đọc,To read,aan,verb,Bài 05,ອ່ານປຶ້ມ,Đọc sách
+ອ່ານພ້ອມກັນ,Cùng đọc to nào (khẩu ngữ lớp học),Read together,aan-phawm-kan,phrase,Khẩu ngữ lớp học,ນັກຮຽນອ່ານພ້ອມກັນເດີ,Cả lớp cùng đọc to theo cô nào
+ອ່ຽງ,Con lươn,Eel,iang,noun,Động vật,ຕົ້ມອ່ຽງໃສ່ຜັກ,Canh lươn nấu rau
+ອ້າຍ,Anh trai,Older brother,aai,noun,Bài 02,ອ້າຍຂອງຂ້ອຍ,Anh trai tôi
+ຮອດ,Tới / Đến nơi,To arrive / To reach,hawt,verb,Bài 08,ຮອດແລ້ວ,Đến nơi rồi
+ຮັກ,Yêu,To love,hak,verb,Bài 02,ຂ້ອຍຮັກຄອບຄົວ,Tôi yêu gia đình
+ຮັກຊາດ,Yêu nước / Lòng yêu nước,Patriotic / Patriotism,hak-xaat,verb,Đạo đức,ປະຊາຊົນຮັກຊາດ,Nhân dân yêu nước
+ຮັກບ້ານເກີດ,Yêu quê hương,Love hometown,hak-baan-koet,verb,Cảm xúc,ຮັກບ້ານເກີດເມືອງນອນ,Yêu quê cha đất tổ
+ຮັກແພງ,Thương yêu / Quý mến,Cherish / Love dearly,hak-phaeng,verb,Cảm xúc,ຮັກແພງກັນເໝືອນພີ່ນ້ອງ,Thương yêu nhau như anh em ruột
 ຮັບ,Nhận,To receive,hap,verb,Bài 12,ຮັບຂອງຂວັນ,Nhận quà
+ຮາດແວ,Phần cứng (Hardware),Hardware,haat-vae,noun,AI & CNTT,ອຸປະກອນຮາດແວ,Thiết bị phần cứng
+ຮີດເຄື່ອງ,Là / Ủi quần áo,To iron clothes,heet-khuang,verb,Bài 10,ຮີດເສື້ອ,Ủi áo
+ຮຸ່ງເຊົ້າ,Rạng sáng / Bình minh,Dawn / Early morning,hung-xao,noun,Thời gian,ຕື່ນແຕ່ຮຸ່ງເຊົ້າ,Dậy từ lúc rạng đông
+ຮຸ້ນ,Cổ phiếu,Stock / Shares,hun,noun,Tài chính,ຊື້ຮຸ້ນ,Mua cổ phiếu
 ຮູບ,Bức ảnh,Picture / Image,huup,noun,Bài 12,ຮູບຖ່າຍ,Tấm ảnh
+ຮູບເງົາ,Phim ảnh,Movie / Cinema,huup-ngao,noun,Mở rộng - Giải trí,ເບິ່ງຮູບເງົາໃນໂຮງ,Xem phim ở rạp
+ຮູ້,Biết,To know,huu,verb,Bài 05,ຂ້ອຍບໍ່ຮູ້,Tôi không biết
+ຮຽກຮ້ອງ,Kêu gọi / Đòi hỏi,To call for / To demand,hiak-hawng,verb,Xã hội,ຮຽກຮ້ອງສັນຕິພາບ,Kêu gọi hòa bình
+ຮຽນ,Học,To study / To learn,hian,verb,Bài 05,ຮຽນໜັງສື,Học chữ / Học bài
 ຮ້ອງເພງ,Hát,To sing,hawng-pheng,verb,Bài 12,ຮ້ອງເພງມ່ວນ,Hát rất hay
+ຮ້ອຍ,Trăm (100),Hundred (100),hwy,number,Bài 03,ໜຶ່ງຮ້ອຍ,Một trăm
+ຮ້ອຍສ່ວນຮ້ອຍ,Một trăm phần trăm (100%),One hundred percent,hway-suan-hway,phrase,Tỷ lệ,ຖືກຕ້ອງຮ້ອຍສ່ວນຮ້ອຍ,Chính xác một trăm phần trăm
+ຮ້ອນ,Nóng,Hot,hawn,adjective,Bài 06,ນ້ຳຮ້ອນ,Nước nóng
+ຮ້ານ,Cửa hàng / Tiệm,Shop / Store,haan,noun,Bài 07,ຮ້ານອາຫານ,Quán ăn
+ຮ້ານກາເຟ,Quán cà phê,Coffee shop,haan-kaa-fee,noun,Mở rộng - Địa điểm,ນັ່ງລົມກັນຢູ່ຮ້ານກາເຟ,Ngồi tán gẫu ở quán cà phê
+ຮ້ານຂາຍປຶ້ມ,Hiệu sách,Bookstore,haan-khaai-puem,noun,Dịch vụ,ຊື້ວັດຈະນານຸກົມຢູ່ຮ້ານຂາຍປຶ້ມ,Mua từ điển ở hiệu sách
+ຮ້ານຂາຍຢາ,Hiệu thuốc tây,Pharmacy,haan-khaai-yaa,noun,Bài 09,ຊື້ຢາຢູ່ຮ້ານ,Mua thuốc ở tiệm
+ຮ້ານຄ້າ,Cửa hàng bách hóa,Grocery store,haan-khaa,noun,Bài 07,ຊື້ເຄື່ອງຢູ່ຮ້ານຄ້າ,Mua đồ ở tiệm
+ຮ້ານຊັກລີດ,Tiệm giặt là,Laundry shop,haan-xak-leet,noun,Dịch vụ,ເອົາເຄື່ອງໄປຮ້ານຊັກລີດ,Mang quần áo ra tiệm giặt
+ຮ້ານຕັດຜົມ,Tiệm cắt tóc,Barbershop / Hair salon,haan-tat-phom,noun,Dịch vụ,ໄປຮ້ານຕັດຜົມ,Đến tiệm cắt tóc
+ຮ້ານສະດວກຊື້,Cửa hàng tiện lợi,Convenience store,haan-sa-duak-seu,noun,Mua sắm,ເຂົ້າຮ້ານສະດວກຊື້,Vào cửa hàng tiện lợi
+ຮ້ານສ້ອມແປງ,Tiệm sửa chữa (xe máy/máy móc),Repair shop,haan-sawm-paeng,noun,Dịch vụ,ຮ້ານສ້ອມແປງລົດຈັກ,Tiệm sửa xe máy
+ຮ້ານອາຫານ,Nhà hàng / Quán ăn,Restaurant,haan-aa-haan,noun,Bài 07,ກິນເຂົ້າຢູ່ຮ້ານ,Ăn ở quán
+ເກັ່ງ,Giỏi / Xuất sắc,Good at / Clever,keng,adjective,Bài 05,ລາວຮຽນເກັ່ງ,Cậu ấy học giỏi
+ເກັ່ງຫຼາຍ,Giỏi lắm / Rất giỏi,Very smart / Great job,keng-laai,phrase,Khen ngợi,ເຈົ້າເກັ່ງຫຼາຍ,Bạn giỏi lắm
+ເກີບ,Đôi giày / Dép,Shoes,koep,noun,Bài 07,ເກີບຜ້າ,Giày vải
+ເກືອ,Muối,Salt,kuea,noun,Mở rộng - Gia vị,ໃສ່ເກືອນິດໜຶ່ງ,Cho chút muối
+ເກືອບ,Gần như / Suýt nữa,Almost / Nearly,kueap,adverb,Mức độ,ເກືອບຮອດແລ້ວ,Suýt soát đến nơi rồi
+ເກົາຫຼີ,Hàn Quốc,Korea,kao-lee,noun,Bài 01,ປະເທດເກົາຫຼີ,Nước Hàn Quốc
+ເກົ່າ,Cũ,Old (thing),kao,adjective,Bài 11,ປຶ້ມເກົ່າ,Quyển sách cũ
+ເກົ້າ,Chín (số 9),Nine (9),kao,number,Bài 03,ເກົ້າສິບ,Chín mươi
+ເກົ້າສິບ,Chín mươi,Ninety,kao-sip,number,Số đếm,ເກົ້າສິບສ່ວນຮ້ອຍ,Chín mươi phần trăm
+ເກົ້າຮ້ອຍ,Chín trăm,Nine hundred,kao-hway,number,Số đếm,ເກົ້າຮ້ອຍກິໂລ,Chín trăm cân
+ເຂົ້າ,Cơm / Gạo,Rice / Meal,khao,noun,Bài 06,ກິນເຂົ້າ,Ăn cơm
+ເຂົ້າຈີ່,Bánh mì kiểu Pháp / Lào,Baguette / Bread,khao-chee,noun,Mở rộng - Ẩm thực,ເຂົ້າຈີ່ປາເຕ້,Bánh mì pa-tê
+ເຂົ້າຈ້າວ,Cơm tẻ (gạo tẻ),Plain rice,khao-chao,noun,Bài 06,ກິນເຂົ້າຈ້າວ,Ăn cơm tẻ
+ເຂົ້າຕົ້ມ,Cháo / Bánh tét Lào,Rice porridge / Lao sticky rice cake,khao-tom,noun,Ẩm thực,ກິນເຂົ້າຕົ້ມຕອນເຊົ້າ,Ăn cháo buổi sáng
+ເຂົ້ານຽວ,Xôi (gạo nếp Lào),Sticky rice,khao-niao,noun,Bài 06,ເຂົ້ານຽວແຊບ,Xôi Lào rất ngon
+ເຂົ້າປຸ້ນ,Bún,Rice vermicelli (Khao Poon),khao-pun,noun,Bài 06,ເຂົ້າປຸ້ນນ້ຳແຈ່ວ,Bún nước lèo
+ເຂົ້າປຽກ,Bánh canh / Cháo bánh canh,Wet noodle soup (Khao Piak),khao-piak,noun,Bài 06,ເຂົ້າປຽກໄກ່,Bánh canh gà
+ເຂົ້າຜັດ,Cơm chiên / Cơm rang,Fried rice,khao-phat,noun,Mở rộng - Ẩm thực,ເຂົ້າຜັດໝູ,Cơm chiên thịt lợn
+ເຂົ້າສານ,Gạo tẻ chưa nấu,Raw rice,khao-saan,noun,Thực phẩm,ຊື້ເຂົ້າສານໜຶ່ງເປົາ,Mua một bao gạo
+ເຂົ້າຮຽນ,Vào học,To attend class,khao-hian,verb,Bài 05,ເຂົ້າຮຽນແປດໂມງ,Vào học lúc 8 giờ
+ເຂົ້າເປືອກ,Thóc lúa,Paddy rice,khao-pueak,noun,Thực phẩm,ຕາກເຂົ້າເປືອກ,Phơi thóc lúa
+ເຂົ້າໃຈ,Hiểu,To understand,khao-chai,verb,Bài 01,ເຈົ້າເຂົ້າໃຈບໍ,Bạn có hiểu không
+ເຂົ້າໜຽວ,Xôi nếp (đặc sản Lào),Sticky rice,khao-niaao,noun,Mở rộng - Ẩm thực,ກິນເຂົ້າໜຽວໃສ່ຕິບ,Ăn xôi trong giỏ típ
+ເຄມີສາດ,Hóa học,Chemistry,khee-mee-saat,noun,Môn học,ວິຊາເຄມີສາດ,Môn hóa học
+ເຄັມ,Mặn,Salty,khem,adjective,Bài 06,ເຄັມຫຼາຍ,Mặn quá
+ເຄິ່ງ,Nửa / Một nửa,Half,khoeng,noun,Bài 03,ເຄິ່ງຊົ່ວໂມງ,Nửa giờ
+ເຄີຍ,Đã từng,Ever / Used to,khoey,adverb,Tần suất,ເຄີຍມາແລ້ວ,Đã từng đến rồi
+ເຄືອຂ່າຍປະສາດທຽມ,Mạng nơ-ron nhân tạo (Artificial Neural Network),Artificial Neural Network,khuea-khaai-pa-saat-thiam,noun,AI & CNTT,ເຄືອຂ່າຍປະສາດທຽມເລິກ,Mạng nơ-ron sâu (Deep Neural Network)
+ເຄືອຂ່າຍໄຮ້ສາຍ,Mạng không dây (Wi-Fi),Wi-Fi / Wireless network,khuea-khaai-hai-saai,noun,Công nghệ,ເຊື່ອມຕໍ່ Wi-Fi,Bắt sóng Wi-Fi
+ເຄື່ອງ,Đồ đạc / Hàng hóa,Thing / Goods,khuang,noun,Bài 07,ຊື້ເຄື່ອງ,Mua sắm đồ
+ເຄົາ,Râu cằm,Beard,khao,noun,Cơ thể,ໂກນເຄົາ,Cạo râu
+ເງິນ,Tiền / Bạc,Money / Silver,ngoen,noun,Bài 07,ຈ່າຍເງິນ,Trả tiền
+ເງິນກີບ,Tiền Kíp Lào,Lao Kip (LAK),ngoen-keep,noun,Kinh tế,ເງິນກີບລາວ,Đồng Kíp Lào
+ເງິນກູ້,Tiền vay / Khoản vay,Loan,ngoen-kuu,noun,Tài chính,ກູ້ຢືມເງິນ,Vay mượn vốn
+ເງິນດົ່ງ,Tiền Đồng Việt Nam,Vietnamese Dong (VND),ngoen-dong,noun,Kinh tế,ແລກປ່ຽນເງິນດົ່ງ,Đổi tiền Đồng
+ເງິນທອນ,Tiền thừa / Tiền thối,Change (money),ngoen-thawn,noun,Bài 07,ບໍ່ມີເງິນທອນ,Không có tiền lẻ thối
+ເງິນບາດ,Tiền Bạt Thái Lan,Thai Baht (THB),ngoen-baat,noun,Kinh tế,ຈ່າຍເງິນບາດ,Thanh toán tiền Baht
+ເງິນຝາກປະຈຳ,Tiền gửi tiết kiệm có kỳ hạn,Fixed deposit,ngoen-faak-pa-cham,noun,Tài chính,ຝາກເງິນປະຈຳ,Gửi tiết kiệm có kỳ hạn
+ເງິນສົດ,Tiền mặt,Cash,ngoen-sot,noun,Bài 07,ຮັບເງິນສົດ,Nhận tiền mặt
+ເງິນໂດລາ,Đô la Mỹ,US Dollar (USD),ngoen-doo-laa,noun,Kinh tế,ເງິນໂດລາສະຫະລັດ,Đô la Mỹ
+ເຈລະຈາ,Đàm phán / Thương lượng,To negotiate,chee-la-chaa,verb,Ngoại giao,ເຈລະຈາສັນຕິພາບ,Đàm phán hòa bình
+ເຈັດ,Bảy (số 7),Seven (7),chet,number,Bài 03,ເຈັດວັນ,Bảy ngày
+ເຈັດສິບ,Bảy mươi,Seventy,chet-sip,number,Số đếm,ເຈັດສິບປີ,Bảy mươi năm
+ເຈັດຮ້ອຍ,Bảy trăm,Seven hundred,chet-hway,number,Số đếm,ເຈັດຮ້ອຍວັນ,Bảy trăm ngày
+ເຈັບ,Đau,Pain / Hurt,chep,adjective,Mở rộng - Y tế,ເຈັບບ່ອນໃດ,Đau ở chỗ nào?
+ເຈັບຕາ,Đau mắt,Sore eyes,chep-taa,verb,Y tế,ຢອດຢາແກ້ເຈັບຕາ,Nhỏ thuốc đau mắt
+ເຈັບທ້ອງ,Đau bụng,Stomach ache,chep-thawng,verb,Y tế,ເຈັບທ້ອງຫຼາຍ,Đau quặn bụng
+ເຈັບຫົວ,Đau đầu,Headache,chep-hua,verb,Y tế,ກິນຢາແກ້ເຈັບຫົວ,Uống thuốc giảm đau đầu
+ເຈັບແຂ້ວ,Đau răng,Toothache,chep-khaew,verb,Y tế,ໄປຫາໝໍປິ່ນປົວແຂ້ວ,Đi khám nha sĩ chữa răng
+ເຈົ້າ,Bạn / Anh / Chị / Vâng,You / Yes (polite),chao,pronoun,Bài 01,ເຈົ້າແມ່ນໃຜ,Bạn là ai
+ເຈົ້າຂອງເຮືອນ,Chủ nhà,Homeowner / Landlord,chao-khawng-heuan,noun,Xã hội,ເຈົ້າຂອງເຮືອນໃຈດີ,Chủ nhà tốt tính
+ເຈົ້າຊື່ຫຍັງ,Bạn tên là gì?,What is your name?,chao-seu-nyang,phrase,Bài 01,ເຈົ້າຊື່ຫຍັງເກາະ,Bạn tên là gì nhỉ
+ເຈົ້າເມືອງ,Huyện trưởng / Quận trưởng,District Governor,chao-mueang,noun,Nhà nước,ເຈົ້າເມືອງລົງກວດກາ,Huyện trưởng đi thanh tra
+ເຈົ້າແຂວງ,Tỉnh trưởng,Provincial Governor,chao-khwaeng,noun,Nhà nước,ເຈົ້າແຂວງວຽງຈັນ,Tỉnh trưởng Viêng Chăn
+ເຈ້ຍ,Tờ giấy,Paper,chia,noun,Mở rộng - Giáo dục,ເຈ້ຍຂາວ,Tờ giấy trắng
+ເຊກອງ,Sekong,Sekong,xee-kawng,noun,Địa lý Lào,ແຂວງເຊກອງ,Tỉnh Sekong
+ເຊັກອິນ,Làm thủ tục nhận phòng / Check-in,Check-in,xek-in,verb,Khách sạn,ເຊັກອິນເວລາສອງໂມງ,Check-in lúc hai giờ
+ເຊັກເອົ້າ,Làm thủ tục trả phòng / Check-out,Check-out,xek-ao,verb,Khách sạn,ເຊັກເອົ້າຕອນທ່ຽງ,Check-out lúc mười hai giờ trưa
+ເຊັນສັນຍາ,Ký hợp đồng,To sign contract,xen-san-nyaa,verb,Kinh tế,ເຊັນສັນຍາຮ່ວມມື,Ký hợp đồng hợp tác
+ເຊີບເວີ,Máy chủ (Server),Server,soe-voe,noun,AI & CNTT,ເຊີບເວີຄລາວ,Máy chủ đám mây
 ເຊື່ອ,Tin tưởng,To believe,xua,verb,Bài 12,ຂ້ອຍເຊື່ອເຈົ້າ,Tôi tin bạn
+ເຊົ້າ,Sớm / Sáng,Early / Morning,xao,adjective,Bài 04,ຕື່ນເຊົ້າ,Thức dậy sớm
+ເດີ,Nhé / Nha (tiểu từ cuối câu thân mật),Sentence final particle (polite friendly),der,particle,Mở rộng - Khẩu ngữ,ໄປກ່ອນເດີ,Tôi đi trước nhé!
+ເດີນທາງ,Lên đường / Đi lại,To travel / To journey,doen-thaang,verb,Du lịch,ເດີນທາງດ້ວຍຄວາມປອດໄພ,Lên đường thượng lộ bình an
+ເດືອນ,Tháng / Mặt trăng,Month / Moon,deuan,noun,Bài 04,ເດືອນນີ້,Tháng này
+ເດືອນກ່ອນ,Tháng trước,Last month,duean-kawn,noun,Thời gian,ເດືອນກ່ອນເຮັດວຽກໜັກ,Tháng trước làm việc vất vả
+ເດືອນແລ້ວ,Tháng trước,Last month,deuan-laew,noun,Bài 04,ເດືອນແລ້ວຮ້ອນ,Tháng trước nóng
+ເດືອນໜ້າ,Tháng sau,Next month,deuan-naa,noun,Bài 04,ເດືອນໜ້າສອບເສັງ,Tháng sau thi
 ເຕັ້ນ,Nhảy múa / Khiêu vũ,To dance / To jump,ten,verb,Bài 12,ເຕັ້ນລຳ,Khiêu vũ
+ເຕົ່າ,Con rùa,Turtle / Tortoise,tao,noun,Động vật,ເຕົ່າຍ່າງຊ້າ,Rùa bò chậm chạp
+ເຕ້ຍ,Thấp / Lùn,Short,tia,adjective,Bài 02,ຄົນເຕ້ຍ,Người thấp
+ເທິງ,Trên / Ở trên,On / Above,thoeng,preposition,Mở rộng - Giới từ,ຢູ່ເທິງພູ,Ở trên đỉnh núi
+ເທົ່າໃດ,Bao nhiêu,How much,thao-dai,pronoun,Bài 03,ລາຄາເທົ່າໃດ,Giá bao nhiêu
+ເບຍ,Bia,Beer,bia,noun,Bài 06,ເບຍລາວ,Bia Lào (Beerlao)
+ເບຍລາວ,Bia Lào (Beerlao),Beerlao,bia-laao,noun,Mở rộng - Đồ uống,ເບຍລາວແຊບທີ່ສຸດ,Bia Lào ngon nhất
 ເບິ່ງ,Xem / Nhìn,To look / To watch,boeng,verb,Bài 12,ເບິ່ງຮູບ,Xem ảnh
+ເບີ,Số (hiệu),Number (phone/room),ber,noun,Bài 03,ເບີຫ້ອງ,Số phòng
+ເບົາ,Nhẹ,Light (weight),bao,adjective,Bài 11,ຂອງເບົາ,Đồ nhẹ
+ເບົາຫວານ,Bệnh tiểu đường,Diabetes,bao-vaan,noun,Y tế,ພະຍາດເບົາຫວານ,Bệnh tiểu đường
+ເປັດ,Con vịt,Duck,pet,noun,Mở rộng - Động vật,ເປັດລອຍນ້ຳ,Vịt bơi dưới nước
+ເປັນຫວັດ,Bị cảm lạnh / Cảm cúm,Have a cold / Flu,pen-vat,verb,Y tế,ເປັນຫວັດໄອຈາມ,Bị cảm cúm hắt hơi sổ mũi
+ເປີດ,Mở,To open / To turn on,poet,verb,Bài 10,ເປີດປະຕູ,Mở cửa
+ເປີດໜ້າທີ,Mở trang số... (khẩu ngữ lớp học),Open page...,poet-naa-thee,phrase,Khẩu ngữ lớp học,ເປີດໜ້າທີສິບ,Mở trang số mười
+ເປື້ອນ,Bẩn / Dơ,Dirty,puan,adjective,Bài 10,ເສື້ອເປື້ອນ,Áo bẩn
+ເຜັດ,Cay,Spicy / Hot,phet,adjective,Bài 06,ເຜັດຫຼາຍ,Rất cay
+ເຜິ້ງ,Con ong,Bee,phoeng,noun,Sinh vật,ນ້ຳເຜິ້ງຫວານ,Mật ong ngọt lịm
+ເຝີ,Phở,Pho noodle soup,foe,noun,Bài 06,ເຝີຊີ້ນງົວ,Phở bò
+ເພາະວ່າ,Bởi vì / Vì,Because,phaw-vaa,conjunction,Mở rộng - Từ nối,ເພາະວ່າມັກ,Bởi vì yêu thích
+ເພິ່ນ,Ngài / Ông ấy (kính trọng),He / She (polite),phoen,pronoun,Bài 01,ເພິ່ນເປັນອາຈານ,Thầy ấy là giáo viên
+ເພື່ອນ,Bạn bè,Friend,pheuan,noun,Bài 05,ເພື່ອນສະໜິດ,Bạn thân
+ເມກ,Mây,Cloud,meek,noun,Mở rộng - Thời tiết,ເມກຂາວ,Mây trắng bồng bềnh
+ເມຍ,Vợ,Wife,mia,noun,Bài 02,ເມຍຂອງລາວ,Vợ của anh ấy
+ເມດຕາ,Từ bi / Lòng nhân ái,Merciful / Compassionate,meet-taa,adjective,Đạo đức,ມີຈິດໃຈເມດຕາ,Có tấm lòng từ bi
+ເມືອງ,Thị xã / Huyện / Đô thị,Town / District / City,muang,noun,Bài 09,ເມືອງຫຼວງ,Thủ đô
+ເມື່ອຍ,Mệt mỏi,Tired,meuay,adjective,Bài 11,ເຮັດວຽກເມື່ອຍ,Làm việc mệt
+ເມົ້າ,Chuột máy tính,Computer mouse,mao,noun,AI & CNTT,ຄລິກເມົ້າ,Nhấp chuột máy tính
+ເຢັນ,Lạnh / Mát,Cold / Cool,yen,adjective,Bài 06,ນ້ຳເຢັນ,Nước lạnh
+ເລກ,Con số / Chữ số,Number / Digit,lek,noun,Bài 03,ເລກໂທລະສັບ,Số điện thoại
+ເລຂາ,Thư ký,Secretary,lee-khaa,noun,Nghề nghiệp,ເລຂາຫ້ອງການ,Thư ký văn phòng
+ເລີກຮຽນ,Tan học,Class dismisses,loek-hian,verb,Bài 05,ເລີກຮຽນສີ່ໂມງ,Tan học lúc 4 giờ
 ເລີ່ມ,Bắt đầu,To start / To begin,loem,verb,Bài 12,ເລີ່ມຕົ້ນ,Khởi đầu
+ເລືອດ,Máu,Blood,lueat,noun,Cơ thể,ກວດເລືອດ,Xét nghiệm máu
+ເວລາ,Thời gian,Time,ve-laa,noun,Bài 04,ບໍ່ມີເວລາ,Không có thời gian
+ເວັບໄຊ,Trang web,Website,vep-xai,noun,Mở rộng - Công nghệ,ເຂົ້າເບິ່ງເວັບໄຊ,Truy cập trang web
+ເວົ້າ,Nói,To speak / To talk,vao,verb,Bài 01,ເວົ້າພາສາລາວ,Nói tiếng Lào
 ເສຍໃຈ,Buồn lòng / Lấy làm tiếc,Sorry / Regretful,sia-chai,adjective,Bài 12,ຂ້ອຍເສຍໃຈນຳ,Tôi xin chia buồn
+ເສັ້ນເລືອດ,Mạch máu,Blood vessel,sen-lueat,noun,Cơ thể,ເສັ້ນເລືອດຕັນ,Nghẽn mạch máu
+ເສື້ອ,Cái áo,Shirt / Top,seua,noun,Bài 07,ເສື້ອເຊີດ,Áo sơ mi
+ເສົ້າ,Buồn rầu,Sad,sao,adjective,Bài 11,ໜ້າເສົ້າ,Mặt buồn
+ເຫງົາ,Cô đơn / Buồn chán,Lonely,ngao,adjective,Mở rộng - Cảm xúc,ຮູ້ສຶກເຫງົາ,Cảm thấy cô đơn
+ເຫັດ,Nấm,Mushroom,het,noun,Nông sản,ແກງເຫັດ,Canh nấm thơm ngon
 ເຫັນ,Thấy / Trông thấy,To see,hen,verb,Bài 12,ຂ້ອຍເຫັນແລ້ວ,Tôi thấy rồi
+ເຫັນດີນຳ,Đồng ý / Tán thành,Agree with you,hen-dee-nam,phrase,Giao tiếp,ຂ້ອຍເຫັນດີນຳເຈົ້າ,Tôi hoàn toàn tán thành bạn
+ເຫຼົ້າ,Rượu,Liquor / Alcohol,lao,noun,Bài 06,ເຫຼົ້າຂາວ,Rượu trắng
+ເອື້ອຍ,Chị gái,Older sister,euay,noun,Bài 02,ເອື້ອຍໃຈດີ,Chị gái tốt bụng
+ເອົາ,Lấy / Chọn,To take / Want,ao,verb,Bài 07,ເອົາອັນນີ້,Lấy cái này
 ເຮັດ,Làm,To do / To make,het,verb,Bài 12,ເຮັດຫຍັງຢູ່,Đang làm gì thế
+ເຮັດວຽກ,Làm việc,To work,het-viak,verb,Bài 09,ເຮັດວຽກຢູ່ໃສ,Làm việc ở đâu
+ເຮັດວຽກບ້ານ,Làm bài tập về nhà,Do homework,het-viak-baan,phrase,Học tập,ຢ່າລືມເຮັດວຽກບ້ານ,Đừng quên làm bài tập về nhà
+ເຮັດອາຫານ,Nấu món ăn,To prepare food,het-aa-haan,verb,Bài 10,ເຮັດອາຫານລາວ,Nấu món ăn Lào
+ເຮືອ,Thuyền / Tàu thủy,Boat / Ship,heua,noun,Bài 08,ຂີ່ເຮືອຂ້າມຂອງ,Đi thuyền qua sông
+ເຮືອນ,Ngôi nhà,House,heuan,noun,Bài 02,ເຮືອນຂອງຂ້ອຍ,Nhà của tôi
+ເຮືອນກໍ່,Nhà xây gạch,Brick house,heuan-kaw,noun,Kiến trúc,ເຮືອນກໍ່ສອງຊັ້ນ,Nhà xây hai tầng
+ເຮືອນຄົວ,Nhà bếp,Kitchen house,heuan-khua,noun,Gia đình,ແຕ່ງກິນຢູ່ເຮືອນຄົວ,Nấu ăn ở nhà bếp
+ເຮືອນຊານ,Nhà cửa,Household / Homestead,heuan-xaan,noun,Gia đình,ປຸກເຮືອນຊານ,Xây dựng nhà cửa
+ເຮືອນພັກ,Nhà nghỉ,Guesthouse,heuan-phak,noun,Nơi chốn,ພັກຢູ່ເຮືອນພັກ,Nghỉ tại nhà nghỉ
+ເຮືອນໄມ້,Nhà sàn gỗ truyền thống,Wooden house,heuan-mai,noun,Kiến trúc,ເຮືອນໄມ້ແບບລາວ,Nhà gỗ phong cách Lào
+ແກງ,Canh / Súp,Soup / Curry,kaeng,noun,Bài 06,ແກງໜໍ່ໄມ້,Canh măng
+ແກງຈືດ,Canh thanh / Canh rau thịt,Clear broth soup,kaeng-chuet,noun,Ẩm thực,ແກງຈືດເຕ້າຫູ້,Canh thanh đậu phụ
+ແກງໜໍ່ໄມ້,Canh măng tre,Bamboo shoot soup,kaeng-naw-mai,noun,Mở rộng - Ẩm thực,ແກງໜໍ່ໄມ້ໃສ່ຢານາງ,Canh măng nấu lá giang
+ແກ່,Già,Old (person),kae,adjective,Bài 11,ຄົນແກ່,Người già
+ແກ້ມ,Má,Cheek,kaem,noun,Cơ thể,ແກ້ມແດງ,Đôi má ửng hồng
+ແກ້ວ,Chai / Lọ,Bottle / Glass,kaew,noun,Bài 03,ນ້ຳໜຶ່ງແກ້ວ,Một chai nước
+ແກ້ໄຂ,Khắc phục / Giải quyết / Sửa lỗi,To solve / To fix,kae-khai,verb,Hành động,ແກ້ໄຂບັນຫາ,Giải quyết vấn đề
+ແຂງ,Cứng / Khỏe,Hard / Strong,khaeng,adjective,Bài 11,ກ້ອນຫີນແຂງ,Hòn đá cứng
+ແຂງແຮງ,Khỏe mạnh,Strong / Healthy,khaeng-haeng,adjective,Y tế,ຮ່າງກາຍແຂງແຮງ,Cơ thể khỏe mạnh
+ແຂນ,Cánh tay,Arm,khaen,noun,Mở rộng - Cơ thể,ຍົກແຂນ,Giơ tay lên
+ແຂວງ,Tỉnh,Province,khwaeng,noun,Bài 09,ແຂວງຈຳປາສັກ,Tỉnh Champasak
+ແຂວງວຽງຈັນ,Tỉnh Viêng Chăn,Vientiane Province,khwaeng-viang-chan,noun,Địa lý Lào,ອ່າງນ້ຳງື່ມຢູ່ແຂວງວຽງຈັນ,Hồ Nậm Ngừm ở tỉnh Viêng Chăn
+ແຂ້ວ,Răng,Tooth / Teeth,khaew,noun,Mở rộng - Cơ thể,ເຈັບແຂ້ວ,Đau răng
+ແຄນ,Khèn Lào (nhạc cụ di sản UNESCO),Khaen (Lao bamboo mouth organ),khaen,noun,Văn hóa,ສຽງແຄນລາວ,Tiếng khèn Lào
+ແຄບ,Hẹp / Chật,Narrow,khaep,adjective,Bài 10,ທາງແຄບ,Đường hẹp
+ແຈ່ວ,Nước chấm / Tương chấm Lào (Jeow),Lao dipping sauce,chaew,noun,Mở rộng - Ẩm thực,ແຈ່ວບອງ,Tương ớt cay ngọt Luang Prabang
+ແຈ່ວບອງ,Tương ớt cay ngọt Luang Prabang,Luang Prabang spicy paste,chaew-bawng,noun,Ẩm thực,ຈ້ຳແຈ່ວບອງໃສ່ເຂົ້າໜຽວ,Chấm xôi nếp với tương ớt Jeow Bong
+ແຈ່ວໝາກເຂືອ,Cà tím nướng dầm ớt,Eggplant dip,chaew-maak-kheua,noun,Mở rộng - Ẩm thực,ຈ້ຳແຈ່ວໝາກເຂືອ,Chấm tương cà tím nướng
+ແຈ້ງ,Sáng sủa / Rõ ràng,Bright / Clear,chaeng,adjective,Bài 11,ຕອນເຊົ້າແຈ້ງດີ,Buổi sáng trời sáng tỏ
+ແຈ້ງການ,Thông báo,To announce / Notification,chaeng-kaan,noun,Công sở,ອອກແຈ້ງການ,Ra thông báo
+ແຊບ,Ngon,Delicious / Tasty,saep,adjective,Bài 06,ອາຫານແຊບຫຼາຍ,Đồ ăn rất ngon
+ແຊບຫຼາຍ,Ngon tuyệt cú mèo,Very delicious,saep-laai,phrase,Khen ngợi,ອາຫານລາວແຊບຫຼາຍ,Đồ ăn Lào ngon lắm
+ແດ່,Với / Chút nào (cầu khiến nhẹ nhàng),Please / A bit,dae,particle,Mở rộng - Khẩu ngữ,ຊ່ວຍແດ່,Giúp tôi với nào!
+ແຕ່,Nhưng / Từ (đâu đến),But / From,tae,conjunction,Mở rộng - Từ nối,ຢາກໄປແຕ່ບໍ່ມີເວລາ,Muốn đi nhưng không có thời gian
+ແຕ່ງກິນ,Nấu ăn,To cook,taeng-kin,verb,Bài 10,ແມ່ແຕ່ງກິນແຊບ,Mẹ nấu ăn ngon
+ແຕ່ງງານ,Kết hôn / Cưới,To marry / Marriage,taeng-ngaan,verb,Bài 02,ແຕ່ງງານແລ້ວບໍ,Đã kết hôn chưa
 ແທ້,Thật / Thật sự,Really / Truly,thae,adverb,Bài 12,ແທ້ຫວາ,Thật à?
+ແທ້ໆ,Thật sự / Thật đấy,Really / Truly,thae-thae,adverb,Nhấn mạnh,ຂ້ອຍເວົ້າແທ້ໆ,Tôi nói thật lòng đấy
+ແນະນຳ,Giới thiệu / Khuyên bảo,To introduce / To recommend,nae-nam,verb,Giao tiếp,ແນະນຳຕົວເອງ,Tự giới thiệu bản thân
 ແນ່ນອນ,Chắc chắn,Of course / Definitely,naae-nawn,adverb,Bài 12,ແນ່ນອນແລ້ວ,Chắc chắn rồi
 ແບ່ງປັນ,Chia sẻ,To share,baeng-pan,verb,Bài 12,ແບ່ງປັນຄວາມຮູ້,Chia sẻ kiến thức
+ແປກໃຈ,Ngạc nhiên / Kinh ngạc,Surprised / Amazed,paek-chai,adjective,Tâm lý,ຂ້ອຍແປກໃຈຫຼາຍ,Tôi rất ngạc nhiên
+ແປດ,Tám (số 8),Eight (8),paet,number,Bài 03,ແປດໂມງ,Tám giờ
+ແປດສິບ,Tám mươi,Eighty,paet-sip,number,Số đếm,ແປດສິບພັນ,Tám mươi nghìn
+ແປດຮ້ອຍ,Tám trăm,Eight hundred,paet-hway,number,Số đếm,ແປດຮ້ອຍອັນ,Tám trăm chiếc
+ແປ້ງນົວ,Mì chính / Bột ngọt,MSG,paeng-nua,noun,Mở rộng - Gia vị,ຢ່າໃສ່ແປ້ງນົວຫຼາຍ,Đừng cho nhiều mì chính
+ແປ້ນພິມ,Bàn phím máy tính,Keyboard,paen-phim,noun,AI & CNTT,ແປ້ນພິມພາສາລາວ,Bàn phím gõ tiếng Lào
+ແຜນທີ່,Bản đồ,Map,phaen-thee,noun,Bài 08,ເບິ່ງແຜນທີ່,Xem bản đồ
+ແຜ່ນດິນ,Đất đai / Mặt đất,Earth / Land,phaen-din,noun,Tự nhiên,ແຜ່ນດິນອຸດົມສົມບູນ,Đất đai màu mỡ trù phú
+ແຜ່ນດິນໄຫວ,Động đất,Earthquake,phaen-din-vai,noun,Thiên tai,ເກີດແຜ່ນດິນໄຫວ,Xảy ra động đất
+ແພງ,Đắt / Đắt đỏ,Expensive,phaeng,adjective,Bài 07,ແພງຫຼາຍ,Đắt quá
+ແຟລດກາດ,Thẻ từ vựng flashcard,Flashcard,flaat-kaat,noun,Giáo dục trực tuyến,ຮຽນດ້ວຍແຟລດກາດ,Học ngoại ngữ bằng thẻ flashcard
+ແມງກະເບື້ອ,Con bướm,Butterfly,maeng-ka-beua,noun,Sinh vật,ແມງກະເບື້ອບິນຕອມດອກໄມ້,Bướm bay lượn bên hoa
+ແມງວັນ,Con ruồi,Fly / Housefly,maeng-van,noun,Sinh vật,ແມງວັນຕອມ,Ruồi bâu
+ແມງສາບ,Con gián,Cockroach,maeng-saap,noun,Sinh vật,ຢ້ານແມງສາບ,Sợ con gián
+ແມວ,Con mèo,Cat,maeo,noun,Mở rộng - Động vật,ແມວນອນຫຼັບ,Con mèo ngủ ngoan
+ແມັດ,Mét,Meter,maet,noun,Bài 07,ຜ້າສອງແມັດ,Hai mét vải
+ແມ່,Mẹ,Mother,mae,noun,Bài 02,ແມ່ຮັກລູກ,Mẹ yêu con
+ແມ່ຄ້າ,Người bán hàng / Tiểu thương,Vendor / Merchant,mae-khaa,noun,Bài 09,ແມ່ຄ້າໃຈດີ,Bà bán hàng vui vẻ
+ແມ່ນ,Là / Đúng,Yes / To be,maen,verb,Bài 01,ແມ່ນແລ້ວ,Đúng rồi
 ແມ່ນແທ້,Đúng thật,Really true,maen-thae,phrase,Bài 12,ແມ່ນແທ້ໆ,Đúng thật sự
+ແມ່ນແລ້ວ,Đúng rồi / Phải rồi,That's right,maen-laew,phrase,Giao tiếp,"ແມ່ນແລ້ວ, ຖືກຕ້ອງ","Đúng rồi, chuẩn xác"
+ແມ່ນ້ຳ,Dòng sông,River,mae-nam,noun,Mở rộng - Địa lý,ແມ່ນ້ຳກວ້າງໃຫຍ່,Dòng sông rộng lớn
+ແມ່ນ້ຳຂອງ,Sông Mê Kông,Mekong River,mae-nam-khawng,noun,Bài 09,ແຄມແມ່ນ້ຳຂອງ,Bờ sông Mê Kông
+ແມ່ບ້ານ,Người nội trợ,Housewife / Housekeeper,mae-baan,noun,Bài 09,ແມ່ບ້ານເຮັດວຽກເຮືອນ,Nội trợ làm việc nhà
+ແມ່ເຖົ້າ,Bà ngoại,Maternal grandmother,mae-thao,noun,Bài 02,ແມ່ເຖົ້າເຮັດອາຫານ,Bà ngoại nấu ăn
+ແລະ,Và,And,lae,conjunction,Mở rộng - Từ nối,ເຈົ້າແລະຂ້ອຍ,Bạn và tôi
 ແລ່ນ,Chạy,To run,laen,verb,Bài 12,ແລ່ນອອກກຳລັງກາຍ,Chạy tập thể dục
+ແລ່ນໄວ,Chạy nước rút,Sprinting,laen-vai,noun,Thể thao,ແຂ່ງຂັນແລ່ນໄວ,Thi chạy nước rút
 ແລ້ວ,Xong / Rồi,Finished / Already,laew,adverb,Bài 12,ເຮັດແລ້ວ,Làm xong rồi
+ແວ່ນຕາ,Kính mắt,Glasses,vaen-taa,noun,Bài 07,ແວ່ນຕາກັນແດດ,Kính râm
+ແສນ,"Trăm nghìn (100,000)","Hundred thousand (100,000)",saen,number,Bài 03,ໜຶ່ງແສນກີບ,Một trăm nghìn kíp
+ແຫ້ງ,Khô ráo,Dry,haeng,adjective,Bài 11,ລະດູແລ້ງ,Mùa khô
+ແອອັດ,Chật chội / Chen chúc,Crowded / Congested,ae-at,adjective,Trạng thái,ຈະລາຈອນແອອັດ,Giao thông chen chúc tắc đường
+ແອັບພລິເຄຊັນ,Ứng dụng di động (App),Application / App,aep-phi-lee-khee-xan,noun,Công nghệ,ຕິດຕັ້ງແອັບພລິເຄຊັນ,Cài đặt ứng dụng
+ແອເຢັນ,Máy điều hòa,Air conditioner,ae-yen,noun,Bài 10,ເປີດແອເຢັນ,Bật điều hòa
+ແໜມ,Nem chua,Fermented sour pork,naem,noun,Ẩm thực,ແໜມໝູສົ້ມ,Nem chua thịt lợn
+ໂກດ,Giận dữ / Tức giận,Angry,kot,verb,Bài 11,ຢ່າໂກດເດີ,Đừng giận nhé
 ໂຊກດີ,May mắn,Good luck,xook-dee,phrase,Bài 12,ຂໍໃຫ້ໂຊກດີ,Chúc may mắn
+ໂຊກດີເດີ,Chúc may mắn nhé,Good luck to you,xook-dee-der,phrase,Giao tiếp,ຂໍໃຫ້ໂຊກດີເດີ,Chúc bạn nhiều may mắn nhé
+ໂດຍ,Dạ / Vâng ạ (rất kính cẩn),"Yes, sir/ma'am (very respectful)",dooy,interjection,Mở rộng - Giao tiếp,"ໂດຍ, ຮັບຊາບແລ້ວ","Dạ vâng, con/cháu hiểu rồi ạ"
+ໂດດ,Nhảy,To jump,doot,verb,Mở rộng - Hành động,ໂດດຂ້າມ,Nhảy qua
+ໂດລາ,Đô la,Dollar,doh-laa,noun,Bài 07,ໜຶ່ງຮ້ອຍໂດລາ,Một trăm đô la
+ໂຕ,Con / Chiếc áo (loại từ),Animal / Shirt (classifier),toh,noun,Bài 03,ໝາສອງໂຕ,Hai con chó
+ໂຕະ,Cái bàn,Table / Desk,toh,noun,Bài 05,ໂຕະຮຽນ,Bàn học
+ໂທ,Gọi điện,To call (phone),thoh,verb,Bài 10,ໂທຫາຂ້ອຍເດີ,Gọi cho tôi nhé
+ໂທລະທັດ,Ti vi,Television,tho-la-that,noun,Bài 10,ເບິ່ງໂທລະທັດ,Xem tivi
+ໂທລະພາບ,Ti vi,Television,thoo-la-phaap,noun,Mở rộng - Gia dụng,ເບິ່ງໂທລະພາບ,Xem truyền hình
+ໂທລະສັບ,Điện thoại,Telephone / Mobile,tho-la-sap,noun,Bài 10,ໂທລະສັບມືຖື,Điện thoại di động
+ໂປຣແກຣມ,Chương trình máy tính (Software),Program / Software,proo-kaem,noun,Công nghệ,ຂຽນໂປຣແກຣມ,Lập trình phần mềm
+ໂມງ,Giờ / Đồng hồ,O'clock / Watch,moong,noun,Bài 04,ຕອນນີ້ຈັກໂມງ,Bây giờ mấy giờ
+ໂມງມື,Đồng hồ đeo tay,Wristwatch,moong-meu,noun,Bài 07,ໂມງມືງາມ,Đồng hồ đẹp
+ໂມງໃສ່ແຂນ,Đồng hồ đeo tay,Wristwatch,moong-sai-khaen,noun,Mở rộng - Trang phục,ໂມງໃສ່ແຂນສວຍງາມ,Đồng hồ đeo tay rất đẹp
+ໂສດ,Độc thân,Single,sot,adjective,Bài 02,ຂ້ອຍຍັງໂສດ,Tôi vẫn độc thân
+ໂສ້ງ,Cái quần,Trousers / Pants,soong,noun,Bài 07,ໂສ້ງຢີນ,Quần jean
+ໂອນເງິນ,Chuyển khoản,Bank transfer,oon-ngoen,verb,Bài 07,ໂອນເງິນໄດ້ບໍ,Chuyển khoản được không
+ໂອນເງິນດ່ວນ,Chuyển tiền nhanh 24/7,Instant money transfer,oon-ngoen-duan,verb,Tài chính,ໂອນເງິນດ່ວນຜ່ານແອັບ,Chuyển tiền nhanh qua app
+ໂຮງງານ,Nhà máy / Xí nghiệp,Factory,hoong-ngaan,noun,Công nghiệp,ໂຮງງານຕັດຫຍິບ,Nhà máy may mặc
+ໂຮງພິມ,Nhà in / Xưởng in,Printing house,hoong-phim,noun,Sản xuất,ພິມປຶ້ມຢູ່ໂຮງພິມ,In sách ở nhà in
+ໂຮງລະຄອນ,Nhà hát,Theater,hoong-la-khawn,noun,Văn hóa,ຊົມການສະແດງຢູ່ໂຮງລະຄອນ,Xem biểu diễn ở nhà hát
+ໂຮງຮຽນ,Trường học,School,hong-hian,noun,Bài 05,ໂຮງຮຽນໃຫຍ່,Trường học to lớn
+ໂຮງແຮມ,Khách sạn,Hotel,hong-haem,noun,Bài 09,ພັກຢູ່ໂຮງແຮມ,Nghỉ tại khách sạn
+ໂຮງໜັງ,Rạp chiếu phim,Movie theater / Cinema,hoong-nang,noun,Giải trí,ເບິ່ງໜັງຢູ່ໂຮງໜັງ,Xem phim ở rạp
+ໂຮງໝໍ,Bệnh viện,Hospital,hong-maw,noun,Bài 09,ໄປໂຮງໝໍ,Đi bệnh viện
+ໃກ້,Gần,Near / Close,klai,adjective,Bài 08,ຢູ່ໃກ້ນີ້,Ở gần đây
+ໃຈກວ້າງ,Rộng lượng / Hào phóng,Generous / Broad-minded,chai-kuaang,adjective,Tính cách,ຄົນໃຈກວ້າງຂວາງ,Người có lòng dạ rộng lượng
+ໃຈກ້າ,Dũng cảm / Gan dạ,Brave / Courageous,chai-kaa,adjective,Tính cách,ທະຫານໃຈກ້າ,Người lính dũng cảm
+ໃຈງ່າຍ,Dễ dãi / Cả tin,Easy-going / Gullible,chai-ngaai,adjective,Tính cách,ຄົນໃຈງ່າຍ,Người cả tin
+ໃຈດຳ,Độc ác / Lòng dạ đen tối,Cruel / Malicious,chai-dam,adjective,Tính cách,ຄົນໃຈດຳ,Kẻ độc ác
+ໃຈດີ,Tốt bụng / Hiền lành,Kind / Good-natured,chai-dee,adjective,Bài 02,ຄົນລາວໃຈດີ,Người Lào rất hiền
+ໃຈອ່ອນ,Mủi lòng / Yếu lòng,Soft-hearted,chai-awn,adjective,Tính cách,ຄົນໃຈອ່ອນ,Người hay mủi lòng
+ໃຈຮ້ອນ,Nóng vội / Vội vàng,Impatient / Rash,chai-hawn,adjective,Tính cách,ເຮັດວຽກຢ່າໃຈຮ້ອນ,Làm việc chớ nên nóng vội
+ໃຈຮ້າຍ,Tức giận,Angry,chai-haai,adjective,Mở rộng - Cảm xúc,ລາວໃຈຮ້າຍ,Anh ấy nổi giận
+ໃຈເຢັນ,Bình tĩnh / Điềm đạm,Calm / Patient,chai-yen,adjective,Tính cách,ໃຈເຢັນໆເດີ,Hãy bình tĩnh lại nhé
+ໃຈແຄບ,Hẹp hòi / Ích kỷ,Narrow-minded / Selfish,chai-khaep,adjective,Tính cách,ບໍ່ຄວນເປັນຄົນໃຈແຄບ,Không nên là người hẹp hòi
+ໃນ,Trong / Ở trong,In / Inside,nai,preposition,Mở rộng - Giới từ,ຢູ່ໃນຫ້ອງ,Ở trong phòng
+ໃບຂັບຂີ່,Bằng lái xe / Giấy phép lái xe,Driver's license,bai-khap-khee,noun,Giao thông,ກວດໃບຂັບຂີ່,Kiểm tra bằng lái
+ໃບປະກາດ,Bằng tốt nghiệp,Diploma / Degree,bai-pa-kaat,noun,Giáo dục,ຮັບໃບປະກາດສະນີຍະບັດ,Nhận bằng tốt nghiệp
+ໃບຢັ້ງຢືນ,Giấy chứng nhận / Chứng chỉ,Certificate,bai-yang-yeun,noun,Giáo dục,ໃບຢັ້ງຢືນການຮຽນຈົບ,Chứng chỉ hoàn thành khóa học
+ໃບຢັ້ງຢືນທີ່ຢູ່,Giấy xác nhận cư trú,Residence certificate,bai-yang-yeun-thee-yuu,noun,Hành chính,ຂໍໃບຢັ້ງຢືນທີ່ຢູ່,Xin giấy xác nhận cư trú
+ໃບຮັບເງິນ,Hóa đơn / Biên lai,Receipt,bai-hap-ngoen,noun,Bài 07,ຂໍໃບຮັບເງິນ,Xin hóa đơn
+ໃບຮຽກເກັບເງິນ,Hóa đơn thanh toán,Invoice / Bill,bai-hiak-kep-ngoen,noun,Tài chính,ສົ່ງໃບຮຽກເກັບເງິນ,Gửi hóa đơn thu tiền
+ໃສ່ຖົງ,Bỏ vào túi,Put in a bag,sai-thong,phrase,Bài 07,ໃສ່ຖົງໃຫ້ແດ່,Bỏ túi hộ tôi
+ໃຫຍ່,Lớn / To,Big / Large,nyai,adjective,Bài 07,ເຮືອນໃຫຍ່,Nhà to
 ໃຫ້,Cho / Tặng,To give,hai,verb,Bài 12,ໃຫ້ເງິນ,Cho tiền
+ໃໝ່,Mới,New,mai,adjective,Bài 11,ລົດໃໝ່,Xe mới
+ໄກ,Xa,Far,kai,adjective,Bài 08,ໄກຫຼາຍ,Rất xa
+ໄກ່,Con gà,Chicken,kai,noun,Mở rộng - Động vật,ໄກ່ຂັນຕອນເຊົ້າ,Gà gáy sáng
+ໄຂ່,Trứng,Egg,khai,noun,Bài 06,ໄຂ່ດາວ,Trứng ốp la
+ໄຂ້,Sốt / Cơn sốt,Fever,khai,noun,Mở rộng - Y tế,ເປັນໄຂ້ສູງ,Bị sốt cao
+ໄຄແຜ່ນ,Rêu đá Luang Prabang chiên,Crispy river weed,khai-phaen,noun,Mở rộng - Ẩm thực,ໄຄແຜ່ນຫຼວງພະບາງ,Rêu đá chiên Luang Prabang
+ໄຊຍະບູລີ,Xayaboury,Xayaboury,xai-nya-buu-lee,noun,Địa lý Lào,ບຸນຊ້າງໄຊຍະບູລີ,Lễ hội voi Xayaboury
+ໄຊສົມບູນ,Xaysomboun,Xaysomboun,xai-som-buun,noun,Địa lý Lào,ພູເບ້ຍຢູ່ໄຊສົມບູນ,Đỉnh núi Phou Bia ở Xaysomboun
+ໄດ້,Được / Có thể,Can / To get,dai,verb,Bài 01,ເວົ້າໄດ້ໜ້ອຍໜຶ່ງ,Nói được một chút
+ໄທ,Thái Lan,Thailand,thai,noun,Bài 01,ຄົນໄທ,Người Thái
+ໄປ,Đi,To go,pai,verb,Bài 08,ໄປໃສ,Đi đâu
+ໄປກິນເຂົ້າ,Đi ăn cơm,To go have a meal,pai-kin-khao,verb,Ẩm thực,ໄປກິນເຂົ້ານຳກັນ,Đi ăn cơm cùng nhau
+ໄປຊື້ເຄື່ອງ,Đi mua sắm,To go shopping,pai-seu-khueang,verb,Mua sắm,ໄປຊື້ເຄື່ອງຢູ່ຫ້າງ,Đi mua sắm ở siêu thị
+ໄປຕະຫຼາດ,Đi chợ,To go to market,pai-ta-laat,verb,Mua sắm,ແມ່ໄປຕະຫຼາດ,Mẹ đi chợ mua đồ
+ໄປທ່ຽວ,Đi du lịch / Đi chơi,To travel / To go out,pai-thiaao,verb,Du lịch,ໄປທ່ຽວວັງວຽງ,Đi du lịch Vang Vieng
+ໄປນອນ,Đi ngủ,To go to bed,pai-nawn,verb,Đời sống,ຮອດເວລານອນແລ້ວ,Đến giờ đi ngủ rồi
+ໄປວັດ,Đi chùa lễ Phật,To go to temple,pai-vat,verb,Văn hóa,ຕັກບາດຢູ່ວັດ,Lễ bái cúng dường ở chùa
+ໄປສະນີ,Bưu điện,Post office,pai-sa-nee,noun,Bài 09,ສົ່ງຈົດໝາຍ,Gửi thư tại bưu điện
+ໄປສະໜາມບິນ,Đi ra sân bay,To go to airport,pai-sa-naam-bin,verb,Giao thông,ໄປສະໜາມບິນຮັບແຂກ,Ra sân bay đón khách
+ໄປຫຼິ້ນ,Đi chơi,To go hang out,pai-lin,verb,Giải trí,ໄປຫຼິ້ນບ້ານໝູ່,Đi chơi nhà bạn
+ໄປຮຽນ,Đi học,To go to school,pai-hian,verb,Học tập,ໄປຮຽນແຕ່ເຊົ້າ,Đi học từ sáng sớm
+ໄປເຮັດວຽກ,Đi làm việc,To go to work,pai-het-viak,verb,Công việc,ຂີ່ລົດໄປເຮັດວຽກ,Đi xe đi làm
+ໄປໂຮງໝໍ,Đi bệnh viện,To go to hospital,pai-hoong-maw,verb,Y tế,ພາຄົນເຈັບໄປໂຮງໝໍ,Đưa bệnh nhân tới bệnh viện
+ໄຟ,Lửa / Điện / Đèn,Fire / Light,fai,noun,Mở rộng - Năng lượng,ເປີດໄຟ,Bật đèn
+ໄຟຟ້າ,Điện lực / Đèn điện,Electricity,fai-faa,noun,Bài 10,ໄຟຟ້າມອດ,Mất điện
+ໄຟສາຍ,Đèn pin,Flashlight / Torch,fai-saai,noun,Gia dụng,ເຍືອງໄຟສາຍ,Soi đèn pin
+ໄຟແດງ,Đèn giao thông / Đèn đỏ,Traffic light / Red light,fai-daeng,noun,Bài 08,ໄຟຂຽວໄຟແດງ,Đèn xanh đèn đỏ
+ໄມ້ບັນທັດ,Thước kẻ,Ruler,mai-ban-that,noun,Bài 05,ໄມ້ບັນທັດຍາວ,Thước kẻ dài
+ໄວ,Nhanh,Fast / Quick,vai,adjective,Bài 04,ໄປໄວໆ,Đi nhanh lên
+ໄວຍາກອນ,Ngữ pháp,Grammar,vai-yaa-kawn,noun,Ngôn ngữ,ໄວຍາກອນພາສາລາວ,Ngữ pháp tiếng Lào
+ໄສ້ອົ່ວ,Xúc xích thảo mộc Lào (Sai Oua),Lao herbal sausage,sai-ua,noun,Mở rộng - Ẩm thực,ໄສ້ອົ່ວໝູ,Xúc xích heo thơm cay
 ໄຫ້,Khóc,To cry,hai,verb,Bài 12,ຢ່າໄຫ້,Đừng khóc
+ໄອ,Ho,Cough,ai,verb,Mở rộng - Y tế,ໄອຫຼາຍ,Ho liên tục
+ໜວດ,Râu mép,Moustache,nuat,noun,Cơ thể,ໄວ້ໜວດ,Để râu mép
+ໜັກ,Nặng,Heavy,nak,adjective,Bài 11,ກະເປົາໜັກ,Cặp sách nặng
+ໜັງສືຜ່ານແດນ,Hộ chiếu (Passport),Passport,nang-seu-phaan-daen,noun,Du lịch,ກວດໜັງສືຜ່ານແດນ,Kiểm tra hộ chiếu
+ໜາ,Dày,Thick,naa,adjective,Bài 11,ປຶ້ມໜາ,Quyển sách dày
+ໜາວ,Lạnh giá,Cold (weather),naao,adjective,Bài 11,ລະດູໜາວ,Mùa đông lạnh
+ໜີ້ສິນ,Nợ nần,Debt,nee-sin,noun,Tài chính,ບໍ່ມີໜີ້ສິນ,Không có nợ nần
+ໜຶ່ງ,Một (số 1),One (1),neung,number,Bài 03,ໜຶ່ງອັນ,Một cái
+ໜຶ່ງລ້ານ,Một triệu,One million,neung-laan,number,Số đếm,ໜຶ່ງລ້ານກີບ,Một triệu Kíp
+ໜຸ່ມ,Trẻ tuổi,Young,num,adjective,Bài 11,ໄວໜຸ່ມ,Giới trẻ
+ໜູ,Con chuột,Rat / Mouse,nuu,noun,Động vật,ໜູແລ່ນໃນເຮືອນ,Chuột chạy trong nhà
+ໜ້ອຍ,Ít,Few / Little,noy,adjective,Bài 03,ມີເງິນໜ້ອຍ,Có ít tiền
+ໜ້ອຍໜຶ່ງ,Một chút / Một ít,A little bit,noy-neung,adverb,Bài 01,ຂ້ອຍເຂົ້າໃຈໜ້ອຍໜຶ່ງ,Tôi hiểu một chút
+ໜ້າ,Phía trước / Mặt,Front / Face,naa,noun,Bài 08,ຢູ່ຕໍ່ໜ້າ,Ở phía trước
+ໜ້າຜາກ,Trán,Forehead,naa-phaak,noun,Cơ thể,ໜ້າຜາກກວ້າງ,Vầng trán rộng
+ໜ້າຮັກ,Đáng yêu,Cute / Lovely,naa-hak,adjective,Bài 02,ເດັກນ້ອຍໜ້າຮັກ,Trẻ nhỏ đáng yêu
+ໝວກ,Cái mũ / Nón,Hat / Cap,muak,noun,Bài 07,ໃສ່ໝວກ,Đội mũ
+ໝອກ,Sương mù,Fog / Mist,mawk,noun,Thời tiết,ໝອກປົກຄຸມຕອນເຊົ້າ,Sương mù bao phủ sáng sớm
+ໝອນ,Cái gối,Pillow,mawn,noun,Bài 10,ໝອນນຸ່ມ,Gối êm
+ໝັ້ນໃຈ,Tự tin / Chắc chắn,Confident,man-chai,adjective,Tâm lý,ມີຄວາມໝັ້ນໃຈ,Có sự tự tin
+ໝາ,Con chó,Dog,maa,noun,Mở rộng - Động vật,ໝາເຫົ່າ,Chó sủa
+ໝາກກ້ວຍ,Quả chuối,Banana,maak-kluay,noun,Bài 06,ໝາກກ້ວຍສຸກ,Chuối chín
+ໝາກກ້ຽງ,Quả cam,Orange,maak-kiang,noun,Bài 06,ນ້ຳໝາກກ້ຽງ,Nước cam ép
+ໝາກຂາມ,Quả me,Tamarind,maak-khaam,noun,Hoa quả,ໝາກຂາມຫວານ,Me ngọt
+ໝາກທຸລຽນ,Quả sầu riêng,Durian,maak-thu-lian,noun,Hoa quả,ໝາກທຸລຽນຫອມ,Sầu riêng thơm nức
+ໝາກນັດ,Quả dứa / thơm,Pineapple,maak-nat,noun,Mở rộng - Hoa quả,ໝາກນັດຫວານ,Quả dứa ngọt
+ໝາກນາວ,Quả chanh,Lime / Lemon,maak-naao,noun,Mở rộng - Hoa quả,ບີບໝາກນາວ,Vắt chanh
+ໝາກພ້າວ,Quả dừa,Coconut,maak-phaao,noun,Mở rộng - Hoa quả,ນ້ຳໝາກພ້າວ,Nước dừa tươi
+ໝາກມັງຄຸດ,Quả măng cụt,Mangosteen,maak-mang-khut,noun,Hoa quả,ໝາກມັງຄຸດຫວານ,Măng cụt thơm ngọt
+ໝາກມ່ວງ,Quả xoài,Mango,maak-muang,noun,Bài 06,ໝາກມ່ວງຫວານ,Xoài ngọt
+ໝາກລຳໄຍ,Quả nhãn,Longan,maak-lam-nyai,noun,Hoa quả,ໝາກລຳໄຍຫວານ,Nhãn ngọt thơm
+ໝາກລີ້ນຈີ່,Quả vải,Lychee,maak-leen-chee,noun,Hoa quả,ໝາກລີ້ນຈີ່ສົດ,Vải thiều tươi
+ໝາກສີດາ,Quả ổi,Guava,maak-see-daa,noun,Hoa quả,ໝາກສີດາກອບ,Ổi giòn ngọt
+ໝາກອຶ,Bí đỏ,Pumpkin,maak-ue,noun,Rau củ,ແກງໝາກອຶ,Canh bí đỏ
+ໝາກຮຸ່ງ,Quả đu đủ,Papaya,maak-hung,noun,Mở rộng - Hoa quả,ໝາກຮຸ່ງດິບ,Đu đủ xanh
+ໝາກເຂືອ,Cà tím,Eggplant,maak-kheua,noun,Rau củ,ແຈ່ວໝາກເຂືອ,Tương cà tím nướng
+ໝາກເຜັດ,Quả ớt,Chili,maak-phet,noun,Mở rộng - Gia vị,ໝາກເຜັດແດງ,Ớt đỏ cay
+ໝາກເລັ່ນ,Cà chua,Tomato,maak-len,noun,Rau củ,ໝາກເລັ່ນແດງ,Cà chua chín đỏ
+ໝາກແຕງ,Dưa leo / Dưa chuột,Cucumber,maak-taeng,noun,Rau củ,ຕຳໝາກແຕງ,Nộm dưa leo
+ໝາກໂມ,Quả dưa hấu,Watermelon,maak-moo,noun,Bài 06,ໝາກໂມແດງ,Dưa hấu đỏ
+ໝາກໄຂ່ຫຼັງ,Thận,Kidney,maak-khai-lang,noun,Nội tạng,ບຳລຸງໝາກໄຂ່ຫຼັງ,Bổ thận
+ໝາກໄມ້,Hoa quả / Trái cây,Fruit,maak-mai,noun,Bài 06,ກິນໝາກໄມ້,Ăn hoa quả
+ໝີ່,Mì sợi,Noodles,mee,noun,Ẩm thực,ຜັດໝີ່ລາວ,Mì xào kiểu Lào
+ໝື່ນ,"Mười nghìn (10,000)","Ten thousand (10,000)",meun,number,Bài 03,ໜຶ່ງໝື່ນກີບ,Một vạn kíp
+ໝູຍໍ,Giò lụa / Chả lụa,Vietnamese/Lao pork roll,muu-nyaw,noun,Ẩm thực,ໝູຍໍຊຽງຂວາງ,Giò lụa Xieng Khouang
+ໝູ່,Bạn / Bè bạn,Friend / Companion,muu,noun,Bài 05,ໝູ່ຮ່ວມຫ້ອງ,Bạn cùng lớp
+ໝູ່ເພື່ອນ,Bạn bè,Friends,muu-pheuan,noun,Mở rộng - Quan hệ,ໝູ່ເພື່ອນຫຼວງຫຼາຍ,Rất nhiều bạn bè
+ໝໍປິ່ນປົວ,Bác sĩ điều trị,Medical doctor,maw-pin-pua,noun,Bài 09,ໄປຫາໝໍ,Đi khám bác sĩ
+ໝໍ້,Cái nồi,Pot,maw,noun,Đồ gia dụng,ໝໍ້ຕົ້ມນ້ຳ,Nồi đun nước
+ໝໍ້ໜຶ້ງ,Chõ đồ xôi / Nồi hấp xôi Lào,Lao sticky rice steamer pot,maw-neung,noun,Đồ gia dụng,ໝໍ້ໜຶ້ງເຂົ້າໜຽວ,Chõ đồ xôi nếp Lào

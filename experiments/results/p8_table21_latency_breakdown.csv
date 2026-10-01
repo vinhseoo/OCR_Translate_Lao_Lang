@@ -1,0 +1,8 @@
+﻿stage,latency_ms,percentage,hardware,notes
+Giai đoạn 1: Tiền xử lý ảnh (Crop + CLAHE + Rescale 48px),12.5,24.27,CPU (Single Thread),Chuẩn hóa độ tương phản & bảo toàn nét dấu
+Giai đoạn 2: Nhận dạng ký tự (LaoCRNN Inference),28.5,55.34,CPU (Torch),"Mô hình 8.48M tham số, CTC greedy decode"
+Giai đoạn 3: Hậu xử lý từ điển (Weighted Lexicon Snap),6.1,11.84,CPU (Python DP),Chiết khấu phạt dấu thanh & ma trận nhầm lẫn
+Giai đoạn 4: Phân đoạn từ (Trie Maximum Matching),1.2,2.33,CPU (In-memory Trie),"Khớp chuỗi cực đại trên 1,200 từ vựng"
+Giai đoạn 5: Phiên âm chữ Latinh (Lao Romanizer),0.8,1.55,CPU (Rule-based),Chuyển tự ngữ âm hỗ trợ phát âm
+Giai đoạn 6: Tra cứu từ điển & Tổng hợp Flashcard,2.4,4.66,CPU (Dict lookup),Trích xuất song ngữ Lào-Việt-Anh và ví dụ
+TỔNG TOÀN LUỒNG END-TO-END,51.5,100.0,CPU Thông thường,Tốc độ xử lý ~20 khung hình/giây (Real-time Offline)

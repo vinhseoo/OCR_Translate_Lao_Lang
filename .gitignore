@@ -53,6 +53,7 @@ experiments/results/*.csv
 !experiments/results/p5_*.csv
 !experiments/results/p6_*.csv
 !experiments/results/p7_*.csv
+!experiments/results/p8_*.csv
 experiments/results/*.png
 !experiments/results/dataset_sample_grid.png
 !experiments/results/lao_4tiers_projection_profile.png
@@ -60,6 +61,7 @@ experiments/results/*.png
 !experiments/results/ablation_*.png
 !experiments/results/p6_*.png
 !experiments/results/p7_*.png
+!experiments/results/p8_*.png
 
 # Tesseract traineddata (except sample)
 *.traineddata
