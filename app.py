@@ -22,6 +22,7 @@ import cv2
 from PIL import Image
 import streamlit as st
 import pandas as pd
+from dataclasses import asdict
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 if PROJECT_ROOT not in sys.path:
