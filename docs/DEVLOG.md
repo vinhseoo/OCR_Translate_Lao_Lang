@@ -59,3 +59,41 @@ Mỗi khi bắt đầu hoặc hoàn thành một công việc, thêm một entry
   - Kho mã nguồn GitHub đã được đồng bộ đầy đủ và sẵn sàng cho việc làm việc nhóm và bảo vệ.
 
 ---
+
+### [2026-10-01 14:00] - [P0] - Hoàn Tất Kiểm Tra Render Font & Cài Đặt Tesseract 5 Lao
+- **Mục tiêu:** Kiểm tra render font trên 1,215 tổ hợp phụ âm $\times$ nguyên âm $\times$ dấu thanh và cài đặt Tesseract 5 cùng mô hình `lao.traineddata` (tessdata_best).
+- **Thực hiện:**
+  - Tải về 3 font chuẩn Google: `NotoSansLao.ttf`, `NotoSerifLao.ttf`, và `NotoSansLaoLooped.ttf` vào `data/fonts/`.
+  - Cài đặt `tesseract v5.4.0.20240606` và tải `lao.traineddata` (13.5 MB) từ tessdata_best vào `C:\Users\maiduc.vinh\AppData\Local\Programs\Tesseract-OCR\tessdata\`.
+  - Chạy `src/utils/font_check.py`, render thành công 3 ảnh lưới kiểm tra kích thước lớn: `grid_NotoSansLao.ttf.png`, `grid_NotoSerifLao.ttf.png`, `grid_NotoSansLaoLooped.ttf.png`.
+- **Kết quả / Quyết định:**
+  - Cả 3 font hiển thị chuẩn xác không bị đè dấu hay trôi dấu. Được phê duyệt cho tập dữ liệu tổng hợp ở P2.
+  - Phase P0 chính thức **HOÀN THÀNH 100%**.
+
+---
+
+### [2026-10-01 14:10] - [P1] - Hoàn Thành Lát Cắt Dọc (Vertical Spike End-to-End)
+- **Mục tiêu:** Dựng luồng hoạt động thông suốt từ ảnh thẻ flashcard đến kết quả dịch nghĩa, đo CER mốc số 0 và phát hiện rủi ro.
+- **Thực hiện:**
+  - Xây dựng pipeline tiền xử lý `src/preprocessing/pipeline.py` (Grayscale, crop viền 16px, Otsu thresholding, white padding 15px).
+  - Xây dựng `src/ocr/tesseract_engine.py` bọc Tesseract (`--oem 1 --psm 7 -l lao`).
+  - Xây dựng `src/postprocessing/mini_dict_matcher.py` tra cứu từ điển 30 từ (`data/dictionaries/mini_dict.csv`) hỗ trợ exact match và Levenshtein fuzzy match.
+  - Xây dựng CLI `src/run.py` chạy đơn lẻ: `python src/run.py --image <path>`.
+  - Sinh 20 ảnh flashcard mẫu tại `data/samples/p1_spike/` và chạy đánh giá toàn diện bằng `experiments/evaluate_p1_spike.py`.
+- **Số liệu Thực nghiệm (Baseline Zero):**
+  - **Số mẫu test:** 20 ảnh thẻ flashcard.
+  - **Độ chính xác cấp từ tuyệt đối (Exact Match):** 5/20 (25.0%).
+  - **Tỉ lệ tìm đúng nghĩa qua từ điển (Semantic Accuracy):** 17/20 (85.0%).
+  - **CER thô trung bình (Mốc số 0):** **37.62%**.
+  - **Bootstrap 95% Confidence Interval:** **[23.71% - 52.94%]**.
+  - **Thời gian xử lý trung bình:** 0.129 giây/ảnh.
+- **Phát hiện Rủi ro Then chốt (Vibe & Insights):**
+  1. *Rụng dấu thanh:* `ແມ່ນ` bị nhận dạng thành `ແມນ` (mất dấu Mai Ek `່`), `ຫ້ອງຮຽນ` thành `ຫອງຮຽນ` (mất dấu Mai Tho `້`). Điều này chứng minh Otsu và Tesseract thô thường làm đứt gãy các dấu thanh nhỏ.
+  2. *Trôi nguyên âm tầng trên:* `ກິນ` (k-i-n) bị đọc thành `ກນິ` (nguyên âm `ິ` bị dồn ra sau phụ âm cuối `ນ`).
+  3. *Sức mạnh của từ điển:* Dù ký tự thô bị sai dấu, thuật toán khớp mờ Levenshtein trong từ điển đóng vẫn khôi phục đúng nghĩa 85% trường hợp!
+- **Kết quả / Quyết định:**
+  - Cổng ra Phase P1 chính thức **ĐẠT (PASSED)** với 5/20 ảnh đúng 100% ký tự và 17/20 đúng nghĩa.
+- **Bước tiếp theo:**
+  - Sẵn sàng chuyển sang **Phase P2: Dữ liệu (Gold Set + Từ điển lớn $\ge 500$ từ + Synthetic Data)**.
+
+---
