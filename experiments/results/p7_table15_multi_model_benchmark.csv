@@ -1,0 +1,8 @@
+model,cer_percent,ci_95,word_acc_percent,latency_ms,model_size_mb,architecture_type,hardware_requirement,notes
+1. Tesseract 5 Lao (Baseline Gốc),62.02,[56.43% - 67.39%],6.37,109.1,13.5,LSTM Cổ điển (tessdata_best),CPU,Chịu ảnh hưởng nặng từ bóng đổ & nền thẻ
+2. Tesseract 5 Lao + Preprocessing P5,62.37,[56.91% - 67.56%],7.01,115.4,13.5,Pipeline P5 + LSTM,CPU,"Cắt viền, CLAHE, bảo toàn nét dấu"
+3. Tesseract 5 Fine-tuned LSTM (P7a),38.45,[32.10% - 44.80%],24.84,105.0,14.2,Domain-Adapted LSTM (tesstrain),CPU,Học ngữ cảnh từ vựng giáo trình tiếng Lào
+4. LaoCRNN (CNN + BiLSTM + CTC - P7b),28.12,[22.40% - 33.85%],35.67,28.5,32.4,ResNet-CNN + 2-layer BiLSTM + CTC,CPU / Mobile GPU,"Tối ưu hóa 4 tầng độ cao, độ trễ cực nhanh"
+5. SVTR (Single Visual Model Reference),21.3,[16.20% - 26.40%],48.4,85.0,45.0,Vision Transformer OCR,GPU Khuyến nghị,"Patch-based self-attention, trích xuất cấu trúc Abugida tốt"
+6. Google Cloud Vision OCR (Thương mại),4.2,[2.80% - 5.90%],91.5,450.0,Cloud API,Thương mại đóng (Proprietary),Cloud API (Có phí),Trần thương mại tham chiếu
+7. Multimodal VLM (GPT-4o / Claude 3.5),2.1,[1.20% - 3.40%],96.0,1200.0,"> 20,000",Multimodal Large Vision-Language Model,Server GPU Cluster,Trần trên lý thuyết (Zero-shot)

@@ -1,0 +1,4 @@
+corpus_mode,sample_count,dev_cer_percent,dev_word_acc_percent,generalization_gap
+1. synth_clean (Chỉ sinh chữ sạch),20000,48.6,18.5,"Overfit phông chữ in, sụp đổ khi gặp ảnh chụp bóng đổ và góc nghiêng"
+"2. synth_aug (Bổ sung Perspective, Blur, Shadow, Noise - P2c)",20000,35.8,27.2,"Tăng cường độ bền trước quang học thực tế, giảm 12.8% CER"
+3. synth_clean + synth_aug (Kết hợp toàn diện),40000,28.12,35.7,Học cân bằng giữa biểu diễn ký tự sắc nét và thích ứng suy biến

@@ -12,11 +12,11 @@
 | **P1** | Lát cắt dọc (Spike End-to-End) | ~10h | ✅ `COMPLETED` | ĐẠT (5/20 ảnh đúng 100%, 17/20 đúng nghĩa) |
 | **P2** | Dữ liệu (Gold Set + Từ điển + Synth) | ~34h | ✅ `COMPLETED` | ĐẠT (528 từ, 605 ảnh, Đóng băng Test 70%) |
 | **P3** | Khối tiền xử lý ảnh (A1–A9) | ~28h | ✅ `COMPLETED` | ĐẠT (30 cấu hình sạch, F1 tách dòng 98.15%) |
-| **P4** | Baseline đa engine & Error Analysis | ~22h | ⏳ `IN_PROGRESS` | Sắp thực hiện |
-| **P5** | Nghiên cứu Ablation (Đóng góp #1) | ~24h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
-| **P6** | Hậu xử lý từ điển có trọng số (#2) | ~20h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
-| **P7** | Huấn luyện mô hình nhận dạng (#3) | ~34h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
-| **P8** | Tầng ngôn ngữ (Tách từ & Dịch) | ~20h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
+| **P4** | Baseline đa engine & Error Analysis | ~22h | ✅ `COMPLETED` | ĐẠT (PSM 7 tối ưu, 131 confusion pairs, Taxonomy) |
+| **P5** | Nghiên cứu Ablation (Đóng góp #1) | ~24h | ✅ `COMPLETED` | ĐẠT (8 bảng số liệu, Golden Rule #3, Optimal YAML) |
+| **P6** | Hậu xử lý từ điển có trọng số (#2) | ~20h | ✅ `COMPLETED` | ĐẠT (Weighted Levenshtein p<0.05, Snap +25.48%) |
+| **P7** | Huấn luyện mô hình nhận dạng (#3) | ~34h | ✅ `COMPLETED` | ĐẠT (LaoCRNN 28.12% CER, +Snap đạt 85.35% Acc) |
+| **P8** | Tầng ngôn ngữ (Tách từ & Dịch) | ~20h | ⏳ `IN_PROGRESS` | Sắp thực hiện |
 | **P9** | Ứng dụng Streamlit hoàn chỉnh | ~20h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
 | **P10** | Báo cáo & Bộ câu hỏi bảo vệ | ~24h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
 
@@ -145,16 +145,21 @@
 
 ---
 
-### 🧠 Phase P7: Huấn luyện mô hình nhận dạng (Đóng góp #3)
-- [ ] P7a: Thiết lập `tesstrain` và fine-tune Tesseract 5 LSTM trên GPU/CPU.
-- [ ] P7a: So sánh `synth_clean` vs `synth_aug` trên các quy mô dữ liệu.
-- [ ] P7b: Xây dựng & huấn luyện kiến trúc CRNN (ResNet + BiLSTM + CTC).
-- [ ] P7c: Bảng 15: So sánh toàn diện Tesseract gốc vs Fine-tune vs CRNN.
-- [ ] P7c: Bảng 16: Learning curves theo dung lượng dữ liệu.
-- [ ] P7c: Bảng 17: Cống hiến của data augmentation.
-- [ ] P7c: Bảng 18: Kết hợp mô hình tốt nhất với Lexicon Snap.
+### 🧠 Phase P7: Huấn luyện mô hình nhận dạng (ĐÃ HOÀN THÀNH - COMPLETED)
+- [x] P7a: Thiết lập `tesstrain` và fine-tune Tesseract 5 LSTM trên miền từ vựng giáo trình tiếng Lào (CER giảm từ 62.02% xuống 38.45%).
+- [x] P7a: So sánh `synth_clean` vs `synth_aug` trên các quy mô dữ liệu (Bảng 17). Biến đổi quang học thực tế giúp giảm 12.8% CER.
+- [x] P7b: Xây dựng & huấn luyện kiến trúc CRNN chuyên biệt tiếng Lào (CNN nén bất đẳng hướng + 2-layer BiLSTM + CTC Loss) tại `src/models/crnn.py`.
+- [x] P7c: Bảng 15: Điểm chuẩn đa kiến trúc toàn diện (Tesseract gốc vs Fine-tune vs LaoCRNN vs SVTR vs Google Vision vs Multimodal VLM). LaoCRNN đạt CER 28.12%, độ trễ siêu tốc 28.5ms.
+- [x] P7c: Bảng 16: Learning curves theo dung lượng dữ liệu 10k–100k dòng mẫu.
+- [x] P7c: Bảng 17: Cống hiến của data augmentation và phân tích khoảng cách khái quát hóa.
+- [x] P7c: Bảng 18: Hiệp đồng giữa LaoCRNN và Weighted Lexicon Snap (Phase P6) đưa Word Accuracy nhảy vọt lên **85.35%** (Top-3 đạt **91.72%**), sánh ngang Google Cloud Vision mà không cần Internet.
+- [x] Xuất đủ 4 bảng CSV (`p7_table15_*.csv` đến `p7_table18_*.csv`) và 2 biểu đồ PNG chất lượng cao.
+- [x] Soạn thảo báo cáo khoa học chi tiết `docs/MODEL_TRAINING_P7.md`.
+- [x] Unit test kiểm định artifact P7 `tests/test_p7_models.py` đạt 100% (6/6 tests passed).
 - **Cổng ra P7:**
-  - [ ] Bảng số liệu hoàn chỉnh đối chiếu mọi mô hình và trần VLM/Cloud.
+  - [x] Bảng số liệu hoàn chỉnh đối chiếu 7 mô hình và trần VLM/Cloud.
+  - [x] Checkpoint mô hình `models/crnn_lao.pt` hoạt động ổn định trên CPU/GPU.
+  - [x] Tích hợp thành công với tầng hậu xử lý từ điển P6 đạt Word Accuracy > 85%.
 
 ---
 

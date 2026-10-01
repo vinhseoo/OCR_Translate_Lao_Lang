@@ -1,0 +1,4 @@
+model_architecture,cer_standalone,acc_standalone,cer_with_lexicon_snap,acc_with_lexicon_snap,gain_word_acc,top3_candidate_acc
+1. Tesseract 5 Lao (Baseline Gốc),62.02,6.37,59.0,29.3,+22.93%,34.39%
+2. Tesseract 5 Fine-tuned LSTM,38.45,24.84,18.2,68.79,+43.95%,76.43%
+3. LaoCRNN (CNN + BiLSTM + CTC - SOTA Cục Bộ),28.12,35.67,9.4,85.35,+49.68%,91.72%

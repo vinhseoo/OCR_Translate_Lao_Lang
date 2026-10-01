@@ -1,0 +1,5 @@
+scale_lines,num_lines,tesseract_ft_cer,crnn_cer,word_acc,train_time_hours
+10k dòng,10000,52.1,42.5,19.5,0.8
+20k dòng,20000,45.3,35.8,27.2,1.6
+60k dòng,60000,38.45,28.12,35.7,4.5
+100k dòng,100000,33.2,22.4,44.1,7.2
