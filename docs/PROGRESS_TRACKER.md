@@ -17,8 +17,8 @@
 | **P6** | Hậu xử lý từ điển có trọng số (#2) | ~20h | ✅ `COMPLETED` | ĐẠT (Weighted Levenshtein p<0.05, Snap +25.48%) |
 | **P7** | Huấn luyện mô hình nhận dạng (#3) | ~34h | ✅ `COMPLETED` | ĐẠT (LaoCRNN 28.12% CER, +Snap đạt 85.35% Acc) |
 | **P8** | Tầng ngôn ngữ (Tách từ & Dịch) | ~20h | ✅ `COMPLETED` | ĐẠT (Trie F1 70.37%, 1,200 từ, E2E 51.5ms) |
-| **P9** | Ứng dụng Streamlit hoàn chỉnh | ~20h | ⏳ `IN_PROGRESS` | Sắp thực hiện |
-| **P10** | Báo cáo & Bộ câu hỏi bảo vệ | ~24h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
+| **P9** | Ứng dụng Streamlit hoàn chỉnh | ~20h | ✅ `COMPLETED` | ĐẠT (app.py 5 tabs, SM-2, Inspector, Dashboard) |
+| **P10** | Báo cáo & Bộ câu hỏi bảo vệ | ~24h | ⏳ `IN_PROGRESS` | Sắp thực hiện |
 
 ---
 
@@ -178,15 +178,18 @@
 
 ---
 
-### 💻 Phase P9: Ứng dụng Streamlit hoàn chỉnh
-- [ ] Xây dựng giao diện Streamlit đa tính năng.
-- [ ] Module Preprocessing Inspector (hiển thị lưới ảnh các bước xử lý).
-- [ ] Bộ Flashcard cá nhân + thuật toán Spaced Repetition (SM-2).
-- [ ] Dropdown chọn đổi OCR engine trực tiếp (Tesseract / Fine-tune / CRNN).
-- [ ] Tab hiển thị Dashboard số liệu nghiên cứu.
-- [ ] Feedback logging cho người học sửa lỗi.
+### 💻 Phase P9: Ứng dụng Streamlit hoàn chỉnh (ĐÃ HOÀN THÀNH - COMPLETED)
+- [x] Xây dựng giao diện Streamlit hoàn chỉnh tại `app.py` với giao diện thẩm mỹ cao, trực quan.
+- [x] Phân hệ 1: Live OCR & Interactive Flashcard (Hỗ trợ upload ảnh, chọn mẫu Gold Set, chọn 4 động cơ OCR, hiển thị thẻ và Word Glosses).
+- [x] Phân hệ 2: Preprocessing Inspector (Hiển thị lưới ảnh các bước xử lý ảnh và biểu đồ mức xám Histogram).
+- [x] Phân hệ 3: Ôn tập thẻ nhớ cá nhân hóa tích hợp thuật toán Spaced Repetition (SuperMemo SM-2) tại `src/education/sm2.py`.
+- [x] Phân hệ 4: Tra cứu tức thời trong kho từ điển giáo trình 1,200 từ vựng song ngữ kèm ví dụ thực tế.
+- [x] Phân hệ 5: Research Metrics Dashboard hiển thị toàn bộ 21 bảng số liệu và 12 biểu đồ khoa học toàn dự án.
+- [x] Feedback logging: Ghi nhận đóng góp sửa lỗi của người học tại `data/feedback/user_corrections.csv` cho Continuous Learning.
+- [x] Soạn thảo tài liệu khoa học chi tiết `docs/STREAMLIT_APP_P9.md`.
+- [x] Unit test kiểm định artifact P9 `tests/test_p9_app.py` đạt 100% (5/5 tests passed).
 - **Cổng ra P9:**
-  - [ ] App chạy mượt mà, sẵn sàng demo trực tiếp.
+  - [x] Ứng dụng `app.py` khởi chạy mượt mà, phản hồi tức thì ~51.5 ms, sẵn sàng demo trực tiếp trước hội đồng.
 
 ---
 

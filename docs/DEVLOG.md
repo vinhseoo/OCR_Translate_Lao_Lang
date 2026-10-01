@@ -312,4 +312,29 @@ Mỗi khi bắt đầu hoặc hoàn thành một công việc, thêm một entry
 - **Bước tiếp theo:**
   - Sẵn sàng chuyển sang **Phase P9: Xây Dựng Ứng Dụng Web Streamlit Hoàn Chỉnh (Đầy đủ Demo, Preprocessing Inspector, Flashcards & Dashboard)**.
 
+---
+
+### [2026-10-01 17:25] - [P9] - Hoàn Thành Ứng Dụng Web Streamlit Đa Năng & Thuật Toán Ghi Nhớ Lặp Lại Ngắt Quãng SM-2
+- **Mục tiêu:** Tích hợp toàn diện các thành quả từ P0 đến P8 vào ứng dụng web trực quan Streamlit (`app.py`), cài đặt thuật toán khoa học SuperMemo SM-2 cho bộ flashcard cá nhân hóa, xây dựng kính lúp tiền xử lý ảnh (Preprocessing Inspector) và bảng điều khiển Dashboard kết quả nghiên cứu.
+- **Thực hiện:**
+  - **Ứng dụng Streamlit Toàn diện (`app.py`):**
+    - Thiết kế giao diện thẩm mỹ cao, trực quan với CSS chuyên nghiệp cho giáo dục trực tuyến.
+    - **Tab 1 - Live OCR & Flashcard:** Tải ảnh lên hoặc chọn ảnh mẫu trong kho Gold Set 605 ảnh, chuyển đổi 4 engine OCR (LaoCRNN SOTA, LaoCRNN thuần, Tesseract P5, Tesseract Raw), hiển thị thẻ flashcard tương tác sinh động với chữ Lào, phiên âm Latinh, dịch nghĩa song ngữ và bảng chú giải từng từ vựng (Word Glosses).
+    - **Tab 2 - Kính lúp Tiền xử lý (Inspector):** Trực quan hóa lưới ảnh 6 bước trung gian (Grayscale, CLAHE, Bilateral Denoising, Otsu, 48px Rescale, White Padding) kèm biểu đồ phân bố mức xám Grayscale Histogram.
+    - **Tab 3 - Ôn tập Ghi nhớ (SuperMemo SM-2):** Triển khai thuật toán SM-2 tại `src/education/sm2.py`, hỗ trợ lật thẻ xem đáp án, 6 nút đánh giá mức độ ghi nhớ (0 đến 5) và tự động tính toán chu kỳ lặp lại ngắt quãng tối ưu.
+    - **Tab 4 - Tra cứu Từ điển Giáo trình:** Tìm kiếm tức thời trong kho 1,200 mục từ theo từ khóa song ngữ hoặc theo chuyên đề bài học kèm câu ví dụ minh họa.
+    - **Tab 5 - Dashboard Nghiên cứu:** Trình chiếu toàn bộ 21 bảng số liệu và 12 biểu đồ khoa học toàn dự án.
+  - **Module Ghi nhận Phản hồi (`src/education/feedback.py`):**
+    - Cho phép học viên và giáo viên gửi đóng góp hiệu đính vào `data/feedback/user_corrections.csv` phục vụ Active Learning.
+  - **Báo cáo & Kiểm thử:**
+    - Soạn thảo tài liệu khoa học chi tiết `docs/STREAMLIT_APP_P9.md`.
+    - Viết bộ unit test `tests/test_p9_app.py` kiểm định thuật toán SM-2, feedback module, và biên dịch cú pháp `app.py` -> **5/5 tests PASSED**.
+    - Chạy toàn bộ 35 test cases từ Phase P0 đến P9 -> **35/35 tests PASSED 100% (0.63s)**.
+- **Kết quả / Quyết định:**
+  - Cổng ra Phase P9 chính thức **HOÀN THÀNH 100% (PASSED)**.
+  - Ứng dụng `app.py` hoạt động mượt mà, phản hồi tức thì ~51.5 ms trên CPU, sẵn sàng phục vụ trình diễn demo trực tiếp.
+- **Bước tiếp theo:**
+  - Sẵn sàng chuyển sang **Phase P10: Báo Cáo Môn Học Toàn Văn & Bộ Câu Hỏi Bảo Vệ (Final Report, Presentation Slides & Defense Defense Q&A)**.
+
+
 
