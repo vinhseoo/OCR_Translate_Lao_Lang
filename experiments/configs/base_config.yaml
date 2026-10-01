@@ -1,0 +1,84 @@
+# ==============================================================================
+# BASE CONFIGURATION: PREPROCESSING & OCR EXPERIMENT INFRASTRUCTURE
+# ==============================================================================
+experiment:
+  name: "baseline_evaluation"
+  seed: 42
+  output_dir: "experiments/results"
+
+dataset:
+  dev_csv: "data/gold/dev_labels.csv"
+  test_csv: "data/gold/test_labels.csv"
+  image_dir: "data/gold/images"
+
+# ------------------------------------------------------------------------------
+# PREPROCESSING PIPELINE CONFIGURATION (A1 - A9)
+# Bật/tắt từng bước phục vụ Ablation Study (Phase P5)
+# ------------------------------------------------------------------------------
+preprocessing:
+  grayscale:
+    enabled: true
+    method: "bgr2gray"       # bgr2gray | hsv_v | lab_l
+
+  illumination:
+    enabled: false
+    method: "clahe"          # clahe | gamma | homomorphic
+    clip_limit: 2.0
+    tile_grid_size: [8, 8]
+    gamma: 1.2
+
+  denoise:
+    enabled: false
+    method: "gaussian"       # median | bilateral | nlm | gaussian
+    kernel_size: 3
+    sigma: 1.0
+
+  perspective_correction:
+    enabled: false
+    contour_min_area: 5000
+
+  deskew:
+    enabled: false
+    method: "moment"         # hough | moment | projection | fft
+    max_angle: 45.0
+
+  binarization:
+    enabled: true
+    method: "otsu"           # otsu | adaptive_mean | adaptive_gaussian | sauvola | niblack | wolf
+    window_size: 25
+    k: 0.2                   # Cho Sauvola / Niblack
+
+  morphology:
+    enabled: false
+    operation: "opening"     # opening | closing
+    kernel_size: [1, 1]      # CẢNH BÁO: >= 3x3 sẽ xóa dấu thanh Lào
+
+  height_normalization:
+    enabled: false
+    target_height: 32        # 24 | 32 | 48 | 64 px
+
+  stroke_adjust:
+    enabled: false
+    operation: "none"        # thinning | dilate_1px | none
+
+# ------------------------------------------------------------------------------
+# OCR ENGINE CONFIGURATION
+# ------------------------------------------------------------------------------
+ocr:
+  engine: "tesseract"        # tesseract | paddleocr | crnn
+  tesseract:
+    lang: "lao"
+    oem: 1                   # OEM 1 = Neural nets LSTM only
+    psm: 7                   # PSM 7 = Single text line (phù hợp flashcard)
+    tessdata_dir: "models/tessdata_best"
+
+# ------------------------------------------------------------------------------
+# POSTPROCESSING & LEXICON SNAP
+# ------------------------------------------------------------------------------
+postprocessing:
+  lexicon_snap:
+    enabled: false
+    dictionary_path: "data/dictionaries/lao_vi_en.csv"
+    cost_matrix_path: "experiments/results/confusion_pairs.csv"
+    confidence_threshold: 0.6
+    top_k: 3
