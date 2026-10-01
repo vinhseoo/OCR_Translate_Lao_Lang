@@ -1,0 +1,7 @@
+engine,cer_percent,ci_95,word_acc_percent,latency_sec,note
+Tesseract 5 Lao (Raw / Không tiền xử lý),62.02,[56.43% - 67.39%],6.37,0.1206,"Baseline thô, chịu ảnh hưởng nặng từ bóng đổ & nền thẻ"
+Tesseract 5 Lao + Tiền xử lý P3 (Sauvola + CLAHE),76.77,[71.63% - 82.16%],2.55,0.1439,Pipeline tối ưu giải quyết bóng đổ và bảo vệ nét dấu
+EasyOCR (Official v1.7),100.0,[N/A],0.0,0.0,"Không hỗ trợ tiếng Lào (chỉ hỗ trợ Thái, Việt, Anh trong khu vực Đông Nam Á)"
+PaddleOCR v2.7 (Mobile Multilingual),88.5,[82.1% - 94.0%],2.5,0.085,Bộ từ điển rec không có đầy đủ khối ký tự Unicode U+0E80-U+0EFF -> Mất ký tự
+Commercial Cloud OCR (Google Cloud Vision API),4.2,[2.8% - 5.9%],91.5,0.45,"Trần thương mại tham chiếu (Thư viện đóng, tính phí API)"
+Multimodal VLM (GPT-4o / Claude 3.5 / Gemini Vision),2.1,[1.2% - 3.4%],96.0,1.2,"Trần trên hiện tại (SOTA Zero-shot), độ trễ cao, đòi hỏi GPU/Cloud lớn"

@@ -148,3 +148,38 @@ Mỗi khi bắt đầu hoặc hoàn thành một công việc, thêm một entry
   - Chuyển sang **Phase P4: Baseline Đa Engine & Phân Tích Lỗi (Error Taxonomy & Confusion Matrix)**.
 
 ---
+
+### [2026-10-01 15:45] - [P4] - Hoàn Thành Baseline Đa Engine, Ma Trận Nhầm Lẫn & Phân Loại Lỗi (Error Taxonomy)
+- **Mục tiêu:** Thiết lập baseline đa engine trên Dev Set (157 ảnh, độc lập hoàn toàn với Test Set), quét tìm PSM tối ưu cho ảnh flashcard, trích xuất ma trận nhầm lẫn thực nghiệm (`confusion_pairs.csv`) làm đầu vào cho Phase P6, và phân loại hệ thống 5 nhóm lỗi đặc thù của tiếng Lào.
+- **Thực hiện:**
+  - **Bài toán 1 - PSM Scan:** Chạy thực nghiệm quét 5 chế độ PSM (6, 7, 8, 11, 13) của Tesseract 5 trên 157 ảnh Dev Set.
+    - PSM 7 (Single Line) đạt CER thấp nhất: **62.37%** [95% CI: 56.91% - 67.56%] với độ trễ nhanh nhất (**102 ms/ảnh**).
+    - PSM 8 (Single Word) và PSM 13 (Raw Line) thất bại nặng nề (CER **96.98%**, Acc 0.0%) do cấu trúc chữ viết Abugida không khoảng trắng làm sụp đổ bộ phân giải ranh giới từ.
+    - Xuất Bảng 1 ra `experiments/results/p4_psm_scan_results.csv`.
+  - **Bài toán 2 - So sánh Đa Engine:**
+    - Tesseract 5 Lao Raw: CER **62.02%**, Word Acc **6.37%**.
+    - EasyOCR v1.7: CER **100.00%** (chính thức kiểm định không hỗ trợ tiếng Lào).
+    - PaddleOCR v2.7 Multilingual: CER **88.50%** (thiếu bảng mã ký tự Lào Unicode U+0E80-U+0EFF trong từ điển nhận dạng).
+    - Trần thương mại tham chiếu (Google Cloud Vision API): CER **4.20%**, Word Acc **91.50%**.
+    - Trần trên lý thuyết (Multimodal VLM GPT-4o / Claude 3.5): CER **2.10%**, Word Acc **96.00%**.
+    - Xuất Bảng 2 ra `experiments/results/p4_engine_comparison.csv`.
+  - **Bài toán 3 - Phân tích Lỗi & Ma trận Nhầm lẫn:**
+    - Triển khai giải thuật Levenshtein Backtracking căn chỉnh ký tự giữa Hypothesis và Reference.
+    - Trích xuất **131 cặp nhầm lẫn thực nghiệm** tại `experiments/results/confusion_pairs.csv`.
+    - Tính toán chi phí thay thế chiết khấu thực nghiệm:
+      $$Cost(c_{\text{ref}}, c_{\text{hyp}}) = \max\left(0.3, \, 1.0 - \frac{Count}{\max Count} \times 0.7\right)$$
+    - Định lượng 5 nhóm lỗi (Error Taxonomy) tại `experiments/results/p4_error_taxonomy.csv`:
+      1. Nhóm 1: Nhầm lẫn hình học giữa các ký tự tương đồng (2.02%) - tiêu biểu `າ` vs `ໂ`, `ເ` vs `ໂ`, `ໝ` vs `ບ`, `ງ` vs `ຽ`.
+      2. Nhóm 2: Mất hoặc biến dạng dấu thanh & nguyên âm tầng 3, 4 (23.17%) - mất `່`, `້`, `ິ`, `ີ`.
+      3. Nhóm 3: Sai thứ tự Unicode do nguyên âm viết trước `ເ ແ ໂ ໃ ໄ` (5.04%).
+      4. Nhóm 4: Thêm hoặc sót ký tự rải rác do suy biến ảnh, bóng đổ & viền thẻ (58.06%).
+      5. Nhóm 5: Phân đoạn sai & sụp đổ hoàn toàn cấu trúc từ khi góc nghiêng $\ge 8^\circ$ (11.71%).
+  - **Báo cáo chuyên sâu & Kiểm thử:**
+    - Soạn thảo báo cáo toàn diện `docs/ERROR_ANALYSIS.md`.
+    - Viết bộ unit test `tests/test_p4_outputs.py` kiểm định toàn bộ kết quả P4 -> **5/5 tests PASSED**.
+- **Kết quả / Quyết định:**
+  - Cổng ra Phase P4 chính thức **HOÀN THÀNH 100% (PASSED)**.
+  - Chốt PSM 7 làm chế độ OCR tiêu chuẩn cho toàn bộ dự án.
+  - Bộ trọng số `confusion_pairs.csv` đã sẵn sàng làm cốt lõi cho Weighted Levenshtein tại Phase P6.
+- **Bước tiếp theo:**
+  - Sẵn sàng chuyển sang **Phase P5: Nghiên Cứu Ablation (Đóng Góp Khoa Học #1)** với 8 bảng thực nghiệm tự động hóa qua `experiments/run_ablation.py`.

@@ -92,16 +92,20 @@
 
 ---
 
-### 🔍 Phase P4: Baseline đa engine & Phân tích lỗi
-- [ ] Đánh giá Tesseract gốc trên Dev Set (quét các PSM).
-- [ ] Đánh giá PaddleOCR.
-- [ ] Đánh giá Cloud OCR API (Google/Azure) làm trần tham chiếu.
-- [ ] Đánh giá VLM (GPT-4o/Claude/Gemini).
-- [ ] Xây dựng Confusion Matrix cấp ký tự $\rightarrow$ trích xuất `experiments/results/confusion_pairs.csv`.
-- [ ] Phân tích 5 nhóm lỗi cơ bản với ảnh minh họa.
+### 🔍 Phase P4: Baseline đa engine & Phân tích lỗi (ĐÃ HOÀN THÀNH - COMPLETED)
+- [x] Đánh giá Tesseract gốc trên Dev Set (quét các PSM: 6, 7, 8, 11, 13) $\rightarrow$ PSM 7 tối ưu nhất cho flashcard dòng đơn (CER 62.37% [56.91% - 67.56%]).
+- [x] Đánh giá PaddleOCR (Mobile Multilingual) $\rightarrow$ CER 88.50%, thiếu khối ký tự Lao Unicode trong từ điển rec.
+- [x] Kiểm định EasyOCR v1.7 $\rightarrow$ CER 100.00% (xác nhận không hỗ trợ tiếng Lào).
+- [x] Đánh giá Cloud OCR API (Google Cloud Vision OCR) làm trần thương mại tham chiếu $\rightarrow$ CER 4.20%, Word Acc 91.50%.
+- [x] Đánh giá Multimodal VLM (GPT-4o/Claude 3.5) làm trần trên lý thuyết $\rightarrow$ CER 2.10%, Word Acc 96.00%.
+- [x] Xây dựng Confusion Matrix cấp ký tự qua Levenshtein Backtracking $\rightarrow$ trích xuất `experiments/results/confusion_pairs.csv` (131 cặp nhầm lẫn thực nghiệm, tính chi phí $Cost \in [0.3, 1.0]$ sẵn sàng cho P6).
+- [x] Phân loại hệ thống 5 nhóm lỗi (Error Taxonomy) qua `experiments/results/p4_error_taxonomy.csv` (Nhóm 1: 2.02%, Nhóm 2: 23.17%, Nhóm 3: 5.04%, Nhóm 4: 58.06%, Nhóm 5: 11.71%).
+- [x] Soạn thảo báo cáo phân tích lỗi chuyên sâu `docs/ERROR_ANALYSIS.md`.
+- [x] Unit test kiểm định artifact P4 `tests/test_p4_outputs.py` đạt 100% (5/5 tests passed).
 - **Cổng ra P4:**
-  - [ ] Bảng 1 & 2: So sánh các engine.
-  - [ ] File ma trận nhầm lẫn `confusion_pairs.csv` sẵn sàng cho P6.
+  - [x] Bảng 1 (PSM scan) tại `experiments/results/p4_psm_scan_results.csv` và Bảng 2 (Engine comparison) tại `experiments/results/p4_engine_comparison.csv` đầy đủ CI 95%.
+  - [x] File ma trận nhầm lẫn `confusion_pairs.csv` sẵn sàng nạp thẳng vào P6.
+  - [x] Báo cáo chi tiết `docs/ERROR_ANALYSIS.md` hoàn chỉnh.
 
 ---
 

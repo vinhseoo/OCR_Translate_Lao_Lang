@@ -45,6 +45,10 @@ models/*
 experiments/results/*.csv
 !experiments/results/p1_spike_results.csv
 !experiments/results/line_segmentation_comparison.csv
+!experiments/results/p4_psm_scan_results.csv
+!experiments/results/p4_engine_comparison.csv
+!experiments/results/confusion_pairs.csv
+!experiments/results/p4_error_taxonomy.csv
 experiments/results/*.png
 !experiments/results/dataset_sample_grid.png
 !experiments/results/lao_4tiers_projection_profile.png

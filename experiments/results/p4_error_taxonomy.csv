@@ -1,0 +1,6 @@
+category_id,category_name,count,percentage,examples
+1_geometric_similarity,"Nhầm lẫn cặp ký tự tương đồng hình học (ດ-ຄ, ບ-ປ, ມ-ນ)",16,2.02,gold_card_0039.jpg: 'ເກົາຫຼີ'->'| ອຸນ' ; gold_card_0061.jpg: 'ນ້າບ່າວ'->'ນໂບໂວ'
+2_tone_mark_dropped,Mất hoặc biến dạng dấu thanh & nguyên âm trên/dưới,184,23.17,gold_card_0002.jpg: 'ກະລຸນາ'->'' ; gold_card_0003.jpg: 'ກະລຸນາ'->''
+3_vowel_order_inversion,Sai thứ tự Unicode do nguyên âm viết trước (ເ ແ ໂ ໃ ໄ),40,5.04,gold_card_0020.jpg: 'ບໍ່ແມ່ນ'->'' ; gold_card_0021.jpg: 'ບໍ່ແມ່ນ'->''
+4_insertion_deletion,Thêm hoặc sót ký tự rải rác do nhiễu,461,58.06,
+5_complete_breakdown,Hỏng hoàn toàn cấu trúc từ vựng (CER >= 100%),93,11.71,gold_card_0002.jpg: 'ກະລຸນາ'->'' ; gold_card_0003.jpg: 'ກະລຸນາ'->''

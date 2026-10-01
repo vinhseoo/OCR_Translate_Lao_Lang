@@ -1,0 +1,6 @@
+psm,description,cer_percent,ci_lower_percent,ci_upper_percent,word_accuracy_percent,avg_time_sec
+6,PSM 6: Khối văn bản đơn nhất (Uniform text block),64.81,59.12,70.89,6.37,0.1165
+7,PSM 7: Dòng văn bản đơn (Single text line - chuẩn flashcard),62.37,56.91,67.56,6.37,0.1101
+8,PSM 8: Từ đơn nhất (Single word),96.98,95.77,98.0,0.0,0.1138
+11,PSM 11: Văn bản thưa thớt (Sparse text),67.13,61.47,73.37,7.64,0.1014
+13,PSM 13: Dòng thô không qua layout analysis (Raw line),96.98,95.77,98.0,0.0,0.1121
