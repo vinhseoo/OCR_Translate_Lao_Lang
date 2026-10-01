@@ -1,0 +1,4 @@
+stage,cer_percent,word_acc_percent,gain_acc_percent,description
+"1. OCR Thô Baseline (Chưa qua tiền xử lý, PSM 7)",62.02,5.73,0.0,"Ảnh gốc chịu ảnh hưởng từ bóng đổ, viền thẻ và mất nét dấu"
+2. OCR + Tiền xử lý tối ưu (Phase P3 / P5),71.2,3.82,-1.91,"Khử viền thẻ, CLAHE, chuẩn hóa chiều cao 48px, đệm trắng an toàn"
+3. OCR + Tiền xử lý + Weighted Lexicon Snap (Phase P6),59.0,29.3,23.57,"Khôi phục hoàn toàn từ điển giáo trình, khắc phục lỗi rụng dấu thanh"

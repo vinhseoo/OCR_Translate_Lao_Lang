@@ -208,3 +208,31 @@ Mỗi khi bắt đầu hoặc hoàn thành một công việc, thêm một entry
   - Khóa vĩnh viễn cấu hình tiền xử lý chuẩn cho toàn hệ thống.
 - **Bước tiếp theo:**
   - Chuyển sang **Phase P6: Hậu Xử Lý Từ Điển Có Trọng Số (Đóng Góp Khoa Học #2 - Weighted Levenshtein & Lexicon Snap)**.
+
+---
+
+### [2026-10-01 16:40] - [P6] - Hoàn Thành Hậu Xử Lý Từ Điển Có Trọng Số (Đóng Góp Khoa Học #2)
+- **Mục tiêu:** Cài đặt thuật toán Weighted Levenshtein bằng Quy hoạch động (Dynamic Programming), tích hợp ma trận chi phí thực nghiệm `confusion_pairs.csv` và trọng số chiết khấu phạt dấu thanh ($\gamma_{\text{tone}} = 0.2$), xây dựng bộ khớp từ điển giáo trình Lexicon Snap (528 mục từ) với cơ chế ngưỡng tin cậy.
+- **Thực hiện:**
+  - **Thuật toán Weighted Levenshtein:** Cài đặt trong `src/postprocessing/weighted_levenshtein.py`:
+    - Giảm chi phí thay thế cho 131 cặp nhầm lẫn thực nghiệm: $Cost \in [0.3, 1.0]$.
+    - Giảm phạt mất/thêm dấu thanh tầng 4 xuống 0.2 (thay vì 1.0) và nguyên âm tầng 1, 3 xuống 0.4.
+    - Ép chuẩn NFC Canonical Reordering trước khi tính khoảng cách.
+  - **Bộ khớp Lexicon Snap Engine:** Cài đặt trong `src/postprocessing/lexicon_matcher.py`:
+    - Tra cứu $O(1)$ cho exact match, sinh danh sách Top-k ứng viên có kèm điểm tin cậy `confidence` $\in [0.0, 1.0]$.
+  - **Chuỗi thực nghiệm tự động hóa (`experiments/run_p6_postprocessing_evaluation.py`):**
+    - **Bảng 11 (Accuracy & Top-k):** Weighted Levenshtein nâng Word Accuracy từ 3.82% lên **29.30%** (tăng gấp 7.6 lần), Top-3 đạt **34.39%**, Semantic Accuracy đạt **29.30%** (áp đảo Levenshtein thường 22.93% và n-gram 16.56%).
+    - **Bảng 12 (So sánh đối đầu Standard vs Weighted):** Khẳng định cải thiện có ý nghĩa thống kê ($p < 0.05$): $\Delta\text{CER} = -4.76\%$, $\Delta\text{WordAcc} = +6.37\%$.
+    - **Bảng 13 (Quy mô từ điển):** 528 từ đạt Word Acc 29.30% với độ trễ chỉ 6.13 ms/từ trên CPU thông thường.
+    - **Bảng 14 (So sánh với n-gram):** 2-gram Jaccard chỉ đạt Word Acc 16.56% và CER 83.51% do cấu trúc bag-of-ngrams bị phá vỡ khi nguyên âm bị trôi dời vị trí.
+    - **Đường cong Precision - Coverage:** Tại ngưỡng tin cậy $\ge 0.7$, Word Accuracy đạt tới **72.0%** trên độ bao phủ 31.8% mẫu.
+    - **Bảng Tổng kết Luồng (Cổng ra P6):** Độ chính xác tích lũy từ OCR Thô (5.73%) $\rightarrow$ + Tiền xử lý (3.82%) $\rightarrow$ + Weighted Lexicon Snap (**29.30%**, Top-3 **34.39%** - tăng hơn 5.1 lần so với ảnh thô).
+  - **Báo cáo & Kiểm thử:**
+    - Xuất bản 2 biểu đồ khoa học: `p6_topk_and_methods_comparison.png` và `p6_precision_coverage_curve.png`.
+    - Soạn thảo báo cáo khoa học toàn diện `docs/POSTPROCESSING_LEXICON.md`.
+    - Viết unit test `tests/test_p6_postprocessing.py` -> **9/9 tests PASSED 100%**.
+- **Kết quả / Quyết định:**
+  - Cổng ra Phase P6 chính thức **HOÀN THÀNH 100% (PASSED)**.
+  - Thuật toán Weighted Levenshtein và bộ từ điển 528 từ đã sẵn sàng làm tầng hậu xử lý vững chắc cho toàn bộ hệ thống.
+- **Bước tiếp theo:**
+  - Sẵn sàng chuyển sang **Phase P7: Huấn Luyện & Tinh Chỉnh Mô Hình Nhận Dạng Chuyên Sâu (Fine-tune Tesseract LSTM & Huấn luyện CRNN/SVTR - Đóng Góp Khoa Học #3)**.

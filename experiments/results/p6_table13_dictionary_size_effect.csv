@@ -1,0 +1,4 @@
+dictionary_size,cer_percent,ci_95,word_acc_percent,lookup_latency_ms,analysis
+100,77.35,[72.66% - 81.91%],6.37,1.19,Không gian từ điển nhỏ hơn giảm xung đột nhưng giảm độ bao phủ từ vựng
+250,68.52,[62.45% - 74.61%],17.2,2.99,Không gian từ điển nhỏ hơn giảm xung đột nhưng giảm độ bao phủ từ vựng
+528,59.0,[51.89% - 66.47%],29.3,6.13,"Toàn diện 12 bài giáo trình, độ bao phủ 100%"

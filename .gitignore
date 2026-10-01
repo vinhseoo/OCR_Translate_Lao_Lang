@@ -50,11 +50,13 @@ experiments/results/*.csv
 !experiments/results/confusion_pairs.csv
 !experiments/results/p4_error_taxonomy.csv
 !experiments/results/p5_*.csv
+!experiments/results/p6_*.csv
 experiments/results/*.png
 !experiments/results/dataset_sample_grid.png
 !experiments/results/lao_4tiers_projection_profile.png
 !experiments/results/preprocessing_stages_inspection.png
 !experiments/results/ablation_*.png
+!experiments/results/p6_*.png
 
 # Tesseract traineddata (except sample)
 *.traineddata

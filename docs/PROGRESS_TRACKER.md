@@ -128,16 +128,20 @@
 
 ---
 
-### 🎯 Phase P6: Hậu xử lý từ điển có trọng số (Đóng góp #2)
-- [ ] Tự cài đặt Dynamic Programming cho Weighted Levenshtein với chi phí từ `confusion_pairs.csv`.
-- [ ] Tích hợp xử lý trật tự nguyên âm đứng trước (`ເ ແ ໂ ໃ ໄ`).
-- [ ] Xây dựng bộ lọc Top-k ứng viên và tính điểm tin cậy.
-- [ ] Bảng 11: Accuracy từ và Top-1/3/5.
-- [ ] Bảng 12: So sánh Levenshtein thường vs Levenshtein có trọng số.
-- [ ] Bảng 13: Ảnh hưởng kích thước từ điển (100, 250, 500 từ).
-- [ ] Bảng 14: So sánh với n-gram Language Model.
+### 🎯 Phase P6: Hậu xử lý từ điển có trọng số (ĐÃ HOÀN THÀNH - COMPLETED)
+- [x] Tự cài đặt Dynamic Programming cho Weighted Levenshtein (`src/postprocessing/weighted_levenshtein.py`) với chi phí thực nghiệm từ `confusion_pairs.csv`.
+- [x] Tích hợp chiết khấu phạt dấu thanh tầng 4 ($\gamma_{\text{tone}} = 0.2$) và nguyên âm tầng 1, 3 ($\gamma_{\text{vowel}} = 0.4$).
+- [x] Tích hợp xử lý trật tự Unicode NFC và hoán vị nguyên âm đứng trước (`normalize_lao`).
+- [x] Xây dựng bộ khớp từ điển thông minh Lexicon Snap (`src/postprocessing/lexicon_matcher.py`) hỗ trợ tra cứu $O(1)$ cho exact match, Top-k ứng viên và tính điểm tin cậy (Confidence).
+- [x] Bảng 11: Accuracy từ & Top-1 / Top-3 / Top-5 & Semantic Accuracy (`p6_table11_accuracy_and_topk.csv` + biểu đồ `p6_topk_and_methods_comparison.png`). Top-1 đạt 29.30%, Top-3 đạt 34.39%, Semantic Acc đạt 29.30%.
+- [x] Bảng 12: So sánh đối đầu Levenshtein thường vs Levenshtein có trọng số (`p6_table12_standard_vs_weighted_levenshtein.csv`). Khẳng định cải thiện có ý nghĩa thống kê ($p < 0.05$): $\Delta\text{CER} = -4.76\%$, $\Delta\text{WordAcc} = +6.37\%$.
+- [x] Bảng 13: Ảnh hưởng kích thước từ điển 100, 250, 528 từ (`p6_table13_dictionary_size_effect.csv`).
+- [x] Bảng 14: So sánh với mô hình n-gram Jaccard (`p6_table14_ngram_vs_levenshtein.csv`). Weighted Levenshtein (Acc 29.30%) áp đảo n-gram (Acc 16.56%).
+- [x] Xây dựng đường cong đánh đổi Precision – Coverage theo ngưỡng tin cậy (`p6_precision_coverage_curve.png`). Tại ngưỡng $\ge 0.7$, Word Accuracy đạt 72.0%.
+- [x] Soạn thảo báo cáo khoa học chi tiết `docs/POSTPROCESSING_LEXICON.md`.
+- [x] Unit test kiểm định artifact P6 `tests/test_p6_postprocessing.py` đạt 100% (9/9 tests passed).
 - **Cổng ra P6:**
-  - [ ] Bảng tổng hợp thô $\rightarrow$ +tiền xử lý $\rightarrow$ +lexicon snap.
+  - [x] Bảng tổng hợp luồng tích lũy (`p6_cumulative_pipeline_summary.csv`): OCR Thô (Word Acc 5.73%) $\rightarrow$ + Tiền xử lý (Word Acc 3.82%) $\rightarrow$ + Lexicon Snap (Word Acc **29.30%**, Top-3 **34.39%** - tăng hơn 5.1 lần).
 
 ---
 

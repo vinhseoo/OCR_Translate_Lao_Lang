@@ -1,0 +1,3 @@
+model_type,cer_percent,word_acc_percent,theoretical_limitation
+2-gram Jaccard Language Model,83.51,16.56,Không quan tâm trật tự chuỗi; nhạy cảm cực cao khi trôi nguyên âm tầng trên
+Weighted Levenshtein Alignment (P6),59.0,29.3,Quy hoạch động bảo toàn trật tự tuyến tính và căn chỉnh chính xác từng tầng

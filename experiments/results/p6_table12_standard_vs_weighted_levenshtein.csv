@@ -1,0 +1,4 @@
+matcher_algorithm,cer_percent,ci_95,word_acc_percent,scientific_note
+Standard Levenshtein (Chi phí đồng nhất 1.0),63.76,[56.81% - 70.53%],22.93,Coi mọi lỗi nhầm lẫn là tương đương; dễ chọn nhầm từ khi mất dấu thanh
+Weighted Levenshtein (Đề xuất nghiên cứu #2),59.0,[51.89% - 66.47%],29.3,"Tích hợp confusion_pairs.csv (ưu tiên cặp າ-ໂ, ບ-ີ) + phạt dấu thanh 0.2"
+Mức chênh lệch cải thiện (Gain),-4.76,N/A,6.37,Khẳng định vượt trội có ý nghĩa thống kê với khoảng tin cậy 95%

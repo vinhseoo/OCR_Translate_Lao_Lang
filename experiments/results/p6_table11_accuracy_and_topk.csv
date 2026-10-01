@@ -1,0 +1,5 @@
+method,cer_percent,top1_acc_percent,top3_acc_percent,top5_acc_percent,semantic_acc_percent,latency_ms
+OCR Thô không hậu xử lý,71.2,3.82,3.82,3.82,3.82,0.0
+Khớp Levenshtein tiêu chuẩn,63.76,22.93,29.94,33.76,22.93,3.1
+Khớp Mô hình n-gram Jaccard,83.51,16.56,20.38,25.48,17.2,2.18
+Khớp Weighted Levenshtein (Đề xuất P6),59.0,29.3,34.39,35.03,29.3,6.26
