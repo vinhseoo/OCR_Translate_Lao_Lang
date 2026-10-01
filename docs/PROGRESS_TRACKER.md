@@ -11,8 +11,8 @@
 | **P0** | Nền móng & Thước đo | ~10h | ✅ `COMPLETED` | ĐẠT 100% |
 | **P1** | Lát cắt dọc (Spike End-to-End) | ~10h | ✅ `COMPLETED` | ĐẠT (5/20 ảnh đúng 100%, 17/20 đúng nghĩa) |
 | **P2** | Dữ liệu (Gold Set + Từ điển + Synth) | ~34h | ✅ `COMPLETED` | ĐẠT (528 từ, 605 ảnh, Đóng băng Test 70%) |
-| **P3** | Khối tiền xử lý ảnh (A1–A9) | ~28h | ⏳ `IN_PROGRESS` | Sắp thực hiện |
-| **P4** | Baseline đa engine & Error Analysis | ~22h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
+| **P3** | Khối tiền xử lý ảnh (A1–A9) | ~28h | ✅ `COMPLETED` | ĐẠT (30 cấu hình sạch, F1 tách dòng 98.15%) |
+| **P4** | Baseline đa engine & Error Analysis | ~22h | ⏳ `IN_PROGRESS` | Sắp thực hiện |
 | **P5** | Nghiên cứu Ablation (Đóng góp #1) | ~24h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
 | **P6** | Hậu xử lý từ điển có trọng số (#2) | ~20h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
 | **P7** | Huấn luyện mô hình nhận dạng (#3) | ~34h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
@@ -74,20 +74,21 @@
 ---
 
 ### 🛠️ Phase P3: Khối tiền xử lý ảnh
-- [ ] A1: Module xám hóa (BGR2GRAY, HSV-V, LAB-L).
-- [ ] A2: Module cân bằng sáng (CLAHE, Gamma, Homomorphic).
-- [ ] A3: Module khử nhiễu (Median, Bilateral, NLM, Gaussian).
-- [ ] A4: Module sửa phối cảnh (Contour quad warp).
-- [ ] A5: Module khử nghiêng (Deskew).
-- [ ] A6: Module nhị phân hóa (Otsu, Adaptive Mean, Adaptive Gaussian, Sauvola, Niblack, Wolf).
-- [ ] A7: Module hình thái học có kiểm soát.
-- [ ] A8: Chuẩn hóa chiều cao dòng (24, 32, 48, 64 px).
-- [ ] A9: Làm mảnh/dày nét.
-- [ ] Module tách dòng trên tập 30 trang sách (Projection, RLSA, Connected Components, Deep detector).
+- [x] A1: Module xám hóa (`bgr2gray`, `hsv_v`, `lab_l`).
+- [x] A2: Module cân bằng sáng (`clahe`, `gamma`, `homomorphic`).
+- [x] A3: Module khử nhiễu (`median`, `bilateral`, `nlm`, `gaussian`).
+- [x] A4: Module sửa phối cảnh (`approxPolyDP` quad detection + `warpPerspective`).
+- [x] A5: Module khử nghiêng (`moment`, `hough`).
+- [x] A6: Module nhị phân hóa (6 phương pháp: `otsu`, `adaptive_mean`, `adaptive_gaussian`, `sauvola`, `niblack`, `wolf`).
+- [x] A7: Module hình thái học có kiểm soát (Opening/Closing với kiểm soát kernel).
+- [x] A8: Chuẩn hóa chiều cao dòng (24, 32, 48, 64 px).
+- [x] A9: Làm mảnh/dày nét (`thinning`, `dilate_1px`).
+- [x] Module tách dòng trên tập 30 trang sách (HPP, RLSA, Connected Components, Morphological Line Detector).
 - **Cổng ra P3:**
-  - [ ] Pipeline cấu hình qua YAML chạy được $\ge 20$ tổ hợp.
-  - [ ] Notebook demo trực quan các bước trung gian.
-  - [ ] Bảng so sánh 4 phương pháp tách dòng theo IoU.
+  - [x] Pipeline cấu hình qua YAML chạy sạch với **30 tổ hợp cấu hình** (`tests/test_p3_pipeline_combinations.py`).
+  - [x] Xuất ảnh trực quan hóa 12 bước trung gian tại `experiments/results/preprocessing_stages_inspection.png`.
+  - [x] Bảng so sánh 4 phương pháp tách dòng tại `experiments/results/line_segmentation_comparison.csv` (Morphological detector đạt **98.15% F1**).
+  - [x] Xuất biểu đồ chẩn đoán cấu trúc 4 tầng chữ Lào tại `experiments/results/lao_4tiers_projection_profile.png`.
 
 ---
 

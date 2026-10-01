@@ -44,8 +44,11 @@ models/*
 !models/.gitkeep
 experiments/results/*.csv
 !experiments/results/p1_spike_results.csv
+!experiments/results/line_segmentation_comparison.csv
 experiments/results/*.png
 !experiments/results/dataset_sample_grid.png
+!experiments/results/lao_4tiers_projection_profile.png
+!experiments/results/preprocessing_stages_inspection.png
 
 # Tesseract traineddata (except sample)
 *.traineddata

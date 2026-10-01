@@ -1,0 +1,5 @@
+method,precision,recall,f1_score
+Horizontal_Projection_Profile,0.5408,0.5408,0.5408
+RLSA_Algorithm,0.3704,0.3704,0.3704
+Connected_Components_Merging,0.5593,0.5593,0.5593
+Morphological_Line_Detector,0.9815,0.9815,0.9815

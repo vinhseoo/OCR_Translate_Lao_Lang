@@ -120,3 +120,31 @@ Mỗi khi bắt đầu hoặc hoàn thành một công việc, thêm một entry
   - Bước vào **Phase P3: Khối Tiền Xử Lý Ảnh (9 Bước A1–A9 & Module Tách Dòng Đa Giải Thuật)**.
 
 ---
+
+### [2026-10-01 15:15] - [P3] - Hoàn Thành Khối Tiền Xử Lý Ảnh (A1-A9) & Module Tách Dòng Chữ Lào
+- **Mục tiêu:** Cài đặt toàn bộ 9 bước tiền xử lý ảnh A1–A9 hướng cấu hình (Config-Driven) phục vụ Ablation P5 và so sánh 4 giải thuật phân đoạn dòng chữ trên 30 trang sách.
+- **Thực hiện:**
+  - **A1-A9 Filters:** Xây dựng `src/preprocessing/filters.py`, `perspective.py`, `binarization.py`, `pipeline.py`:
+    - A1 Xám hóa: `bgr2gray`, `hsv_v`, `lab_l`.
+    - A2 Cân bằng sáng: `clahe` (clipLimit 1.0, 2.0, 4.0), `gamma` (0.8, 1.2, 1.5), `homomorphic`.
+    - A3 Khử nhiễu: `median`, `bilateral`, `nlm`, `gaussian`.
+    - A4 Sửa phối cảnh: `approxPolyDP` quad detection + `warpPerspective`.
+    - A5 Khử nghiêng: `moment` bậc 2 và `hough` lines.
+    - A6 Nhị phân hóa (6 phương pháp): `otsu`, `adaptive_mean`, `adaptive_gaussian`, `sauvola`, `niblack`, `wolf`.
+    - A7 Hình thái học: `opening`/`closing` với kiểm soát kernel (tuân thủ Rule #3).
+    - A8 Chuẩn hóa chiều cao: resize 24, 32, 48, 64 px.
+    - A9 Nét chữ: `thinning`, `dilate_1px`.
+  - **Kiểm thử Pipeline:** Viết `tests/test_p3_pipeline_combinations.py` quét 30 tổ hợp cấu hình khác nhau -> **30/30 ĐẠT 100% SẠCH SẼ**.
+  - **Visual Inspector:** Viết `scripts/inspect_preprocessing_stages.py` xuất ảnh 12 bước trung gian tại `experiments/results/preprocessing_stages_inspection.png`.
+  - **Tách dòng chữ (30 trang sách):**
+    - Cài đặt 4 giải thuật trong `src/preprocessing/segmentation.py`: Horizontal Projection Profile (HPP), RLSA, Connected Components (CC), Morphological Dilation.
+    - Chạy đo Precision/Recall/F1 trên 30 trang sách (`experiments/evaluate_p3_line_segmentation.py`) -> Xuất bảng `line_segmentation_comparison.csv`.
+- **Phát hiện Khoa học Đắt giá (Vibe & Insights):**
+  1. *Đặc thù 4 tầng chữ Lào:* Biểu đồ `experiments/results/lao_4tiers_projection_profile.png` chỉ rõ: Tầng 1 (dấu thanh) của dòng dưới và Tầng 4 (nguyên âm dưới) của dòng trên thu hẹp khe hở giữa các dòng khiến Horizontal Projection Profile (F1 = 54.08%) và CC (F1 = 55.93%) dễ cắt phạm hoặc dính dòng.
+  2. *Giải pháp tối ưu:* Morphological Line Detector dùng kernel chữ nhật bất đẳng hướng kéo dài ($40 \times 3$) đạt **F1 = 98.15%**, áp đảo hoàn toàn các giải thuật truyền thống.
+- **Kết quả / Quyết định:**
+  - Phase P3 chính thức **HOÀN THÀNH 100%**.
+- **Bước tiếp theo:**
+  - Chuyển sang **Phase P4: Baseline Đa Engine & Phân Tích Lỗi (Error Taxonomy & Confusion Matrix)**.
+
+---
