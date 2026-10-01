@@ -1,0 +1,6 @@
+kernel_config,kernel_size,cer_percent,ci_95,tone_marks_lost_count,tone_marks_lost_percent,word_acc_percent,scientific_conclusion
+Không áp dụng (None),0x0,80.02,[74.42% - 85.59%],71,88.75,2.55,Tuân thủ Golden Rule #3
+Kernel 1x1 (An toàn tuyệt đối),1x1,80.02,[74.42% - 85.59%],71,88.75,2.55,Tuân thủ Golden Rule #3
+Kernel 2x2 (Bảo vệ dấu nhỏ),2x2,73.29,[68.00% - 78.68%],72,90.0,2.55,Tuân thủ Golden Rule #3
+Kernel 3x3 (Bắt đầu xóa dấu thanh),3x3,60.05,[54.43% - 65.86%],64,80.0,5.1,VI PHẠM: Xóa dấu thanh làm vỡ nghĩa
+Kernel 5x5 (Xóa sạch toàn bộ dấu thanh),5x5,133.1,[125.26% - 141.27%],71,88.75,0.0,VI PHẠM: Xóa dấu thanh làm vỡ nghĩa

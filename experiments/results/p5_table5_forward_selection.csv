@@ -1,0 +1,7 @@
+stage,cer_percent,step_gain_percent,cumulative_gain_percent,ci_95,word_acc_percent
+Bước 0: Ảnh thô (Raw Baseline),62.02,-0.0,-0.0,[56.57% - 67.33%],5.73
+Bước 1: + Xám hóa BGR2GRAY & Cắt viền,62.37,-0.35,-0.35,[56.91% - 67.56%],6.37
+Bước 2: + Cân bằng sáng thích nghi CLAHE (A2),63.3,-0.93,-1.28,[57.75% - 68.67%],7.01
+"Bước 3: + Khử nghiêng Moment & Denoise (A3, A5)",75.03,-11.73,-13.01,[70.17% - 79.83%],4.46
+Bước 4: + Chuyển sang Sauvola Binarization (A6),85.71,-10.69,-23.69,[80.70% - 90.77%],1.27
+Bước 5: + Chuẩn hóa chiều cao 48px & Opening 1x1,81.65,4.07,-19.63,[77.35% - 86.22%],3.18

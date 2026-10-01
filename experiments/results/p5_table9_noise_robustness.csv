@@ -1,0 +1,6 @@
+scenario,raw_cer_percent,optimal_cer_percent,gain_cer_percent,raw_word_acc_percent,optimal_word_acc_percent
+Nhiễu chuẩn (Không thêm nhiễu),62.02,81.65,-19.63,5.73,3.18
+Gaussian Noise (sigma = 10),62.6,85.95,-23.34,5.1,2.55
+Gaussian Noise (sigma = 20),69.92,84.9,-14.98,2.55,3.18
+Gaussian Noise (sigma = 30),93.15,87.69,5.46,0.0,2.55
+Gaussian Blur (kernel 5x5),60.05,81.18,-21.14,7.64,3.82

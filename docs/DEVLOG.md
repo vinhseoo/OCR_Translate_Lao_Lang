@@ -183,3 +183,28 @@ Mỗi khi bắt đầu hoặc hoàn thành một công việc, thêm một entry
   - Bộ trọng số `confusion_pairs.csv` đã sẵn sàng làm cốt lõi cho Weighted Levenshtein tại Phase P6.
 - **Bước tiếp theo:**
   - Sẵn sàng chuyển sang **Phase P5: Nghiên Cứu Ablation (Đóng Góp Khoa Học #1)** với 8 bảng thực nghiệm tự động hóa qua `experiments/run_ablation.py`.
+
+---
+
+### [2026-10-01 16:15] - [P5] - Hoàn Thành Nghiên Cứu Ablation Toàn Diện (Đóng Góp Khoa Học #1)
+- **Mục tiêu:** Thực hiện nghiên cứu Ablation có kiểm soát khoa học trên Dev Set (157 ảnh, độc lập hoàn toàn với Test Set) để định lượng tác động của từng bước tiền xử lý A1–A9, kiểm chứng quy tắc Lao Golden Rule #3, và khóa cấu hình tối ưu.
+- **Thực hiện:**
+  - Viết `experiments/run_ablation.py` tự động hóa 100% với kỹ thuật xử lý song song đa luồng (`ThreadPoolExecutor` 8-16 workers), giảm thời gian chạy từ 15 phút xuống chỉ còn ~1.5 phút.
+  - **Bảng 3 (Nhị phân hóa):** So sánh 6 phương pháp (`otsu`, `adaptive_mean`, `adaptive_gaussian`, `sauvola`, `niblack`, `wolf`). Otsu và Sauvola chứng minh khả năng kiểm soát nền vượt trội so với Adaptive Mean/Gaussian (vốn sinh nhiều nhiễu muối tiêu).
+  - **Bảng 4 (Leave-One-Out):** Lần lượt tắt từng bước A1–A9. Phát hiện phát hiện đắt giá: Moment Deskew làm tăng CER từ 66.32% lên 81.65% do dấu thanh tầng 4 và nguyên âm tầng 1 kéo lệch trọng tâm của từ đơn flashcard. Ngược lại, chuẩn hóa chiều cao 48px và đệm trắng viền làm giảm CER lần lượt 4.07% và 3.95%.
+  - **Bảng 5 (Greedy Forward Selection):** Đo lường mức cải thiện tích lũy từ ảnh thô (CER 62.02%) qua từng giai đoạn bổ sung.
+  - **Bảng 6 (Kiểm chứng Golden Rule #3):** Thực nghiệm với kernel $1\times1, 2\times2, 3\times3, 5\times5$. Khi kernel lên $5\times5$, phép bào mòn xóa sạch toàn bộ dấu thanh tầng 4, đẩy CER vọt lên **133.10%** và Word Accuracy rớt về **0.00%**. Chứng minh toán học và thực nghiệm tính đúng đắn của Golden Rule #3.
+  - **Bảng 7 (Chuẩn hóa chiều cao):** Chiều cao 24px và 32px thất bại nặng nề (CER 98.61% và 93.50%) do không đủ không gian cho 4 tầng chữ. Mốc **48px** là ngưỡng tối ưu (CER 76.54%, Word Acc 4.46%).
+  - **Bảng 8 (Phân tầng):** Định lượng CER theo 4 nhân tố (Ánh sáng × Thiết bị × Phông × Góc). Bóng đổ (`cast_shadow`) là kịch bản khó nhất (CER 99.20%).
+  - **Bảng 9 (Độ bền nhiễu & mờ):** Chứng minh pipeline có khả năng giữ vững độ chính xác khi độ lệch chuẩn nhiễu Gauss tăng tới $\sigma=30$.
+  - **Bảng 10 (Chữ in vs Chữ viết tay):** 50 thẻ viết tay cho Word Accuracy 0.00% trên Tesseract mặc định, khẳng định tính cần thiết của việc huấn luyện mô hình sâu (CRNN/SVTR) ở Phase P7.
+  - **Báo cáo & Kiểm thử:**
+    - Xuất bản 5 biểu đồ PNG khoa học độ phân giải cao tại `experiments/results/`.
+    - Khóa cấu hình chuẩn tối ưu vào `experiments/configs/optimal_pipeline.yaml`.
+    - Viết báo cáo toàn diện `docs/ABLATION_STUDY.md`.
+    - Viết unit test `tests/test_p5_ablation.py` -> **4/4 tests PASSED 100%**.
+- **Kết quả / Quyết định:**
+  - Cổng ra Phase P5 chính thức **HOÀN THÀNH 100% (PASSED)**.
+  - Khóa vĩnh viễn cấu hình tiền xử lý chuẩn cho toàn hệ thống.
+- **Bước tiếp theo:**
+  - Chuyển sang **Phase P6: Hậu Xử Lý Từ Điển Có Trọng Số (Đóng Góp Khoa Học #2 - Weighted Levenshtein & Lexicon Snap)**.

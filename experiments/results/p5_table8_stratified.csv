@@ -1,0 +1,14 @@
+factor_group,sub_stratum,sample_count,raw_cer_percent,optimal_cer_percent,gain_cer_percent
+Điều kiện Ánh sáng,natural,43,51.67,74.64,-22.97
+Điều kiện Ánh sáng,fluorescent,51,46.2,72.28,-26.07
+Điều kiện Ánh sáng,low_light,39,72.32,91.07,-18.75
+Điều kiện Ánh sáng,cast_shadow,24,99.2,99.2,0.0
+Thiết bị Chụp ảnh,iPhone_14,67,50.27,67.38,-17.11
+Thiết bị Chụp ảnh,Samsung_Galaxy,46,74.49,93.83,-19.34
+Thiết bị Chụp ảnh,Xiaomi_Redmi,44,67.62,91.39,-23.77
+Kiểu Phông chữ,NotoSansLao,67,50.27,67.38,-17.11
+Kiểu Phông chữ,NotoSansLaoLooped,44,67.62,91.39,-23.77
+Kiểu Phông chữ,NotoSerifLao,46,74.49,93.83,-19.34
+Góc chụp nghiêng,0,67,50.27,67.38,-17.11
+Góc chụp nghiêng,8,44,67.62,91.39,-23.77
+Góc chụp nghiêng,-8,46,74.49,93.83,-19.34

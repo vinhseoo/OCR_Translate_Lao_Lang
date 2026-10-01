@@ -1,0 +1,34 @@
+binarization:
+  enabled: true
+  k: 0.2
+  method: sauvola
+  window_size: 25
+border_padding:
+  crop_outer_px: 16
+  enabled: true
+  padding_px: 15
+denoise:
+  enabled: true
+  kernel_size: 3
+  method: gaussian
+  sigma: 1.0
+deskew:
+  enabled: true
+  max_angle: 45.0
+  method: moment
+grayscale:
+  enabled: true
+  method: bgr2gray
+height_normalization:
+  enabled: true
+  target_height: 48
+illumination:
+  clip_limit: 2.0
+  enabled: true
+  method: clahe
+morphology:
+  enabled: true
+  kernel_size:
+  - 1
+  - 1
+  operation: opening

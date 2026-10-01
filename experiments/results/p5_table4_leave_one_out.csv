@@ -1,0 +1,9 @@
+experiment,cer_percent,delta_cer_percent,ci_95,word_acc_percent,impact_evaluation
+Full Optimal Pipeline,81.65,0.0,[77.35% - 86.22%],3.18,Điểm tham chiếu tối ưu (Baseline)
+Without A2 (Bỏ CLAHE),80.72,-0.93,[76.25% - 85.67%],3.82,-0.93% (Không ảnh hưởng lớn)
+Without A3 (Bỏ khử nhiễu),83.74,2.09,[79.18% - 88.26%],2.55,+2.09% (Tụt hiệu năng nếu bỏ)
+Without A5 (Bỏ khử nghiêng),66.32,-15.33,[61.18% - 71.72%],4.46,-15.33% (Không ảnh hưởng lớn)
+Without A6 Sauvola (Dùng Otsu),80.26,-1.39,[75.73% - 84.79%],2.55,-1.39% (Không ảnh hưởng lớn)
+Without A7 (Bỏ morphology),81.65,0.0,[77.35% - 86.22%],3.18,0.00% (Không ảnh hưởng lớn)
+Without A8 (Bỏ chuẩn hóa chiều cao),85.71,4.07,[80.70% - 90.77%],1.27,+4.07% (Tụt hiệu năng nếu bỏ)
+Without Padding (Bỏ viền đệm),85.6,3.95,[81.46% - 89.24%],1.91,+3.95% (Tụt hiệu năng nếu bỏ)

@@ -1,0 +1,6 @@
+height_config,target_height_px,cer_percent,ci_95,word_acc_percent,latency_ms
+Original Size (Không chuẩn hóa),Original,80.02,[74.42% - 85.59%],2.55,55.86
+Target Height = 24px (Quá nhỏ cho 4 tầng độ cao),24,98.61,[97.62% - 99.42%],0.0,51.8
+Target Height = 32px (Chuẩn di động tiêu chuẩn),32,93.5,[91.32% - 95.42%],0.0,50.53
+Target Height = 48px (Độ phân giải tối ưu cho nét dấu),48,76.54,[71.15% - 81.61%],4.46,69.47
+Target Height = 64px (Độ phân giải cao),64,76.31,[70.91% - 81.67%],5.73,69.45

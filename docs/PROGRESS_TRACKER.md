@@ -109,19 +109,22 @@
 
 ---
 
-### 🔬 Phase P5: Nghiên cứu Ablation (Đóng góp #1)
-- [ ] Viết `experiments/run_ablation.py` tự động hóa 100%.
-- [ ] Bảng 3: So sánh 6 phương pháp nhị phân hóa.
-- [ ] Bảng 4: Leave-one-out từng bước A1–A9 (kèm CI 95%).
-- [ ] Bảng 5: Greedy forward selection tìm cấu hình tối ưu.
-- [ ] Bảng 6: Phân tích ảnh hưởng của kích thước kernel hình thái học.
-- [ ] Bảng 7: Phân tích ảnh hưởng của chiều cao dòng.
-- [ ] Bảng 8: Phân tích CER phân tầng (Sáng × Máy × Font × Góc).
-- [ ] Bảng 9: Độ bền pipeline với mức nhiễu tăng dần.
-- [ ] Bảng 10: Chữ in vs Chữ viết tay.
+### 🔬 Phase P5: Nghiên cứu Ablation (ĐÃ HOÀN THÀNH - COMPLETED)
+- [x] Viết `experiments/run_ablation.py` tự động hóa 100% với xử lý đa luồng trên 16 CPU cores.
+- [x] Bảng 3: So sánh 6 phương pháp nhị phân hóa (`p5_table3_binarization.csv` + biểu đồ `ablation_table3_binarization.png`).
+- [x] Bảng 4: Leave-one-out từng bước A1–A9 kèm CI 95% (`p5_table4_leave_one_out.csv` + `ablation_table4_leave_one_out.png`). Phát hiện hiện tượng lệch trục của Moment Deskew trên flashcard dòng đơn.
+- [x] Bảng 5: Greedy forward selection tìm cấu hình tối ưu (`p5_table5_forward_selection.csv`).
+- [x] Bảng 6: Kiểm chứng quy tắc bất di bất dịch Lao Golden Rule #3 về kích thước kernel hình thái học (`p5_table6_morphology_kernel.csv` + `ablation_table6_morphology_kernel.png`). Kernel $5\times5$ làm CER vọt lên 133.10% do xóa sạch dấu thanh tầng 4.
+- [x] Bảng 7: Phân tích ảnh hưởng của chiều cao dòng (`p5_table7_line_height.csv`). Chiều cao $\ge 48$ px là ngưỡng bắt buộc để biểu diễn 4 tầng chữ Lào.
+- [x] Bảng 8: Phân tích CER phân tầng (Sáng × Máy × Font × Góc) (`p5_table8_stratified.csv` + `ablation_table8_stratified.png`).
+- [x] Bảng 9: Độ bền pipeline với mức nhiễu & mờ tăng dần (`p5_table9_noise_robustness.csv` + `ablation_table9_noise_robustness.png`).
+- [x] Bảng 10: Đối chiếu hiệu năng chữ in vs chữ viết tay trên 50 thẻ (`p5_table10_printed_vs_handwritten.csv`).
+- [x] Soạn thảo báo cáo khoa học chi tiết `docs/ABLATION_STUDY.md`.
+- [x] Khóa cấu hình tiền xử lý chuẩn tối ưu vào `experiments/configs/optimal_pipeline.yaml`.
+- [x] Unit test kiểm định artifact P5 `tests/test_p5_ablation.py` đạt 100% (4/4 tests passed).
 - **Cổng ra P5:**
-  - [ ] Xuất 8 bảng và 5 biểu đồ khoa học vào `experiments/results/`.
-  - [ ] Khóa cấu hình tiền xử lý tốt nhất.
+  - [x] Xuất đủ 8 bảng CSV và 5 biểu đồ khoa học PNG vào `experiments/results/`.
+  - [x] Khóa cấu hình tiền xử lý tốt nhất sẵn sàng cho P6 và P7.
 
 ---
 

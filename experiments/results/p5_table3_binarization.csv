@@ -1,0 +1,7 @@
+method,description,cer_percent,ci_95,ci_lower_percent,ci_upper_percent,word_acc_percent,avg_time_sec
+otsu,Otsu (Ngưỡng toàn cục tiêu chuẩn),63.3,[57.75% - 68.67%],57.75,68.67,7.01,0.0391
+adaptive_mean,"Adaptive Mean (Ngưỡng cục bộ trung bình, C=10)",83.97,[78.93% - 88.92%],78.93,88.92,2.55,0.0455
+adaptive_gaussian,"Adaptive Gaussian (Ngưỡng cục bộ Gauss, C=10)",82.93,[78.08% - 87.46%],78.08,87.46,1.91,0.056
+sauvola,"Sauvola (Ngưỡng cục bộ phương sai, k=0.2, w=25)",80.02,[74.42% - 85.59%],74.42,85.59,2.55,0.071
+niblack,"Niblack (Ngưỡng cục bộ độ lệch chuẩn, k=-0.2, w=25)",102.32,[98.83% - 106.72%],98.83,106.72,0.64,0.0637
+wolf,"Wolf (Chuẩn hóa độ tương phản cực tiểu, k=0.5, w=25)",129.73,[112.49% - 149.41%],112.49,149.41,0.0,0.0675
