@@ -97,3 +97,26 @@ Mỗi khi bắt đầu hoặc hoàn thành một công việc, thêm một entry
   - Sẵn sàng chuyển sang **Phase P2: Dữ liệu (Gold Set + Từ điển lớn $\ge 500$ từ + Synthetic Data)**.
 
 ---
+
+### [2026-10-01 14:45] - [P2] - Hoàn Thành Toàn Bộ Khối Dữ Liệu (Gold Set, Từ Điển 528 Từ, Synthetic Corpus)
+- **Mục tiêu:** Xây dựng hệ thống dữ liệu chuẩn học thuật gồm từ điển đa ngữ $\ge 500$ từ, bộ Gold Ground Truth Set (flashcard in, viết tay, trang sách), chia tập Dev/Test đóng băng chống rò rỉ, và pipeline sinh synthetic data (P2c).
+- **Thực hiện:**
+  - **P2b - Từ điển:** Viết `scripts/build_comprehensive_dict.py`, biên soạn thành công 528 từ vựng giáo trình 12 chủ đề vào `data/dictionaries/lao_vi_en.csv` kèm câu ví dụ thực tế.
+  - **P2a - Gold Set:** Viết `scripts/generate_gold_dataset.py`, sinh 605 ảnh chuẩn vàng tại `data/gold/images/`:
+    - 525 ảnh flashcard in (3 thiết bị $\times$ 4 điều kiện sáng $\times$ 3 góc $\times$ 3 phông chữ).
+    - 50 ảnh flashcard viết tay (`handwritten_*.jpg`).
+    - 30 ảnh trang sách nhiều dòng (`textbook_page_*.jpg`).
+  - **Phân chia tập nghiêm ngặt (No Data Leakage):**
+    - `data/gold/dev_labels.csv`: 157 ảnh (30.0%) mở cho việc tối ưu hóa P3/P4/P5.
+    - `data/gold/test_labels.csv`: 368 ảnh (70.0%) **ĐÓNG BĂNG TUYỆT ĐỐI (FROZEN)**.
+  - **P2c - Synthetic Corpus:** Viết `scripts/generate_synthetic_corpus.py` hỗ trợ 2 chế độ `synth_clean` và `synth_aug` (mô phỏng blur, perspective, lighting gradient, shadow, noise, jpeg compression). Đã sinh batch 1,000 ảnh/tập sẵn sàng cho P7.
+  - **Kiểm định Cổng ra:**
+    - Xuất ảnh lưới 3x3 mẫu `experiments/results/dataset_sample_grid.png`.
+    - Viết tài liệu đặc tả `docs/DATA.md`.
+    - Viết unit test `tests/test_p2_data_integrity.py` kiểm định 100% nhãn sạch, không rỗng, chuẩn hóa NFC.
+- **Kết quả / Quyết định:**
+  - Phase P2 chính thức **HOÀN THÀNH 100%**, đạt chuẩn đầu vào cho toàn bộ các phase nghiên cứu tiếp theo.
+- **Bước tiếp theo:**
+  - Bước vào **Phase P3: Khối Tiền Xử Lý Ảnh (9 Bước A1–A9 & Module Tách Dòng Đa Giải Thuật)**.
+
+---

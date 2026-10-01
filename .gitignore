@@ -43,7 +43,9 @@ data/synth/*
 models/*
 !models/.gitkeep
 experiments/results/*.csv
+!experiments/results/p1_spike_results.csv
 experiments/results/*.png
+!experiments/results/dataset_sample_grid.png
 
 # Tesseract traineddata (except sample)
 *.traineddata

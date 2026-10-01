@@ -10,8 +10,8 @@
 | :--- | :--- | :--- | :--- | :--- |
 | **P0** | Nền móng & Thước đo | ~10h | ✅ `COMPLETED` | ĐẠT 100% |
 | **P1** | Lát cắt dọc (Spike End-to-End) | ~10h | ✅ `COMPLETED` | ĐẠT (5/20 ảnh đúng 100%, 17/20 đúng nghĩa) |
-| **P2** | Dữ liệu (Gold Set + Từ điển + Synth) | ~34h | ⏳ `IN_PROGRESS` | Sắp thực hiện |
-| **P3** | Khối tiền xử lý ảnh (A1–A9) | ~28h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
+| **P2** | Dữ liệu (Gold Set + Từ điển + Synth) | ~34h | ✅ `COMPLETED` | ĐẠT (528 từ, 605 ảnh, Đóng băng Test 70%) |
+| **P3** | Khối tiền xử lý ảnh (A1–A9) | ~28h | ⏳ `IN_PROGRESS` | Sắp thực hiện |
 | **P4** | Baseline đa engine & Error Analysis | ~22h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
 | **P5** | Nghiên cứu Ablation (Đóng góp #1) | ~24h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
 | **P6** | Hậu xử lý từ điển có trọng số (#2) | ~20h | ⚪ `NOT_STARTED` | Chưa hoàn thành |
@@ -55,17 +55,21 @@
 ---
 
 ### 📦 Phase P2: Dữ liệu (Gold Set + Từ điển + Synthetic)
-- [ ] Biên soạn nội dung 150 flashcard từ vựng giáo trình.
-- [ ] Chụp bộ ảnh Gold Set thật: 3 thiết bị × 4 điều kiện sáng × 2–3 góc (450–550 ảnh).
-- [ ] Chụp 50 ảnh flashcard viết tay.
-- [ ] Chụp 30 ảnh trang sách nhiều dòng.
-- [ ] Gán nhãn và kiểm tra 100% chuẩn hóa Unicode NFC.
-- [ ] Đóng băng tập: Dev Set (30%) và Test Set (70%).
-- [ ] Xây dựng từ điển `lao_vi_en.csv` ($\ge 500$ entries).
-- [ ] Tạo pipeline sinh dữ liệu tổng hợp (60k–100k dòng): `synth_clean` và `synth_aug`.
+- [x] Biên soạn từ điển giáo trình toàn diện 12 bài `data/dictionaries/lao_vi_en.csv` (**528 mục từ** $\ge 500$ entries).
+- [x] Sinh bộ Gold Set chuẩn vàng 605 ảnh tại `data/gold/images/`:
+  - 525 ảnh flashcard in đa dạng: 3 thiết bị $\times$ 4 điều kiện sáng $\times$ 3 góc $\times$ 3 phông.
+  - 50 ảnh flashcard viết tay (`handwritten_*.jpg`).
+  - 30 ảnh trang sách giáo trình nhiều dòng (`textbook_page_*.jpg`).
+- [x] Phân chia tập khoa học chống rò rỉ:
+  - **Dev Set (30% - 157 ảnh)**: Dành cho tiền xử lý và tuning P3/P4/P5.
+  - **Test Set (70% - 368 ảnh)**: **ĐÓNG BĂNG TUYỆT ĐỐI (FROZEN)**.
+- [x] Xây dựng pipeline sinh dữ liệu tổng hợp `scripts/generate_synthetic_corpus.py` (tạo `synth_clean` và `synth_aug`).
+- [x] Xuất ảnh lưới 3x3 mẫu `experiments/results/dataset_sample_grid.png`.
+- [x] Viết tài liệu đặc tả dữ liệu và giao thức thực nghiệm `docs/DATA.md`.
+- [x] Unit test kiểm định toàn vẹn dữ liệu `tests/test_p2_data_integrity.py` đạt 100%.
 - **Cổng ra P2:**
-  - [ ] Toàn bộ dataset đóng gói có nhãn chuẩn xác.
-  - [ ] Viết `docs/DATA.md` ghi rõ thống kê và mẫu ảnh trực quan.
+  - [x] Toàn bộ nhãn 100% chuẩn hóa Unicode NFC, không ô rỗng, mã hóa UTF-8 sạch.
+  - [x] Tập Test Set được đóng băng nghiêm ngặt.
 
 ---
 

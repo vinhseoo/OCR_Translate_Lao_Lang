@@ -1,0 +1,21 @@
+idx,filename,font,reference,hypothesis,cer,exact_match,dict_vi,dict_en,confidence,match_type,latency
+1,card_01.jpg,NotoSansLao.ttf,ສະບາຍດີ,ສະບາຍດີ,0.0,True,Xin chào,Hello,1.0,exact,0.126
+2,card_02.jpg,NotoSerifLao.ttf,ຂອບໃຈ,ຂອບໃຈ,0.0,True,Cảm ơn,Thank you,1.0,exact,0.148
+3,card_03.jpg,NotoSansLaoLooped.ttf,ຂໍໂທດ,ຂໂທດ,0.2,False,Xin lỗi,Sorry / Excuse me,0.8,fuzzy,0.136
+4,card_04.jpg,NotoSansLao.ttf,ແມ່ນ,ແມນ,0.25,False,Đúng / Vâng,Yes / Correct,0.75,fuzzy,0.112
+5,card_05.jpg,NotoSerifLao.ttf,ບໍ່,ບປັ,0.6667,False,Không,No / Not,0.33,fuzzy,0.116
+6,card_06.jpg,NotoSansLaoLooped.ttf,ສະບາຍດີບໍ,ສະບາຍດບີ,0.2222,False,Xin chào,Hello,0.88,fuzzy,0.119
+7,card_07.jpg,NotoSansLao.ttf,ຍິນດີທີ່ໄດ້ຮູ້ຈັກ,ວຍນິດທີໂດຮ້ງູ໋ກິ,0.7059,False,Rất vui được gặp bạn,Nice to meet you,0.29,fuzzy,0.127
+8,card_08.jpg,NotoSerifLao.ttf,ກິນ,ກນີ,0.6667,False,Ăn,To eat,0.33,fuzzy,0.103
+9,card_09.jpg,NotoSansLaoLooped.ttf,ດື່ມ,ດມື,0.75,False,Đúng / Vâng,Yes / Correct,0.25,fuzzy,0.192
+10,card_10.jpg,NotoSansLao.ttf,ນ້ຳ,ນໂ,0.6667,False,Nước,Water,0.33,fuzzy,0.151
+11,card_11.jpg,NotoSerifLao.ttf,ເຂົ້າ,ເຂາົ້,0.4,False,Cơm / Gạo,Rice / Food,0.6,fuzzy,0.139
+12,card_12.jpg,NotoSansLaoLooped.ttf,ກາເຟ,ກາເຟ,0.0,True,Cà phê,Coffee,1.0,exact,0.111
+13,card_13.jpg,NotoSansLao.ttf,ຊາ,ຊາ,0.0,True,Trà,Tea,1.0,exact,0.146
+14,card_14.jpg,NotoSerifLao.ttf,ໂຮງຮຽນ,ໂຮງຮຽນ,0.0,True,Trường học,School,1.0,exact,0.107
+15,card_15.jpg,NotoSansLaoLooped.ttf,ຄູ,3,1.0,False,Trà,Tea,0.0,fuzzy,0.146
+16,card_16.jpg,NotoSansLao.ttf,ນັກຮຽນ,ນກິຮຽນ,0.3333,False,Học sinh,Student,0.67,fuzzy,0.121
+17,card_17.jpg,NotoSerifLao.ttf,ປຶ້ມ,ປມີ,0.75,False,Đúng / Vâng,Yes / Correct,0.25,fuzzy,0.119
+18,card_18.jpg,NotoSansLaoLooped.ttf,ສໍ,ສຶ,0.5,False,Bút chì,Pencil,0.5,fuzzy,0.107
+19,card_19.jpg,NotoSansLao.ttf,ບິກ,ບກິ,0.6667,False,Không,No / Not,0.33,fuzzy,0.102
+20,card_20.jpg,NotoSerifLao.ttf,ຫ້ອງຮຽນ,ຫອງຮຽນ,0.1429,False,Phòng học,Classroom,0.86,fuzzy,0.151
