@@ -27,7 +27,68 @@ from src.preprocessing.binarization import apply_binarization
 class PreprocessingPipeline:
     def __init__(self, config: Optional[Dict[str, Any]] = None):
         """Khởi tạo pipeline với cấu hình mặc định hoặc tùy biến."""
-        self.config = config or self.get_default_config()
+        self.config = self._normalize_config(config)
+
+    @classmethod
+    def _normalize_config(cls, cfg: Optional[Dict[str, Any]]) -> Dict[str, Any]:
+        """Chuẩn hóa cấu hình hỗ trợ cả cấu trúc lồng nhau (nested) lẫn phẳng (flat)."""
+        default = cls.get_default_config()
+        if not cfg:
+            return default
+
+        norm = {k: v.copy() if isinstance(v, dict) else v for k, v in default.items()}
+
+        # 1. Hỗ trợ cấu hình dạng phẳng (flat keys) nếu người dùng truyền vào
+        if "color_space" in cfg:
+            norm["grayscale"] = {"enabled": True, "method": cfg["color_space"]}
+        if "clahe" in cfg:
+            norm["illumination"] = {
+                "enabled": bool(cfg["clahe"]),
+                "method": "clahe",
+                "clip_limit": cfg.get("clip_limit", 2.0)
+            }
+        if "denoise_method" in cfg:
+            norm["denoise"] = {
+                "enabled": True,
+                "method": cfg["denoise_method"],
+                "kernel_size": cfg.get("denoise_kernel", 3),
+                "sigma": cfg.get("denoise_sigma", 1.0)
+            }
+        if "binarization_method" in cfg:
+            norm["binarization"] = {
+                "enabled": True,
+                "method": cfg["binarization_method"]
+            }
+        if "morph_filter" in cfg:
+            norm["morphology"] = {
+                "enabled": bool(cfg["morph_filter"]),
+                "operation": "opening",
+                "kernel_size": [1, 1]
+            }
+        if "target_height" in cfg:
+            norm["height_normalization"] = {
+                "enabled": True,
+                "target_height": int(cfg["target_height"])
+            }
+        if "border_padding" in cfg:
+            bp = cfg["border_padding"]
+            if isinstance(bp, int):
+                norm["border_padding"] = {"enabled": True, "padding_px": bp, "crop_outer_px": 0}
+            elif isinstance(bp, dict):
+                norm["border_padding"].update(bp)
+
+        # 2. Ghi đè các nhóm cấu hình lồng nhau (nested sections)
+        for sec in [
+            "grayscale", "illumination", "denoise", "perspective_correction",
+            "deskew", "binarization", "morphology", "height_normalization",
+            "stroke_adjust", "border_padding"
+        ]:
+            if sec in cfg and isinstance(cfg[sec], dict):
+                norm[sec].update(cfg[sec])
+            elif sec in cfg and isinstance(cfg[sec], bool):
+                norm[sec]["enabled"] = cfg[sec]
+
+        return norm
 
     @staticmethod
     def get_default_config() -> Dict[str, Any]:
@@ -72,6 +133,8 @@ class PreprocessingPipeline:
         
         # A4: SỬA PHỐI CẢNH (Trước khi xám hóa để tận dụng kênh màu và cạnh sắc)
         persp_cfg = cfg.get("perspective_correction", {})
+        if not isinstance(persp_cfg, dict):
+            persp_cfg = {}
         if persp_cfg.get("enabled", False):
             min_area = persp_cfg.get("contour_min_area", 5000.0)
             cur_img, warped = apply_perspective_correction(cur_img, min_area=min_area)
@@ -79,6 +142,10 @@ class PreprocessingPipeline:
 
         # Bỏ viền ngoài nếu là ảnh flashcard
         pad_cfg = cfg.get("border_padding", {})
+        if isinstance(pad_cfg, int):
+            pad_cfg = {"enabled": True, "padding_px": pad_cfg, "crop_outer_px": 0}
+        elif not isinstance(pad_cfg, dict):
+            pad_cfg = {}
         crop_outer = pad_cfg.get("crop_outer_px", 0)
         if crop_outer > 0 and cur_img.shape[0] > 2 * crop_outer and cur_img.shape[1] > 2 * crop_outer:
             cur_img = cur_img[crop_outer:-crop_outer, crop_outer:-crop_outer]
@@ -86,6 +153,8 @@ class PreprocessingPipeline:
             
         # A1: XÁM HÓA (GRAYSCALE)
         gray_cfg = cfg.get("grayscale", {})
+        if not isinstance(gray_cfg, dict):
+            gray_cfg = {"enabled": True, "method": str(gray_cfg)} if gray_cfg else {}
         if gray_cfg.get("enabled", True):
             method = gray_cfg.get("method", "bgr2gray")
             cur_gray = convert_to_grayscale(cur_img, method=method)
@@ -95,6 +164,8 @@ class PreprocessingPipeline:
         
         # A2: CÂN BẰNG ÁNH SÁNG (ILLUMINATION)
         illum_cfg = cfg.get("illumination", {})
+        if not isinstance(illum_cfg, dict):
+            illum_cfg = {"enabled": bool(illum_cfg), "method": "clahe"} if illum_cfg else {}
         if illum_cfg.get("enabled", False):
             method = illum_cfg.get("method", "clahe").lower()
             if method == "clahe":
@@ -110,6 +181,8 @@ class PreprocessingPipeline:
             
         # A3: KHỬ NHIỄU (DENOISE)
         denoise_cfg = cfg.get("denoise", {})
+        if not isinstance(denoise_cfg, dict):
+            denoise_cfg = {"enabled": bool(denoise_cfg), "method": "gaussian"} if denoise_cfg else {}
         if denoise_cfg.get("enabled", False):
             method = denoise_cfg.get("method", "gaussian")
             ksize = denoise_cfg.get("kernel_size", 3)
@@ -119,6 +192,8 @@ class PreprocessingPipeline:
             
         # A5: KHỬ NGHIÊNG (DESKEW)
         deskew_cfg = cfg.get("deskew", {})
+        if not isinstance(deskew_cfg, dict):
+            deskew_cfg = {"enabled": bool(deskew_cfg), "method": "moment"} if deskew_cfg else {}
         if deskew_cfg.get("enabled", False):
             method = deskew_cfg.get("method", "moment")
             max_angle = deskew_cfg.get("max_angle", 45.0)
@@ -127,6 +202,8 @@ class PreprocessingPipeline:
             
         # A6: NHỊ PHÂN HÓA (BINARIZATION)
         bin_cfg = cfg.get("binarization", {})
+        if not isinstance(bin_cfg, dict):
+            bin_cfg = {"enabled": bool(bin_cfg), "method": "otsu"} if bin_cfg else {}
         if bin_cfg.get("enabled", True):
             method = bin_cfg.get("method", "otsu")
             bin_params = {k: v for k, v in bin_cfg.items() if k not in ("enabled", "method")}
@@ -137,6 +214,8 @@ class PreprocessingPipeline:
         
         # A7: HÌNH THÁI HỌC (MORPHOLOGY)
         morph_cfg = cfg.get("morphology", {})
+        if not isinstance(morph_cfg, dict):
+            morph_cfg = {"enabled": bool(morph_cfg), "operation": "opening", "kernel_size": [1, 1]} if morph_cfg else {}
         if morph_cfg.get("enabled", False):
             op = morph_cfg.get("operation", "opening")
             ksize = tuple(morph_cfg.get("kernel_size", [1, 1]))
@@ -145,6 +224,8 @@ class PreprocessingPipeline:
             
         # A8: CHUẨN HÓA CHIỀU CAO (HEIGHT NORMALIZATION)
         h_norm_cfg = cfg.get("height_normalization", {})
+        if not isinstance(h_norm_cfg, dict):
+            h_norm_cfg = {"enabled": True, "target_height": int(h_norm_cfg)} if isinstance(h_norm_cfg, (int, float)) else {}
         if h_norm_cfg.get("enabled", False):
             target_h = h_norm_cfg.get("target_height", 32)
             cur_bin = apply_height_normalization(cur_bin, target_height=target_h)
@@ -152,13 +233,15 @@ class PreprocessingPipeline:
             
         # A9: LÀM MẢNH / DÀY NÉT (STROKE ADJUST)
         stroke_cfg = cfg.get("stroke_adjust", {})
+        if not isinstance(stroke_cfg, dict):
+            stroke_cfg = {}
         if stroke_cfg.get("enabled", False):
             op = stroke_cfg.get("operation", "none")
             cur_bin = apply_stroke_adjustment(cur_bin, operation=op)
             stages["A9_stroke_adjust"] = cur_bin.copy()
             
         # Thêm padding trắng an toàn
-        padding_px = pad_cfg.get("padding_px", 15)
+        padding_px = pad_cfg.get("padding_px", 15) if isinstance(pad_cfg, dict) else 15
         if padding_px > 0:
             cur_bin = np.pad(cur_bin, padding_px, mode="constant", constant_values=255)
             stages["final_padded"] = cur_bin.copy()

@@ -28,6 +28,25 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
+# Tự động nhận diện đường dẫn Tesseract OCR trên Windows
+tess_candidates = [
+    os.path.expandvars(r'%LOCALAPPDATA%\Programs\Tesseract-OCR\tesseract.exe'),
+    r'C:\Program Files\Tesseract-OCR\tesseract.exe',
+    r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe',
+]
+for tc in tess_candidates:
+    if os.path.exists(tc):
+        try:
+            import pytesseract
+            pytesseract.pytesseract.tesseract_cmd = tc
+        except Exception:
+            pass
+        break
+
+tessdata_best_dir = os.path.join(PROJECT_ROOT, "models", "tessdata_best")
+if os.path.exists(tessdata_best_dir):
+    os.environ["TESSDATA_PREFIX"] = tessdata_best_dir
+
 from src.preprocessing.normalize import normalize_lao
 from src.preprocessing.pipeline import PreprocessingPipeline
 from src.postprocessing.lexicon_matcher import LexiconMatcher
@@ -109,15 +128,14 @@ st.markdown("""
 def load_system_engines():
     """Tải và lưu trữ vào bộ nhớ các mô hình và động cơ toàn luồng."""
     pipeline = PreprocessingPipeline(config={
-        "color_space": "bgr2gray",
-        "clahe": True,
-        "clip_limit": 2.0,
-        "grid_size": [8, 8],
-        "denoise_method": "bilateral",
-        "binarization_method": "otsu",
-        "morph_filter": True,
-        "target_height": 48,
-        "border_padding": 8
+        "grayscale": {"enabled": True, "method": "bgr2gray"},
+        "illumination": {"enabled": True, "method": "clahe", "clip_limit": 2.0},
+        "denoise": {"enabled": True, "method": "bilateral"},
+        "deskew": {"enabled": False},
+        "binarization": {"enabled": True, "method": "otsu"},
+        "morphology": {"enabled": True, "operation": "opening", "kernel_size": [1, 1]},
+        "height_normalization": {"enabled": True, "target_height": 48},
+        "border_padding": {"enabled": True, "padding_px": 15, "crop_outer_px": 0}
     })
     
     matcher = LexiconMatcher()
@@ -251,6 +269,10 @@ if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
 
     with col_right:
         st.subheader("3. Kết quả Nhận dạng & Dịch thuật")
+        
+        if "ocr_result" not in st.session_state:
+            st.session_state.ocr_result = None
+
         if image_to_process is not None:
             if st.button("🚀 THỰC HIỆN NHẬN DẠNG & TỔNG HỢP FLASHCARD", type="primary", use_container_width=True):
                 with st.spinner("Đang xử lý toàn luồng qua Pipeline Xử lý ảnh -> OCR -> Từ điển -> NLP..."):
@@ -258,36 +280,74 @@ if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
                     img_np = np.array(image_to_process)
 
                     # 1. Tiền xử lý ảnh
-                    processed_img = pipeline.process(img_np)
+                    if hasattr(pipeline, "config") and isinstance(pipeline.config.get("deskew"), dict):
+                        pipeline.config["deskew"]["enabled"] = use_deskew
+                    proc_res = pipeline.process(img_np)
+                    processed_img = proc_res[0] if isinstance(proc_res, tuple) else proc_res
 
-                    # 2. Nhận dạng OCR
+                    # 2. Nhận dạng OCR đa động cơ
                     raw_pred = ""
                     if "LaoCRNN" in engine_choice and crnn_model is not None:
                         raw_pred = crnn_model.predict_image(processed_img)
+                        # Nếu CRNN chưa đọc được, hỗ trợ thêm qua Tesseract
+                        if not raw_pred.strip():
+                            try:
+                                import pytesseract
+                                raw_pred = pytesseract.image_to_string(processed_img, lang='lao', config='--psm 7')
+                            except Exception:
+                                pass
                     else:
-                        # Tesseract fallback
+                        # Tesseract Engine
                         try:
                             import pytesseract
-                            custom_config = r'--oem 1 --psm 7 -l lao'
-                            raw_pred = pytesseract.image_to_string(processed_img, config=custom_config)
+                            raw_pred = pytesseract.image_to_string(processed_img, lang='lao', config='--psm 7')
                         except Exception:
-                            raw_pred = "ສະບາຍດີ"
+                            raw_pred = ""
 
                     raw_pred = normalize_lao(raw_pred).strip()
-                    if not raw_pred:
-                        raw_pred = "ສະບາຍດີ"
 
-                    # 3. Hậu xử lý nếu được chọn
+                    # 3. Hậu xử lý từ điển Levenshtein
                     final_lao = raw_pred
-                    if "Lexicon Snap" in engine_choice:
+                    confidence = 1.0
+                    if raw_pred and "Lexicon Snap" in engine_choice:
                         snap_res = matcher.match(raw_pred, method="weighted_levenshtein")
-                        if snap_res.best_lao:
+                        if snap_res.best_lao and snap_res.confidence >= 0.35:
                             final_lao = snap_res.best_lao
+                            confidence = snap_res.confidence
 
-                    # 4. Tầng ngôn ngữ: Phân đoạn, Phiên âm, Dịch nghĩa
-                    trans_output = translator.translate(final_lao)
-                    t_end = time.perf_counter()
-                    elapsed_ms = (t_end - t_start) * 1000
+                    elapsed_ms = (time.perf_counter() - t_start) * 1000
+
+                    st.session_state.ocr_result = {
+                        "raw_pred": raw_pred,
+                        "final_lao": final_lao,
+                        "elapsed_ms": elapsed_ms,
+                        "engine_choice": engine_choice,
+                        "confidence": confidence,
+                        "image_name": image_name
+                    }
+
+            # Hiển thị kết quả nhận dạng và thẻ Flashcard
+            if st.session_state.ocr_result is not None:
+                res = st.session_state.ocr_result
+                current_text = res["final_lao"]
+
+                # Nếu OCR chưa nhận dạng được ký tự rõ ràng
+                if not current_text:
+                    st.warning("⚠️ OCR chưa nhận diện rõ ký tự từ ảnh (do chữ mờ, ảnh chụp màn hình bị nén hoặc góc chụp). Bạn có thể kiểm tra hoặc nhập trực tiếp chữ Lào vào ô bên dưới:")
+                    default_input = "ທຸກໆຄົນ"
+                else:
+                    default_input = current_text
+
+                # Hộp kiểm tra / điều chỉnh từ vựng trực quan
+                active_lao = st.text_input(
+                    "✏️ Văn bản tiếng Lào đã nhận dạng (có thể tinh chỉnh nếu cần):",
+                    value=default_input,
+                    key="active_lao_input"
+                )
+                active_lao = normalize_lao(active_lao).strip()
+
+                if active_lao:
+                    trans_output = translator.translate(active_lao)
 
                     # Hiển thị thẻ Flashcard cao cấp
                     st.markdown(f"""
@@ -300,8 +360,8 @@ if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
                     """, unsafe_allow_html=True)
 
                     st.markdown(f"""
-                    <span class="metric-badge">Độ trễ: {elapsed_ms:.1f} ms</span>
-                    <span class="metric-badge">Động cơ: {engine_choice.split('(')[0]}</span>
+                    <span class="metric-badge">Độ trễ: {res['elapsed_ms']:.1f} ms</span>
+                    <span class="metric-badge">Động cơ: {res['engine_choice'].split('(')[0]}</span>
                     <span class="metric-badge">Số từ: {len(trans_output.tokens)}</span>
                     """, unsafe_allow_html=True)
 
@@ -334,10 +394,10 @@ if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
 
                     # Hộp đóng góp phản hồi sửa lỗi
                     with st.expander("🛠️ Phát hiện kết quả chưa chuẩn? Gửi phản hồi sửa lỗi cho chúng tôi"):
-                        user_correct = st.text_input("Nội dung tiếng Lào đúng:", value=trans_output.original_lao)
-                        user_note = st.text_input("Ghi chú bổ sung (tuỳ chọn):")
+                        user_correct = st.text_input("Nội dung tiếng Lào đúng:", value=trans_output.original_lao, key="feedback_input")
+                        user_note = st.text_input("Ghi chú bổ sung (tuỳ chọn):", key="feedback_note")
                         if st.button("Gửi đóng góp sửa lỗi"):
-                            save_user_correction(image_name, raw_pred, user_correct, engine_choice, user_note)
+                            save_user_correction(res["image_name"], res["raw_pred"], user_correct, res["engine_choice"], user_note)
                             st.info("Cảm ơn bạn! Đóng góp đã được lưu vào hệ thống Continuous Learning.")
         else:
             st.info("👈 Vui lòng tải ảnh lên hoặc chọn ảnh mẫu bên trái để thực hiện nhận dạng.")

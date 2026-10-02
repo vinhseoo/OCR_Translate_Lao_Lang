@@ -14,6 +14,7 @@ Xây dựng một hệ thống xử lý ảnh và nhận dạng ký tự hoàn c
 ---
 
 ## 📁 Tài liệu Dự án
+- [🚀 Hướng dẫn Cài đặt & Chạy (HUONG_DAN_CHAY.md)](file:///c:/Users/maiduc.vinh/OneDrive%20-%20VietCredit/Desktop/XLA/HUONG_DAN_CHAY.md) — Chi tiết các bước thiết lập môi trường, PowerShell và chạy web app.
 - [📜 Quy chuẩn Dự án (AGENTS.md)](file:///c:/Users/maiduc.vinh/OneDrive%20-%20VietCredit/Desktop/XLA/AGENTS.md) — Các nguyên tắc cốt lõi về tiếng Lào, Unicode, mã nguồn và thực nghiệm.
 - [🗺️ Kế hoạch Dự án Chi tiết (PROJECT_PLAN.md)](file:///c:/Users/maiduc.vinh/OneDrive%20-%20VietCredit/Desktop/XLA/docs/PROJECT_PLAN.md) — Toàn bộ roadmap 11 phase (P0 đến P10) với mốc giờ, deliverables và cổng ra.
 - [📊 Bảng Theo dõi Tiến độ (PROGRESS_TRACKER.md)](file:///c:/Users/maiduc.vinh/OneDrive%20-%20VietCredit/Desktop/XLA/docs/PROGRESS_TRACKER.md) — Cập nhật trạng thái từng đầu việc và cổng ra.
