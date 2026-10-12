@@ -238,11 +238,13 @@ if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
         image_to_process = None
         image_name = "sample.jpg"
 
+        current_image_id = None
         if input_source == "Tải ảnh lên từ máy tính":
             uploaded_file = st.file_uploader("Tải lên ảnh thẻ flashcard hoặc văn bản chữ Lào (PNG/JPG):", type=["png", "jpg", "jpeg"])
             if uploaded_file is not None:
                 image_to_process = Image.open(uploaded_file).convert("RGB")
                 image_name = uploaded_file.name
+                current_image_id = f"upload_{uploaded_file.name}_{uploaded_file.size}"
                 st.image(image_to_process, caption="Ảnh bạn vừa tải lên", use_container_width=True)
         else:
             gold_dir = os.path.join(PROJECT_ROOT, "data", "gold", "images")
@@ -253,6 +255,7 @@ if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
                     image_path = os.path.join(gold_dir, selected_sample)
                     image_to_process = Image.open(image_path).convert("RGB")
                     image_name = selected_sample
+                    current_image_id = f"gold_{selected_sample}"
                     st.image(image_to_process, caption=f"Mẫu: {selected_sample}", use_container_width=True)
 
         st.subheader("2. Cấu hình Nhận dạng")
@@ -271,6 +274,12 @@ if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
         st.subheader("3. Kết quả Nhận dạng & Dịch thuật")
         
         if "ocr_result" not in st.session_state:
+            st.session_state.ocr_result = None
+        if "last_processed_img_id" not in st.session_state:
+            st.session_state.last_processed_img_id = None
+
+        # Tự động xóa kết quả OCR của ảnh cũ khi người dùng đổi ảnh mới
+        if current_image_id is not None and st.session_state.last_processed_img_id != current_image_id:
             st.session_state.ocr_result = None
 
         if image_to_process is not None:
@@ -317,6 +326,8 @@ if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
 
                     elapsed_ms = (time.perf_counter() - t_start) * 1000
 
+                    # Cập nhật kết quả và ghi nhận image ID đã xử lý
+                    st.session_state.last_processed_img_id = current_image_id
                     st.session_state.ocr_result = {
                         "raw_pred": raw_pred,
                         "final_lao": final_lao,
@@ -325,6 +336,10 @@ if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
                         "confidence": confidence,
                         "image_name": image_name
                     }
+                    
+                    # Đồng bộ trực tiếp text_input trong session_state để tránh bị stale value
+                    st.session_state["active_lao_input"] = final_lao if final_lao else "ທຸກໆຄົນ"
+                    st.session_state["feedback_input"] = final_lao if final_lao else ""
 
             # Hiển thị kết quả nhận dạng và thẻ Flashcard
             if st.session_state.ocr_result is not None:
@@ -334,14 +349,14 @@ if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
                 # Nếu OCR chưa nhận dạng được ký tự rõ ràng
                 if not current_text:
                     st.warning("⚠️ OCR chưa nhận diện rõ ký tự từ ảnh (do chữ mờ, ảnh chụp màn hình bị nén hoặc góc chụp). Bạn có thể kiểm tra hoặc nhập trực tiếp chữ Lào vào ô bên dưới:")
-                    default_input = "ທຸກໆຄົນ"
-                else:
-                    default_input = current_text
 
-                # Hộp kiểm tra / điều chỉnh từ vựng trực quan
+                # Đảm bảo session_state["active_lao_input"] luôn có giá trị
+                if "active_lao_input" not in st.session_state:
+                    st.session_state["active_lao_input"] = current_text if current_text else "ທຸກໆຄົນ"
+
+                # Hộp kiểm tra / điều chỉnh từ vựng trực quan (đồng bộ 2 chiều với session_state)
                 active_lao = st.text_input(
                     "✏️ Văn bản tiếng Lào đã nhận dạng (có thể tinh chỉnh nếu cần):",
-                    value=default_input,
                     key="active_lao_input"
                 )
                 active_lao = normalize_lao(active_lao).strip()
@@ -394,11 +409,13 @@ if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
 
                     # Hộp đóng góp phản hồi sửa lỗi
                     with st.expander("🛠️ Phát hiện kết quả chưa chuẩn? Gửi phản hồi sửa lỗi cho chúng tôi"):
-                        user_correct = st.text_input("Nội dung tiếng Lào đúng:", value=trans_output.original_lao, key="feedback_input")
+                        user_correct = st.text_input("Nội dung tiếng Lào đúng:", key="feedback_input")
                         user_note = st.text_input("Ghi chú bổ sung (tuỳ chọn):", key="feedback_note")
                         if st.button("Gửi đóng góp sửa lỗi"):
                             save_user_correction(res["image_name"], res["raw_pred"], user_correct, res["engine_choice"], user_note)
                             st.info("Cảm ơn bạn! Đóng góp đã được lưu vào hệ thống Continuous Learning.")
+            else:
+                st.info("👆 Vui lòng bấm nút **'🚀 THỰC HIỆN NHẬN DẠNG & TỔNG HỢP FLASHCARD'** ở trên để phân tích ảnh mới tải lên.")
         else:
             st.info("👈 Vui lòng tải ảnh lên hoặc chọn ảnh mẫu bên trái để thực hiện nhận dạng.")
 
