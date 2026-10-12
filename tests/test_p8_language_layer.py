@@ -31,10 +31,10 @@ class TestP8LanguageLayer(unittest.TestCase):
 
     def test_lao_tokenizer_trie(self):
         """Kiểm tra giải thuật Trie Longest Matching trên câu ghép tiếng Lào."""
-        text = "ສະບາຍດີຕອນເຊົ້າ"
+        text = "ກິນເຂົ້າດື່ມນ້ຳ"
         tokens = self.tokenizer.tokenize(text)
-        self.assertIn("ສະບາຍດີ", tokens)
-        self.assertIn("ຕອນເຊົ້າ", tokens)
+        self.assertIn("ກິນ", tokens)
+        self.assertIn("ເຂົ້າ", tokens)
 
     def test_compute_tokenization_f1(self):
         """Kiểm tra hàm đo F1 biên giới từ."""

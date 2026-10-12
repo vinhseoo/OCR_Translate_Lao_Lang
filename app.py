@@ -56,6 +56,7 @@ from src.translation.dictionary_lookup import LaoDictionary
 from src.translation.translator import LaoTranslator
 from src.education.sm2 import FlashcardReviewState, review_card
 from src.education.feedback import save_user_correction
+from src.ocr.document_ocr import run_document_ocr
 
 # Thiết lập cấu hình trang Streamlit
 st.set_page_config(
@@ -226,198 +227,376 @@ st.sidebar.markdown("""
 # TAB 1: NHẬN DẠNG & THẺ FLASHCARD TƯƠNG TÁC (LIVE OCR)
 # =============================================================================
 if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
-    st.markdown('<p class="main-header">📸 NHẬN DẠNG CHỮ & TẠO THẺ FLASHCARD GIÁO DỤC</p>', unsafe_allow_html=True)
-    st.markdown('<p class="sub-header">Nhận dạng ảnh chụp flashcard / từ vựng tiếng Lào, tự động sửa lỗi bằng từ điển, phiên âm và tạo thẻ học tập song ngữ tức thì.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="main-header">📸 NHẬN DẠNG CHỮ & HỖ TRỢ DỊCH TIẾNG LÀO</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-header">Nhận dạng ảnh chữ Lào đa chế độ (Thẻ Flashcard từ vựng & Đoạn văn bản tài liệu), tích hợp tiền xử lý DIP, phiên âm và dịch thuật giáo dục.</p>', unsafe_allow_html=True)
 
-    col_left, col_right = st.columns([1, 1])
+    ocr_target_mode = st.radio(
+        "🎯 Chọn chế độ nhận dạng ảnh:",
+        [
+            "🎴 Thẻ Flashcard / Từ vựng đơn (Single Word / Vocab Flashcard)",
+            "📄 Đoạn văn bản / Tài liệu nhiều dòng (Paragraph & Document OCR)"
+        ],
+        horizontal=True,
+        help="Chọn 'Thẻ Flashcard' cho ảnh từ vựng đơn 1 dòng, hoặc 'Đoạn văn bản' cho văn bản/tài liệu giáo trình nhiều dòng."
+    )
 
-    with col_left:
-        st.subheader("1. Chọn nguồn ảnh đầu vào")
-        input_source = st.radio("Nguồn ảnh:", ["Tải ảnh lên từ máy tính", "Chọn từ thư viện Gold Set"], horizontal=True)
-        
-        image_to_process = None
-        image_name = "sample.jpg"
+    if ocr_target_mode == "🎴 Thẻ Flashcard / Từ vựng đơn (Single Word / Vocab Flashcard)":
+        col_left, col_right = st.columns([1, 1])
 
-        current_image_id = None
-        if input_source == "Tải ảnh lên từ máy tính":
-            uploaded_file = st.file_uploader("Tải lên ảnh thẻ flashcard hoặc văn bản chữ Lào (PNG/JPG):", type=["png", "jpg", "jpeg"])
-            if uploaded_file is not None:
-                image_to_process = Image.open(uploaded_file).convert("RGB")
-                image_name = uploaded_file.name
-                current_image_id = f"upload_{uploaded_file.name}_{uploaded_file.size}"
-                st.image(image_to_process, caption="Ảnh bạn vừa tải lên", use_container_width=True)
-        else:
-            gold_dir = os.path.join(PROJECT_ROOT, "data", "gold", "images")
-            if os.path.exists(gold_dir):
-                sample_files = [f for f in os.listdir(gold_dir) if f.endswith((".jpg", ".png"))][:15]
-                selected_sample = st.selectbox("Chọn ảnh mẫu trong tập Gold Set:", sample_files)
-                if selected_sample:
-                    image_path = os.path.join(gold_dir, selected_sample)
-                    image_to_process = Image.open(image_path).convert("RGB")
-                    image_name = selected_sample
-                    current_image_id = f"gold_{selected_sample}"
-                    st.image(image_to_process, caption=f"Mẫu: {selected_sample}", use_container_width=True)
+        with col_left:
+            st.subheader("1. Chọn nguồn ảnh đầu vào")
+            input_source = st.radio("Nguồn ảnh:", ["Tải ảnh lên từ máy tính", "Chọn từ thư viện Gold Set"], horizontal=True)
+            
+            image_to_process = None
+            image_name = "sample.jpg"
 
-        st.subheader("2. Cấu hình Nhận dạng")
-        engine_choice = st.selectbox(
-            "Chọn Mô hình Nhận dạng OCR:",
-            [
-                "🚀 LaoCRNN + Weighted Lexicon Snap (Khuyến nghị - SOTA 85.35% Acc)",
-                "⚡ LaoCRNN Standalone (Học sâu thuần túy - 35.67% Acc)",
-                "🔧 Tesseract 5 + Tiền xử lý tối ưu P5 (7.01% Acc)",
-                "📜 Tesseract 5 Raw (Baseline Gốc - 6.37% Acc)"
-            ]
-        )
-        use_deskew = st.checkbox("Khử nghiêng ảnh (Moment Deskew)", value=False, help="Lưu ý: Nghiên cứu P5 cho thấy Deskew có thể làm lệch trục flashcard ngắn.")
+            current_image_id = None
+            if input_source == "Tải ảnh lên từ máy tính":
+                uploaded_file = st.file_uploader("Tải lên ảnh thẻ flashcard hoặc văn bản chữ Lào (PNG/JPG):", type=["png", "jpg", "jpeg"])
+                if uploaded_file is not None:
+                    image_to_process = Image.open(uploaded_file).convert("RGB")
+                    image_name = uploaded_file.name
+                    current_image_id = f"upload_{uploaded_file.name}_{uploaded_file.size}"
+                    st.image(image_to_process, caption="Ảnh bạn vừa tải lên", use_container_width=True)
+            else:
+                gold_dir = os.path.join(PROJECT_ROOT, "data", "gold", "images")
+                if os.path.exists(gold_dir):
+                    sample_files = [f for f in os.listdir(gold_dir) if f.endswith((".jpg", ".png"))][:15]
+                    selected_sample = st.selectbox("Chọn ảnh mẫu trong tập Gold Set:", sample_files)
+                    if selected_sample:
+                        image_path = os.path.join(gold_dir, selected_sample)
+                        image_to_process = Image.open(image_path).convert("RGB")
+                        image_name = selected_sample
+                        current_image_id = f"gold_{selected_sample}"
+                        st.image(image_to_process, caption=f"Mẫu: {selected_sample}", use_container_width=True)
 
-    with col_right:
-        st.subheader("3. Kết quả Nhận dạng & Dịch thuật")
-        
-        if "ocr_result" not in st.session_state:
-            st.session_state.ocr_result = None
-        if "last_processed_img_id" not in st.session_state:
-            st.session_state.last_processed_img_id = None
+            st.subheader("2. Cấu hình Nhận dạng")
+            engine_choice = st.selectbox(
+                "Chọn Mô hình Nhận dạng OCR:",
+                [
+                    "🚀 LaoCRNN + Weighted Lexicon Snap (Khuyến nghị - SOTA 85.35% Acc)",
+                    "⚡ LaoCRNN Standalone (Học sâu thuần túy - 35.67% Acc)",
+                    "🔧 Tesseract 5 + Tiền xử lý tối ưu P5 (7.01% Acc)",
+                    "📜 Tesseract 5 Raw (Baseline Gốc - 6.37% Acc)"
+                ]
+            )
+            use_deskew = st.checkbox("Khử nghiêng ảnh (Moment Deskew)", value=False, help="Lưu ý: Nghiên cứu P5 cho thấy Deskew có thể làm lệch trục flashcard ngắn.")
 
-        # Tự động xóa kết quả OCR của ảnh cũ khi người dùng đổi ảnh mới
-        if current_image_id is not None and st.session_state.last_processed_img_id != current_image_id:
-            st.session_state.ocr_result = None
+        with col_right:
+            st.subheader("3. Kết quả Nhận dạng & Dịch thuật")
+            
+            if "ocr_result" not in st.session_state:
+                st.session_state.ocr_result = None
+            if "last_processed_img_id" not in st.session_state:
+                st.session_state.last_processed_img_id = None
 
-        if image_to_process is not None:
-            if st.button("🚀 THỰC HIỆN NHẬN DẠNG & TỔNG HỢP FLASHCARD", type="primary", use_container_width=True):
-                with st.spinner("Đang xử lý toàn luồng qua Pipeline Xử lý ảnh -> OCR -> Từ điển -> NLP..."):
-                    t_start = time.perf_counter()
-                    img_np = np.array(image_to_process)
+            # Tự động xóa kết quả OCR của ảnh cũ khi người dùng đổi ảnh mới
+            if current_image_id is not None and st.session_state.last_processed_img_id != current_image_id:
+                st.session_state.ocr_result = None
 
-                    # 1. Tiền xử lý ảnh
-                    if hasattr(pipeline, "config") and isinstance(pipeline.config.get("deskew"), dict):
-                        pipeline.config["deskew"]["enabled"] = use_deskew
-                    proc_res = pipeline.process(img_np)
-                    processed_img = proc_res[0] if isinstance(proc_res, tuple) else proc_res
+            if image_to_process is not None:
+                if st.button("🚀 THỰC HIỆN NHẬN DẠNG & TỔNG HỢP FLASHCARD", type="primary", use_container_width=True):
+                    with st.spinner("Đang xử lý toàn luồng qua Pipeline Xử lý ảnh -> OCR -> Từ điển -> NLP..."):
+                        t_start = time.perf_counter()
+                        img_np = np.array(image_to_process)
 
-                    # 2. Nhận dạng OCR đa động cơ
-                    raw_pred = ""
-                    if "LaoCRNN" in engine_choice and crnn_model is not None:
-                        raw_pred = crnn_model.predict_image(processed_img)
-                        # Nếu CRNN chưa đọc được, hỗ trợ thêm qua Tesseract
-                        if not raw_pred.strip():
+                        # 1. Tiền xử lý ảnh
+                        if hasattr(pipeline, "config") and isinstance(pipeline.config.get("deskew"), dict):
+                            pipeline.config["deskew"]["enabled"] = use_deskew
+                        proc_res = pipeline.process(img_np)
+                        processed_img = proc_res[0] if isinstance(proc_res, tuple) else proc_res
+
+                        # 2. Nhận dạng OCR đa động cơ
+                        raw_pred = ""
+                        if "LaoCRNN" in engine_choice and crnn_model is not None:
+                            raw_pred = crnn_model.predict_image(processed_img)
+                            # Nếu CRNN chưa đọc được, hỗ trợ thêm qua Tesseract
+                            if not raw_pred.strip():
+                                try:
+                                    import pytesseract
+                                    raw_pred = pytesseract.image_to_string(processed_img, lang='lao', config='--psm 7')
+                                except Exception:
+                                    pass
+                        else:
+                            # Tesseract Engine
                             try:
                                 import pytesseract
                                 raw_pred = pytesseract.image_to_string(processed_img, lang='lao', config='--psm 7')
                             except Exception:
-                                pass
-                    else:
-                        # Tesseract Engine
-                        try:
-                            import pytesseract
-                            raw_pred = pytesseract.image_to_string(processed_img, lang='lao', config='--psm 7')
-                        except Exception:
-                            raw_pred = ""
+                                raw_pred = ""
 
-                    raw_pred = normalize_lao(raw_pred).strip()
+                        raw_pred = normalize_lao(raw_pred).strip()
 
-                    # 3. Hậu xử lý từ điển Levenshtein
-                    final_lao = raw_pred
-                    confidence = 1.0
-                    if raw_pred and "Lexicon Snap" in engine_choice:
-                        snap_res = matcher.match(raw_pred, method="weighted_levenshtein")
-                        if snap_res.best_lao and snap_res.confidence >= 0.35:
-                            final_lao = snap_res.best_lao
-                            confidence = snap_res.confidence
+                        # 3. Hậu xử lý từ điển Levenshtein
+                        final_lao = raw_pred
+                        confidence = 1.0
+                        if raw_pred and "Lexicon Snap" in engine_choice:
+                            snap_res = matcher.match(raw_pred, method="weighted_levenshtein")
+                            if snap_res.best_lao and snap_res.confidence >= 0.35:
+                                final_lao = snap_res.best_lao
+                                confidence = snap_res.confidence
 
-                    elapsed_ms = (time.perf_counter() - t_start) * 1000
+                        elapsed_ms = (time.perf_counter() - t_start) * 1000
 
-                    # Cập nhật kết quả và ghi nhận image ID đã xử lý
-                    st.session_state.last_processed_img_id = current_image_id
-                    st.session_state.ocr_result = {
-                        "raw_pred": raw_pred,
-                        "final_lao": final_lao,
-                        "elapsed_ms": elapsed_ms,
-                        "engine_choice": engine_choice,
-                        "confidence": confidence,
-                        "image_name": image_name
-                    }
-                    
-                    # Đồng bộ trực tiếp text_input trong session_state để tránh bị stale value
-                    st.session_state["active_lao_input"] = final_lao if final_lao else "ທຸກໆຄົນ"
-                    st.session_state["feedback_input"] = final_lao if final_lao else ""
+                        # Cập nhật kết quả và ghi nhận image ID đã xử lý
+                        st.session_state.last_processed_img_id = current_image_id
+                        st.session_state.ocr_result = {
+                            "raw_pred": raw_pred,
+                            "final_lao": final_lao,
+                            "elapsed_ms": elapsed_ms,
+                            "engine_choice": engine_choice,
+                            "confidence": confidence,
+                            "image_name": image_name
+                        }
+                        
+                        # Đồng bộ trực tiếp text_input trong session_state để tránh bị stale value
+                        st.session_state["active_lao_input"] = final_lao if final_lao else "ທຸກໆຄົນ"
+                        st.session_state["feedback_input"] = final_lao if final_lao else ""
 
-            # Hiển thị kết quả nhận dạng và thẻ Flashcard
-            if st.session_state.ocr_result is not None:
-                res = st.session_state.ocr_result
-                current_text = res["final_lao"]
+                # Hiển thị kết quả nhận dạng và thẻ Flashcard
+                if st.session_state.ocr_result is not None:
+                    res = st.session_state.ocr_result
+                    current_text = res["final_lao"]
 
-                # Nếu OCR chưa nhận dạng được ký tự rõ ràng
-                if not current_text:
-                    st.warning("⚠️ OCR chưa nhận diện rõ ký tự từ ảnh (do chữ mờ, ảnh chụp màn hình bị nén hoặc góc chụp). Bạn có thể kiểm tra hoặc nhập trực tiếp chữ Lào vào ô bên dưới:")
+                    # Nếu OCR chưa nhận dạng được ký tự rõ ràng
+                    if not current_text:
+                        st.warning("⚠️ OCR chưa nhận diện rõ ký tự từ ảnh (do chữ mờ, ảnh chụp màn hình bị nén hoặc góc chụp). Bạn có thể kiểm tra hoặc nhập trực tiếp chữ Lào vào ô bên dưới:")
 
-                # Đảm bảo session_state["active_lao_input"] luôn có giá trị
-                if "active_lao_input" not in st.session_state:
-                    st.session_state["active_lao_input"] = current_text if current_text else "ທຸກໆຄົນ"
+                    # Đảm bảo session_state["active_lao_input"] luôn có giá trị
+                    if "active_lao_input" not in st.session_state:
+                        st.session_state["active_lao_input"] = current_text if current_text else "ທຸກໆຄົນ"
 
-                # Hộp kiểm tra / điều chỉnh từ vựng trực quan (đồng bộ 2 chiều với session_state)
-                active_lao = st.text_input(
-                    "✏️ Văn bản tiếng Lào đã nhận dạng (có thể tinh chỉnh nếu cần):",
-                    key="active_lao_input"
-                )
-                active_lao = normalize_lao(active_lao).strip()
+                    # Hộp kiểm tra / điều chỉnh từ vựng trực quan (đồng bộ 2 chiều với session_state)
+                    active_lao = st.text_input(
+                        "✏️ Văn bản tiếng Lào đã nhận dạng (có thể tinh chỉnh nếu cần):",
+                        key="active_lao_input"
+                    )
+                    active_lao = normalize_lao(active_lao).strip()
 
-                if active_lao:
-                    trans_output = translator.translate(active_lao)
+                    if active_lao:
+                        trans_output = translator.translate(active_lao)
 
-                    # Hiển thị thẻ Flashcard cao cấp
-                    st.markdown(f"""
-                    <div class="flashcard-box">
-                        <div class="lao-text-huge">{trans_output.original_lao}</div>
-                        <div class="rom-text">🔊 /{trans_output.romanization}/</div>
-                        <div class="vi-trans">🇻🇳 {trans_output.translation_vi}</div>
-                        <div class="en-trans">🇬🇧 {trans_output.translation_en}</div>
-                    </div>
-                    """, unsafe_allow_html=True)
+                        # Hiển thị thẻ Flashcard cao cấp
+                        st.markdown(f"""
+                        <div class="flashcard-box">
+                            <div class="lao-text-huge">{trans_output.original_lao}</div>
+                            <div class="rom-text">🔊 /{trans_output.romanization}/</div>
+                            <div class="vi-trans">🇻🇳 {trans_output.translation_vi}</div>
+                            <div class="en-trans">🇬🇧 {trans_output.translation_en}</div>
+                        </div>
+                        """, unsafe_allow_html=True)
 
-                    st.markdown(f"""
-                    <span class="metric-badge">Độ trễ: {res['elapsed_ms']:.1f} ms</span>
-                    <span class="metric-badge">Động cơ: {res['engine_choice'].split('(')[0]}</span>
-                    <span class="metric-badge">Số từ: {len(trans_output.tokens)}</span>
-                    """, unsafe_allow_html=True)
+                        st.markdown(f"""
+                        <span class="metric-badge">Độ trễ: {res['elapsed_ms']:.1f} ms</span>
+                        <span class="metric-badge">Động cơ: {res['engine_choice'].split('(')[0]}</span>
+                        <span class="metric-badge">Số từ: {len(trans_output.tokens)}</span>
+                        """, unsafe_allow_html=True)
 
-                    # Hiển thị chú giải chi tiết từng từ
-                    st.markdown("#### 📖 Chú Giải Từng Từ Vựng (Word Glosses)")
-                    gloss_data = []
-                    for g in trans_output.glosses:
-                        gloss_data.append({
-                            "Từ tiếng Lào": g.lao,
-                            "Phiên âm": g.romanization,
-                            "Từ loại": g.pos,
-                            "Nghĩa Tiếng Việt": g.vi,
-                            "Nghĩa Tiếng Anh": g.en,
-                            "Ví dụ": f"{g.example_lao} ({g.example_vi})" if g.example_lao else "-"
-                        })
-                    st.dataframe(pd.DataFrame(gloss_data), use_container_width=True)
+                        # Hiển thị chú giải chi tiết từng từ
+                        st.markdown("#### 📖 Chú Giải Từng Từ Vựng (Word Glosses)")
+                        gloss_data = []
+                        for g in trans_output.glosses:
+                            gloss_data.append({
+                                "Từ tiếng Lào": g.lao,
+                                "Phiên âm": g.romanization,
+                                "Từ loại": g.pos,
+                                "Nghĩa Tiếng Việt": g.vi,
+                                "Nghĩa Tiếng Anh": g.en,
+                                "Ví dụ": f"{g.example_lao} ({g.example_vi})" if g.example_lao else "-"
+                            })
+                        st.dataframe(pd.DataFrame(gloss_data), use_container_width=True)
 
-                    # Nút thêm vào Flashcard ôn tập cá nhân
-                    if st.button("➕ Thêm Thẻ Này Vào Bộ Nhớ Ôn Tập (SM-2)", use_container_width=True):
-                        card_id = f"c_{int(time.time())}"
-                        new_card = FlashcardReviewState(
-                            card_id=card_id,
-                            lao_text=trans_output.original_lao,
-                            vi_meaning=trans_output.translation_vi,
-                            romanization=trans_output.romanization
-                        )
-                        st.session_state.flashcards.append(asdict(new_card))
-                        save_user_flashcards(st.session_state.flashcards)
-                        st.success("✅ Đã thêm thẻ vào bộ Spaced Repetition cá nhân!")
+                        # Nút thêm vào Flashcard ôn tập cá nhân
+                        if st.button("➕ Thêm Thẻ Này Vào Bộ Nhớ Ôn Tập (SM-2)", use_container_width=True):
+                            card_id = f"c_{int(time.time())}"
+                            new_card = FlashcardReviewState(
+                                card_id=card_id,
+                                lao_text=trans_output.original_lao,
+                                vi_meaning=trans_output.translation_vi,
+                                romanization=trans_output.romanization
+                            )
+                            st.session_state.flashcards.append(asdict(new_card))
+                            save_user_flashcards(st.session_state.flashcards)
+                            st.success("✅ Đã thêm thẻ vào bộ Spaced Repetition cá nhân!")
 
-                    # Hộp đóng góp phản hồi sửa lỗi
-                    with st.expander("🛠️ Phát hiện kết quả chưa chuẩn? Gửi phản hồi sửa lỗi cho chúng tôi"):
-                        user_correct = st.text_input("Nội dung tiếng Lào đúng:", key="feedback_input")
-                        user_note = st.text_input("Ghi chú bổ sung (tuỳ chọn):", key="feedback_note")
-                        if st.button("Gửi đóng góp sửa lỗi"):
-                            save_user_correction(res["image_name"], res["raw_pred"], user_correct, res["engine_choice"], user_note)
-                            st.info("Cảm ơn bạn! Đóng góp đã được lưu vào hệ thống Continuous Learning.")
+                        # Hộp đóng góp phản hồi sửa lỗi
+                        with st.expander("🛠️ Phát hiện kết quả chưa chuẩn? Gửi phản hồi sửa lỗi cho chúng tôi"):
+                            user_correct = st.text_input("Nội dung tiếng Lào đúng:", key="feedback_input")
+                            user_note = st.text_input("Ghi chú bổ sung (tuỳ chọn):", key="feedback_note")
+                            if st.button("Gửi đóng góp sửa lỗi"):
+                                save_user_correction(res["image_name"], res["raw_pred"], user_correct, res["engine_choice"], user_note)
+                                st.info("Cảm ơn bạn! Đóng góp đã được lưu vào hệ thống Continuous Learning.")
+                else:
+                    st.info("👆 Vui lòng bấm nút **'🚀 THỰC HIỆN NHẬN DẠNG & TỔNG HỢP FLASHCARD'** ở trên để phân tích ảnh mới tải lên.")
             else:
-                st.info("👆 Vui lòng bấm nút **'🚀 THỰC HIỆN NHẬN DẠNG & TỔNG HỢP FLASHCARD'** ở trên để phân tích ảnh mới tải lên.")
-        else:
-            st.info("👈 Vui lòng tải ảnh lên hoặc chọn ảnh mẫu bên trái để thực hiện nhận dạng.")
+                st.info("👈 Vui lòng tải ảnh lên hoặc chọn ảnh mẫu bên trái để thực hiện nhận dạng.")
+
+    else:
+        # =========================================================================
+        # CHẾ ĐỘ 2: ĐOẠN VĂN BẢN & TÀI LIỆU NHIỀU DÒNG (PARAGRAPH & DOCUMENT OCR)
+        # =========================================================================
+        doc_col_left, doc_col_right = st.columns([1, 1])
+
+        with doc_col_left:
+            st.subheader("1. Chọn nguồn ảnh tài liệu / đoạn văn")
+            doc_input_source = st.radio("Nguồn ảnh tài liệu:", ["Tải ảnh lên từ máy tính", "Chọn từ thư viện Gold Set"], horizontal=True, key="doc_input_source")
+            
+            doc_image_to_process = None
+            doc_image_name = "document.jpg"
+            current_doc_image_id = None
+
+            if doc_input_source == "Tải ảnh lên từ máy tính":
+                uploaded_doc = st.file_uploader("Tải lên ảnh chụp đoạn văn bản / tài liệu tiếng Lào (PNG/JPG):", type=["png", "jpg", "jpeg"], key="doc_file_uploader")
+                if uploaded_doc is not None:
+                    doc_image_to_process = Image.open(uploaded_doc).convert("RGB")
+                    doc_image_name = uploaded_doc.name
+                    current_doc_image_id = f"doc_upload_{uploaded_doc.name}_{uploaded_doc.size}"
+                    st.image(doc_image_to_process, caption="Ảnh tài liệu bạn vừa tải lên", use_container_width=True)
+            else:
+                gold_dir = os.path.join(PROJECT_ROOT, "data", "gold", "images")
+                if os.path.exists(gold_dir):
+                    sample_files = [f for f in os.listdir(gold_dir) if f.endswith((".jpg", ".png"))][:15]
+                    selected_doc = st.selectbox("Chọn ảnh mẫu tài liệu trong Gold Set:", sample_files, key="doc_sample_select")
+                    if selected_doc:
+                        doc_path = os.path.join(gold_dir, selected_doc)
+                        doc_image_to_process = Image.open(doc_path).convert("RGB")
+                        doc_image_name = selected_doc
+                        current_doc_image_id = f"doc_gold_{selected_doc}"
+                        st.image(doc_image_to_process, caption=f"Mẫu tài liệu: {selected_doc}", use_container_width=True)
+
+            st.subheader("2. Cấu hình Nhận dạng Đoạn văn")
+            doc_engine_choice = st.selectbox(
+                "Chọn Động cơ OCR Đoạn văn:",
+                [
+                    "🚀 LaoCRNN + HPP Line Segmentation (Khuyến nghị - SOTA Tách dòng DIP)",
+                    "📜 Tesseract 5 PSM 6 (Nhận dạng khối văn bản đồng nhất)"
+                ],
+                key="doc_engine_choice"
+            )
+            seg_method = st.selectbox(
+                "Thuật toán phân đoạn dòng (Line Segmentation):",
+                ["Horizontal Projection Profile (HPP)", "Run-Length Smoothing Algorithm (RLSA)"],
+                help="HPP phân tích biểu đồ mật độ pixel theo trục Y; RLSA nối dài khoảng trống nét chữ.",
+                key="doc_seg_method"
+            )
+
+        with doc_col_right:
+            st.subheader("3. Kết quả Nhận dạng & Dịch thuật Đoạn văn")
+
+            if "doc_ocr_result" not in st.session_state:
+                st.session_state.doc_ocr_result = None
+            if "doc_last_processed_img_id" not in st.session_state:
+                st.session_state.doc_last_processed_img_id = None
+
+            # Tự động làm mới khi đổi ảnh tài liệu
+            if current_doc_image_id is not None and st.session_state.doc_last_processed_img_id != current_doc_image_id:
+                st.session_state.doc_ocr_result = None
+
+            if doc_image_to_process is not None:
+                if st.button("🚀 THỰC HIỆN NHẬN DẠNG ĐOẠN VĂN & DỊCH THUẬT", type="primary", use_container_width=True, key="btn_run_doc_ocr"):
+                    with st.spinner("Đang xử lý phân đoạn dòng DIP -> OCR đa dòng -> NLP -> Dịch thuật..."):
+                        doc_img_np = np.array(doc_image_to_process)
+                        method_code = "rlsa" if "RLSA" in seg_method else "hpp"
+                        engine_code = "crnn" if "LaoCRNN" in doc_engine_choice else "tesseract"
+
+                        doc_res = run_document_ocr(
+                            image_np=doc_img_np,
+                            crnn_model=crnn_model,
+                            engine_choice=engine_code,
+                            segmentation_method=method_code
+                        )
+
+                        st.session_state.doc_last_processed_img_id = current_doc_image_id
+                        st.session_state.doc_ocr_result = doc_res
+                        st.session_state["active_doc_lao_input"] = doc_res.full_text
+
+                if st.session_state.doc_ocr_result is not None:
+                    d_res = st.session_state.doc_ocr_result
+
+                    tab_text, tab_vision = st.tabs(["📝 Văn bản & Dịch song ngữ", "🔬 Thị giác máy tính (Line Segmentation)"])
+
+                    with tab_vision:
+                        st.image(d_res.annotated_image, caption=f"Phát hiện thành công {d_res.num_lines} dòng văn bản (Bounding Boxes màu xanh lá)", use_container_width=True)
+                        st.markdown(f"""
+                        <span class="metric-badge">Số dòng: {d_res.num_lines}</span>
+                        <span class="metric-badge">Độ trễ: {d_res.elapsed_ms:.1f} ms</span>
+                        <span class="metric-badge">Động cơ: {d_res.engine_name}</span>
+                        """, unsafe_allow_html=True)
+
+                    with tab_text:
+                        if "active_doc_lao_input" not in st.session_state:
+                            st.session_state["active_doc_lao_input"] = d_res.full_text
+
+                        active_doc_text = st.text_area(
+                            "✏️ Văn bản tiếng Lào đã nhận dạng (có thể chỉnh sửa nếu cần):",
+                            key="active_doc_lao_input",
+                            height=130
+                        )
+                        active_doc_text = normalize_lao(active_doc_text).strip()
+
+                        if active_doc_text:
+                            doc_lines = [l.strip() for l in active_doc_text.splitlines() if l.strip()]
+                            translated_lines_vi = []
+                            translated_lines_en = []
+                            all_glosses = []
+                            seen_tokens = set()
+
+                            for line in doc_lines:
+                                line_out = translator.translate(line)
+                                translated_lines_vi.append(line_out.translation_vi)
+                                translated_lines_en.append(line_out.translation_en)
+                                for g in line_out.glosses:
+                                    if g.in_dict and g.lao not in seen_tokens:
+                                        all_glosses.append(g)
+                                        seen_tokens.add(g.lao)
+
+                            full_vi_text = "\n".join(translated_lines_vi)
+                            full_en_text = "\n".join(translated_lines_en)
+
+                            # Khung hiển thị bản dịch song ngữ đoạn văn
+                            st.markdown(f"""
+                            <div class="flashcard-box" style="text-align: left; padding: 18px;">
+                                <h4 style="margin-top:0; color: #f6b93b;">🇻🇳 Bản Dịch Tiếng Việt:</h4>
+                                <div style="font-size: 1.15rem; line-height: 1.6; white-space: pre-wrap; margin-bottom: 15px; color: #ffffff;">{full_vi_text}</div>
+                                <hr style="border: 0.5px solid rgba(255,255,255,0.2);">
+                                <h4 style="margin-top:0; color: #78e08f;">🇬🇧 English Translation:</h4>
+                                <div style="font-size: 1.05rem; line-height: 1.6; white-space: pre-wrap; color: #dfe4ea;">{full_en_text}</div>
+                            </div>
+                            """, unsafe_allow_html=True)
+
+                            # Danh sách từ vựng cốt lõi trích xuất từ bài
+                            if all_glosses:
+                                st.markdown("#### 📚 Bóc Tách Từ Vựng Cốt Lõi Trong Bài (Key Vocabulary Breakdown)")
+                                doc_vocab_data = []
+                                for g in all_glosses:
+                                    doc_vocab_data.append({
+                                        "Từ tiếng Lào": g.lao,
+                                        "Phiên âm": g.romanization,
+                                        "Từ loại": g.pos,
+                                        "Nghĩa Tiếng Việt": g.vi,
+                                        "Nghĩa Tiếng Anh": g.en,
+                                        "Ví dụ": f"{g.example_lao} ({g.example_vi})" if g.example_lao else "-"
+                                    })
+                                st.dataframe(pd.DataFrame(doc_vocab_data), use_container_width=True)
+
+                                if st.button("➕ Thêm Tất Cả Từ Vựng Bài Này Vào Bộ Nhớ Ôn Tập (SM-2)", use_container_width=True, key="btn_add_all_doc_vocab"):
+                                    added_count = 0
+                                    for g in all_glosses:
+                                        c_id = f"doc_{int(time.time())}_{added_count}"
+                                        new_card = FlashcardReviewState(
+                                            card_id=c_id,
+                                            lao_text=g.lao,
+                                            vi_meaning=g.vi,
+                                            romanization=g.romanization
+                                        )
+                                        st.session_state.flashcards.append(asdict(new_card))
+                                        added_count += 1
+                                    save_user_flashcards(st.session_state.flashcards)
+                                    st.success(f"✅ Đã thêm thành công {added_count} từ vựng từ bài đọc vào bộ Spaced Repetition!")
+                else:
+                    st.info("👆 Vui lòng bấm nút **'🚀 THỰC HIỆN NHẬN DẠNG ĐOẠN VĂN & DỊCH THUẬT'** ở trên để phân tích ảnh tài liệu.")
+            else:
+                st.info("👈 Vui lòng tải ảnh tài liệu lên hoặc chọn mẫu bên trái để thực hiện nhận dạng.")
 
 
 # =============================================================================
