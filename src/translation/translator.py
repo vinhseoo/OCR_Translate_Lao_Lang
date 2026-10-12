@@ -9,7 +9,7 @@ sang cả hai ngôn ngữ Tiếng Việt và Tiếng Anh.
 """
 import os
 import sys
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Tuple
 from dataclasses import dataclass, field
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -154,3 +154,69 @@ class LaoTranslator:
             glosses=glosses,
             is_exact_phrase=False
         )
+
+    def translate_full_paragraph(self, paragraph_text: str) -> Tuple[str, str, List[WordGloss]]:
+        """
+        Dịch toàn bộ đoạn văn bản tiếng Lào sang Tiếng Việt và Tiếng Anh trôi chảy theo ngữ cảnh.
+        Đồng thời bóc tách toàn bộ từ vựng giáo trình có trong bài để phục vụ học tập.
+        """
+        norm_para = normalize_lao(paragraph_text).strip()
+        if not norm_para:
+            return "", "", []
+
+        lines = [l.strip() for l in norm_para.splitlines() if l.strip()]
+        vi_results = []
+        en_results = []
+        all_glosses: List[WordGloss] = []
+        seen_words = set()
+
+        import requests
+
+        for line in lines:
+            line_vi = ""
+            line_en = ""
+
+            # 1. Thử dịch câu trôi chảy qua Machine Translation API
+            try:
+                res_vi = requests.get(
+                    "https://clients5.google.com/translate_a/t",
+                    params={"client": "dict-chrome-ex", "sl": "lo", "tl": "vi", "q": line},
+                    timeout=4
+                )
+                if res_vi.status_code == 200:
+                    data = res_vi.json()
+                    line_vi = data[0] if isinstance(data, list) and len(data) > 0 else ""
+            except Exception:
+                pass
+
+            try:
+                res_en = requests.get(
+                    "https://clients5.google.com/translate_a/t",
+                    params={"client": "dict-chrome-ex", "sl": "lo", "tl": "en", "q": line},
+                    timeout=4
+                )
+                if res_en.status_code == 200:
+                    data = res_en.json()
+                    line_en = data[0] if isinstance(data, list) and len(data) > 0 else ""
+            except Exception:
+                pass
+
+            # 2. Bóc tách từ vựng qua từ điển nội bộ
+            line_out = self.translate(line)
+            if not line_vi:
+                line_vi = line_out.translation_vi
+            if not line_en:
+                line_en = line_out.translation_en
+
+            vi_results.append(line_vi)
+            en_results.append(line_en)
+
+            for g in line_out.glosses:
+                if g.in_dict and g.lao not in seen_words:
+                    all_glosses.append(g)
+                    seen_words.add(g.lao)
+
+        full_vi = "\n".join(vi_results)
+        full_en = "\n".join(en_results)
+        return full_vi, full_en, all_glosses
+

@@ -513,86 +513,83 @@ if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
                 if st.session_state.doc_ocr_result is not None:
                     d_res = st.session_state.doc_ocr_result
 
-                    tab_text, tab_vision = st.tabs(["📝 Văn bản & Dịch song ngữ", "🔬 Thị giác máy tính (Line Segmentation)"])
-
-                    with tab_vision:
-                        st.image(d_res.annotated_image, caption=f"Phát hiện thành công {d_res.num_lines} dòng văn bản (Bounding Boxes màu xanh lá)", use_container_width=True)
-                        st.markdown(f"""
-                        <span class="metric-badge">Số dòng: {d_res.num_lines}</span>
+                    # Hiển thị badge thống kê nhanh
+                    st.markdown(f"""
+                    <div style="margin-bottom: 12px;">
+                        <span class="metric-badge">Phát hiện: {d_res.num_lines} dòng</span>
                         <span class="metric-badge">Độ trễ: {d_res.elapsed_ms:.1f} ms</span>
                         <span class="metric-badge">Động cơ: {d_res.engine_name}</span>
+                    </div>
+                    """, unsafe_allow_html=True)
+
+                    with st.expander("🔬 Xem Bounding Boxes phân đoạn dòng (Line Segmentation DIP)", expanded=False):
+                        st.image(d_res.annotated_image, caption=f"Phát hiện {d_res.num_lines} dòng văn bản (Khung xanh viền nét chữ)", use_container_width=True)
+
+                    if "active_doc_lao_input" not in st.session_state:
+                        st.session_state["active_doc_lao_input"] = d_res.full_text
+
+                    active_doc_text = st.text_area(
+                        "✏️ Văn bản tiếng Lào đã nhận dạng (có thể chỉnh sửa nếu cần):",
+                        key="active_doc_lao_input",
+                        height=140
+                    )
+                    active_doc_text = normalize_lao(active_doc_text).strip()
+
+                    if active_doc_text:
+                        # Dịch toàn đoạn trôi chảy theo ngữ cảnh
+                        full_vi_text, full_en_text, all_glosses = translator.translate_full_paragraph(active_doc_text)
+
+                        # Khung hiển thị bản dịch song ngữ đoạn văn cao cấp (tương phản cao, chữ sắc nét)
+                        st.markdown(f"""
+                        <div style="background: #111827; border-radius: 14px; padding: 22px; border: 1px solid #374151; margin: 15px 0; box-shadow: 0 10px 25px rgba(0,0,0,0.3);">
+                            <div style="margin-bottom: 20px;">
+                                <div style="font-weight: 700; font-size: 1.15rem; color: #fbbf24; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                                    🇻🇳 BẢN DỊCH TIẾNG VIỆT (VIETNAMESE)
+                                </div>
+                                <div style="font-size: 1.15rem; line-height: 1.8; color: #f9fafb; white-space: pre-wrap; font-weight: 400; padding: 12px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 4px solid #f59e0b;">
+{full_vi_text}
+                                </div>
+                            </div>
+                            <div style="margin-top: 15px;">
+                                <div style="font-weight: 700; font-size: 1.1rem; color: #34d399; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                                    🇬🇧 BẢN DỊCH TIẾNG ANH (ENGLISH)
+                                </div>
+                                <div style="font-size: 1.05rem; line-height: 1.8; color: #f3f4f6; white-space: pre-wrap; font-weight: 400; padding: 12px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 4px solid #10b981;">
+{full_en_text}
+                                </div>
+                            </div>
+                        </div>
                         """, unsafe_allow_html=True)
 
-                    with tab_text:
-                        if "active_doc_lao_input" not in st.session_state:
-                            st.session_state["active_doc_lao_input"] = d_res.full_text
+                        # Danh sách từ vựng cốt lõi trích xuất từ bài
+                        if all_glosses:
+                            st.markdown("#### 📚 Bóc Tách Từ Vựng Cốt Lõi Trong Bài (Key Vocabulary Breakdown)")
+                            doc_vocab_data = []
+                            for g in all_glosses:
+                                doc_vocab_data.append({
+                                    "Từ tiếng Lào": g.lao,
+                                    "Phiên âm": g.romanization,
+                                    "Từ loại": g.pos,
+                                    "Nghĩa Tiếng Việt": g.vi,
+                                    "Nghĩa Tiếng Anh": g.en,
+                                    "Ví dụ": f"{g.example_lao} ({g.example_vi})" if g.example_lao else "-"
+                                })
+                            st.dataframe(pd.DataFrame(doc_vocab_data), use_container_width=True)
 
-                        active_doc_text = st.text_area(
-                            "✏️ Văn bản tiếng Lào đã nhận dạng (có thể chỉnh sửa nếu cần):",
-                            key="active_doc_lao_input",
-                            height=130
-                        )
-                        active_doc_text = normalize_lao(active_doc_text).strip()
-
-                        if active_doc_text:
-                            doc_lines = [l.strip() for l in active_doc_text.splitlines() if l.strip()]
-                            translated_lines_vi = []
-                            translated_lines_en = []
-                            all_glosses = []
-                            seen_tokens = set()
-
-                            for line in doc_lines:
-                                line_out = translator.translate(line)
-                                translated_lines_vi.append(line_out.translation_vi)
-                                translated_lines_en.append(line_out.translation_en)
-                                for g in line_out.glosses:
-                                    if g.in_dict and g.lao not in seen_tokens:
-                                        all_glosses.append(g)
-                                        seen_tokens.add(g.lao)
-
-                            full_vi_text = "\n".join(translated_lines_vi)
-                            full_en_text = "\n".join(translated_lines_en)
-
-                            # Khung hiển thị bản dịch song ngữ đoạn văn
-                            st.markdown(f"""
-                            <div class="flashcard-box" style="text-align: left; padding: 18px;">
-                                <h4 style="margin-top:0; color: #f6b93b;">🇻🇳 Bản Dịch Tiếng Việt:</h4>
-                                <div style="font-size: 1.15rem; line-height: 1.6; white-space: pre-wrap; margin-bottom: 15px; color: #ffffff;">{full_vi_text}</div>
-                                <hr style="border: 0.5px solid rgba(255,255,255,0.2);">
-                                <h4 style="margin-top:0; color: #78e08f;">🇬🇧 English Translation:</h4>
-                                <div style="font-size: 1.05rem; line-height: 1.6; white-space: pre-wrap; color: #dfe4ea;">{full_en_text}</div>
-                            </div>
-                            """, unsafe_allow_html=True)
-
-                            # Danh sách từ vựng cốt lõi trích xuất từ bài
-                            if all_glosses:
-                                st.markdown("#### 📚 Bóc Tách Từ Vựng Cốt Lõi Trong Bài (Key Vocabulary Breakdown)")
-                                doc_vocab_data = []
+                            if st.button("➕ Thêm Tất Cả Từ Vựng Bài Này Vào Bộ Nhớ Ôn Tập (SM-2)", use_container_width=True, key="btn_add_all_doc_vocab"):
+                                added_count = 0
                                 for g in all_glosses:
-                                    doc_vocab_data.append({
-                                        "Từ tiếng Lào": g.lao,
-                                        "Phiên âm": g.romanization,
-                                        "Từ loại": g.pos,
-                                        "Nghĩa Tiếng Việt": g.vi,
-                                        "Nghĩa Tiếng Anh": g.en,
-                                        "Ví dụ": f"{g.example_lao} ({g.example_vi})" if g.example_lao else "-"
-                                    })
-                                st.dataframe(pd.DataFrame(doc_vocab_data), use_container_width=True)
-
-                                if st.button("➕ Thêm Tất Cả Từ Vựng Bài Này Vào Bộ Nhớ Ôn Tập (SM-2)", use_container_width=True, key="btn_add_all_doc_vocab"):
-                                    added_count = 0
-                                    for g in all_glosses:
-                                        c_id = f"doc_{int(time.time())}_{added_count}"
-                                        new_card = FlashcardReviewState(
-                                            card_id=c_id,
-                                            lao_text=g.lao,
-                                            vi_meaning=g.vi,
-                                            romanization=g.romanization
-                                        )
-                                        st.session_state.flashcards.append(asdict(new_card))
-                                        added_count += 1
-                                    save_user_flashcards(st.session_state.flashcards)
-                                    st.success(f"✅ Đã thêm thành công {added_count} từ vựng từ bài đọc vào bộ Spaced Repetition!")
+                                    c_id = f"doc_{int(time.time())}_{added_count}"
+                                    new_card = FlashcardReviewState(
+                                        card_id=c_id,
+                                        lao_text=g.lao,
+                                        vi_meaning=g.vi,
+                                        romanization=g.romanization
+                                    )
+                                    st.session_state.flashcards.append(asdict(new_card))
+                                    added_count += 1
+                                save_user_flashcards(st.session_state.flashcards)
+                                st.success(f"✅ Đã thêm thành công {added_count} từ vựng từ bài đọc vào bộ Spaced Repetition!")
                 else:
                     st.info("👆 Vui lòng bấm nút **'🚀 THỰC HIỆN NHẬN DẠNG ĐOẠN VĂN & DỊCH THUẬT'** ở trên để phân tích ảnh tài liệu.")
             else:
