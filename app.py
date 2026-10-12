@@ -53,7 +53,7 @@ from src.postprocessing.lexicon_matcher import LexiconMatcher
 from src.translation.tokenizer import LaoTokenizer
 from src.translation.romanizer import LaoRomanizer
 from src.translation.dictionary_lookup import LaoDictionary
-from src.translation.translator import LaoTranslator
+from src.translation.translator import LaoTranslator, translate_full_paragraph
 from src.education.sm2 import FlashcardReviewState, review_card
 from src.education.feedback import save_user_correction
 from src.ocr.document_ocr import run_document_ocr
@@ -165,6 +165,11 @@ def load_system_engines():
 
 
 pipeline, matcher, translator, crnn_model = load_system_engines()
+if not hasattr(translator, "translate_full_paragraph"):
+    import types
+    translator.translate_full_paragraph = types.MethodType(
+        lambda self, text: translate_full_paragraph(text, translator=self), translator
+    )
 
 # Khởi tạo Deck Flashcard trong session_state
 FLASHCARD_DB = os.path.join(PROJECT_ROOT, "data", "flashcards_deck.json")
@@ -308,7 +313,7 @@ if app_mode == "🎴 1. Nhận Dạng Thẻ Flashcard (Live OCR)":
                                 engine_choice="crnn",
                                 segmentation_method="hpp"
                             )
-                            full_vi, full_en, doc_glosses = translator.translate_full_paragraph(doc_res.full_text)
+                            full_vi, full_en, doc_glosses = translate_full_paragraph(doc_res.full_text, translator=translator)
                             elapsed_ms = (time.perf_counter() - t_start) * 1000
 
                             st.session_state.last_processed_img_id = current_image_id
@@ -624,7 +629,7 @@ elif app_mode == "📄 2. Nhận Dạng Đoạn Văn Bản (Document OCR)":
 
                 if active_doc_text:
                     # Dịch toàn đoạn trôi chảy theo ngữ cảnh
-                    full_vi_text, full_en_text, all_glosses = translator.translate_full_paragraph(active_doc_text)
+                    full_vi_text, full_en_text, all_glosses = translate_full_paragraph(active_doc_text, translator=translator)
 
                     # Khung hiển thị bản dịch song ngữ đoạn văn cao cấp (tương phản cao, chữ sắc nét)
                     st.markdown(f"""

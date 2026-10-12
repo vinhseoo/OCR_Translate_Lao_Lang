@@ -1,9 +1,15 @@
 """
 Unit test kiểm thử module Phân đoạn dòng và Nhận dạng đoạn văn bản (Document OCR).
 """
+import os
+import sys
 import unittest
 import numpy as np
 import cv2
+
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
 from src.ocr.document_ocr import detect_and_crop_lines, run_document_ocr
 
@@ -30,6 +36,20 @@ class TestDocumentOCR(unittest.TestCase):
         self.assertIsNotNone(res)
         self.assertIsInstance(res.elapsed_ms, float)
         self.assertGreaterEqual(res.num_lines, 0)
+
+    def test_translate_full_paragraph(self):
+        from src.translation.translator import LaoTranslator, translate_full_paragraph
+        translator = LaoTranslator()
+        # Test as method
+        vi, en, glosses = translator.translate_full_paragraph("ສະບາຍດີ\nຂອບໃຈ")
+        self.assertTrue(len(vi) > 0)
+        self.assertTrue(len(en) > 0)
+        self.assertIsInstance(glosses, list)
+
+        # Test as standalone function
+        vi2, en2, glosses2 = translate_full_paragraph("ສະບາຍດີ", translator=translator)
+        self.assertTrue(len(vi2) > 0)
+        self.assertTrue(len(en2) > 0)
 
 
 if __name__ == "__main__":
