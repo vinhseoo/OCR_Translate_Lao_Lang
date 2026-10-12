@@ -205,11 +205,12 @@ st.sidebar.markdown("---")
 app_mode = st.sidebar.radio(
     "CHỌN PHÂN HỆ CHỨC NĂNG:",
     [
-        "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)",
-        "🔬 2. Kính Lúp Tiền Xử Lý (Image Inspector)",
-        "🧠 3. Ôn Tập Ghi Nhớ (Spaced Repetition SM-2)",
-        "📖 4. Tra Cứu Từ Điển Giáo Trình (1,200 từ)",
-        "📊 5. Bảng Điều Khiển Nghiên Cứu (Dashboard)"
+        "🎴 1. Nhận Dạng Thẻ Flashcard (Live OCR)",
+        "📄 2. Nhận Dạng Đoạn Văn Bản (Document OCR)",
+        "🔬 3. Kính Lúp Tiền Xử Lý (Image Inspector)",
+        "🧠 4. Ôn Tập Ghi Nhớ (Spaced Repetition SM-2)",
+        "📖 5. Tra Cứu Từ Điển Giáo Trình (1,200 từ)",
+        "📊 6. Bảng Điều Khiển Nghiên Cứu (Dashboard)"
     ]
 )
 
@@ -224,40 +225,34 @@ st.sidebar.markdown("""
 """)
 
 # =============================================================================
-# TAB 1: NHẬN DẠNG & THẺ FLASHCARD TƯƠNG TÁC (LIVE OCR)
+# PHÂN HỆ 1: NHẬN DẠNG & THẺ FLASHCARD TƯƠNG TÁC (LIVE OCR)
 # =============================================================================
-if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
-    st.markdown('<p class="main-header">📸 NHẬN DẠNG CHỮ & HỖ TRỢ DỊCH TIẾNG LÀO</p>', unsafe_allow_html=True)
-    st.markdown('<p class="sub-header">Nhận dạng ảnh chữ Lào đa chế độ (Thẻ Flashcard từ vựng & Đoạn văn bản tài liệu), tích hợp tiền xử lý DIP, phiên âm và dịch thuật giáo dục.</p>', unsafe_allow_html=True)
+if app_mode == "🎴 1. Nhận Dạng Thẻ Flashcard (Live OCR)":
+    st.markdown('<p class="main-header">🎴 NHẬN DẠNG TỪ VỰNG & TẠO THẺ FLASHCARD</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-header">Chuyên biệt nhận dạng ảnh thẻ từ vựng / cụm từ ngắn đơn lẻ, tự động sửa lỗi từ điển và tạo thẻ Flashcard Spaced Repetition (SM-2).</p>', unsafe_allow_html=True)
 
-    ocr_target_mode = st.radio(
-        "🎯 Chọn chế độ nhận dạng ảnh:",
-        [
-            "🎴 Thẻ Flashcard / Từ vựng đơn (Single Word / Vocab Flashcard)",
-            "📄 Đoạn văn bản / Tài liệu nhiều dòng (Paragraph & Document OCR)"
-        ],
-        horizontal=True,
-        help="Chọn 'Thẻ Flashcard' cho ảnh từ vựng đơn 1 dòng, hoặc 'Đoạn văn bản' cho văn bản/tài liệu giáo trình nhiều dòng."
-    )
+    col_left, col_right = st.columns([1, 1])
 
-    if ocr_target_mode == "🎴 Thẻ Flashcard / Từ vựng đơn (Single Word / Vocab Flashcard)":
-        col_left, col_right = st.columns([1, 1])
+    with col_left:
+        st.subheader("1. Chọn nguồn ảnh đầu vào")
+        input_source = st.radio("Nguồn ảnh:", ["Tải ảnh lên từ máy tính", "Chọn từ thư viện Gold Set"], horizontal=True)
+        
+        image_to_process = None
+        image_name = "sample.jpg"
 
-        with col_left:
-            st.subheader("1. Chọn nguồn ảnh đầu vào")
-            input_source = st.radio("Nguồn ảnh:", ["Tải ảnh lên từ máy tính", "Chọn từ thư viện Gold Set"], horizontal=True)
-            
-            image_to_process = None
-            image_name = "sample.jpg"
-
-            current_image_id = None
-            if input_source == "Tải ảnh lên từ máy tính":
-                uploaded_file = st.file_uploader("Tải lên ảnh thẻ flashcard hoặc văn bản chữ Lào (PNG/JPG):", type=["png", "jpg", "jpeg"])
-                if uploaded_file is not None:
-                    image_to_process = Image.open(uploaded_file).convert("RGB")
-                    image_name = uploaded_file.name
-                    current_image_id = f"upload_{uploaded_file.name}_{uploaded_file.size}"
-                    st.image(image_to_process, caption="Ảnh bạn vừa tải lên", use_container_width=True)
+        current_image_id = None
+        if input_source == "Tải ảnh lên từ máy tính":
+            uploaded_file = st.file_uploader("Tải lên ảnh thẻ flashcard hoặc từ vựng tiếng Lào (PNG/JPG):", type=["png", "jpg", "jpeg"])
+            if uploaded_file is not None:
+                image_to_process = Image.open(uploaded_file).convert("RGB")
+                image_name = uploaded_file.name
+                current_image_id = f"upload_{uploaded_file.name}_{uploaded_file.size}"
+                st.image(image_to_process, caption="Ảnh bạn vừa tải lên", use_container_width=True)
+                
+                # Cảnh báo thông minh nếu ảnh có nhiều dòng
+                img_w, img_h = image_to_process.size
+                if img_h > 100 and (img_w / img_h) < 4.0:
+                    st.warning("💡 **Lưu ý:** Ảnh này có vẻ là một **đoạn văn bản nhiều dòng**! Phân hệ này chuyên tạo Flashcard từ đơn 1 dòng. Nếu muốn nhận dạng và dịch trọn vẹn cả đoạn văn, bạn hãy chọn phân hệ **'📄 2. Nhận Dạng Đoạn Văn Bản (Document OCR)'** ở menu bên trái.")
             else:
                 gold_dir = os.path.join(PROJECT_ROOT, "data", "gold", "images")
                 if os.path.exists(gold_dir):
@@ -428,178 +423,178 @@ if app_mode == "📸 1. Nhận Dạng & Thẻ Flashcard (Live OCR)":
                                 st.info("Cảm ơn bạn! Đóng góp đã được lưu vào hệ thống Continuous Learning.")
                 else:
                     st.info("👆 Vui lòng bấm nút **'🚀 THỰC HIỆN NHẬN DẠNG & TỔNG HỢP FLASHCARD'** ở trên để phân tích ảnh mới tải lên.")
-            else:
-                st.info("👈 Vui lòng tải ảnh lên hoặc chọn ảnh mẫu bên trái để thực hiện nhận dạng.")
+# =============================================================================
+# PHÂN HỆ 2: NHẬN DẠNG ĐOẠN VĂN BẢN & TÀI LIỆU (DOCUMENT OCR)
+# =============================================================================
+elif app_mode == "📄 2. Nhận Dạng Đoạn Văn Bản (Document OCR)":
+    st.markdown('<p class="main-header">📄 NHẬN DẠNG ĐOẠN VĂN BẢN & TÀI LIỆU TIẾNG LÀO</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-header">Tách dòng tự động qua thuật toán DIP (HPP/RLSA), nhận dạng đa dòng, dịch thuật song ngữ lưu loát và bóc tách từ vựng học tập.</p>', unsafe_allow_html=True)
 
-    else:
-        # =========================================================================
-        # CHẾ ĐỘ 2: ĐOẠN VĂN BẢN & TÀI LIỆU NHIỀU DÒNG (PARAGRAPH & DOCUMENT OCR)
-        # =========================================================================
-        doc_col_left, doc_col_right = st.columns([1, 1])
+    doc_col_left, doc_col_right = st.columns([1, 1])
 
-        with doc_col_left:
-            st.subheader("1. Chọn nguồn ảnh tài liệu / đoạn văn")
-            doc_input_source = st.radio("Nguồn ảnh tài liệu:", ["Tải ảnh lên từ máy tính", "Chọn từ thư viện Gold Set"], horizontal=True, key="doc_input_source")
-            
-            doc_image_to_process = None
-            doc_image_name = "document.jpg"
-            current_doc_image_id = None
+    with doc_col_left:
+        st.subheader("1. Chọn nguồn ảnh tài liệu / đoạn văn")
+        doc_input_source = st.radio("Nguồn ảnh tài liệu:", ["Tải ảnh lên từ máy tính", "Chọn từ thư viện Gold Set"], horizontal=True, key="doc_input_source")
+        
+        doc_image_to_process = None
+        doc_image_name = "document.jpg"
+        current_doc_image_id = None
 
-            if doc_input_source == "Tải ảnh lên từ máy tính":
-                uploaded_doc = st.file_uploader("Tải lên ảnh chụp đoạn văn bản / tài liệu tiếng Lào (PNG/JPG):", type=["png", "jpg", "jpeg"], key="doc_file_uploader")
-                if uploaded_doc is not None:
-                    doc_image_to_process = Image.open(uploaded_doc).convert("RGB")
-                    doc_image_name = uploaded_doc.name
-                    current_doc_image_id = f"doc_upload_{uploaded_doc.name}_{uploaded_doc.size}"
-                    st.image(doc_image_to_process, caption="Ảnh tài liệu bạn vừa tải lên", use_container_width=True)
-            else:
-                gold_dir = os.path.join(PROJECT_ROOT, "data", "gold", "images")
-                if os.path.exists(gold_dir):
-                    sample_files = [f for f in os.listdir(gold_dir) if f.endswith((".jpg", ".png"))][:15]
-                    selected_doc = st.selectbox("Chọn ảnh mẫu tài liệu trong Gold Set:", sample_files, key="doc_sample_select")
-                    if selected_doc:
-                        doc_path = os.path.join(gold_dir, selected_doc)
-                        doc_image_to_process = Image.open(doc_path).convert("RGB")
-                        doc_image_name = selected_doc
-                        current_doc_image_id = f"doc_gold_{selected_doc}"
-                        st.image(doc_image_to_process, caption=f"Mẫu tài liệu: {selected_doc}", use_container_width=True)
+        if doc_input_source == "Tải ảnh lên từ máy tính":
+            uploaded_doc = st.file_uploader("Tải lên ảnh chụp đoạn văn bản / tài liệu tiếng Lào (PNG/JPG):", type=["png", "jpg", "jpeg"], key="doc_file_uploader")
+            if uploaded_doc is not None:
+                doc_image_to_process = Image.open(uploaded_doc).convert("RGB")
+                doc_image_name = uploaded_doc.name
+                current_doc_image_id = f"doc_upload_{uploaded_doc.name}_{uploaded_doc.size}"
+                st.image(doc_image_to_process, caption="Ảnh tài liệu bạn vừa tải lên", use_container_width=True)
+        else:
+            gold_dir = os.path.join(PROJECT_ROOT, "data", "gold", "images")
+            if os.path.exists(gold_dir):
+                sample_files = [f for f in os.listdir(gold_dir) if f.endswith((".jpg", ".png"))][:15]
+                selected_doc = st.selectbox("Chọn ảnh mẫu tài liệu trong Gold Set:", sample_files, key="doc_sample_select")
+                if selected_doc:
+                    doc_path = os.path.join(gold_dir, selected_doc)
+                    doc_image_to_process = Image.open(doc_path).convert("RGB")
+                    doc_image_name = selected_doc
+                    current_doc_image_id = f"doc_gold_{selected_doc}"
+                    st.image(doc_image_to_process, caption=f"Mẫu tài liệu: {selected_doc}", use_container_width=True)
 
-            st.subheader("2. Cấu hình Nhận dạng Đoạn văn")
-            doc_engine_choice = st.selectbox(
-                "Chọn Động cơ OCR Đoạn văn:",
-                [
-                    "🚀 LaoCRNN + HPP Line Segmentation (Khuyến nghị - SOTA Tách dòng DIP)",
-                    "📜 Tesseract 5 PSM 6 (Nhận dạng khối văn bản đồng nhất)"
-                ],
-                key="doc_engine_choice"
-            )
-            seg_method = st.selectbox(
-                "Thuật toán phân đoạn dòng (Line Segmentation):",
-                ["Horizontal Projection Profile (HPP)", "Run-Length Smoothing Algorithm (RLSA)"],
-                help="HPP phân tích biểu đồ mật độ pixel theo trục Y; RLSA nối dài khoảng trống nét chữ.",
-                key="doc_seg_method"
-            )
+        st.subheader("2. Cấu hình Nhận dạng Đoạn văn")
+        doc_engine_choice = st.selectbox(
+            "Chọn Động cơ OCR Đoạn văn:",
+            [
+                "🚀 LaoCRNN + HPP Line Segmentation (Khuyến nghị - SOTA Tách dòng DIP)",
+                "📜 Tesseract 5 PSM 6 (Nhận dạng khối văn bản đồng nhất)"
+            ],
+            key="doc_engine_choice"
+        )
+        seg_method = st.selectbox(
+            "Thuật toán phân đoạn dòng (Line Segmentation):",
+            ["Horizontal Projection Profile (HPP)", "Run-Length Smoothing Algorithm (RLSA)"],
+            help="HPP phân tích biểu đồ mật độ pixel theo trục Y; RLSA nối dài khoảng trống nét chữ.",
+            key="doc_seg_method"
+        )
 
-        with doc_col_right:
-            st.subheader("3. Kết quả Nhận dạng & Dịch thuật Đoạn văn")
+    with doc_col_right:
+        st.subheader("3. Kết quả Nhận dạng & Dịch thuật Đoạn văn")
 
-            if "doc_ocr_result" not in st.session_state:
-                st.session_state.doc_ocr_result = None
-            if "doc_last_processed_img_id" not in st.session_state:
-                st.session_state.doc_last_processed_img_id = None
+        if "doc_ocr_result" not in st.session_state:
+            st.session_state.doc_ocr_result = None
+        if "doc_last_processed_img_id" not in st.session_state:
+            st.session_state.doc_last_processed_img_id = None
 
-            # Tự động làm mới khi đổi ảnh tài liệu
-            if current_doc_image_id is not None and st.session_state.doc_last_processed_img_id != current_doc_image_id:
-                st.session_state.doc_ocr_result = None
+        # Tự động làm mới khi đổi ảnh tài liệu
+        if current_doc_image_id is not None and st.session_state.doc_last_processed_img_id != current_doc_image_id:
+            st.session_state.doc_ocr_result = None
 
-            if doc_image_to_process is not None:
-                if st.button("🚀 THỰC HIỆN NHẬN DẠNG ĐOẠN VĂN & DỊCH THUẬT", type="primary", use_container_width=True, key="btn_run_doc_ocr"):
-                    with st.spinner("Đang xử lý phân đoạn dòng DIP -> OCR đa dòng -> NLP -> Dịch thuật..."):
-                        doc_img_np = np.array(doc_image_to_process)
-                        method_code = "rlsa" if "RLSA" in seg_method else "hpp"
-                        engine_code = "crnn" if "LaoCRNN" in doc_engine_choice else "tesseract"
+        if doc_image_to_process is not None:
+            if st.button("🚀 THỰC HIỆN NHẬN DẠNG ĐOẠN VĂN & DỊCH THUẬT", type="primary", use_container_width=True, key="btn_run_doc_ocr"):
+                with st.spinner("Đang xử lý phân đoạn dòng DIP -> OCR đa dòng -> NLP -> Dịch thuật..."):
+                    doc_img_np = np.array(doc_image_to_process)
+                    method_code = "rlsa" if "RLSA" in seg_method else "hpp"
+                    engine_code = "crnn" if "LaoCRNN" in doc_engine_choice else "tesseract"
 
-                        doc_res = run_document_ocr(
-                            image_np=doc_img_np,
-                            crnn_model=crnn_model,
-                            engine_choice=engine_code,
-                            segmentation_method=method_code
-                        )
+                    doc_res = run_document_ocr(
+                        image_np=doc_img_np,
+                        crnn_model=crnn_model,
+                        engine_choice=engine_code,
+                        segmentation_method=method_code
+                    )
 
-                        st.session_state.doc_last_processed_img_id = current_doc_image_id
-                        st.session_state.doc_ocr_result = doc_res
-                        st.session_state["active_doc_lao_input"] = doc_res.full_text
+                    st.session_state.doc_last_processed_img_id = current_doc_image_id
+                    st.session_state.doc_ocr_result = doc_res
+                    st.session_state["active_doc_lao_input"] = doc_res.full_text
 
-                if st.session_state.doc_ocr_result is not None:
-                    d_res = st.session_state.doc_ocr_result
+            if st.session_state.doc_ocr_result is not None:
+                d_res = st.session_state.doc_ocr_result
 
-                    # Hiển thị badge thống kê nhanh
+                # Hiển thị badge thống kê nhanh
+                st.markdown(f"""
+                <div style="margin-bottom: 12px;">
+                    <span class="metric-badge">Phát hiện: {d_res.num_lines} dòng</span>
+                    <span class="metric-badge">Độ trễ: {d_res.elapsed_ms:.1f} ms</span>
+                    <span class="metric-badge">Động cơ: {d_res.engine_name}</span>
+                </div>
+                """, unsafe_allow_html=True)
+
+                with st.expander("🔬 Xem Bounding Boxes phân đoạn dòng (Line Segmentation DIP)", expanded=False):
+                    st.image(d_res.annotated_image, caption=f"Phát hiện {d_res.num_lines} dòng văn bản (Khung xanh viền nét chữ)", use_container_width=True)
+
+                if "active_doc_lao_input" not in st.session_state:
+                    st.session_state["active_doc_lao_input"] = d_res.full_text
+
+                active_doc_text = st.text_area(
+                    "✏️ Văn bản tiếng Lào đã nhận dạng (có thể chỉnh sửa nếu cần):",
+                    key="active_doc_lao_input",
+                    height=140
+                )
+                active_doc_text = normalize_lao(active_doc_text).strip()
+
+                if active_doc_text:
+                    # Dịch toàn đoạn trôi chảy theo ngữ cảnh
+                    full_vi_text, full_en_text, all_glosses = translator.translate_full_paragraph(active_doc_text)
+
+                    # Khung hiển thị bản dịch song ngữ đoạn văn cao cấp (tương phản cao, chữ sắc nét)
                     st.markdown(f"""
-                    <div style="margin-bottom: 12px;">
-                        <span class="metric-badge">Phát hiện: {d_res.num_lines} dòng</span>
-                        <span class="metric-badge">Độ trễ: {d_res.elapsed_ms:.1f} ms</span>
-                        <span class="metric-badge">Động cơ: {d_res.engine_name}</span>
+                    <div style="background: #111827; border-radius: 14px; padding: 22px; border: 1px solid #374151; margin: 15px 0; box-shadow: 0 10px 25px rgba(0,0,0,0.3);">
+                        <div style="margin-bottom: 20px;">
+                            <div style="font-weight: 700; font-size: 1.15rem; color: #fbbf24; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                                🇻🇳 BẢN DỊCH TIẾNG VIỆT (VIETNAMESE)
+                            </div>
+                            <div style="font-size: 1.15rem; line-height: 1.8; color: #f9fafb; white-space: pre-wrap; font-weight: 400; padding: 12px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 4px solid #f59e0b;">
+{full_vi_text}
+                            </div>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <div style="font-weight: 700; font-size: 1.1rem; color: #34d399; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                                🇬🇧 BẢN DỊCH TIẾNG ANH (ENGLISH)
+                            </div>
+                            <div style="font-size: 1.05rem; line-height: 1.8; color: #f3f4f6; white-space: pre-wrap; font-weight: 400; padding: 12px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 4px solid #10b981;">
+{full_en_text}
+                            </div>
+                        </div>
                     </div>
                     """, unsafe_allow_html=True)
 
-                    with st.expander("🔬 Xem Bounding Boxes phân đoạn dòng (Line Segmentation DIP)", expanded=False):
-                        st.image(d_res.annotated_image, caption=f"Phát hiện {d_res.num_lines} dòng văn bản (Khung xanh viền nét chữ)", use_container_width=True)
+                    # Danh sách từ vựng cốt lõi trích xuất từ bài
+                    if all_glosses:
+                        st.markdown("#### 📚 Bóc Tách Từ Vựng Cốt Lõi Trong Bài (Key Vocabulary Breakdown)")
+                        doc_vocab_data = []
+                        for g in all_glosses:
+                            doc_vocab_data.append({
+                                "Từ tiếng Lào": g.lao,
+                                "Phiên âm": g.romanization,
+                                "Từ loại": g.pos,
+                                "Nghĩa Tiếng Việt": g.vi,
+                                "Nghĩa Tiếng Anh": g.en,
+                                "Ví dụ": f"{g.example_lao} ({g.example_vi})" if g.example_lao else "-"
+                            })
+                        st.dataframe(pd.DataFrame(doc_vocab_data), use_container_width=True)
 
-                    if "active_doc_lao_input" not in st.session_state:
-                        st.session_state["active_doc_lao_input"] = d_res.full_text
-
-                    active_doc_text = st.text_area(
-                        "✏️ Văn bản tiếng Lào đã nhận dạng (có thể chỉnh sửa nếu cần):",
-                        key="active_doc_lao_input",
-                        height=140
-                    )
-                    active_doc_text = normalize_lao(active_doc_text).strip()
-
-                    if active_doc_text:
-                        # Dịch toàn đoạn trôi chảy theo ngữ cảnh
-                        full_vi_text, full_en_text, all_glosses = translator.translate_full_paragraph(active_doc_text)
-
-                        # Khung hiển thị bản dịch song ngữ đoạn văn cao cấp (tương phản cao, chữ sắc nét)
-                        st.markdown(f"""
-                        <div style="background: #111827; border-radius: 14px; padding: 22px; border: 1px solid #374151; margin: 15px 0; box-shadow: 0 10px 25px rgba(0,0,0,0.3);">
-                            <div style="margin-bottom: 20px;">
-                                <div style="font-weight: 700; font-size: 1.15rem; color: #fbbf24; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
-                                    🇻🇳 BẢN DỊCH TIẾNG VIỆT (VIETNAMESE)
-                                </div>
-                                <div style="font-size: 1.15rem; line-height: 1.8; color: #f9fafb; white-space: pre-wrap; font-weight: 400; padding: 12px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 4px solid #f59e0b;">
-{full_vi_text}
-                                </div>
-                            </div>
-                            <div style="margin-top: 15px;">
-                                <div style="font-weight: 700; font-size: 1.1rem; color: #34d399; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
-                                    🇬🇧 BẢN DỊCH TIẾNG ANH (ENGLISH)
-                                </div>
-                                <div style="font-size: 1.05rem; line-height: 1.8; color: #f3f4f6; white-space: pre-wrap; font-weight: 400; padding: 12px 16px; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 4px solid #10b981;">
-{full_en_text}
-                                </div>
-                            </div>
-                        </div>
-                        """, unsafe_allow_html=True)
-
-                        # Danh sách từ vựng cốt lõi trích xuất từ bài
-                        if all_glosses:
-                            st.markdown("#### 📚 Bóc Tách Từ Vựng Cốt Lõi Trong Bài (Key Vocabulary Breakdown)")
-                            doc_vocab_data = []
+                        if st.button("➕ Thêm Tất Cả Từ Vựng Bài Này Vào Bộ Nhớ Ôn Tập (SM-2)", use_container_width=True, key="btn_add_all_doc_vocab"):
+                            added_count = 0
                             for g in all_glosses:
-                                doc_vocab_data.append({
-                                    "Từ tiếng Lào": g.lao,
-                                    "Phiên âm": g.romanization,
-                                    "Từ loại": g.pos,
-                                    "Nghĩa Tiếng Việt": g.vi,
-                                    "Nghĩa Tiếng Anh": g.en,
-                                    "Ví dụ": f"{g.example_lao} ({g.example_vi})" if g.example_lao else "-"
-                                })
-                            st.dataframe(pd.DataFrame(doc_vocab_data), use_container_width=True)
-
-                            if st.button("➕ Thêm Tất Cả Từ Vựng Bài Này Vào Bộ Nhớ Ôn Tập (SM-2)", use_container_width=True, key="btn_add_all_doc_vocab"):
-                                added_count = 0
-                                for g in all_glosses:
-                                    c_id = f"doc_{int(time.time())}_{added_count}"
-                                    new_card = FlashcardReviewState(
-                                        card_id=c_id,
-                                        lao_text=g.lao,
-                                        vi_meaning=g.vi,
-                                        romanization=g.romanization
-                                    )
-                                    st.session_state.flashcards.append(asdict(new_card))
-                                    added_count += 1
-                                save_user_flashcards(st.session_state.flashcards)
-                                st.success(f"✅ Đã thêm thành công {added_count} từ vựng từ bài đọc vào bộ Spaced Repetition!")
-                else:
-                    st.info("👆 Vui lòng bấm nút **'🚀 THỰC HIỆN NHẬN DẠNG ĐOẠN VĂN & DỊCH THUẬT'** ở trên để phân tích ảnh tài liệu.")
+                                c_id = f"doc_{int(time.time())}_{added_count}"
+                                new_card = FlashcardReviewState(
+                                    card_id=c_id,
+                                    lao_text=g.lao,
+                                    vi_meaning=g.vi,
+                                    romanization=g.romanization
+                                )
+                                st.session_state.flashcards.append(asdict(new_card))
+                                added_count += 1
+                            save_user_flashcards(st.session_state.flashcards)
+                            st.success(f"✅ Đã thêm thành công {added_count} từ vựng từ bài đọc vào bộ Spaced Repetition!")
             else:
-                st.info("👈 Vui lòng tải ảnh tài liệu lên hoặc chọn mẫu bên trái để thực hiện nhận dạng.")
+                st.info("👆 Vui lòng bấm nút **'🚀 THỰC HIỆN NHẬN DẠNG ĐOẠN VĂN & DỊCH THUẬT'** ở trên để phân tích ảnh tài liệu.")
+        else:
+            st.info("👈 Vui lòng tải ảnh tài liệu lên hoặc chọn mẫu bên trái để thực hiện nhận dạng.")
 
 
 # =============================================================================
 # TAB 2: KÍNH LÚP TIỀN XỬ LÝ ẢNH (PREPROCESSING INSPECTOR)
 # =============================================================================
-elif app_mode == "🔬 2. Kính Lúp Tiền Xử Lý (Image Inspector)":
+elif app_mode == "🔬 3. Kính Lúp Tiền Xử Lý (Image Inspector)":
     st.markdown('<p class="main-header">🔬 KÍNH LÚP TIỀN XỬ LÝ ẢNH (PREPROCESSING INSPECTOR)</p>', unsafe_allow_html=True)
     st.markdown('<p class="sub-header">Trực quan hóa từng bước trong chuỗi 12 phép biến đổi xử lý ảnh số (Digital Image Processing) phục vụ chẩn đoán và nghiên cứu khoa học.</p>', unsafe_allow_html=True)
 
@@ -648,7 +643,7 @@ elif app_mode == "🔬 2. Kính Lúp Tiền Xử Lý (Image Inspector)":
 # =============================================================================
 # TAB 3: ÔN TẬP GHI NHỚ (SPACED REPETITION SM-2)
 # =============================================================================
-elif app_mode == "🧠 3. Ôn Tập Ghi Nhớ (Spaced Repetition SM-2)":
+elif app_mode == "🧠 4. Ôn Tập Ghi Nhớ (Spaced Repetition SM-2)":
     st.markdown('<p class="main-header">🧠 ÔN TẬP THẺ NHỚ (SPACED REPETITION SM-2)</p>', unsafe_allow_html=True)
     st.markdown('<p class="sub-header">Ứng dụng thuật toán khoa học SuperMemo SM-2 tự động tính toán chu kỳ lặp lại giúp người học tiếng Lào ghi nhớ vĩnh viễn.</p>', unsafe_allow_html=True)
 
@@ -711,7 +706,7 @@ elif app_mode == "🧠 3. Ôn Tập Ghi Nhớ (Spaced Repetition SM-2)":
 # =============================================================================
 # TAB 4: TRA CỨU TỪ ĐIỂN GIÁO TRÌNH (1,200 TỪ)
 # =============================================================================
-elif app_mode == "📖 4. Tra Cứu Từ Điển Giáo Trình (1,200 từ)":
+elif app_mode == "📖 5. Tra Cứu Từ Điển Giáo Trình (1,200 từ)":
     st.markdown('<p class="main-header">📖 KHO TỪ ĐIỂN GIÁO TRÌNH TIẾNG LÀO (1,200 MỤC TỪ)</p>', unsafe_allow_html=True)
     st.markdown('<p class="sub-header">Tra cứu song ngữ Lào - Việt - Anh, từ loại, phiên âm và câu ví dụ minh họa chuẩn xác.</p>', unsafe_allow_html=True)
 
@@ -752,7 +747,7 @@ elif app_mode == "📖 4. Tra Cứu Từ Điển Giáo Trình (1,200 từ)":
 # =============================================================================
 # TAB 5: BẢNG ĐIỀU KHIỂN NGHIÊN CỨU (DASHBOARD)
 # =============================================================================
-elif app_mode == "📊 5. Bảng Điều Khiển Nghiên Cứu (Dashboard)":
+elif app_mode == "📊 6. Bảng Điều Khiển Nghiên Cứu (Dashboard)":
     st.markdown('<p class="main-header">📊 BẢNG ĐIỀU KHIỂN KẾT QUẢ NGHIÊN CỨU KHOA HỌC</p>', unsafe_allow_html=True)
     st.markdown('<p class="sub-header">Tổng hợp đầy đủ 21 bảng số liệu và 12 biểu đồ chẩn đoán khoa học của toàn bộ đề tài (P0 đến P8).</p>', unsafe_allow_html=True)
 
