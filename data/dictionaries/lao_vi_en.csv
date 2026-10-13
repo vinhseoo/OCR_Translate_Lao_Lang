@@ -2174,3 +2174,16 @@ lao,vi,en,romanization,pos,lesson,example_lao,example_vi
 ດອກເບ້ຍເງິນກູ້,lãi suất vay ngân hàng,loan interest rate,dok bia ngen koo,noun,tai_chinh,ດອກເບ້ຍເງິນກູ້ຕ່ຳ,Lãi suất cho vay ưu đãi
 ໜັງສືຄ້ຳປະກັນ,thư bảo lãnh ngân hàng,bank guarantee letter,nang seu kham pa kan,noun,tai_chinh,ອອກໜັງສືຄ້ຳປະກັນ,Phát hành thư bảo lãnh ngân hàng
 ເງິນຕາຕ່າງປະເທດ,ngoại tệ / tiền nước ngoài,foreign currency,ngen ta tang pa thed,noun,tai_chinh,ຄຸ້ມຄອງເງິນຕາຕ່າງປະເທດ,Quản lý ngoại hối
+ນີ້,này / đây,this / these,nii,pronoun,co_ban,ອັນນີ້,cái này
+ອັນນີ້,cái này,this one / this,an-nii,pronoun,co_ban,ອັນນີ້ແມ່ນຫຍັງ,cái này là gì
+ຫລາຍ,nhiều / rất / quá,many / much / very,laai,adjective,co_ban,ງາມຫລາຍ,rất đẹp
+ງາມຫລາຍ,rất đẹp / đẹp quá,very beautiful,ngaam-laai,phrase,khen_ngoi,ດອກໄມ້ງາມຫລາຍ,hoa rất đẹp
+ໂທລະສັບນີ້,điện thoại này,this phone,tho-la-sap nii,phrase,giao_tiep,ໂທລະສັບນີ້ງາມຫຼາຍ,điện thoại này đẹp quá
+ວຽກຫຼາຍ,nhiều công việc / bận việc,a lot of work / busy,viak laai,phrase,cong_viec,ມື້ນີ້ວຽກຫຼາຍ,hôm nay nhiều việc quá
+ບໍ່,không,no / not,baw,adverb,co_ban,ບໍ່ເຫັນ,không thấy
+ຊອກ,tìm kiếm,to look for / to find,xawk,verb,co_ban,ຊອກຫາ,tìm kiếm
+ຊອກຫາ,tìm kiếm,to search / to seek,xawk-haa,verb,co_ban,ຊອກຫາໂທລະສັບ,tìm điện thoại
+ເຫັນ,thấy / nhìn thấy,to see,hen,verb,co_ban,ເຫັນແລ້ວ,thấy rồi
+ບໍ່ເຫັນ,không thấy / không tìm thấy,cannot see / cannot find,baw hen,phrase,co_ban,ຊອກບໍ່ເຫັນ,tìm không thấy
+ຂ້ອຍ,tôi,I / me,khoy,pronoun,co_ban,ຂ້ອຍແມ່ນນັກຮຽນ,tôi là học sinh
+ຂ້ອຍຊອກໂທລະສັບບໍ່ເຫັນ,tôi không tìm thấy điện thoại,I cannot find my phone,khoy xawk tho-la-sap baw hen,phrase,giao_tiep,ຂ້ອຍຊອກໂທລະສັບບໍ່ເຫັນ,tôi không tìm thấy điện thoại

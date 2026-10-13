@@ -57,7 +57,14 @@ def reorder_lao_combining_marks(text: str) -> str:
                 continue
         i += 1
         
-    return "".join(result)
+    # Xử lý lỗi gõ/nhận dạng dấu thanh bị nhảy sau ký tự 'ອ' trong vần '...້ອຍ' (ví dụ: 'ຂອ້ຍ' -> 'ຂ້ອຍ')
+    res_str = "".join(result)
+    res_str = re.sub(
+        r'([\u0e81-\u0eae])\u0ead([\u0ec8-\u0ecb])\u0e8d',
+        lambda m: m.group(1) + m.group(2) + '\u0ead\u0e8d',
+        res_str
+    )
+    return res_str
 
 
 def normalize_lao(text: str) -> str:
@@ -66,7 +73,8 @@ def normalize_lao(text: str) -> str:
     1. Loại bỏ ký tự rác, khoảng trắng thừa, Zero-Width Space (U+200B).
     2. Chuẩn hóa dạng Unicode NFC.
     3. Sửa trật tự các dấu tổ hợp (Combining marks) bị gõ lộn xộn.
-    4. Ép lại NFC lần cuối đảm bảo byte đồng nhất.
+    4. Chuẩn hóa đồng nhất các phụ âm ghép/ligature (ví dụ: 'ຫລ' -> 'ຫຼ').
+    5. Ép lại NFC lần cuối đảm bảo byte đồng nhất.
     """
     if not text:
         return ""
@@ -79,8 +87,11 @@ def normalize_lao(text: str) -> str:
     
     # 3. Chuẩn hóa trật tự dấu tổ hợp
     text = reorder_lao_combining_marks(text)
+
+    # 4. Chuẩn hóa phụ âm ghép ligature (ví dụ: 'ຫລ' -> 'ຫຼ')
+    text = text.replace("\u0eab\u0ea5", "\u0eab\u0ebc")
     
-    # 4. Ép NFC lần 2 để đảm bảo canonical representation
+    # 5. Ép NFC lần 2 để đảm bảo canonical representation
     text = unicodedata.normalize("NFC", text)
     
     return text

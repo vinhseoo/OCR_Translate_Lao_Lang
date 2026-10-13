@@ -183,51 +183,87 @@ def translate_full_paragraph(paragraph_text: str, translator: Optional[LaoTransl
 
     import requests
 
+    # 1. Thử dịch toàn bộ đoạn văn bản cùng lúc để bảo toàn ngữ cảnh toàn bài
+    full_vi = ""
+    full_en = ""
+
+    try:
+        res_vi = requests.get(
+            "https://clients5.google.com/translate_a/t",
+            params={"client": "dict-chrome-ex", "sl": "lo", "tl": "vi", "q": norm_para},
+            timeout=4
+        )
+        if res_vi.status_code == 200:
+            data = res_vi.json()
+            full_vi = data[0] if isinstance(data, list) and len(data) > 0 else ""
+    except Exception:
+        pass
+
+    try:
+        res_en = requests.get(
+            "https://clients5.google.com/translate_a/t",
+            params={"client": "dict-chrome-ex", "sl": "lo", "tl": "en", "q": norm_para},
+            timeout=4
+        )
+        if res_en.status_code == 200:
+            data = res_en.json()
+            full_en = data[0] if isinstance(data, list) and len(data) > 0 else ""
+    except Exception:
+        pass
+
+    # 2. Duyệt từng dòng để bóc tách từ vựng & làm dự phòng (fallback) nếu dịch toàn bài chưa có
+    fallback_vi_lines = []
+    fallback_en_lines = []
+
     for line in lines:
         line_vi = ""
         line_en = ""
 
-        # 1. Thử dịch câu trôi chảy qua Machine Translation API
-        try:
-            res_vi = requests.get(
-                "https://clients5.google.com/translate_a/t",
-                params={"client": "dict-chrome-ex", "sl": "lo", "tl": "vi", "q": line},
-                timeout=4
-            )
-            if res_vi.status_code == 200:
-                data = res_vi.json()
-                line_vi = data[0] if isinstance(data, list) and len(data) > 0 else ""
-        except Exception:
-            pass
+        # Nếu chưa có bản dịch toàn bài, thử dịch từng dòng
+        if not full_vi:
+            try:
+                r_vi = requests.get(
+                    "https://clients5.google.com/translate_a/t",
+                    params={"client": "dict-chrome-ex", "sl": "lo", "tl": "vi", "q": line},
+                    timeout=3
+                )
+                if r_vi.status_code == 200:
+                    d = r_vi.json()
+                    line_vi = d[0] if isinstance(d, list) and len(d) > 0 else ""
+            except Exception:
+                pass
 
-        try:
-            res_en = requests.get(
-                "https://clients5.google.com/translate_a/t",
-                params={"client": "dict-chrome-ex", "sl": "lo", "tl": "en", "q": line},
-                timeout=4
-            )
-            if res_en.status_code == 200:
-                data = res_en.json()
-                line_en = data[0] if isinstance(data, list) and len(data) > 0 else ""
-        except Exception:
-            pass
+        if not full_en:
+            try:
+                r_en = requests.get(
+                    "https://clients5.google.com/translate_a/t",
+                    params={"client": "dict-chrome-ex", "sl": "lo", "tl": "en", "q": line},
+                    timeout=3
+                )
+                if r_en.status_code == 200:
+                    d = r_en.json()
+                    line_en = d[0] if isinstance(d, list) and len(d) > 0 else ""
+            except Exception:
+                pass
 
-        # 2. Bóc tách từ vựng qua từ điển nội bộ
         line_out = translator.translate(line)
         if not line_vi:
             line_vi = line_out.translation_vi
         if not line_en:
             line_en = line_out.translation_en
 
-        vi_results.append(line_vi)
-        en_results.append(line_en)
+        fallback_vi_lines.append(line_vi)
+        fallback_en_lines.append(line_en)
 
         for g in line_out.glosses:
             if g.in_dict and g.lao not in seen_words:
                 all_glosses.append(g)
                 seen_words.add(g.lao)
 
-    full_vi = "\n".join(vi_results)
-    full_en = "\n".join(en_results)
+    if not full_vi:
+        full_vi = "\n".join(fallback_vi_lines)
+    if not full_en:
+        full_en = "\n".join(fallback_en_lines)
+
     return full_vi, full_en, all_glosses
 

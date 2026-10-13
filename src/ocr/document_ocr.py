@@ -3,6 +3,7 @@ Module Nhận Dạng Đoạn Văn Bản & Tài Liệu Tiếng Lào (Paragraph & 
 Kết hợp Xử lý ảnh số (DIP Line Segmentation: HPP / RLSA) với Động cơ OCR
 (LaoCRNN Line-by-line hoặc Tesseract Multi-line Block).
 """
+import os
 import time
 from dataclasses import dataclass, field
 from typing import List, Tuple, Dict, Any, Optional
@@ -10,11 +11,43 @@ import numpy as np
 import cv2
 from PIL import Image
 
+try:
+    import pytesseract
+    tess_candidates = [
+        os.path.expandvars(r'%LOCALAPPDATA%\Programs\Tesseract-OCR\tesseract.exe'),
+        r'C:\Program Files\Tesseract-OCR\tesseract.exe',
+        r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe',
+    ]
+    for tc in tess_candidates:
+        if os.path.exists(tc):
+            pytesseract.pytesseract.tesseract_cmd = tc
+            break
+except Exception:
+    pass
+
 from src.preprocessing.normalize import normalize_lao
 from src.preprocessing.segmentation import (
     segment_lines_horizontal_projection,
     segment_lines_rlsa,
 )
+
+
+def preprocess_line_crop(crop: np.ndarray) -> np.ndarray:
+    """Tiền xử lý ảnh dòng cắt chuẩn DIP: Tăng tương phản CLAHE và thêm đệm viền an toàn."""
+    if crop is None or crop.size == 0:
+        return crop
+    if crop.ndim == 3:
+        gray = cv2.cvtColor(crop, cv2.COLOR_RGB2GRAY)
+    else:
+        gray = crop.copy()
+    
+    # Tăng tương phản cục bộ thích nghi CLAHE
+    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    enhanced = clahe.apply(gray)
+    
+    # Thêm viền an toàn để bảo toàn nét móc và dấu thanh
+    padded = cv2.copyMakeBorder(enhanced, 6, 6, 12, 12, cv2.BORDER_CONSTANT, value=255)
+    return padded
 
 
 @dataclass
@@ -80,7 +113,8 @@ def detect_and_crop_lines(
     if method.lower() == "rlsa":
         raw_boxes = segment_lines_rlsa(binary, thresh_h=35)
     else:
-        raw_boxes = segment_lines_horizontal_projection(binary, min_line_height=min_line_height, valley_thresh=3)
+        adaptive_valley = max(4, int(w * 0.015))
+        raw_boxes = segment_lines_horizontal_projection(binary, min_line_height=min_line_height, valley_thresh=adaptive_valley)
 
     # Nếu không phát hiện được dòng nào, coi toàn bộ ảnh là 1 dòng
     if not raw_boxes:
@@ -155,19 +189,26 @@ def run_document_ocr(
     line_results: List[LineResult] = []
     text_lines: List[str] = []
 
-    # 2. Động cơ nhận dạng theo dòng (Line-by-line LaoCRNN)
-    if "crnn" in engine_choice.lower() and crnn_model is not None:
+    # 2. Động cơ nhận dạng theo dòng (Line-by-line: CRNN / Hybrid / Tesseract Lines)
+    if "block" not in engine_choice.lower():
         for idx, (crop, box) in enumerate(zip(cropped_lines, line_boxes)):
-            try:
-                line_text = crnn_model.predict_image(crop)
-            except Exception:
-                line_text = ""
+            prep_crop = preprocess_line_crop(crop)
+            line_text = ""
 
-            # Dự phòng Tesseract nếu CRNN chưa nhận diện được dòng đó
-            if not line_text.strip():
+            if "crnn" in engine_choice.lower() and crnn_model is not None:
+                try:
+                    line_text = crnn_model.predict_image(prep_crop)
+                except Exception:
+                    line_text = ""
+
+            # Dự phòng Tesseract nếu CRNN trống, hoặc dùng Tesseract nếu chọn Hybrid/Tesseract Lines
+            if not line_text.strip() or "tess" in engine_choice.lower() or "hybrid" in engine_choice.lower():
                 try:
                     import pytesseract
-                    line_text = pytesseract.image_to_string(crop, lang="lao", config="--psm 7")
+                    tess_text = pytesseract.image_to_string(prep_crop, lang="lao", config="--psm 7")
+                    if tess_text.strip():
+                        if not line_text.strip() or "tess" in engine_choice.lower() or len(tess_text.strip()) > len(line_text.strip()):
+                            line_text = tess_text
                 except Exception:
                     pass
 
@@ -191,6 +232,15 @@ def run_document_ocr(
 
     full_text = "\n".join(text_lines)
     full_text = normalize_lao(full_text)
+
+    # Tự động nắn chỉnh câu theo từ điển (Sentence Lexicon Alignment & Spell-check)
+    try:
+        from src.postprocessing.sentence_corrector import LaoSentenceCorrector
+        corrector = LaoSentenceCorrector()
+        full_text = corrector.correct_sentence(full_text)
+    except Exception:
+        pass
+
     elapsed_ms = (time.perf_counter() - t_start) * 1000
 
     return DocumentOCRResult(

@@ -54,12 +54,29 @@ class LaoDictionary:
 
     def contains(self, word: str) -> bool:
         """Kiểm tra từ có tồn tại trong từ điển hay không."""
-        return normalize_lao(word) in self.entries
+        return self.lookup(word) is not None
 
     def lookup(self, word: str) -> Optional[Dict[str, Any]]:
-        """Tra cứu chi tiết một mục từ."""
+        """Tra cứu chi tiết một mục từ với khả năng tương thích biến thể chính tả."""
         norm_word = normalize_lao(word)
-        return self.entries.get(norm_word)
+        if norm_word in self.entries:
+            return self.entries[norm_word]
+        
+        # Tương thích chính tả ligature Lào: 'ຫລ' <-> 'ຫຼ', 'ຫນ' <-> 'ໜ', 'ຫມ' <-> 'ໝ'
+        v1 = norm_word.replace("\u0eab\u0ea5", "\u0eab\u0ebc")
+        if v1 in self.entries:
+            return self.entries[v1]
+        v2 = norm_word.replace("\u0eab\u0ebc", "\u0eab\u0ea5")
+        if v2 in self.entries:
+            return self.entries[v2]
+        v3 = norm_word.replace("\u0eab\u0e99", "\u0ead")
+        if v3 in self.entries:
+            return self.entries[v3]
+        v4 = norm_word.replace("\u0eab\u0ea1", "\u0eae")
+        if v4 in self.entries:
+            return self.entries[v4]
+            
+        return None
 
     def lookup_gloss(self, word: str, lang: str = "vi") -> str:
         """Lấy nghĩa ngắn gọn phục vụ chú giải từng từ."""
