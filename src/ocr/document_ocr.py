@@ -241,6 +241,15 @@ def run_document_ocr(
     except Exception:
         pass
 
+    if "hybrid" in engine_choice.lower():
+        engine_name = f"Hybrid (LaoCRNN + Tesseract) + {segmentation_method.upper()}"
+    elif "crnn" in engine_choice.lower():
+        engine_name = f"LaoCRNN + {segmentation_method.upper()} Line Segmentation"
+    elif "block" in engine_choice.lower():
+        engine_name = "Tesseract PSM 6 Block"
+    else:
+        engine_name = f"Tesseract PSM 7 + {segmentation_method.upper()} Line Segmentation"
+
     elapsed_ms = (time.perf_counter() - t_start) * 1000
 
     return DocumentOCRResult(
@@ -249,5 +258,6 @@ def run_document_ocr(
         annotated_image=annotated_img,
         num_lines=len(line_results),
         elapsed_ms=elapsed_ms,
-        engine_name="LaoCRNN + HPP Line Segmentation" if "crnn" in engine_choice.lower() else "Tesseract PSM 6 Block"
+        engine_name=engine_name
     )
+

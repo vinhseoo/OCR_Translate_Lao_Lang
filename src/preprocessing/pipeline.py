@@ -255,3 +255,25 @@ def process_image(image_input: Any, config: Optional[Dict[str, Any]] = None, ret
     """Hàm tiện ích cấp module nhận ảnh và trả về kết quả."""
     pipeline = PreprocessingPipeline(config=config)
     return pipeline.process(image_input, return_stages=return_stages)
+
+
+def preprocess_image_p1(image_input: Any) -> Image.Image:
+    """
+    Hàm tiền xử lý tối giản cho Phase P1 Spike (Grayscale + Otsu + Padding).
+    Đảm bảo 100% tương thích ngược với CLI run.py và evaluate_p1_spike.py.
+    """
+    pipeline = PreprocessingPipeline(config={
+        "grayscale": {"enabled": True, "method": "bgr2gray"},
+        "illumination": {"enabled": False},
+        "denoise": {"enabled": False},
+        "perspective_correction": {"enabled": False},
+        "deskew": {"enabled": False},
+        "binarization": {"enabled": True, "method": "otsu"},
+        "morphology": {"enabled": False},
+        "height_normalization": {"enabled": False},
+        "stroke_adjust": {"enabled": False},
+        "border_padding": {"enabled": True, "padding_px": 15, "crop_outer_px": 16}
+    })
+    res_np, _ = pipeline.process(image_input)
+    return Image.fromarray(res_np)
+

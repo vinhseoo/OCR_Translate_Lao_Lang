@@ -99,20 +99,25 @@ Trình duyệt web mặc định của bạn sẽ tự động mở trang web �
 
 ---
 
-## ⚡ 4. Cách Chạy Nhanh (Shortcut Script)
+## ⚡ 4. Cách Chạy Nhanh (Shortcut Scripts)
 
-Để không phải gõ lại từng lệnh kích hoạt mỗi lần làm việc, dự án cung cấp script tiện ích:
+Script khởi chạy đã được tích hợp **cơ chế tự động dò tìm Python** (tự động nhận diện `.venv`, Python hệ thống, hoặc Python đi kèm pgAdmin 4 mà không cần cài thêm Python ngoài):
 
-### Cách 1: Chạy file PowerShell
+### Cách 1: Chạy file PowerShell (Khuyên dùng)
 ```powershell
 .\run_app.ps1
 ```
 
-### Cách 2: Chạy file Batch (hoặc nhấp đúp chuột)
+### Cách 2: Chạy file Batch (hoặc nhấp đúp chuột vào file)
 ```cmd
 .\run_app.bat
 ```
-*(File này sẽ tự động kiểm tra `.venv`, tự kích hoạt và khởi chạy Streamlit).*
+
+### Cách 3: Lệnh chạy trực tiếp bằng Python pgAdmin 4 (Đã có sẵn đủ thư viện)
+```powershell
+& "$env:LOCALAPPDATA\Programs\pgAdmin 4\python\python.exe" -m streamlit run app.py
+```
+
 
 ---
 
@@ -129,7 +134,14 @@ python scripts/inspect_preprocessing_stages.py
 
 # Kiểm tra độ tương thích font tiếng Lào
 python -c "from src.utils.font_check import check_lao_fonts; print(check_lao_fonts())"
+
+# Sinh Báo cáo Đồ án Toàn văn Word (.docx) chuẩn TCVN / IEEE (45 - 50 trang)
+python scripts/generate_academic_report_docx.py
 ```
+
+> 📄 File báo cáo Word hoàn chỉnh đã được tạo sẵn tại thư mục gốc:  
+> [Bao_Cao_Do_An_Lao_OCR_DIP.docx](file:///c:/Users/maiduc.vinh/OneDrive%20-%20VietCredit/Desktop/XLA/Bao_Cao_Do_An_Lao_OCR_DIP.docx) (Dung lượng ~3.1MB, đầy đủ 25 bảng và 12 biểu đồ).
+
 
 ---
 

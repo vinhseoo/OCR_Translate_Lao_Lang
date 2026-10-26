@@ -1,47 +1,52 @@
 # ====================================================================
-# Script tự động khởi chạy Ứng dụng Web OCR Tiếng Lào (Streamlit)
+# Script tu dong khoi chay Ung dung Web OCR Tieng Lao (Streamlit)
+# Tu dong nhan dien Python moi truong ao, Python he thong hoac Python pgAdmin 4
 # ====================================================================
 
 $ProjectRoot = $PSScriptRoot
 Set-Location -Path $ProjectRoot
 
 Write-Host "============================================================" -ForegroundColor Cyan
-Write-Host " 🇱🇦 KHỞI CHẠY HỆ THỐNG LAO OCR & EDUCATIONAL TRANSLATION " -ForegroundColor Yellow
+Write-Host " [LAO OCR & EDUCATIONAL TRANSLATION SYSTEM - WEB APP] " -ForegroundColor Yellow
 Write-Host "============================================================" -ForegroundColor Cyan
 
-# 1. Kiểm tra môi trường ảo .venv
-if (Test-Path -Path "$ProjectRoot\.venv\Scripts\Activate.ps1") {
-    Write-Host "[1/3] Dang kich hoat moi truong ao .venv..." -ForegroundColor Green
-    & "$ProjectRoot\.venv\Scripts\Activate.ps1"
+# 1. Danh sach cac duong dan Python kha di
+$pythonCandidates = @(
+    "$ProjectRoot\.venv\Scripts\python.exe",
+    "$env:LOCALAPPDATA\Programs\pgAdmin 4\python\python.exe",
+    "C:\Program Files\PostgreSQL\18\pgAdmin 4\python\python.exe",
+    "C:\Program Files\PostgreSQL\17\pgAdmin 4\python\python.exe",
+    "C:\Program Files\PostgreSQL\16\pgAdmin 4\python\python.exe"
+)
+
+$targetPython = $null
+
+# Kiem tra python trong PATH truoc (loai tru alias rong cua WindowsApps)
+$sysPython = Get-Command python -ErrorAction SilentlyContinue
+if ($sysPython -and $sysPython.Source -notlike "*WindowsApps*") {
+    $targetPython = "python"
 } else {
-    Write-Host "[CANH BAO] Chua tim thay thu muc .venv!" -ForegroundColor Yellow
-    Write-Host "Kiem tra xem he thong da co python chua..." -ForegroundColor Gray
-    
-    $pythonCmd = Get-Command python -ErrorAction SilentlyContinue
-    if (-not $pythonCmd) {
-        Write-Host "[LOI] May chua cai dat Python hoac chua them vao PATH." -ForegroundColor Red
-        Write-Host "Vui long chay: winget install Python.Python.3.11 roi mo lai PowerShell." -ForegroundColor Red
-        Exit 1
+    foreach ($candidate in $pythonCandidates) {
+        if (Test-Path -Path $candidate) {
+            $targetPython = $candidate
+            break
+        }
     }
-
-    Write-Host "Dang tao moi truong ao .venv lan dau..." -ForegroundColor Cyan
-    python -m venv .venv
-    & "$ProjectRoot\.venv\Scripts\Activate.ps1"
-    
-    Write-Host "Dang cai dat dependencies tu requirements.txt..." -ForegroundColor Cyan
-    pip install --upgrade pip
-    pip install -r requirements.txt
 }
 
-# 2. Kiểm tra Streamlit
-Write-Host "[2/3] Kiem tra Streamlit..." -ForegroundColor Green
-$streamlitInstalled = python -c "import streamlit; print('OK')" 2>$null
-if ($streamlitInstalled -ne "OK") {
-    Write-Host "Streamlit chua duoc cai dat. Dang tien hanh cai dat requirements..." -ForegroundColor Yellow
-    pip install -r requirements.txt
+if (-not $targetPython) {
+    Write-Host "[LOI] Khong tim thay Python kha dung tren he thong!" -ForegroundColor Red
+    Write-Host "Vui long cai dat: winget install Python.Python.3.11 roi mo lai PowerShell." -ForegroundColor Yellow
+    Exit 1
 }
 
-# 3. Chạy Streamlit app
-Write-Host "[3/3] Dang khoi dong Web Server Streamlit..." -ForegroundColor Green
-Write-Host "Trinh duyet se tu dong mo http://localhost:8501 (Nhan Ctrl+C de dung)" -ForegroundColor Cyan
-python -m streamlit run app.py
+Write-Host "[1/2] Nhan dien moi truong Python:" -ForegroundColor Green
+Write-Host "      -> $targetPython" -ForegroundColor Gray
+
+# 2. Khoi chay Streamlit app
+Write-Host "[2/2] Dang khoi dong Web Server Streamlit..." -ForegroundColor Green
+Write-Host "      -> Trinh duyet se tu dong mo http://localhost:8501" -ForegroundColor Cyan
+Write-Host "      -> Nhan Ctrl + C tai cua so nay khi muon dung server." -ForegroundColor Gray
+Write-Host "============================================================" -ForegroundColor Cyan
+
+& $targetPython -m streamlit run "$ProjectRoot\app.py"
